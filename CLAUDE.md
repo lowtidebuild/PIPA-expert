@@ -5,16 +5,17 @@
 ## 프로젝트 구조
 
 ```
-sources/grade-a/          # Grade A 공식 1차 소스
-  pipc-guidelines/         # PIPC 가이드라인 46종 (전처리 완료)
-  pipa/                    # 개인정보보호법 조문 (API 수집 예정)
-  pipa-enforcement-decree/ # 시행령 (API 수집 예정)
-sources/grade-b/          # Grade B 2차 소스 (처분례, 판례)
-sources/grade-c/          # Grade C 3차 소스 (학술)
-index/                    # 검색 인덱스 (guideline-index.json, source-registry.json)
-config/                   # RAG 설정, 소스 등급 정의
-scripts/                  # 전처리/수집 스크립트
-docs/specs/               # 설계 문서
+library/inbox/             # 외부 소스 드롭 → /ingest로 자동 처리
+library/grade-a/           # Grade A 공식 1차 소스
+  pipc-guidelines/          # PIPC 가이드라인 46종 (전처리 완료)
+  pipa/                     # 개인정보보호법 조문 (API 수집 예정)
+  pipa-enforcement-decree/  # 시행령 (API 수집 예정)
+library/grade-b/           # Grade B 2차 소스 (처분례, 판례, 로펌)
+library/grade-c/           # Grade C 3차 소스 (학술)
+index/                     # 검색 인덱스 (guideline-index.json, source-registry.json)
+config/                    # RAG 설정, 소스 등급 정의
+scripts/                   # 전처리/수집 스크립트
+docs/specs/                # 설계 문서
 ```
 
 ## Source Grade 체계
@@ -28,6 +29,20 @@ docs/specs/               # 설계 문서
 
 PIPA 전문 Agent는 `.claude/agents/pipa-agent.md`에 정의되어 있음.
 `/agents/pipa-agent`로 호출.
+
+## Skills
+
+- **legal-opinion-formatter** — 로펌 수준 DOCX 법률의견서 생성 (`.claude/skills/legal-opinion-formatter/`)
+  - `SKILL.md` — 의견서 구조 및 워크플로우
+  - `legal-opinion-formatter-SKILL.md` — python-docx 상세 구현 가이드
+  - `references/format-checklist.md` — 생성 전 체크리스트
+- **ingest** — 외부 소스 자동 파싱/분류/인덱싱 (`.claude/skills/ingest/`)
+  - `library/inbox/`에 파일 드롭 → `/ingest`로 자동 처리
+  - Grade 자동 판별 → frontmatter 생성 → 폴더 배치 → 인덱스 업데이트
+
+## Dependencies
+
+- `python-docx` — DOCX 생성용 (`pip install python-docx`)
 
 ## 주요 문서
 

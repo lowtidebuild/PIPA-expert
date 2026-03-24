@@ -13,7 +13,7 @@
       "title_en": "Commentary on Personal Information Protection Laws",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/01-commentary-on-pipa.md",
+      "path": "library/grade-a/pipc-guidelines/01-commentary-on-pipa.md",
       "keywords": [
         "법령해설",
         "PIPA",
@@ -35,7 +35,7 @@
       "title_en": "Integrated Guide to Personal Information Processing",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/02-integrated-processing-guide.md",
+      "path": "library/grade-a/pipc-guidelines/02-integrated-processing-guide.md",
       "keywords": [
         "개인정보처리",
         "수집",
@@ -61,7 +61,7 @@
       "title_en": "Sector-Specific Personal Information Protection Guide",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/03-sector-specific-guide.md",
+      "path": "library/grade-a/pipc-guidelines/03-sector-specific-guide.md",
       "keywords": [
         "분야별",
         "공공",
@@ -85,7 +85,7 @@
       "title_en": "Personal Information Processing During Emergencies",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/04-emergency-processing.md",
+      "path": "library/grade-a/pipc-guidelines/04-emergency-processing.md",
       "keywords": [
         "긴급상황",
         "재난",
@@ -109,7 +109,7 @@
       "title_en": "Guidelines on PI Protection for Children and Adolescents",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/05-children-adolescents.md",
+      "path": "library/grade-a/pipc-guidelines/05-children-adolescents.md",
       "keywords": [
         "아동",
         "청소년",
@@ -133,7 +133,7 @@
       "title_en": "Guidelines on Right to Request Access Exclusion",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/06-access-exclusion-right.md",
+      "path": "library/grade-a/pipc-guidelines/06-access-exclusion-right.md",
       "keywords": [
         "접근배제",
         "잊힐권리",
@@ -155,7 +155,7 @@
       "title_en": "Guide on Data Subject Rights - Automated Decision-Making",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/07-automated-decision-making.md",
+      "path": "library/grade-a/pipc-guidelines/07-automated-decision-making.md",
       "keywords": [
         "자동화의사결정",
         "프로파일링",
@@ -177,7 +177,7 @@
       "title_en": "Guide on Safety Standards for Personal Information",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/08-safety-standards.md",
+      "path": "library/grade-a/pipc-guidelines/08-safety-standards.md",
       "keywords": [
         "안전조치",
         "암호화",
@@ -201,7 +201,7 @@
       "title_en": "Guide on Privacy Protection Measures for Developers",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/09-developer-privacy.md",
+      "path": "library/grade-a/pipc-guidelines/09-developer-privacy.md",
       "keywords": [
         "개발자",
         "Privacy by Design",
@@ -223,7 +223,7 @@
       "title_en": "Guide on Biometric Information Protection",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/10-biometric-info.md",
+      "path": "library/grade-a/pipc-guidelines/10-biometric-info.md",
       "keywords": [
         "생체정보",
         "지문",
@@ -247,7 +247,7 @@
       "title_en": "Guide on Fixed Video Surveillance Systems",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/11-fixed-video-surveillance.md",
+      "path": "library/grade-a/pipc-guidelines/11-fixed-video-surveillance.md",
       "keywords": [
         "CCTV",
         "영상정보",
@@ -269,7 +269,7 @@
       "title_en": "Guide on Mobile Surveillance Device Privacy",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/12-mobile-surveillance.md",
+      "path": "library/grade-a/pipc-guidelines/12-mobile-surveillance.md",
       "keywords": [
         "이동형",
         "드론",
@@ -293,7 +293,7 @@
       "title_en": "Smart City Personal Information Protection Guide",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/13-smart-city.md",
+      "path": "library/grade-a/pipc-guidelines/13-smart-city.md",
       "keywords": [
         "스마트시티",
         "IoT",
@@ -315,7 +315,7 @@
       "title_en": "Guide on Preventing PI Exposure on Websites",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/14-website-exposure-prevention.md",
+      "path": "library/grade-a/pipc-guidelines/14-website-exposure-prevention.md",
       "keywords": [
         "웹사이트",
         "노출방지",
@@ -337,7 +337,7 @@
       "title_en": "Guidelines on Synthetic Data Utilization",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/15-synthetic-data.md",
+      "path": "library/grade-a/pipc-guidelines/15-synthetic-data.md",
       "keywords": [
         "합성데이터",
         "데이터활용",
@@ -359,7 +359,7 @@
       "title_en": "Guidelines on Pseudonymized Information Processing",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/16-pseudonymization.md",
+      "path": "library/grade-a/pipc-guidelines/16-pseudonymization.md",
       "keywords": [
         "가명정보",
         "가명처리",
@@ -383,7 +383,7 @@
       "title_en": "Practical Guide on Pseudonymized Info in Public Sector",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/17-pseudonymization-public.md",
+      "path": "library/grade-a/pipc-guidelines/17-pseudonymization-public.md",
       "keywords": [
         "가명정보",
         "공공부문",
@@ -405,7 +405,7 @@
       "title_en": "Guidelines on Pseudonymization in Education",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/18-pseudonymization-education.md",
+      "path": "library/grade-a/pipc-guidelines/18-pseudonymization-education.md",
       "keywords": [
         "가명정보",
         "교육",
@@ -427,7 +427,7 @@
       "title_en": "Guidelines on Health and Medical Data Utilization",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/19-health-medical-data.md",
+      "path": "library/grade-a/pipc-guidelines/19-health-medical-data.md",
       "keywords": [
         "보건의료",
         "건강정보",
@@ -449,7 +449,7 @@
       "title_en": "Synthetic Data Generation Reference Model",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/20-synthetic-data-reference-model.md",
+      "path": "library/grade-a/pipc-guidelines/20-synthetic-data-reference-model.md",
       "keywords": [
         "합성데이터",
         "생성모델",
@@ -471,7 +471,7 @@
       "title_en": "Guide on Processing Public PI for AI Development",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/21-public-ai-development.md",
+      "path": "library/grade-a/pipc-guidelines/21-public-ai-development.md",
       "keywords": [
         "AI",
         "공공데이터",
@@ -493,7 +493,7 @@
       "title_en": "Privacy Risk Assessment Model for AI",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/22-ai-privacy-risk-assessment.md",
+      "path": "library/grade-a/pipc-guidelines/22-ai-privacy-risk-assessment.md",
       "keywords": [
         "AI",
         "리스크평가",
@@ -515,7 +515,7 @@
       "title_en": "Guide on PI Processing for Generative AI",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/23-generative-ai.md",
+      "path": "library/grade-a/pipc-guidelines/23-generative-ai.md",
       "keywords": [
         "생성AI",
         "ChatGPT",
@@ -539,7 +539,7 @@
       "title_en": "Guidelines for Drafting Privacy Policies",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/24-privacy-policy-drafting.md",
+      "path": "library/grade-a/pipc-guidelines/24-privacy-policy-drafting.md",
       "keywords": [
         "처리방침",
         "Privacy Policy",
@@ -561,7 +561,7 @@
       "title_en": "Guide on Conducting Privacy Impact Assessments",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/25-privacy-impact-assessment.md",
+      "path": "library/grade-a/pipc-guidelines/25-privacy-impact-assessment.md",
       "keywords": [
         "영향평가",
         "PIA",
@@ -583,7 +583,7 @@
       "title_en": "Guide on Cost Estimation for PIAs",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/26-pia-cost-estimation.md",
+      "path": "library/grade-a/pipc-guidelines/26-pia-cost-estimation.md",
       "keywords": [
         "영향평가",
         "비용산정",
@@ -605,7 +605,7 @@
       "title_en": "Guide on ISMS-P Certification Standards",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/27-isms-p-certification.md",
+      "path": "library/grade-a/pipc-guidelines/27-isms-p-certification.md",
       "keywords": [
         "ISMS-P",
         "인증",
@@ -627,7 +627,7 @@
       "title_en": "Guide on Personal Information Protection Education",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/28-privacy-education.md",
+      "path": "library/grade-a/pipc-guidelines/28-privacy-education.md",
       "keywords": [
         "교육",
         "인식제고",
@@ -649,7 +649,7 @@
       "title_en": "Incident Response Manual for PI Breaches",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/29-breach-response.md",
+      "path": "library/grade-a/pipc-guidelines/29-breach-response.md",
       "keywords": [
         "유출사고",
         "침해사고",
@@ -673,7 +673,7 @@
       "title_en": "Guide on Application of PIPA to Foreign Businesses (EN)",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/30-en-foreign-business-en.md",
+      "path": "library/grade-a/pipc-guidelines/30-en-foreign-business-en.md",
       "keywords": [
         "외국사업자",
         "역외적용",
@@ -695,7 +695,7 @@
       "title_en": "Guide on Application of PIPA to Foreign Businesses (KR)",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/30-kr-foreign-business-kr.md",
+      "path": "library/grade-a/pipc-guidelines/30-kr-foreign-business-kr.md",
       "keywords": [
         "외국사업자",
         "역외적용"
@@ -715,7 +715,7 @@
       "title_en": "Guide on Liability Insurance for PI Damages",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/31-liability-insurance.md",
+      "path": "library/grade-a/pipc-guidelines/31-liability-insurance.md",
       "keywords": [
         "손해배상",
         "보험",
@@ -737,7 +737,7 @@
       "title_en": "Personal Information QA Compilation",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/32-qa-compilation.md",
+      "path": "library/grade-a/pipc-guidelines/32-qa-compilation.md",
       "keywords": [
         "FAQ",
         "질의응답",
@@ -759,7 +759,7 @@
       "title_en": "Guide on Right to Data Portability",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/33-data-portability.md",
+      "path": "library/grade-a/pipc-guidelines/33-data-portability.md",
       "keywords": [
         "전송요구권",
         "데이터이동권",
@@ -781,7 +781,7 @@
       "title_en": "Guide on Designating PI Management Agencies - General",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/34-management-agency-general.md",
+      "path": "library/grade-a/pipc-guidelines/34-management-agency-general.md",
       "keywords": [
         "관리전문기관",
         "지정",
@@ -803,7 +803,7 @@
       "title_en": "Guide on Designating PI Management Agencies - Special",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/35-management-agency-special.md",
+      "path": "library/grade-a/pipc-guidelines/35-management-agency-special.md",
       "keywords": [
         "관리전문기관",
         "지정",
@@ -825,7 +825,7 @@
       "title_en": "Guide on Designating PI Management Agencies - Relay",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/36-management-agency-relay.md",
+      "path": "library/grade-a/pipc-guidelines/36-management-agency-relay.md",
       "keywords": [
         "관리전문기관",
         "지정",
@@ -847,7 +847,7 @@
       "title_en": "Guide on Registration as a General Data Recipient",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/37-general-data-recipient.md",
+      "path": "library/grade-a/pipc-guidelines/37-general-data-recipient.md",
       "keywords": [
         "데이터수령인",
         "등록",
@@ -869,7 +869,7 @@
       "title_en": "Cross-Sector MyData Transfer Procedures and Technical Guidelines",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/38-mydata-transfer-procedures.md",
+      "path": "library/grade-a/pipc-guidelines/38-mydata-transfer-procedures.md",
       "keywords": [
         "MyData",
         "본인정보전송",
@@ -891,7 +891,7 @@
       "title_en": "Industry-Specific PI Processing Guide - Real Estate",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/39a-industry-real-estate.md",
+      "path": "library/grade-a/pipc-guidelines/39a-industry-real-estate.md",
       "keywords": [
         "부동산",
         "업종별",
@@ -913,7 +913,7 @@
       "title_en": "Industry-Specific PI Processing Guide - Hotels",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/39b-industry-hotels.md",
+      "path": "library/grade-a/pipc-guidelines/39b-industry-hotels.md",
       "keywords": [
         "숙박업",
         "업종별",
@@ -935,7 +935,7 @@
       "title_en": "Industry-Specific PI Processing Guide - Academies",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/39c-industry-academies.md",
+      "path": "library/grade-a/pipc-guidelines/39c-industry-academies.md",
       "keywords": [
         "학원",
         "업종별",
@@ -957,7 +957,7 @@
       "title_en": "PI Protection Handbook for Small Businesses",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/40-small-business-handbook.md",
+      "path": "library/grade-a/pipc-guidelines/40-small-business-handbook.md",
       "keywords": [
         "소상공인",
         "소규모",
@@ -979,7 +979,7 @@
       "title_en": "Standard Privacy Policy Template - Real Estate Agents",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/41a-template-real-estate.md",
+      "path": "library/grade-a/pipc-guidelines/41a-template-real-estate.md",
       "keywords": [
         "템플릿",
         "처리방침",
@@ -1001,7 +1001,7 @@
       "title_en": "Standard Privacy Policy Template - Senior Welfare Centers",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/41b-template-senior-welfare.md",
+      "path": "library/grade-a/pipc-guidelines/41b-template-senior-welfare.md",
       "keywords": [
         "템플릿",
         "처리방침",
@@ -1023,7 +1023,7 @@
       "title_en": "Standard Privacy Policy Template - Travel Agencies",
       "source_grade": "A",
       "publisher": "개인정보보호위원회 (PIPC)",
-      "path": "sources/grade-a/pipc-guidelines/41c-template-travel-agency.md",
+      "path": "library/grade-a/pipc-guidelines/41c-template-travel-agency.md",
       "keywords": [
         "템플릿",
         "처리방침",
