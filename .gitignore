@@ -1,0 +1,15 @@
+# PDF 원본 (전처리된 markdown이 sources/에 있으므로 불필요)
+PIPC Official Guidelines/
+
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# 벡터 DB (로컬 생성)
+embeddings/chroma/
+
+# 임시 파일
+*.tmp

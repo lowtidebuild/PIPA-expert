@@ -1,0 +1,21 @@
+{
+  "project": "PIPA Agent-Native RAG",
+  "version": "0.1.0",
+  "phase": 1,
+  "search": {
+    "phase_1": {
+      "method": "keyword_index_plus_grep",
+      "index_file": "index/guideline-index.json",
+      "fallback": "grep_full_text",
+      "max_results": 5
+    },
+    "phase_2": {
+      "method": "vector_semantic",
+      "embedding_model": "TBD",
+      "vector_db": "chromadb",
+      "fallback": "phase_1"
+    }
+  },
+  "source_grades_config": "config/source-grades.json",
+  "languages": ["ko", "en"]
+}
