@@ -23,7 +23,7 @@ ChatGPT Custom GPT / Gemini Gem의 flat document 방식을 넘어서, 법령의 
 ```
 pipa-rag/
 ├── config/           # RAG 설정, 소스 등급 정의
-├── sources/
+├── library/
 │   ├── grade-a/      # 1차 공식 소스
 │   │   ├── pipa/                    # (대기: API 검증 후)
 │   │   ├── pipa-enforcement-decree/ # (대기: API 검증 후)
@@ -108,7 +108,7 @@ pipa-rag/
    - 이유: LLM이 markdown을 네이티브로 이해, frontmatter로 구조화된 메타데이터 제공
 2. **Source Grade 체계** (A/B/C/D) 적용
    - PIPC 공식 가이드라인 = Grade A (단독 근거로 사용 가능)
-3. **범용 구조** — `sources/grade-{a,b,c}/{법령or소스}/` 패턴
+3. **범용 구조** — `library/grade-{a,b,c}/{법령or소스}/` 패턴
    - 새 법령 추가 시 동일 패턴으로 확장
 
 ---

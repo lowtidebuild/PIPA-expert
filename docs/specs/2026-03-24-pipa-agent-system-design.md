@@ -52,7 +52,7 @@ PIPA RAG 시스템의 knowledge base (법령 조문 + PIPC 가이드라인 46종
 ### Knowledge Base 구조
 
 ```
-sources/
+library/
 ├── grade-a/
 │   ├── pipa/                          # 개인정보보호법 조문별 .md
 │   ├── pipa-enforcement-decree/       # 시행령 조문별 .md
@@ -218,11 +218,11 @@ Phase 1에서는 위 설계를 `.claude/agents/pipa-agent.md` 파일로 구현.
 
 | 추상 도구 | Claude Code 구현 |
 |----------|-----------------|
-| search_articles | Read(index/article-index.json) + Grep(sources/). 한국어 형태소 한계로 검색어 어간 수준 substring 매칭, 부족 시 Grep 폴백 적극 사용 |
+| search_articles | Read(index/article-index.json) + Grep(library/). 한국어 형태소 한계로 검색어 어간 수준 substring 매칭, 부족 시 Grep 폴백 적극 사용 |
 | read_article | Read(path) |
-| search_guidelines | Read(index/guideline-index.json) + Grep(sources/grade-a/pipc-guidelines/). guideline-index.json은 이미 생성됨 (46 entries) |
+| search_guidelines | Read(index/guideline-index.json) + Grep(library/grade-a/pipc-guidelines/). guideline-index.json은 이미 생성됨 (46 entries) |
 | read_guideline | Read(path) |
-| get_cross_references | 동일법 내: Read(sources/grade-a/{law}/_cross-refs.json). 법령 간: Read(index/cross-reference-graph.json) |
+| get_cross_references | 동일법 내: Read(library/grade-a/{law}/_cross-refs.json). 법령 간: Read(index/cross-reference-graph.json) |
 | get_source_registry | Read(index/source-registry.json) |
 | web_search_legal | WebSearch(query, allowed_domains=[law.go.kr, pipc.go.kr, ...]) |
 

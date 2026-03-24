@@ -69,7 +69,7 @@ pipa-rag/
 │   ├── source-grades.json             # 소스 등급 정의 (A/B/C/D)
 │   └── refresh-policy.json            # 데이터 갱신 정책
 │
-├── sources/
+├── library/
 │   ├── grade-a/                       # === 1차 공식 소스 ===
 │   │   │
 │   │   ├── pipa/                      # 개인정보보호법 (법률 제xxxxx호)
@@ -168,9 +168,9 @@ referenced_by:
   - "제39조의3"      # 이 조문을 참조하는 다른 조문
   - "제75조 제2항"
 related_guidelines:
-  - "sources/grade-a/pipc-guidelines/standard-personal-info-protection-guidelines.md"
+  - "library/grade-a/pipc-guidelines/standard-personal-info-protection-guidelines.md"
 related_decisions:
-  - "sources/grade-b/pipc-decisions/decision-2024-001.md"
+  - "library/grade-b/pipc-decisions/decision-2024-001.md"
 
 # === 검색 메타 ===
 keywords:
@@ -241,7 +241,7 @@ topics:
       "article": 15,
       "title": "개인정보의 수집·이용",
       "chapter": "제3장",
-      "path": "sources/grade-a/pipa/ch03-개인정보의-처리/art15-개인정보의-수집이용.md",
+      "path": "library/grade-a/pipa/ch03-개인정보의-처리/art15-개인정보의-수집이용.md",
       "keywords": ["수집", "이용", "동의", "적법처리"],
       "source_grade": "A",
       "effective_date": "2024-03-15"
@@ -290,11 +290,11 @@ topics:
 
 법령이 개정될 때:
 1. 현재 조문 파일을 `archive/{law}/{개정일}/`에 복사 (개정 전 스냅샷)
-2. `sources/` 내 조문 파일을 최신 버전으로 갱신
+2. `library/` 내 조문 파일을 최신 버전으로 갱신
 3. frontmatter의 `effective_date`, `last_amended` 업데이트
 4. `_meta.json`에 개정 이력 추가
 
-Agent는 기본적으로 최신 버전(`sources/`)을 참조. "개정 전 조문"을 물어보면 `archive/`에서 해당 시점 스냅샷을 Read.
+Agent는 기본적으로 최신 버전(`library/`)을 참조. "개정 전 조문"을 물어보면 `archive/`에서 해당 시점 스냅샷을 Read.
 
 ### 데이터 갱신 정책
 
@@ -324,7 +324,7 @@ Agent가 PIPA 관련 질문을 받았을 때:
 1. article-index.json 읽기 → keywords 배열에서 질문 키워드와 부분 문자열(substring) 매칭
    (예: "수집하는" → "수집" 매칭. 한국어 형태소 분석은 Phase 2에서 도입)
 2. 매칭된 조문의 path로 .md 파일 목록 확보 (상위 5개)
-3. 키워드 매칭이 부족하면 (2개 미만) Grep으로 sources/ 전체에서 본문 검색
+3. 키워드 매칭이 부족하면 (2개 미만) Grep으로 library/ 전체에서 본문 검색
 4. 매칭된 .md 파일을 Read로 직접 읽기
 ```
 
@@ -346,7 +346,7 @@ Agent가 PIPA 관련 질문을 받았을 때:
 **에러 처리:**
 | 상황 | 대응 |
 |------|------|
-| 검색 결과 0건 | Grep으로 sources/ 전체 폴백 검색. 그래도 0건이면 "해당 조문을 찾지 못했습니다" 명시 |
+| 검색 결과 0건 | Grep으로 library/ 전체 폴백 검색. 그래도 0건이면 "해당 조문을 찾지 못했습니다" 명시 |
 | cross-ref 대상 파일 없음 | "[참조 대상 미수집: 시행령 제X조]" 경고 표시, 나머지 응답은 정상 진행 |
 | frontmatter 파싱 실패 | 본문 텍스트만 사용, "[메타데이터 미확인]" 표시 |
 | 벡터 DB 연결 실패 (Phase 2) | Phase 1 검색 흐름으로 자동 폴백 |
@@ -354,7 +354,7 @@ Agent가 PIPA 관련 질문을 받았을 때:
 ### 범용 확장 설계
 
 새 법령 추가 시:
-1. `sources/grade-a/{new-law}/` 폴더 생성
+1. `library/grade-a/{new-law}/` 폴더 생성
 2. `_meta.json`, `_hierarchy.json`, `_cross-refs.json` 작성
 3. 조문별 .md 파일 생성 (동일 frontmatter 스키마)
 4. `index/` 파일들 자동 재생성 (`scripts/build-index.py`)
