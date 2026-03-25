@@ -92,7 +92,31 @@ agent .md 파일에 아래 섹션 추가:
 
 프로젝트 구조에 inbox 추가, Skills에 ingest 추가.
 
-### 7. Adaptation Checklist
+### 7. Auto-Ingest Hook
+
+`.claude/settings.json`에 아래 hook을 등록하면, 유저가 ingest 관련 키워드를 말할 때 자동으로 ingest skill이 트리거된다:
+
+```json
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.transcript[-1].message // empty' | grep -qiE 'ingest|소스 추가|자료 넣|inbox|파일 올렸|파일 넣었' && echo '{\"hookSpecificOutput\":{\"hookEventName\":\"UserPromptSubmit\",\"additionalContext\":\"[Hook] 유저가 문서 인제스트를 요청했습니다. .claude/skills/ingest/SKILL.md를 읽고 /ingest 워크플로우를 실행하세요.\"}}' || echo '{}'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+기존 `.claude/settings.json`이 있으면 `hooks` 섹션만 머지한다.
+
+### 8. Adaptation Checklist
 
 각 프로젝트에 맞게 조정할 부분:
 
@@ -101,6 +125,7 @@ agent .md 파일에 아래 섹션 추가:
 - [ ] `library/grade-x/` 하위 폴더 구조 — 프로젝트의 소스 분류에 맞게
 - [ ] 인덱스 파일명/구조 — 기존 인덱스와 호환
 - [ ] 기존 `sources/` → `library/` rename 필요 여부
+- [ ] `.claude/settings.json` hook 등록 (기존 settings.json 있으면 머지)
 
 ## Files to Read
 
@@ -116,3 +141,4 @@ PIPA-expert에서 실제 구현을 확인하려면:
 | `index/guideline-index.json` | 인덱스 구조 예시 |
 | `index/source-registry.json` | 소스 레지스트리 예시 |
 | `config/source-grades.json` | Grade 정의 예시 |
+| `.claude/settings.json` | auto-ingest hook 예시 |
