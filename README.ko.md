@@ -278,12 +278,16 @@ flowchart TD
 
 ## 소스 Ingest 시스템
 
-PDF, DOCX 등 아무 파일이나 `library/inbox/`에 넣고 `/ingest` 실행:
+### 나만의 소스 추가하기
+
+1. `library/inbox/`에 아무 파일(PDF, DOCX 등) 드롭
+2. agent에게 알려주기: `/ingest` 또는 "파일 넣었어"
+3. agent가 자동으로 처리:
 
 ```
 library/inbox/    ← 파일 드롭
      │
-     ▼ /ingest
+     ▼ /ingest 또는 "파일 넣었어"
      │
      ├─ Markdown 자동 변환 (MarkItDown)
      ├─ Grade 자동 판별 (A/B/C — 내용 분석 기반)
@@ -291,6 +295,8 @@ library/inbox/    ← 파일 드롭
      ├─ library/grade-{a,b,c}/ 에 배치
      └─ 검색 인덱스 업데이트
 ```
+
+> **참고:** 파일을 넣는 것만으로는 자동 처리되지 않습니다. `/ingest`를 실행하거나 agent에게 알려줘야(예: "inbox에 파일 넣었어") 파싱 파이프라인이 시작됩니다.
 
 ---
 

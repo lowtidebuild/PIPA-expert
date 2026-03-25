@@ -115,7 +115,28 @@ agent .md 파일에 아래 섹션 추가:
 
 기존 `.claude/settings.json`이 있으면 `hooks` 섹션만 머지한다.
 
-### 8. Adaptation Checklist
+### 8. README에 Ingest 사용법 안내 추가
+
+프로젝트 README에 아래 내용을 포함한다. 파일을 넣는 것만으로는 자동 처리되지 않고, **유저가 agent에게 알려줘야** 파싱이 시작된다는 점을 명시한다:
+
+```markdown
+### Adding Your Own Sources
+
+1. Drop any file (PDF, DOCX, etc.) into `library/inbox/`
+2. Tell the agent: `/ingest` or "파일 넣었어"
+3. The agent will automatically:
+   - Convert to structured Markdown
+   - Classify source grade (A/B/C)
+   - Generate metadata (frontmatter)
+   - Place in the appropriate `library/grade-{a,b,c}/` folder
+   - Update search indexes
+
+> **Note:** Dropping files alone does not trigger processing.
+> You must run `/ingest` or tell the agent (e.g. "inbox에 파일 넣었어")
+> to start the parsing pipeline.
+```
+
+### 9. Adaptation Checklist
 
 각 프로젝트에 맞게 조정할 부분:
 

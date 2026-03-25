@@ -279,12 +279,16 @@ The agent produces **law firm-grade Word documents** with:
 
 ## Source Ingest System
 
-Drop any PDF, DOCX, or other document into `library/inbox/` and run `/ingest`:
+### Adding Your Own Sources
+
+1. Drop any file (PDF, DOCX, etc.) into `library/inbox/`
+2. Tell the agent: `/ingest` or "파일 넣었어"
+3. The agent will automatically:
 
 ```
 library/inbox/    ← drop files here
      │
-     ▼ /ingest
+     ▼ /ingest or "파일 넣었어"
      │
      ├─ Auto-convert to Markdown (via MarkItDown)
      ├─ Auto-classify Grade (A/B/C based on content signals)
@@ -292,6 +296,8 @@ library/inbox/    ← drop files here
      ├─ Place in library/grade-{a,b,c}/
      └─ Update search indexes
 ```
+
+> **Note:** Dropping files alone does not trigger processing. You must run `/ingest` or tell the agent (e.g. "inbox에 파일 넣었어") to start the parsing pipeline.
 
 ---
 
