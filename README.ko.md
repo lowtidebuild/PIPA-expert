@@ -216,7 +216,7 @@ flowchart TD
     subgraph web["Step 4: Multi-Layer 웹서치 <i>(KB 부족 시)</i>"]
         direction TB
         L1["🏛️ <b>Layer 1 · 법령 원문</b><br/>law.go.kr · pipc.go.kr"]
-        L2["⚖️ <b>Layer 2 · 6대 로펌</b><br/>김장 · 태평양 · 광장<br/>세종 · 율촌 · 화우"]
+        L2["⚖️ <b>Layer 2 · 주요 로펌</b><br/>국내 주요 로펌<br/>뉴스레터 · 아티클"]
         L3["🎓 <b>Layer 3 · 학술</b><br/>KCI · RISS · SSRN"]
         L4["🌍 <b>Layer 4 · 해외 감독기관</b><br/>EDPB · ICO · IAPP"]
         L1 --> L2 --> L3 --> L4
