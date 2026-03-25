@@ -1,20 +1,73 @@
 {
   "type": "source_registry",
-  "generated_at": "2026-03-24T15:48:53.600014",
+  "generated_at": "2026-03-25T10:04:27.867099",
   "sources": {
     "grade-a": {
       "pipa": {
-        "status": "pending",
-        "note": "법령 원문 — law.go.kr API로 수집 예정"
+        "status": "complete",
+        "count": 140,
+        "law_name": "개인정보 보호법",
+        "retrieved_at": "2026-03-25T10:03:46.833897"
       },
       "pipa-enforcement-decree": {
-        "status": "pending",
-        "note": "시행령 — law.go.kr API로 수집 예정"
+        "status": "complete",
+        "count": 151,
+        "law_name": "개인정보 보호법 시행령",
+        "retrieved_at": "2026-03-25T10:03:50.897479"
       },
       "pipc-guidelines": {
         "status": "complete",
-        "count": 46,
-        "total_chars": 5835290
+        "count": 0,
+        "law_name": "",
+        "retrieved_at": ""
+      },
+      "network-act": {
+        "status": "complete",
+        "count": 156,
+        "law_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+        "retrieved_at": "2026-03-25T10:03:57.169013"
+      },
+      "e-government-act": {
+        "status": "complete",
+        "count": 111,
+        "law_name": "전자정부법",
+        "retrieved_at": "2026-03-25T10:04:25.766257"
+      },
+      "location-info-act": {
+        "status": "complete",
+        "count": 63,
+        "law_name": "위치정보의 보호 및 이용 등에 관한 법률",
+        "retrieved_at": "2026-03-25T10:04:17.756500"
+      },
+      "network-act-enforcement-rule": {
+        "status": "complete",
+        "count": 11,
+        "law_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+        "retrieved_at": "2026-03-25T10:04:05.453063"
+      },
+      "location-info-act-enforcement-decree": {
+        "status": "complete",
+        "count": 55,
+        "law_name": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+        "retrieved_at": "2026-03-25T10:04:21.775236"
+      },
+      "credit-info-act": {
+        "status": "complete",
+        "count": 103,
+        "law_name": "신용정보의 이용 및 보호에 관한 법률",
+        "retrieved_at": "2026-03-25T10:04:09.531368"
+      },
+      "credit-info-act-enforcement-decree": {
+        "status": "complete",
+        "count": 91,
+        "law_name": "신용정보의 이용 및 보호에 관한 법률 시행령",
+        "retrieved_at": "2026-03-25T10:04:13.815597"
+      },
+      "network-act-enforcement-decree": {
+        "status": "complete",
+        "count": 140,
+        "law_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+        "retrieved_at": "2026-03-25T10:04:01.393748"
       }
     },
     "grade-b": {

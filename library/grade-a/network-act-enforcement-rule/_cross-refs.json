@@ -1,0 +1,85 @@
+{
+  "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+  "cross_references": [
+    {
+      "from": "제2조",
+      "to": "제36조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제2조",
+      "to": "제36조의7",
+      "type": "references"
+    },
+    {
+      "from": "제3조",
+      "to": "제47조제3항",
+      "type": "references"
+    },
+    {
+      "from": "제3조",
+      "to": "제56조제3항",
+      "type": "references"
+    },
+    {
+      "from": "제3조",
+      "to": "제47조제2항",
+      "type": "references"
+    },
+    {
+      "from": "제4조",
+      "to": "제60조의3제5항",
+      "type": "references"
+    },
+    {
+      "from": "제4조",
+      "to": "제45조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제4조",
+      "to": "제60조의3제1항",
+      "type": "references"
+    },
+    {
+      "from": "제5조",
+      "to": "제60조의4제4항",
+      "type": "references"
+    },
+    {
+      "from": "제5조",
+      "to": "제60조의4제2항",
+      "type": "references"
+    },
+    {
+      "from": "제5조",
+      "to": "제4조제2항",
+      "type": "references"
+    },
+    {
+      "from": "제5조",
+      "to": "제60조의3제1항",
+      "type": "references"
+    },
+    {
+      "from": "제6조",
+      "to": "제60조의7제4항",
+      "type": "references"
+    },
+    {
+      "from": "제6조",
+      "to": "제48조의6제5항",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제60조의8제1항",
+      "type": "references"
+    },
+    {
+      "from": "제9조",
+      "to": "제9조의2",
+      "type": "references"
+    }
+  ]
+}
