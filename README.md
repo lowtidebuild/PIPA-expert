@@ -1,5 +1,7 @@
 <div align="center">
 
+**[English](#pipa-expert-agent)** · **[한국어](README.ko.md)**
+
 # PIPA Expert Agent
 
 ### AI-Powered Korean Data Privacy Law Advisor
@@ -200,28 +202,55 @@ This means the AI agent can:
 
 ## How It Works
 
-```
-User Question
-     │
-     ▼
-┌─────────────────────────────┐
-│  Step 1: KB Search          │  article-index.json → relevant articles
-│  Step 2: Guideline Search   │  guideline-index.json → PIPC guidance
-│  Step 3: Cross-Reference    │  cross-reference-graph → related provisions
-│  Step 4: Web Search         │  4 layers of trusted external sources
-│          (if KB insufficient)│
-├─────────────────────────────┤
-│  Layer 1: Statutes          │  law.go.kr, pipc.go.kr
-│  Layer 2: Law Firms         │  Kim & Chang, BKL, Lee & Ko,
-│                             │  Shin & Kim, Yulchon, Yoon & Yang
-│  Layer 3: Academic          │  KCI, RISS, SSRN
-│  Layer 4: Foreign DPAs      │  EDPB, ICO, IAPP
-├─────────────────────────────┤
-│  Adversarial Cross-Check    │  Pass A (supporting) vs
-│  (for interpretation Qs)    │  Pass B (counterarguments)
-├─────────────────────────────┤
-│  Output                     │  Verified citations + DOCX opinion
-└─────────────────────────────┘
+```mermaid
+flowchart TD
+    Q["❓ <b>User Question</b>"]
+
+    subgraph kb["Step 1–3: Knowledge Base Search"]
+        direction TB
+        S1["📚 <b>Article Search</b><br/><code>article-index.json</code> → relevant statutes"]
+        S2["📖 <b>Guideline Search</b><br/><code>guideline-index.json</code> → PIPC guidance"]
+        S3["🔗 <b>Cross-Reference Tracking</b><br/><code>cross-reference-graph</code> → delegated provisions"]
+        S1 --> S2 --> S3
+    end
+
+    subgraph web["Step 4: Multi-Layer Web Search <i>(if KB insufficient)</i>"]
+        direction TB
+        L1["🏛️ <b>Layer 1 · Statutes</b><br/>law.go.kr · pipc.go.kr"]
+        L2["⚖️ <b>Layer 2 · Major Law Firms</b><br/>Kim &amp; Chang · BKL · Lee &amp; Ko<br/>Shin &amp; Kim · Yulchon · Yoon &amp; Yang"]
+        L3["🎓 <b>Layer 3 · Academic</b><br/>KCI · RISS · SSRN"]
+        L4["🌍 <b>Layer 4 · Foreign DPAs</b><br/>EDPB · ICO · IAPP"]
+        L1 --> L2 --> L3 --> L4
+    end
+
+    subgraph verify["Adversarial Cross-Verification"]
+        direction LR
+        PA["✅ <b>Pass A</b><br/>Supporting evidence"]
+        PB["⚠️ <b>Pass B</b><br/>Counterarguments<br/>&amp; exceptions"]
+        PA <--> PB
+    end
+
+    O["📄 <b>Verified Legal Opinion</b><br/>DOCX with citations &amp; risk matrix"]
+
+    Q --> kb
+    kb --> web
+    web --> verify
+    verify --> O
+
+    style Q fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#5b21b6
+    style kb fill:#eff6ff,stroke:#2563eb,stroke-width:1px
+    style web fill:#fefce8,stroke:#ca8a04,stroke-width:1px
+    style verify fill:#fef2f2,stroke:#dc2626,stroke-width:1px
+    style O fill:#d1fae5,stroke:#059669,stroke-width:2px,color:#065f46
+    style S1 fill:#dbeafe,stroke:#3b82f6,color:#1e40af
+    style S2 fill:#dbeafe,stroke:#3b82f6,color:#1e40af
+    style S3 fill:#dbeafe,stroke:#3b82f6,color:#1e40af
+    style L1 fill:#fef9c3,stroke:#ca8a04,color:#713f12
+    style L2 fill:#fef9c3,stroke:#ca8a04,color:#713f12
+    style L3 fill:#fef9c3,stroke:#ca8a04,color:#713f12
+    style L4 fill:#fef9c3,stroke:#ca8a04,color:#713f12
+    style PA fill:#dcfce7,stroke:#16a34a,color:#166534
+    style PB fill:#fee2e2,stroke:#ef4444,color:#991b1b
 ```
 
 Every citation is tagged with its verification status:

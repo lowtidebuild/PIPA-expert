@@ -1,5 +1,7 @@
 <div align="center">
 
+**[English](README.md)** · **[한국어](#pipa-expert-agent)**
+
 # PIPA Expert Agent
 
 ### AI 개인정보보호법 전문 자문 시스템
@@ -199,27 +201,55 @@ keywords:
 
 ## 동작 방식
 
-```
-사용자 질문
-     │
-     ▼
-┌─────────────────────────────┐
-│  Step 1: KB 검색             │  article-index.json → 관련 조문
-│  Step 2: 가이드라인 검색      │  guideline-index.json → PIPC 해설
-│  Step 3: 교차참조 추적        │  cross-reference-graph → 관련 규정
-│  Step 4: 웹서치              │  4단계 신뢰도 기반 외부 검색
-│          (KB 부족 시)        │
-├─────────────────────────────┤
-│  Layer 1: 법령 원문          │  law.go.kr, pipc.go.kr
-│  Layer 2: 6대 로펌           │  김장, 태평양, 광장, 세종, 율촌, 화우
-│  Layer 3: 학술               │  KCI, RISS, SSRN
-│  Layer 4: 해외 감독기관       │  EDPB, ICO, IAPP
-├─────────────────────────────┤
-│  Adversarial 교차검증        │  Pass A (긍정 근거) vs
-│  (해석 질문 시)              │  Pass B (반례 탐색)
-├─────────────────────────────┤
-│  출력                        │  검증된 인용 + DOCX 의견서
-└─────────────────────────────┘
+```mermaid
+flowchart TD
+    Q["❓ <b>사용자 질문</b>"]
+
+    subgraph kb["Step 1–3: Knowledge Base 검색"]
+        direction TB
+        S1["📚 <b>조문 검색</b><br/><code>article-index.json</code> → 관련 법조문"]
+        S2["📖 <b>가이드라인 검색</b><br/><code>guideline-index.json</code> → PIPC 해설"]
+        S3["🔗 <b>교차참조 추적</b><br/><code>cross-reference-graph</code> → 위임 조문"]
+        S1 --> S2 --> S3
+    end
+
+    subgraph web["Step 4: Multi-Layer 웹서치 <i>(KB 부족 시)</i>"]
+        direction TB
+        L1["🏛️ <b>Layer 1 · 법령 원문</b><br/>law.go.kr · pipc.go.kr"]
+        L2["⚖️ <b>Layer 2 · 6대 로펌</b><br/>김장 · 태평양 · 광장<br/>세종 · 율촌 · 화우"]
+        L3["🎓 <b>Layer 3 · 학술</b><br/>KCI · RISS · SSRN"]
+        L4["🌍 <b>Layer 4 · 해외 감독기관</b><br/>EDPB · ICO · IAPP"]
+        L1 --> L2 --> L3 --> L4
+    end
+
+    subgraph verify["Adversarial 교차검증"]
+        direction LR
+        PA["✅ <b>Pass A</b><br/>긍정 근거"]
+        PB["⚠️ <b>Pass B</b><br/>반례 탐색<br/>&amp; 예외 규정"]
+        PA <--> PB
+    end
+
+    O["📄 <b>검증된 법률 의견서</b><br/>DOCX · 인용 체계 · 리스크 매트릭스"]
+
+    Q --> kb
+    kb --> web
+    web --> verify
+    verify --> O
+
+    style Q fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#5b21b6
+    style kb fill:#eff6ff,stroke:#2563eb,stroke-width:1px
+    style web fill:#fefce8,stroke:#ca8a04,stroke-width:1px
+    style verify fill:#fef2f2,stroke:#dc2626,stroke-width:1px
+    style O fill:#d1fae5,stroke:#059669,stroke-width:2px,color:#065f46
+    style S1 fill:#dbeafe,stroke:#3b82f6,color:#1e40af
+    style S2 fill:#dbeafe,stroke:#3b82f6,color:#1e40af
+    style S3 fill:#dbeafe,stroke:#3b82f6,color:#1e40af
+    style L1 fill:#fef9c3,stroke:#ca8a04,color:#713f12
+    style L2 fill:#fef9c3,stroke:#ca8a04,color:#713f12
+    style L3 fill:#fef9c3,stroke:#ca8a04,color:#713f12
+    style L4 fill:#fef9c3,stroke:#ca8a04,color:#713f12
+    style PA fill:#dcfce7,stroke:#16a34a,color:#166534
+    style PB fill:#fee2e2,stroke:#ef4444,color:#991b1b
 ```
 
 모든 인용에 검증 상태가 표시됩니다:
