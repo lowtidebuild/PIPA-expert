@@ -370,12 +370,15 @@ claude   # Claude Code 실행
 
 PIPA Expert는 가상의 **법무법인 진주** 소속 전문 법률 AI 에이전트 시리즈 중 하나입니다:
 
-| 에이전트 | 변호사 | 연차 | 전문 분야 |
-|---------|--------|------|----------|
-| [game-legal-research](https://github.com/lowtidebuild/game-legal-research) | 심진주 | 3년차 | 게임 산업법 |
-| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | 변혁기 | 4년차 | 법률 번역 |
-| **PIPA-expert** | **정보호 (鄭保護)** | **5년차** | **개인정보보호법** |
-| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | 반성문 | 10년차 | 품질 리뷰 (파트너) |
+| 에이전트 | 변호사 | 전문 분야 |
+|---------|--------|----------|
+| [game-legal-research](https://github.com/lowtidebuild/game-legal-research) | 심진주 | 게임 산업법 |
+| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | 변혁기 | 법률 번역 |
+| [general-legal-research](https://github.com/lowtidebuild/general-legal-research) | 김재식 | 법률 리서치 |
+| **PIPA-expert** | **정보호** | **개인정보보호법** |
+| [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | 고덕수 | 계약서 검토 |
+| [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | 한석봉 | 법률 문서 작성 |
+| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | 반성문 | 품질 리뷰 (파트너) |
 
 ---
 
