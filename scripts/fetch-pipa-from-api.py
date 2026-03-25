@@ -28,14 +28,28 @@ from datetime import datetime
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).parent.parent
-SOURCES_DIR = PROJECT_ROOT / "sources" / "grade-a"
+SOURCES_DIR = PROJECT_ROOT / "library" / "grade-a"
 
 BASE_URL = "http://www.law.go.kr/DRF"
 
 # Known law IDs (fallback if search fails)
 KNOWN_LAWS = {
+    # 개인정보 보호법 체계
     "개인정보보호법": {"search_query": "개인정보보호법", "target_dir": "pipa"},
     "개인정보보호법 시행령": {"search_query": "개인정보 보호법 시행령", "target_dir": "pipa-enforcement-decree"},
+    "개인정보보호법 시행규칙": {"search_query": "개인정보 보호법 시행규칙", "target_dir": "pipa-enforcement-rule"},
+    # 정보통신망법 체계
+    "정보통신망법": {"search_query": "정보통신망 이용촉진 및 정보보호 등에 관한 법률", "target_dir": "network-act"},
+    "정보통신망법 시행령": {"search_query": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령", "target_dir": "network-act-enforcement-decree"},
+    "정보통신망법 시행규칙": {"search_query": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙", "target_dir": "network-act-enforcement-rule"},
+    # 신용정보법 체계
+    "신용정보법": {"search_query": "신용정보의 이용 및 보호에 관한 법률", "target_dir": "credit-info-act"},
+    "신용정보법 시행령": {"search_query": "신용정보의 이용 및 보호에 관한 법률 시행령", "target_dir": "credit-info-act-enforcement-decree"},
+    # 위치정보법 체계
+    "위치정보법": {"search_query": "위치정보의 보호 및 이용 등에 관한 법률", "target_dir": "location-info-act"},
+    "위치정보법 시행령": {"search_query": "위치정보의 보호 및 이용 등에 관한 법률 시행령", "target_dir": "location-info-act-enforcement-decree"},
+    # 전자정부법 (개인정보 관련 조항 포함)
+    "전자정부법": {"search_query": "전자정부법", "target_dir": "e-government-act"},
 }
 
 
@@ -218,15 +232,29 @@ def extract_keywords(title: str, content: str) -> list[str]:
 
 
 def format_article_number(num_str: str) -> str:
-    """Format article number: '000200' -> '2', '001002' -> '10의2'."""
-    if not num_str or not num_str.isdigit():
+    """Format article number: '000200' -> '2', '001002' -> '10의2', '①' -> '1'."""
+    if not num_str:
         return num_str
-    num = int(num_str[:4])
-    sub = int(num_str[4:6]) if len(num_str) >= 6 else 0
-    result = str(num)
-    if sub > 0:
-        result += f"의{sub}"
-    return result
+
+    # Handle circled numbers (①②③...)
+    circled = "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳"
+    if num_str in circled:
+        return str(circled.index(num_str) + 1)
+
+    # Handle plain digits
+    digits_only = re.sub(r"[^\d]", "", num_str)
+    if not digits_only:
+        return num_str
+
+    if len(digits_only) >= 6:
+        num = int(digits_only[:4])
+        sub = int(digits_only[4:6])
+        result = str(num)
+        if sub > 0:
+            result += f"의{sub}"
+        return result
+
+    return str(int(digits_only))
 
 
 def build_chapter_map(chapters: list) -> dict:
@@ -342,9 +370,9 @@ def process_law(oc: str, law_name: str, config: dict):
     time.sleep(1)  # Rate limiting
     xml_text = fetch_law_full_text(oc, mst)
 
-    # Check for error response
-    if "실패" in xml_text or "검증" in xml_text:
-        print(f"  API ERROR: {xml_text[:200]}")
+    # Check for error response (actual API errors, not law content containing these words)
+    if xml_text.strip().startswith("<OpenAPI_ServiceResponse") or "<errMsg>" in xml_text:
+        print(f"  API ERROR: {xml_text[:300]}")
         return False
 
     # Step 3: Parse XML
@@ -396,7 +424,7 @@ def process_law(oc: str, law_name: str, config: dict):
             {
                 "number": format_article_number(a["조문번호"]),
                 "title": a.get("조문제목", ""),
-                "is_article": a.get("조문여부", "") == "Y",
+                "is_article": a.get("조문여부", "") == "조문",
             }
             for a in articles
         ],
@@ -410,8 +438,8 @@ def process_law(oc: str, law_name: str, config: dict):
     article_count = 0
 
     for article in articles:
-        # Skip non-article entries (편, 장, 절 headings)
-        if article.get("조문여부") != "Y":
+        # Skip non-article entries (편, 장, 절 headings marked as "전문")
+        if article.get("조문여부") != "조문":
             continue
 
         art_num = format_article_number(article["조문번호"])

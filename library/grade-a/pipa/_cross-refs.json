@@ -1,0 +1,955 @@
+{
+  "law": "개인정보 보호법",
+  "cross_references": [
+    {
+      "from": "제3조",
+      "to": "제30조",
+      "type": "references"
+    },
+    {
+      "from": "제5조",
+      "to": "제4조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제2조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제18조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의13",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제10조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의2",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의3",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의4",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의5",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의6",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제33조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제355조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제356조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제132조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제129조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제2조",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의7",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의8",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의9",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의10",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의11",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의12",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의13",
+      "type": "references"
+    },
+    {
+      "from": "제7조",
+      "to": "제7조의14",
+      "type": "references"
+    },
+    {
+      "from": "제8조",
+      "to": "제8조의2",
+      "type": "references"
+    },
+    {
+      "from": "제11조",
+      "to": "제11조의2",
+      "type": "references"
+    },
+    {
+      "from": "제13조",
+      "to": "제13조의2",
+      "type": "references"
+    },
+    {
+      "from": "제16조",
+      "to": "제15조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제18조",
+      "to": "제15조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제18조",
+      "to": "제17조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제18조",
+      "to": "제28조의8제1항",
+      "type": "references"
+    },
+    {
+      "from": "제20조",
+      "to": "제17조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제20조",
+      "to": "제20조의2",
+      "type": "references"
+    },
+    {
+      "from": "제22조",
+      "to": "제30조제2항",
+      "type": "references"
+    },
+    {
+      "from": "제22조",
+      "to": "제22조의2제1항",
+      "type": "references"
+    },
+    {
+      "from": "제22조",
+      "to": "제2조",
+      "type": "references"
+    },
+    {
+      "from": "제22조",
+      "to": "제22조의2",
+      "type": "references"
+    },
+    {
+      "from": "제23조",
+      "to": "제29조",
+      "type": "references"
+    },
+    {
+      "from": "제24조",
+      "to": "제24조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제24조",
+      "to": "제24조제3항",
+      "type": "references"
+    },
+    {
+      "from": "제24조",
+      "to": "제24조의2",
+      "type": "references"
+    },
+    {
+      "from": "제25조",
+      "to": "제30조",
+      "type": "references"
+    },
+    {
+      "from": "제25조",
+      "to": "제29조",
+      "type": "references"
+    },
+    {
+      "from": "제25조",
+      "to": "제2조",
+      "type": "references"
+    },
+    {
+      "from": "제25조",
+      "to": "제25조의2",
+      "type": "references"
+    },
+    {
+      "from": "제25조",
+      "to": "제25조제6항",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제28조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제23조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제33조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제22조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제25조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제25조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제18조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제24조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제36조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제34조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제24조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제64조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제28조의5",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제34조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제59조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제63조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제37조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제28조의11",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제35조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제22조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제31조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제28조의7",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제38조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제15조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제63조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제30조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제21조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제35조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제27조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제30조의2",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제29조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제28조",
+      "type": "references"
+    },
+    {
+      "from": "제26조",
+      "to": "제37조",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의2",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제58조의2",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의3",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의2",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의3",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의2",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의4",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의3",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의5",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의2",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의6",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의3",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의2",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제35조",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의7",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제27조",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제20조의2",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제37조",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제20조",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제35조의2",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제36조",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제34조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제17조",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의8",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제19조",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의9",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의8",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의10",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의11",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의9",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의8제1항",
+      "type": "references"
+    },
+    {
+      "from": "제28조",
+      "to": "제28조의8",
+      "type": "references"
+    },
+    {
+      "from": "제30조",
+      "to": "제32조",
+      "type": "references"
+    },
+    {
+      "from": "제30조",
+      "to": "제61조제2항",
+      "type": "references"
+    },
+    {
+      "from": "제30조",
+      "to": "제30조의2",
+      "type": "references"
+    },
+    {
+      "from": "제31조",
+      "to": "제31조의2",
+      "type": "references"
+    },
+    {
+      "from": "제32조",
+      "to": "제32조의2",
+      "type": "references"
+    },
+    {
+      "from": "제33조",
+      "to": "제32조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제34조",
+      "to": "제34조의2",
+      "type": "references"
+    },
+    {
+      "from": "제35조",
+      "to": "제35조의2",
+      "type": "references"
+    },
+    {
+      "from": "제35조",
+      "to": "제35조의3",
+      "type": "references"
+    },
+    {
+      "from": "제35조",
+      "to": "제35조의3제1항",
+      "type": "references"
+    },
+    {
+      "from": "제35조",
+      "to": "제35조의2제1항",
+      "type": "references"
+    },
+    {
+      "from": "제35조",
+      "to": "제35조의4",
+      "type": "references"
+    },
+    {
+      "from": "제36조",
+      "to": "제35조",
+      "type": "references"
+    },
+    {
+      "from": "제37조",
+      "to": "제32조",
+      "type": "references"
+    },
+    {
+      "from": "제37조",
+      "to": "제37조의2",
+      "type": "references"
+    },
+    {
+      "from": "제37조",
+      "to": "제15조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제37조",
+      "to": "제20조",
+      "type": "references"
+    },
+    {
+      "from": "제38조",
+      "to": "제35조의2제2항",
+      "type": "references"
+    },
+    {
+      "from": "제38조",
+      "to": "제35조",
+      "type": "references"
+    },
+    {
+      "from": "제38조",
+      "to": "제37조",
+      "type": "references"
+    },
+    {
+      "from": "제38조",
+      "to": "제37조의2",
+      "type": "references"
+    },
+    {
+      "from": "제38조",
+      "to": "제36조",
+      "type": "references"
+    },
+    {
+      "from": "제38조",
+      "to": "제35조의2",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제39조의2",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제39조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제39조의3",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제2조",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제39조의4",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제39조의4제2항",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제39조의5",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제163조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제39조의6",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제39조의7",
+      "type": "references"
+    },
+    {
+      "from": "제39조",
+      "to": "제39조의2",
+      "type": "references"
+    },
+    {
+      "from": "제42조",
+      "to": "제43조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제44조",
+      "to": "제43조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제45조",
+      "to": "제43조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제45조",
+      "to": "제45조의2",
+      "type": "references"
+    },
+    {
+      "from": "제46조",
+      "to": "제43조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제49조",
+      "to": "제48조제2항",
+      "type": "references"
+    },
+    {
+      "from": "제50조",
+      "to": "제49조",
+      "type": "references"
+    },
+    {
+      "from": "제50조",
+      "to": "제43조",
+      "type": "references"
+    },
+    {
+      "from": "제50조",
+      "to": "제50조의2",
+      "type": "references"
+    },
+    {
+      "from": "제51조",
+      "to": "제49조",
+      "type": "references"
+    },
+    {
+      "from": "제56조",
+      "to": "제51조",
+      "type": "references"
+    },
+    {
+      "from": "제57조",
+      "to": "제55조",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제22조의2",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제31조",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제22조",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제34조",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제15조",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제27조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제37조",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제30조",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제25조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제58조",
+      "to": "제58조의2",
+      "type": "references"
+    },
+    {
+      "from": "제62조",
+      "to": "제32조의4",
+      "type": "references"
+    },
+    {
+      "from": "제63조",
+      "to": "제64조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제63조",
+      "to": "제64조제3항",
+      "type": "references"
+    },
+    {
+      "from": "제63조",
+      "to": "제63조의2",
+      "type": "references"
+    },
+    {
+      "from": "제63조",
+      "to": "제63조제2항",
+      "type": "references"
+    },
+    {
+      "from": "제63조",
+      "to": "제63조제1항",
+      "type": "references"
+    },
+    {
+      "from": "제64조",
+      "to": "제64조의2",
+      "type": "references"
+    },
+    {
+      "from": "제66조",
+      "to": "제64조의2",
+      "type": "references"
+    },
+    {
+      "from": "제66조",
+      "to": "제61조",
+      "type": "references"
+    },
+    {
+      "from": "제66조",
+      "to": "제64조",
+      "type": "references"
+    },
+    {
+      "from": "제66조",
+      "to": "제75조",
+      "type": "references"
+    },
+    {
+      "from": "제66조",
+      "to": "제65조",
+      "type": "references"
+    },
+    {
+      "from": "제69조",
+      "to": "제129조",
+      "type": "references"
+    },
+    {
+      "from": "제69조",
+      "to": "제132조",
+      "type": "references"
+    },
+    {
+      "from": "제74조",
+      "to": "제71조",
+      "type": "references"
+    },
+    {
+      "from": "제74조",
+      "to": "제70조",
+      "type": "references"
+    },
+    {
+      "from": "제74조",
+      "to": "제73조",
+      "type": "references"
+    },
+    {
+      "from": "제74조",
+      "to": "제74조의2",
+      "type": "references"
+    },
+    {
+      "from": "제74조",
+      "to": "제70조",
+      "type": "references"
+    },
+    {
+      "from": "제74조",
+      "to": "제73조",
+      "type": "references"
+    },
+    {
+      "from": "제76조",
+      "to": "제64조의2",
+      "type": "references"
+    },
+    {
+      "from": "제76조",
+      "to": "제75조",
+      "type": "references"
+    }
+  ]
+}

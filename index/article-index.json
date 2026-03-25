@@ -1,0 +1,4957 @@
+{
+  "type": "article_index",
+  "count": 550,
+  "generated_at": "2026-03-25T10:04:27.864884",
+  "articles": [
+    {
+      "id": "network-act-art1",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/network-act/art1.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art10",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "10",
+      "title": "정보내용물의 개발 지원",
+      "path": "library/grade-a/network-act/art10.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art11",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "11",
+      "title": "정보통신망 응용서비스의 개발 촉진 등",
+      "path": "library/grade-a/network-act/art11.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art12",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "12",
+      "title": "정보의 공동활용체제 구축",
+      "path": "library/grade-a/network-act/art12.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art13",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "13",
+      "title": "정보통신망의 이용촉진 등에 관한 사업",
+      "path": "library/grade-a/network-act/art13.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art14",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "14",
+      "title": "인터넷 이용의 확산",
+      "path": "library/grade-a/network-act/art14.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art15",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "15",
+      "title": "인터넷 서비스의 품질 개선",
+      "path": "library/grade-a/network-act/art15.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art16",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "16",
+      "title": "",
+      "path": "library/grade-a/network-act/art16.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art17",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "17",
+      "title": "",
+      "path": "library/grade-a/network-act/art17.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art18",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "18",
+      "title": "",
+      "path": "library/grade-a/network-act/art18.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art19",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "19",
+      "title": "",
+      "path": "library/grade-a/network-act/art19.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art2",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "2",
+      "title": "정의",
+      "path": "library/grade-a/network-act/art2.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art20",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "20",
+      "title": "",
+      "path": "library/grade-a/network-act/art20.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art21",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "21",
+      "title": "",
+      "path": "library/grade-a/network-act/art21.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art22",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "22",
+      "title": "접근권한에 대한 동의",
+      "path": "library/grade-a/network-act/art22.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art23",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "23",
+      "title": "연계정보의 안전조치 의무 등",
+      "path": "library/grade-a/network-act/art23.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art24",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "24",
+      "title": "",
+      "path": "library/grade-a/network-act/art24.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art25",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "25",
+      "title": "",
+      "path": "library/grade-a/network-act/art25.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art26",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "26",
+      "title": "",
+      "path": "library/grade-a/network-act/art26.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art27",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "27",
+      "title": "",
+      "path": "library/grade-a/network-act/art27.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art28",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "28",
+      "title": "",
+      "path": "library/grade-a/network-act/art28.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art29",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "29",
+      "title": "",
+      "path": "library/grade-a/network-act/art29.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art3",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "3",
+      "title": "정보통신서비스 제공자 및 이용자의 책무",
+      "path": "library/grade-a/network-act/art3.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art30",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "30",
+      "title": "",
+      "path": "library/grade-a/network-act/art30.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art31",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "31",
+      "title": "",
+      "path": "library/grade-a/network-act/art31.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art32",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "32",
+      "title": "국내대리인의 지정",
+      "path": "library/grade-a/network-act/art32.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art33",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "33",
+      "title": "",
+      "path": "library/grade-a/network-act/art33.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art34",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "34",
+      "title": "",
+      "path": "library/grade-a/network-act/art34.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art35",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "35",
+      "title": "",
+      "path": "library/grade-a/network-act/art35.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art36",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "36",
+      "title": "",
+      "path": "library/grade-a/network-act/art36.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art37",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "37",
+      "title": "",
+      "path": "library/grade-a/network-act/art37.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art38",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "38",
+      "title": "",
+      "path": "library/grade-a/network-act/art38.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art39",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "39",
+      "title": "",
+      "path": "library/grade-a/network-act/art39.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art4",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "4",
+      "title": "합성영상등으로 인한 피해 예방을 위한 시책",
+      "path": "library/grade-a/network-act/art4.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art40",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "40",
+      "title": "",
+      "path": "library/grade-a/network-act/art40.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art41",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "41",
+      "title": "청소년 보호를 위한 시책의 마련 등",
+      "path": "library/grade-a/network-act/art41.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art42",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "42",
+      "title": "청소년 보호 책임자의 지정 등",
+      "path": "library/grade-a/network-act/art42.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art43",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "43",
+      "title": "영상 또는 음향정보 제공사업자의 보관의무",
+      "path": "library/grade-a/network-act/art43.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art44",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "44",
+      "title": "명예훼손 분쟁조정부",
+      "path": "library/grade-a/network-act/art44.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art45",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "45",
+      "title": "정보보호 최고책임자의 지정 등",
+      "path": "library/grade-a/network-act/art45.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art46",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "46",
+      "title": "",
+      "path": "library/grade-a/network-act/art46.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art47",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "47",
+      "title": "정보보호 관리체계 인증의 특례",
+      "path": "library/grade-a/network-act/art47.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art48",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "48",
+      "title": "정보통신망연결기기등에 관한 인증",
+      "path": "library/grade-a/network-act/art48.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art49",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "49",
+      "title": "속이는 행위에 사용된 전화번호의 전기통신역무 제공의 중지 등",
+      "path": "library/grade-a/network-act/art49.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art5",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "5",
+      "title": "국외행위에 대한 적용",
+      "path": "library/grade-a/network-act/art5.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art50",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "50",
+      "title": "불법행위를 위한 광고성 정보 전송금지",
+      "path": "library/grade-a/network-act/art50.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art51",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "51",
+      "title": "중요 정보의 국외유출 제한 등",
+      "path": "library/grade-a/network-act/art51.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art52",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "52",
+      "title": "한국인터넷진흥원",
+      "path": "library/grade-a/network-act/art52.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art53",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "53",
+      "title": "통신과금서비스제공자의 등록 등",
+      "path": "library/grade-a/network-act/art53.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art54",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "54",
+      "title": "등록의 결격사유",
+      "path": "library/grade-a/network-act/art54.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art55",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "55",
+      "title": "등록의 취소명령",
+      "path": "library/grade-a/network-act/art55.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art56",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "56",
+      "title": "약관의 신고 등",
+      "path": "library/grade-a/network-act/art56.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art57",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "57",
+      "title": "통신과금서비스의 안전성 확보 등",
+      "path": "library/grade-a/network-act/art57.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art58",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "58",
+      "title": "구매자정보 제공 요청 등",
+      "path": "library/grade-a/network-act/art58.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art59",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "59",
+      "title": "분쟁 조정 및 해결 등",
+      "path": "library/grade-a/network-act/art59.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art6",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "6",
+      "title": "기술개발의 추진 등",
+      "path": "library/grade-a/network-act/art6.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art60",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "60",
+      "title": "손해배상 등",
+      "path": "library/grade-a/network-act/art60.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art61",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "61",
+      "title": "통신과금서비스의 이용제한",
+      "path": "library/grade-a/network-act/art61.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art62",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "62",
+      "title": "국제협력",
+      "path": "library/grade-a/network-act/art62.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art63",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "63",
+      "title": "",
+      "path": "library/grade-a/network-act/art63.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art64",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "64",
+      "title": "투명성 보고서 제출의무 등",
+      "path": "library/grade-a/network-act/art64.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art65",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "65",
+      "title": "",
+      "path": "library/grade-a/network-act/art65.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art66",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "66",
+      "title": "비밀유지 등",
+      "path": "library/grade-a/network-act/art66.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art67",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "67",
+      "title": "",
+      "path": "library/grade-a/network-act/art67.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art68",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "68",
+      "title": "",
+      "path": "library/grade-a/network-act/art68.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art69",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "69",
+      "title": "",
+      "path": "library/grade-a/network-act/art69.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art7",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "7",
+      "title": "기술관련 정보의 관리 및 보급",
+      "path": "library/grade-a/network-act/art7.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art70",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "70",
+      "title": "벌칙",
+      "path": "library/grade-a/network-act/art70.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art71",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "71",
+      "title": "벌칙",
+      "path": "library/grade-a/network-act/art71.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art72",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "72",
+      "title": "벌칙",
+      "path": "library/grade-a/network-act/art72.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art73",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "73",
+      "title": "벌칙",
+      "path": "library/grade-a/network-act/art73.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art74",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "74",
+      "title": "벌칙",
+      "path": "library/grade-a/network-act/art74.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art75",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "75",
+      "title": "몰수ㆍ추징",
+      "path": "library/grade-a/network-act/art75.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art76",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "76",
+      "title": "과태료",
+      "path": "library/grade-a/network-act/art76.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art8",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "8",
+      "title": "정보통신망의 표준화 및 인증",
+      "path": "library/grade-a/network-act/art8.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-art9",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
+      "article": "9",
+      "title": "인증기관의 지정 등",
+      "path": "library/grade-a/network-act/art9.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "credit-info-act-art1",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/credit-info-act/art1.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art10",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "10",
+      "title": "양도ㆍ양수 등의 인가 등",
+      "path": "library/grade-a/credit-info-act/art10.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art11",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "11",
+      "title": "부수업무",
+      "path": "library/grade-a/credit-info-act/art11.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art12",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "12",
+      "title": "유사명칭의 사용 금지",
+      "path": "library/grade-a/credit-info-act/art12.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art13",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "13",
+      "title": "임원의 겸직 금지",
+      "path": "library/grade-a/credit-info-act/art13.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art14",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "14",
+      "title": "허가 등의 취소와 업무의 정지",
+      "path": "library/grade-a/credit-info-act/art14.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art15",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "15",
+      "title": "수집 및 처리의 원칙",
+      "path": "library/grade-a/credit-info-act/art15.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art16",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "16",
+      "title": "",
+      "path": "library/grade-a/credit-info-act/art16.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art17",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "17",
+      "title": "정보집합물의 결합 등",
+      "path": "library/grade-a/credit-info-act/art17.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art18",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "18",
+      "title": "신용정보의 정확성 및 최신성의 유지",
+      "path": "library/grade-a/credit-info-act/art18.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art19",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "19",
+      "title": "신용정보전산시스템의 안전보호",
+      "path": "library/grade-a/credit-info-act/art19.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art2",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "2",
+      "title": "정의",
+      "path": "library/grade-a/credit-info-act/art2.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art20",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "20",
+      "title": "개인신용정보의 보유기간 등",
+      "path": "library/grade-a/credit-info-act/art20.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art21",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "21",
+      "title": "폐업 시 보유정보의 처리",
+      "path": "library/grade-a/credit-info-act/art21.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art22",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "22",
+      "title": "본인신용정보관리회사의 행위규칙",
+      "path": "library/grade-a/credit-info-act/art22.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art23",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "23",
+      "title": "공공기관에 대한 신용정보의 제공 요청 등",
+      "path": "library/grade-a/credit-info-act/art23.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art24",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "24",
+      "title": "주민등록전산정보자료의 이용",
+      "path": "library/grade-a/credit-info-act/art24.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art25",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "25",
+      "title": "종합신용정보집중기관의 업무",
+      "path": "library/grade-a/credit-info-act/art25.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art26",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "26",
+      "title": "데이터전문기관",
+      "path": "library/grade-a/credit-info-act/art26.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art27",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "27",
+      "title": "무허가 채권추심업자에 대한 업무위탁의 금지",
+      "path": "library/grade-a/credit-info-act/art27.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art28",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "28",
+      "title": "",
+      "path": "library/grade-a/credit-info-act/art28.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art29",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "29",
+      "title": "",
+      "path": "library/grade-a/credit-info-act/art29.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art3",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "3",
+      "title": "다른 법률과의 관계",
+      "path": "library/grade-a/credit-info-act/art3.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art30",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "30",
+      "title": "",
+      "path": "library/grade-a/credit-info-act/art30.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art31",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "31",
+      "title": "신용정보활용체제의 공시",
+      "path": "library/grade-a/credit-info-act/art31.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art32",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "32",
+      "title": "개인신용정보의 제공ㆍ활용에 대한 동의",
+      "path": "library/grade-a/credit-info-act/art32.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art33",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "33",
+      "title": "개인신용정보의 전송요구",
+      "path": "library/grade-a/credit-info-act/art33.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art34",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "34",
+      "title": "정보활용 동의등급",
+      "path": "library/grade-a/credit-info-act/art34.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art35",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "35",
+      "title": "신용정보제공ㆍ이용자의 사전통지",
+      "path": "library/grade-a/credit-info-act/art35.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art36",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "36",
+      "title": "자동화평가 결과에 대한 설명 및 이의제기 등",
+      "path": "library/grade-a/credit-info-act/art36.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art37",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "37",
+      "title": "개인신용정보 제공 동의 철회권 등",
+      "path": "library/grade-a/credit-info-act/art37.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art38",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "38",
+      "title": "개인신용정보의 삭제 요구",
+      "path": "library/grade-a/credit-info-act/art38.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art39",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "39",
+      "title": "개인신용정보 누설통지 등",
+      "path": "library/grade-a/credit-info-act/art39.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art4",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "4",
+      "title": "신용정보업 등의 허가",
+      "path": "library/grade-a/credit-info-act/art4.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art40",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "40",
+      "title": "가명정보에 대한 적용 제외",
+      "path": "library/grade-a/credit-info-act/art40.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art41",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "41",
+      "title": "모집업무수탁자의 모집경로 확인 등",
+      "path": "library/grade-a/credit-info-act/art41.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art42",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "42",
+      "title": "과징금의 부과 등",
+      "path": "library/grade-a/credit-info-act/art42.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art43",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "43",
+      "title": "손해배상의 보장",
+      "path": "library/grade-a/credit-info-act/art43.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art44",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "44",
+      "title": "신용정보협회",
+      "path": "library/grade-a/credit-info-act/art44.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art45",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "45",
+      "title": "개인신용정보 활용ㆍ관리 실태에 대한 상시평가",
+      "path": "library/grade-a/credit-info-act/art45.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art46",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "46",
+      "title": "퇴임한 임원 등에 대한 조치 내용의 통보",
+      "path": "library/grade-a/credit-info-act/art46.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art47",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "47",
+      "title": "업무보고서의 제출",
+      "path": "library/grade-a/credit-info-act/art47.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art48",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "48",
+      "title": "청문",
+      "path": "library/grade-a/credit-info-act/art48.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art49",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "49",
+      "title": "권한의 위임ㆍ위탁",
+      "path": "library/grade-a/credit-info-act/art49.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art5",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "5",
+      "title": "신용정보업 등의 허가를 받을 수 있는 자",
+      "path": "library/grade-a/credit-info-act/art5.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art50",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "50",
+      "title": "벌칙",
+      "path": "library/grade-a/credit-info-act/art50.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art51",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "51",
+      "title": "양벌규정",
+      "path": "library/grade-a/credit-info-act/art51.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art52",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "52",
+      "title": "과태료",
+      "path": "library/grade-a/credit-info-act/art52.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art6",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "6",
+      "title": "허가의 요건",
+      "path": "library/grade-a/credit-info-act/art6.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art7",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "7",
+      "title": "허가 등의 공고",
+      "path": "library/grade-a/credit-info-act/art7.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art8",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "8",
+      "title": "신고 및 보고 사항",
+      "path": "library/grade-a/credit-info-act/art8.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-art9",
+      "law": "신용정보의 이용 및 보호에 관한 법률",
+      "article": "9",
+      "title": "최대주주의 자격심사 등",
+      "path": "library/grade-a/credit-info-act/art9.md",
+      "source_grade": "A",
+      "effective_date": "20240814"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art1",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art1.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art10",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "10",
+      "title": "신용정보업 등의 양도ㆍ양수 등의 인가",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art10.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art11",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "11",
+      "title": "유사명칭의 사용 금지",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art11.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art12",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "12",
+      "title": "허가 등의 취소 유예",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art12.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art13",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "13",
+      "title": "수집 및 처리의 원칙",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art13.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art14",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "14",
+      "title": "정보집합물의 결합 등",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art14.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art15",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "15",
+      "title": "신용정보의 정확성 및 최신성의 유지",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art15.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art16",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "16",
+      "title": "",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art16.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art17",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "17",
+      "title": "개인신용정보의 관리방법 등",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art17.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art18",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "18",
+      "title": "본인신용정보관리회사의 행위규칙 등",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art18.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art19",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "19",
+      "title": "공공기관에 대한 신용정보의 제공 요청 등",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art19.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art2",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "2",
+      "title": "정의",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art2.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art20",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "20",
+      "title": "주민등록전산정보자료의 이용",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art20.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art21",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "21",
+      "title": "종합신용정보집중기관의 업무",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art21.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art22",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "22",
+      "title": "데이터전문기관",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art22.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art23",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "23",
+      "title": "신용조사회사 및 채권추심회사의 종사자",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art23.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art24",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "24",
+      "title": "무허가 채권추심업자에 대한 업무위탁 금지 기관",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art24.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art25",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "25",
+      "title": "",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art25.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art26",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "26",
+      "title": "",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art26.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art27",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "27",
+      "title": "신용정보활용체제의 공시",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art27.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art28",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "28",
+      "title": "개인신용정보 전송에 관한 협의회 등의 운영",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art28.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art29",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "29",
+      "title": "정보활용 동의등급",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art29.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art3",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "3",
+      "title": "",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art3.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art30",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "30",
+      "title": "신용정보제공ㆍ이용자의 사전통지",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art30.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art31",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "31",
+      "title": "개인신용평가 결과에 대한 설명 및 이의제기 등",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art31.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art32",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "32",
+      "title": "개인신용정보 제공ㆍ이용 동의 철회권 등",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art32.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art33",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "33",
+      "title": "개인신용정보의 삭제 요구",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art33.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art34",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "34",
+      "title": "가명처리ㆍ익명처리에 관한 행위규칙",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art34.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art35",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "35",
+      "title": "손해배상 책임의 이행을 위한 보험 등 가입의무가 있는 신용정보회사등의 범위",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art35.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art36",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "36",
+      "title": "개인신용정보 활용ㆍ관리 실태에 대한 상시평가",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art36.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art37",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "37",
+      "title": "민감정보 및 개인식별정보의 처리",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art37.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art38",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "38",
+      "title": "위반행위별 과태료의 부과기준",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art38.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art4",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "4",
+      "title": "영업의 허가 신청",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art4.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art5",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "5",
+      "title": "신용정보업 등의 허가를 받을 수 있는 자",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art5.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art6",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "6",
+      "title": "허가의 세부요건 등",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art6.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art7",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "7",
+      "title": "자본금",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art7.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art8",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "8",
+      "title": "신고 및 보고 사항",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art8.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "credit-info-act-enforcement-decree-art9",
+      "law": "신용정보의 이용 및 보호에 관한 법률 시행령",
+      "article": "9",
+      "title": "최대주주의 자격심사 등",
+      "path": "library/grade-a/credit-info-act-enforcement-decree/art9.md",
+      "source_grade": "A",
+      "effective_date": "20260203"
+    },
+    {
+      "id": "e-government-act-art1",
+      "law": "전자정부법",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/e-government-act/art1.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art10",
+      "law": "전자정부법",
+      "article": "10",
+      "title": "전자정부서비스를 제공받는 자에 대한 본인 확인",
+      "path": "library/grade-a/e-government-act/art10.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art11",
+      "law": "전자정부법",
+      "article": "11",
+      "title": "전자적 고지ㆍ통지",
+      "path": "library/grade-a/e-government-act/art11.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art12",
+      "law": "전자정부법",
+      "article": "12",
+      "title": "공공서비스 목록의 제공 등",
+      "path": "library/grade-a/e-government-act/art12.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art13",
+      "law": "전자정부법",
+      "article": "13",
+      "title": "행정정보의 전자적 제공에 따른 비용 부담",
+      "path": "library/grade-a/e-government-act/art13.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art14",
+      "law": "전자정부법",
+      "article": "14",
+      "title": "세금 등의 전자적 납부",
+      "path": "library/grade-a/e-government-act/art14.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art15",
+      "law": "전자정부법",
+      "article": "15",
+      "title": "전자적 급부제공",
+      "path": "library/grade-a/e-government-act/art15.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art16",
+      "law": "전자정부법",
+      "article": "16",
+      "title": "전자정부서비스 이용촉진을 위한 행정기관등의 책무",
+      "path": "library/grade-a/e-government-act/art16.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art17",
+      "law": "전자정부법",
+      "article": "17",
+      "title": "이용자의 참여 확대",
+      "path": "library/grade-a/e-government-act/art17.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art18",
+      "law": "전자정부법",
+      "article": "18",
+      "title": "지능형 전자정부서비스의 제공 등",
+      "path": "library/grade-a/e-government-act/art18.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art19",
+      "law": "전자정부법",
+      "article": "19",
+      "title": "전자정부서비스의 보편적 활용을 위한 대책",
+      "path": "library/grade-a/e-government-act/art19.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art2",
+      "law": "전자정부법",
+      "article": "2",
+      "title": "정의",
+      "path": "library/grade-a/e-government-act/art2.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art20",
+      "law": "전자정부법",
+      "article": "20",
+      "title": "전자정부 포털의 운영",
+      "path": "library/grade-a/e-government-act/art20.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art21",
+      "law": "전자정부법",
+      "article": "21",
+      "title": "전자정부서비스의 민간 참여 및 활용",
+      "path": "library/grade-a/e-government-act/art21.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art22",
+      "law": "전자정부법",
+      "article": "22",
+      "title": "전자정부서비스의 이용실태 조사ㆍ분석",
+      "path": "library/grade-a/e-government-act/art22.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art23",
+      "law": "전자정부법",
+      "article": "23",
+      "title": "전자정부서비스의 효율적 관리",
+      "path": "library/grade-a/e-government-act/art23.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art24",
+      "law": "전자정부법",
+      "article": "24",
+      "title": "전자적 대민서비스 보안대책",
+      "path": "library/grade-a/e-government-act/art24.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art25",
+      "law": "전자정부법",
+      "article": "25",
+      "title": "전자문서의 작성 등",
+      "path": "library/grade-a/e-government-act/art25.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art26",
+      "law": "전자정부법",
+      "article": "26",
+      "title": "전자문서 등의 성립 및 효력 등",
+      "path": "library/grade-a/e-government-act/art26.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art27",
+      "law": "전자정부법",
+      "article": "27",
+      "title": "전자문서의 송신ㆍ수신",
+      "path": "library/grade-a/e-government-act/art27.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art28",
+      "law": "전자정부법",
+      "article": "28",
+      "title": "전자문서의 발송시기 및 도달시기",
+      "path": "library/grade-a/e-government-act/art28.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art29",
+      "law": "전자정부법",
+      "article": "29",
+      "title": "행정전자서명의 인증",
+      "path": "library/grade-a/e-government-act/art29.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art3",
+      "law": "전자정부법",
+      "article": "3",
+      "title": "행정기관등 및 공무원 등의 책무",
+      "path": "library/grade-a/e-government-act/art3.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art30",
+      "law": "전자정부법",
+      "article": "30",
+      "title": "",
+      "path": "library/grade-a/e-government-act/art30.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art31",
+      "law": "전자정부법",
+      "article": "31",
+      "title": "정보통신망을 통한 의견수렴",
+      "path": "library/grade-a/e-government-act/art31.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art32",
+      "law": "전자정부법",
+      "article": "32",
+      "title": "전자적 업무수행 등",
+      "path": "library/grade-a/e-government-act/art32.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art33",
+      "law": "전자정부법",
+      "article": "33",
+      "title": "종이문서의 감축",
+      "path": "library/grade-a/e-government-act/art33.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art34",
+      "law": "전자정부법",
+      "article": "34",
+      "title": "업무담당자의 신원 및 접근권한",
+      "path": "library/grade-a/e-government-act/art34.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art35",
+      "law": "전자정부법",
+      "article": "35",
+      "title": "금지행위",
+      "path": "library/grade-a/e-government-act/art35.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art36",
+      "law": "전자정부법",
+      "article": "36",
+      "title": "행정정보의 효율적 관리 및 이용",
+      "path": "library/grade-a/e-government-act/art36.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art37",
+      "law": "전자정부법",
+      "article": "37",
+      "title": "행정정보 공동이용센터",
+      "path": "library/grade-a/e-government-act/art37.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art38",
+      "law": "전자정부법",
+      "article": "38",
+      "title": "공동이용 행정정보",
+      "path": "library/grade-a/e-government-act/art38.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art39",
+      "law": "전자정부법",
+      "article": "39",
+      "title": "행정정보 공동이용의 신청ㆍ승인",
+      "path": "library/grade-a/e-government-act/art39.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art4",
+      "law": "전자정부법",
+      "article": "4",
+      "title": "전자정부의 원칙",
+      "path": "library/grade-a/e-government-act/art4.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art40",
+      "law": "전자정부법",
+      "article": "40",
+      "title": "심사ㆍ승인ㆍ협의의 의제",
+      "path": "library/grade-a/e-government-act/art40.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art41",
+      "law": "전자정부법",
+      "article": "41",
+      "title": "행정정보 공동이용 승인의 철회 및 정지",
+      "path": "library/grade-a/e-government-act/art41.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art42",
+      "law": "전자정부법",
+      "article": "42",
+      "title": "정보주체의 사전동의",
+      "path": "library/grade-a/e-government-act/art42.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art43",
+      "law": "전자정부법",
+      "article": "43",
+      "title": "정보주체 본인에 관한 행정정보의 제공요구권",
+      "path": "library/grade-a/e-government-act/art43.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art44",
+      "law": "전자정부법",
+      "article": "44",
+      "title": "국가기준데이터의 관리 등",
+      "path": "library/grade-a/e-government-act/art44.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art45",
+      "law": "전자정부법",
+      "article": "45",
+      "title": "정보기술아키텍처 기본계획의 수립 등",
+      "path": "library/grade-a/e-government-act/art45.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art46",
+      "law": "전자정부법",
+      "article": "46",
+      "title": "기관별 정보기술아키텍처 도입ㆍ운영",
+      "path": "library/grade-a/e-government-act/art46.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art47",
+      "law": "전자정부법",
+      "article": "47",
+      "title": "정보기술아키텍처의 도입ㆍ운영 촉진",
+      "path": "library/grade-a/e-government-act/art47.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art48",
+      "law": "전자정부법",
+      "article": "48",
+      "title": "정보통신기술에 적합한 업무 재설계",
+      "path": "library/grade-a/e-government-act/art48.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art49",
+      "law": "전자정부법",
+      "article": "49",
+      "title": "상호운용성 확보 등을 위한 기술평가",
+      "path": "library/grade-a/e-government-act/art49.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art5",
+      "law": "전자정부법",
+      "article": "5",
+      "title": "전자정부의 날",
+      "path": "library/grade-a/e-government-act/art5.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art50",
+      "law": "전자정부법",
+      "article": "50",
+      "title": "표준화",
+      "path": "library/grade-a/e-government-act/art50.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art51",
+      "law": "전자정부법",
+      "article": "51",
+      "title": "공유서비스의 지정 및 활용",
+      "path": "library/grade-a/e-government-act/art51.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art52",
+      "law": "전자정부법",
+      "article": "52",
+      "title": "정보통신망의 구축",
+      "path": "library/grade-a/e-government-act/art52.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art53",
+      "law": "전자정부법",
+      "article": "53",
+      "title": "정보화인력 개발계획의 수립 등",
+      "path": "library/grade-a/e-government-act/art53.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art54",
+      "law": "전자정부법",
+      "article": "54",
+      "title": "클라우드컴퓨팅서비스의 이용",
+      "path": "library/grade-a/e-government-act/art54.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art55",
+      "law": "전자정부법",
+      "article": "55",
+      "title": "지역정보통합센터 설립ㆍ운영",
+      "path": "library/grade-a/e-government-act/art55.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art56",
+      "law": "전자정부법",
+      "article": "56",
+      "title": "정보통신망의 사용 제한",
+      "path": "library/grade-a/e-government-act/art56.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art57",
+      "law": "전자정부법",
+      "article": "57",
+      "title": "행정기관등의 정보시스템 감리",
+      "path": "library/grade-a/e-government-act/art57.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art58",
+      "law": "전자정부법",
+      "article": "58",
+      "title": "감리법인의 등록",
+      "path": "library/grade-a/e-government-act/art58.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art59",
+      "law": "전자정부법",
+      "article": "59",
+      "title": "감리법인의 준수사항",
+      "path": "library/grade-a/e-government-act/art59.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art6",
+      "law": "전자정부법",
+      "article": "6",
+      "title": "다른 법률과의 관계",
+      "path": "library/grade-a/e-government-act/art6.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art60",
+      "law": "전자정부법",
+      "article": "60",
+      "title": "감리원",
+      "path": "library/grade-a/e-government-act/art60.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art61",
+      "law": "전자정부법",
+      "article": "61",
+      "title": "감리법인 등의 결격사유",
+      "path": "library/grade-a/e-government-act/art61.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art62",
+      "law": "전자정부법",
+      "article": "62",
+      "title": "감리법인의 등록취소 등",
+      "path": "library/grade-a/e-government-act/art62.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art63",
+      "law": "전자정부법",
+      "article": "63",
+      "title": "등록취소처분 등을 받은 감리법인의 업무계속 등",
+      "path": "library/grade-a/e-government-act/art63.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art64",
+      "law": "전자정부법",
+      "article": "64",
+      "title": "전자정부사업관리자의 책무 등",
+      "path": "library/grade-a/e-government-act/art64.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art65",
+      "law": "전자정부법",
+      "article": "65",
+      "title": "지역정보화사업의 추진 및 지원",
+      "path": "library/grade-a/e-government-act/art65.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art66",
+      "law": "전자정부법",
+      "article": "66",
+      "title": "시범사업의 추진",
+      "path": "library/grade-a/e-government-act/art66.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art67",
+      "law": "전자정부법",
+      "article": "67",
+      "title": "사전협의",
+      "path": "library/grade-a/e-government-act/art67.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art68",
+      "law": "전자정부법",
+      "article": "68",
+      "title": "성과 분석 및 진단",
+      "path": "library/grade-a/e-government-act/art68.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art69",
+      "law": "전자정부법",
+      "article": "69",
+      "title": "자료제출 등 협조",
+      "path": "library/grade-a/e-government-act/art69.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art7",
+      "law": "전자정부법",
+      "article": "7",
+      "title": "전자정부서비스의 신청 등",
+      "path": "library/grade-a/e-government-act/art7.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art70",
+      "law": "전자정부법",
+      "article": "70",
+      "title": "전자정부의 국제협력",
+      "path": "library/grade-a/e-government-act/art70.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art71",
+      "law": "전자정부법",
+      "article": "71",
+      "title": "전문기관의 지정 등",
+      "path": "library/grade-a/e-government-act/art71.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art72",
+      "law": "전자정부법",
+      "article": "72",
+      "title": "한국지역정보개발원의 설립 등",
+      "path": "library/grade-a/e-government-act/art72.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art73",
+      "law": "전자정부법",
+      "article": "73",
+      "title": "권한 등의 위임ㆍ위탁",
+      "path": "library/grade-a/e-government-act/art73.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art74",
+      "law": "전자정부법",
+      "article": "74",
+      "title": "비밀누설 등의 금지",
+      "path": "library/grade-a/e-government-act/art74.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art75",
+      "law": "전자정부법",
+      "article": "75",
+      "title": "벌칙 적용 시의 공무원 의제",
+      "path": "library/grade-a/e-government-act/art75.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art76",
+      "law": "전자정부법",
+      "article": "76",
+      "title": "벌칙",
+      "path": "library/grade-a/e-government-act/art76.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art77",
+      "law": "전자정부법",
+      "article": "77",
+      "title": "양벌규정",
+      "path": "library/grade-a/e-government-act/art77.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art78",
+      "law": "전자정부법",
+      "article": "78",
+      "title": "과태료",
+      "path": "library/grade-a/e-government-act/art78.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art8",
+      "law": "전자정부법",
+      "article": "8",
+      "title": "",
+      "path": "library/grade-a/e-government-act/art8.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "e-government-act-art9",
+      "law": "전자정부법",
+      "article": "9",
+      "title": "전자정부 포털을 통한 생활정보의 제공",
+      "path": "library/grade-a/e-government-act/art9.md",
+      "source_grade": "A",
+      "effective_date": "20250708"
+    },
+    {
+      "id": "pipa-enforcement-decree-art1",
+      "law": "개인정보 보호법 시행령",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/pipa-enforcement-decree/art1.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art10",
+      "law": "개인정보 보호법 시행령",
+      "article": "10",
+      "title": "",
+      "path": "library/grade-a/pipa-enforcement-decree/art10.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art11",
+      "law": "개인정보 보호법 시행령",
+      "article": "11",
+      "title": "기본계획의 수립절차 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art11.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art12",
+      "law": "개인정보 보호법 시행령",
+      "article": "12",
+      "title": "시행계획의 수립절차 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art12.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art13",
+      "law": "개인정보 보호법 시행령",
+      "article": "13",
+      "title": "개인정보 보호수준 평가의 대상ㆍ기준ㆍ방법ㆍ절차 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art13.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art14",
+      "law": "개인정보 보호법 시행령",
+      "article": "14",
+      "title": "개인정보의 추가적인 이용ㆍ제공의 기준 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art14.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art15",
+      "law": "개인정보 보호법 시행령",
+      "article": "15",
+      "title": "개인정보 이용ㆍ제공 내역의 통지",
+      "path": "library/grade-a/pipa-enforcement-decree/art15.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art16",
+      "law": "개인정보 보호법 시행령",
+      "article": "16",
+      "title": "개인정보의 파기방법",
+      "path": "library/grade-a/pipa-enforcement-decree/art16.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art17",
+      "law": "개인정보 보호법 시행령",
+      "article": "17",
+      "title": "아동의 개인정보 보호",
+      "path": "library/grade-a/pipa-enforcement-decree/art17.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art18",
+      "law": "개인정보 보호법 시행령",
+      "article": "18",
+      "title": "민감정보의 범위",
+      "path": "library/grade-a/pipa-enforcement-decree/art18.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art19",
+      "law": "개인정보 보호법 시행령",
+      "article": "19",
+      "title": "고유식별정보의 범위",
+      "path": "library/grade-a/pipa-enforcement-decree/art19.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art2",
+      "law": "개인정보 보호법 시행령",
+      "article": "2",
+      "title": "공공기관의 범위",
+      "path": "library/grade-a/pipa-enforcement-decree/art2.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art20",
+      "law": "개인정보 보호법 시행령",
+      "article": "20",
+      "title": "",
+      "path": "library/grade-a/pipa-enforcement-decree/art20.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art21",
+      "law": "개인정보 보호법 시행령",
+      "article": "21",
+      "title": "주민등록번호 암호화 적용 대상 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art21.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art22",
+      "law": "개인정보 보호법 시행령",
+      "article": "22",
+      "title": "고정형 영상정보처리기기 설치ㆍ운영 제한의 예외",
+      "path": "library/grade-a/pipa-enforcement-decree/art22.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art23",
+      "law": "개인정보 보호법 시행령",
+      "article": "23",
+      "title": "고정형 영상정보처리기기 설치 시 의견 수렴",
+      "path": "library/grade-a/pipa-enforcement-decree/art23.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art24",
+      "law": "개인정보 보호법 시행령",
+      "article": "24",
+      "title": "안내판의 설치 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art24.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art25",
+      "law": "개인정보 보호법 시행령",
+      "article": "25",
+      "title": "고정형 영상정보처리기기 운영ㆍ관리 방침",
+      "path": "library/grade-a/pipa-enforcement-decree/art25.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art26",
+      "law": "개인정보 보호법 시행령",
+      "article": "26",
+      "title": "공공기관의 고정형 영상정보처리기기 설치ㆍ운영 사무의 위탁",
+      "path": "library/grade-a/pipa-enforcement-decree/art26.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art27",
+      "law": "개인정보 보호법 시행령",
+      "article": "27",
+      "title": "영상정보처리기기 설치ㆍ운영 지침",
+      "path": "library/grade-a/pipa-enforcement-decree/art27.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art28",
+      "law": "개인정보 보호법 시행령",
+      "article": "28",
+      "title": "개인정보의 처리 업무 위탁 시 조치",
+      "path": "library/grade-a/pipa-enforcement-decree/art28.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art29",
+      "law": "개인정보 보호법 시행령",
+      "article": "29",
+      "title": "국외 이전 중지 명령에 대한 이의 제기",
+      "path": "library/grade-a/pipa-enforcement-decree/art29.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art3",
+      "law": "개인정보 보호법 시행령",
+      "article": "3",
+      "title": "영상정보처리기기의 범위",
+      "path": "library/grade-a/pipa-enforcement-decree/art3.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art30",
+      "law": "개인정보 보호법 시행령",
+      "article": "30",
+      "title": "공공시스템 운영기관 등의 개인정보 안전성 확보 조치 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art30.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art31",
+      "law": "개인정보 보호법 시행령",
+      "article": "31",
+      "title": "개인정보 처리방침의 평가 대상 및 절차",
+      "path": "library/grade-a/pipa-enforcement-decree/art31.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art32",
+      "law": "개인정보 보호법 시행령",
+      "article": "32",
+      "title": "국내대리인 지정 대상자의 범위 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art32.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art33",
+      "law": "개인정보 보호법 시행령",
+      "article": "33",
+      "title": "개인정보파일의 등록사항 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art33.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art34",
+      "law": "개인정보 보호법 시행령",
+      "article": "34",
+      "title": "개인정보 보호 인증심사원의 자격 및 자격 취소 요건",
+      "path": "library/grade-a/pipa-enforcement-decree/art34.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art35",
+      "law": "개인정보 보호법 시행령",
+      "article": "35",
+      "title": "개인정보 영향평가의 대상",
+      "path": "library/grade-a/pipa-enforcement-decree/art35.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art36",
+      "law": "개인정보 보호법 시행령",
+      "article": "36",
+      "title": "평가기관의 지정 및 지정취소",
+      "path": "library/grade-a/pipa-enforcement-decree/art36.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art37",
+      "law": "개인정보 보호법 시행령",
+      "article": "37",
+      "title": "영향평가 시 고려사항",
+      "path": "library/grade-a/pipa-enforcement-decree/art37.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art38",
+      "law": "개인정보 보호법 시행령",
+      "article": "38",
+      "title": "영향평가의 평가기준 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art38.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art39",
+      "law": "개인정보 보호법 시행령",
+      "article": "39",
+      "title": "개인정보 유출 등의 통지",
+      "path": "library/grade-a/pipa-enforcement-decree/art39.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art4",
+      "law": "개인정보 보호법 시행령",
+      "article": "4",
+      "title": "영리업무의 금지",
+      "path": "library/grade-a/pipa-enforcement-decree/art4.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art40",
+      "law": "개인정보 보호법 시행령",
+      "article": "40",
+      "title": "노출된 개인정보의 삭제ㆍ차단 요청 기관",
+      "path": "library/grade-a/pipa-enforcement-decree/art40.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art41",
+      "law": "개인정보 보호법 시행령",
+      "article": "41",
+      "title": "개인정보의 열람절차 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art41.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art42",
+      "law": "개인정보 보호법 시행령",
+      "article": "42",
+      "title": "개인정보전송지원플랫폼의 구축 및 운영 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art42.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art43",
+      "law": "개인정보 보호법 시행령",
+      "article": "43",
+      "title": "개인정보의 정정ㆍ삭제 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art43.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art44",
+      "law": "개인정보 보호법 시행령",
+      "article": "44",
+      "title": "자동화된 결정의 기준과 절차 등의 공개",
+      "path": "library/grade-a/pipa-enforcement-decree/art44.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art45",
+      "law": "개인정보 보호법 시행령",
+      "article": "45",
+      "title": "대리인의 범위 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art45.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art46",
+      "law": "개인정보 보호법 시행령",
+      "article": "46",
+      "title": "정보주체 또는 대리인의 확인",
+      "path": "library/grade-a/pipa-enforcement-decree/art46.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art47",
+      "law": "개인정보 보호법 시행령",
+      "article": "47",
+      "title": "수수료 등의 금액 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art47.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art48",
+      "law": "개인정보 보호법 시행령",
+      "article": "48",
+      "title": "당연직위원",
+      "path": "library/grade-a/pipa-enforcement-decree/art48.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art49",
+      "law": "개인정보 보호법 시행령",
+      "article": "49",
+      "title": "분쟁조정 전문위원회",
+      "path": "library/grade-a/pipa-enforcement-decree/art49.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art5",
+      "law": "개인정보 보호법 시행령",
+      "article": "5",
+      "title": "시ㆍ도 개인정보 보호 관계 기관 협의회",
+      "path": "library/grade-a/pipa-enforcement-decree/art5.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art50",
+      "law": "개인정보 보호법 시행령",
+      "article": "50",
+      "title": "사무기구",
+      "path": "library/grade-a/pipa-enforcement-decree/art50.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art51",
+      "law": "개인정보 보호법 시행령",
+      "article": "51",
+      "title": "조정안에 대한 거부 의사 통지 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art51.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art52",
+      "law": "개인정보 보호법 시행령",
+      "article": "52",
+      "title": "집단분쟁조정의 신청 대상",
+      "path": "library/grade-a/pipa-enforcement-decree/art52.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art53",
+      "law": "개인정보 보호법 시행령",
+      "article": "53",
+      "title": "집단분쟁조정 절차의 개시",
+      "path": "library/grade-a/pipa-enforcement-decree/art53.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art54",
+      "law": "개인정보 보호법 시행령",
+      "article": "54",
+      "title": "집단분쟁조정 절차에 대한 참가 신청",
+      "path": "library/grade-a/pipa-enforcement-decree/art54.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art55",
+      "law": "개인정보 보호법 시행령",
+      "article": "55",
+      "title": "집단분쟁조정 절차의 진행",
+      "path": "library/grade-a/pipa-enforcement-decree/art55.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art56",
+      "law": "개인정보 보호법 시행령",
+      "article": "56",
+      "title": "수당과 여비",
+      "path": "library/grade-a/pipa-enforcement-decree/art56.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art57",
+      "law": "개인정보 보호법 시행령",
+      "article": "57",
+      "title": "분쟁조정 세칙",
+      "path": "library/grade-a/pipa-enforcement-decree/art57.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art58",
+      "law": "개인정보 보호법 시행령",
+      "article": "58",
+      "title": "개선권고 및 징계권고",
+      "path": "library/grade-a/pipa-enforcement-decree/art58.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art59",
+      "law": "개인정보 보호법 시행령",
+      "article": "59",
+      "title": "침해 사실의 신고 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art59.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art6",
+      "law": "개인정보 보호법 시행령",
+      "article": "6",
+      "title": "의사의 공개",
+      "path": "library/grade-a/pipa-enforcement-decree/art6.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art60",
+      "law": "개인정보 보호법 시행령",
+      "article": "60",
+      "title": "환급가산금의 이자율",
+      "path": "library/grade-a/pipa-enforcement-decree/art60.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art61",
+      "law": "개인정보 보호법 시행령",
+      "article": "61",
+      "title": "결과의 공표",
+      "path": "library/grade-a/pipa-enforcement-decree/art61.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art62",
+      "law": "개인정보 보호법 시행령",
+      "article": "62",
+      "title": "규제의 재검토",
+      "path": "library/grade-a/pipa-enforcement-decree/art62.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art63",
+      "law": "개인정보 보호법 시행령",
+      "article": "63",
+      "title": "과태료의 부과기준",
+      "path": "library/grade-a/pipa-enforcement-decree/art63.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art7",
+      "law": "개인정보 보호법 시행령",
+      "article": "7",
+      "title": "공무원 등의 파견",
+      "path": "library/grade-a/pipa-enforcement-decree/art7.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art8",
+      "law": "개인정보 보호법 시행령",
+      "article": "8",
+      "title": "",
+      "path": "library/grade-a/pipa-enforcement-decree/art8.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-enforcement-decree-art9",
+      "law": "개인정보 보호법 시행령",
+      "article": "9",
+      "title": "개인정보 침해요인 평가 절차 등",
+      "path": "library/grade-a/pipa-enforcement-decree/art9.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art1",
+      "law": "개인정보 보호법",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/pipa/art1.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art10",
+      "law": "개인정보 보호법",
+      "article": "10",
+      "title": "시행계획",
+      "path": "library/grade-a/pipa/art10.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art11",
+      "law": "개인정보 보호법",
+      "article": "11",
+      "title": "개인정보 보호수준 평가",
+      "path": "library/grade-a/pipa/art11.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art12",
+      "law": "개인정보 보호법",
+      "article": "12",
+      "title": "개인정보 보호지침",
+      "path": "library/grade-a/pipa/art12.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art13",
+      "law": "개인정보 보호법",
+      "article": "13",
+      "title": "개인정보 보호의 날",
+      "path": "library/grade-a/pipa/art13.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art14",
+      "law": "개인정보 보호법",
+      "article": "14",
+      "title": "국제협력",
+      "path": "library/grade-a/pipa/art14.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art15",
+      "law": "개인정보 보호법",
+      "article": "15",
+      "title": "개인정보의 수집ㆍ이용",
+      "path": "library/grade-a/pipa/art15.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art16",
+      "law": "개인정보 보호법",
+      "article": "16",
+      "title": "개인정보의 수집 제한",
+      "path": "library/grade-a/pipa/art16.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art17",
+      "law": "개인정보 보호법",
+      "article": "17",
+      "title": "개인정보의 제공",
+      "path": "library/grade-a/pipa/art17.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art18",
+      "law": "개인정보 보호법",
+      "article": "18",
+      "title": "개인정보의 목적 외 이용ㆍ제공 제한",
+      "path": "library/grade-a/pipa/art18.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art19",
+      "law": "개인정보 보호법",
+      "article": "19",
+      "title": "개인정보를 제공받은 자의 이용ㆍ제공 제한",
+      "path": "library/grade-a/pipa/art19.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art2",
+      "law": "개인정보 보호법",
+      "article": "2",
+      "title": "정의",
+      "path": "library/grade-a/pipa/art2.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art20",
+      "law": "개인정보 보호법",
+      "article": "20",
+      "title": "개인정보 이용ㆍ제공 내역의 통지",
+      "path": "library/grade-a/pipa/art20.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art21",
+      "law": "개인정보 보호법",
+      "article": "21",
+      "title": "개인정보의 파기",
+      "path": "library/grade-a/pipa/art21.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art22",
+      "law": "개인정보 보호법",
+      "article": "22",
+      "title": "아동의 개인정보 보호",
+      "path": "library/grade-a/pipa/art22.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art23",
+      "law": "개인정보 보호법",
+      "article": "23",
+      "title": "민감정보의 처리 제한",
+      "path": "library/grade-a/pipa/art23.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art24",
+      "law": "개인정보 보호법",
+      "article": "24",
+      "title": "주민등록번호 처리의 제한",
+      "path": "library/grade-a/pipa/art24.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art25",
+      "law": "개인정보 보호법",
+      "article": "25",
+      "title": "이동형 영상정보처리기기의 운영 제한",
+      "path": "library/grade-a/pipa/art25.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art26",
+      "law": "개인정보 보호법",
+      "article": "26",
+      "title": "업무위탁에 따른 개인정보의 처리 제한",
+      "path": "library/grade-a/pipa/art26.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art27",
+      "law": "개인정보 보호법",
+      "article": "27",
+      "title": "영업양도 등에 따른 개인정보의 이전 제한",
+      "path": "library/grade-a/pipa/art27.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art28",
+      "law": "개인정보 보호법",
+      "article": "28",
+      "title": "준용규정",
+      "path": "library/grade-a/pipa/art28.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art29",
+      "law": "개인정보 보호법",
+      "article": "29",
+      "title": "안전조치의무",
+      "path": "library/grade-a/pipa/art29.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art3",
+      "law": "개인정보 보호법",
+      "article": "3",
+      "title": "개인정보 보호 원칙",
+      "path": "library/grade-a/pipa/art3.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art30",
+      "law": "개인정보 보호법",
+      "article": "30",
+      "title": "개인정보 처리방침의 평가 및 개선권고",
+      "path": "library/grade-a/pipa/art30.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art31",
+      "law": "개인정보 보호법",
+      "article": "31",
+      "title": "국내대리인의 지정",
+      "path": "library/grade-a/pipa/art31.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art32",
+      "law": "개인정보 보호법",
+      "article": "32",
+      "title": "개인정보 보호 인증",
+      "path": "library/grade-a/pipa/art32.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art33",
+      "law": "개인정보 보호법",
+      "article": "33",
+      "title": "개인정보 영향평가",
+      "path": "library/grade-a/pipa/art33.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art34",
+      "law": "개인정보 보호법",
+      "article": "34",
+      "title": "노출된 개인정보의 삭제ㆍ차단",
+      "path": "library/grade-a/pipa/art34.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art35",
+      "law": "개인정보 보호법",
+      "article": "35",
+      "title": "개인정보 전송 관리 및 지원",
+      "path": "library/grade-a/pipa/art35.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art36",
+      "law": "개인정보 보호법",
+      "article": "36",
+      "title": "개인정보의 정정ㆍ삭제",
+      "path": "library/grade-a/pipa/art36.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art37",
+      "law": "개인정보 보호법",
+      "article": "37",
+      "title": "자동화된 결정에 대한 정보주체의 권리 등",
+      "path": "library/grade-a/pipa/art37.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art38",
+      "law": "개인정보 보호법",
+      "article": "38",
+      "title": "권리행사의 방법 및 절차",
+      "path": "library/grade-a/pipa/art38.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art39",
+      "law": "개인정보 보호법",
+      "article": "39",
+      "title": "손해배상의 보장",
+      "path": "library/grade-a/pipa/art39.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art4",
+      "law": "개인정보 보호법",
+      "article": "4",
+      "title": "정보주체의 권리",
+      "path": "library/grade-a/pipa/art4.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art40",
+      "law": "개인정보 보호법",
+      "article": "40",
+      "title": "설치 및 구성",
+      "path": "library/grade-a/pipa/art40.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art41",
+      "law": "개인정보 보호법",
+      "article": "41",
+      "title": "위원의 신분보장",
+      "path": "library/grade-a/pipa/art41.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art42",
+      "law": "개인정보 보호법",
+      "article": "42",
+      "title": "위원의 제척ㆍ기피ㆍ회피",
+      "path": "library/grade-a/pipa/art42.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art43",
+      "law": "개인정보 보호법",
+      "article": "43",
+      "title": "조정의 신청 등",
+      "path": "library/grade-a/pipa/art43.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art44",
+      "law": "개인정보 보호법",
+      "article": "44",
+      "title": "처리기간",
+      "path": "library/grade-a/pipa/art44.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art45",
+      "law": "개인정보 보호법",
+      "article": "45",
+      "title": "진술의 원용 제한",
+      "path": "library/grade-a/pipa/art45.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art46",
+      "law": "개인정보 보호법",
+      "article": "46",
+      "title": "조정 전 합의 권고",
+      "path": "library/grade-a/pipa/art46.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art47",
+      "law": "개인정보 보호법",
+      "article": "47",
+      "title": "분쟁의 조정",
+      "path": "library/grade-a/pipa/art47.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art48",
+      "law": "개인정보 보호법",
+      "article": "48",
+      "title": "조정의 거부 및 중지",
+      "path": "library/grade-a/pipa/art48.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art49",
+      "law": "개인정보 보호법",
+      "article": "49",
+      "title": "집단분쟁조정",
+      "path": "library/grade-a/pipa/art49.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art5",
+      "law": "개인정보 보호법",
+      "article": "5",
+      "title": "국가 등의 책무",
+      "path": "library/grade-a/pipa/art5.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art50",
+      "law": "개인정보 보호법",
+      "article": "50",
+      "title": "개선의견의 통보",
+      "path": "library/grade-a/pipa/art50.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art51",
+      "law": "개인정보 보호법",
+      "article": "51",
+      "title": "단체소송의 대상 등",
+      "path": "library/grade-a/pipa/art51.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art52",
+      "law": "개인정보 보호법",
+      "article": "52",
+      "title": "전속관할",
+      "path": "library/grade-a/pipa/art52.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art53",
+      "law": "개인정보 보호법",
+      "article": "53",
+      "title": "소송대리인의 선임",
+      "path": "library/grade-a/pipa/art53.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art54",
+      "law": "개인정보 보호법",
+      "article": "54",
+      "title": "소송허가신청",
+      "path": "library/grade-a/pipa/art54.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art55",
+      "law": "개인정보 보호법",
+      "article": "55",
+      "title": "소송허가요건 등",
+      "path": "library/grade-a/pipa/art55.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art56",
+      "law": "개인정보 보호법",
+      "article": "56",
+      "title": "확정판결의 효력",
+      "path": "library/grade-a/pipa/art56.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art57",
+      "law": "개인정보 보호법",
+      "article": "57",
+      "title": "「민사소송법」의 적용 등",
+      "path": "library/grade-a/pipa/art57.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art58",
+      "law": "개인정보 보호법",
+      "article": "58",
+      "title": "적용제외",
+      "path": "library/grade-a/pipa/art58.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art59",
+      "law": "개인정보 보호법",
+      "article": "59",
+      "title": "금지행위",
+      "path": "library/grade-a/pipa/art59.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art6",
+      "law": "개인정보 보호법",
+      "article": "6",
+      "title": "다른 법률과의 관계",
+      "path": "library/grade-a/pipa/art6.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art60",
+      "law": "개인정보 보호법",
+      "article": "60",
+      "title": "비밀유지 등",
+      "path": "library/grade-a/pipa/art60.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art61",
+      "law": "개인정보 보호법",
+      "article": "61",
+      "title": "의견제시 및 개선권고",
+      "path": "library/grade-a/pipa/art61.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art62",
+      "law": "개인정보 보호법",
+      "article": "62",
+      "title": "침해 사실의 신고 등",
+      "path": "library/grade-a/pipa/art62.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art63",
+      "law": "개인정보 보호법",
+      "article": "63",
+      "title": "사전 실태점검",
+      "path": "library/grade-a/pipa/art63.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art64",
+      "law": "개인정보 보호법",
+      "article": "64",
+      "title": "과징금의 부과",
+      "path": "library/grade-a/pipa/art64.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art65",
+      "law": "개인정보 보호법",
+      "article": "65",
+      "title": "고발 및 징계권고",
+      "path": "library/grade-a/pipa/art65.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art66",
+      "law": "개인정보 보호법",
+      "article": "66",
+      "title": "결과의 공표",
+      "path": "library/grade-a/pipa/art66.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art67",
+      "law": "개인정보 보호법",
+      "article": "67",
+      "title": "연차보고",
+      "path": "library/grade-a/pipa/art67.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art68",
+      "law": "개인정보 보호법",
+      "article": "68",
+      "title": "권한의 위임ㆍ위탁",
+      "path": "library/grade-a/pipa/art68.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art69",
+      "law": "개인정보 보호법",
+      "article": "69",
+      "title": "벌칙 적용 시의 공무원 의제",
+      "path": "library/grade-a/pipa/art69.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art7",
+      "law": "개인정보 보호법",
+      "article": "7",
+      "title": "운영 등",
+      "path": "library/grade-a/pipa/art7.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art70",
+      "law": "개인정보 보호법",
+      "article": "70",
+      "title": "벌칙",
+      "path": "library/grade-a/pipa/art70.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art71",
+      "law": "개인정보 보호법",
+      "article": "71",
+      "title": "벌칙",
+      "path": "library/grade-a/pipa/art71.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art72",
+      "law": "개인정보 보호법",
+      "article": "72",
+      "title": "벌칙",
+      "path": "library/grade-a/pipa/art72.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art73",
+      "law": "개인정보 보호법",
+      "article": "73",
+      "title": "벌칙",
+      "path": "library/grade-a/pipa/art73.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art74",
+      "law": "개인정보 보호법",
+      "article": "74",
+      "title": "몰수ㆍ추징 등",
+      "path": "library/grade-a/pipa/art74.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art75",
+      "law": "개인정보 보호법",
+      "article": "75",
+      "title": "과태료",
+      "path": "library/grade-a/pipa/art75.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art76",
+      "law": "개인정보 보호법",
+      "article": "76",
+      "title": "과태료에 관한 규정 적용의 특례",
+      "path": "library/grade-a/pipa/art76.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art8",
+      "law": "개인정보 보호법",
+      "article": "8",
+      "title": "개인정보 침해요인 평가",
+      "path": "library/grade-a/pipa/art8.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "pipa-art9",
+      "law": "개인정보 보호법",
+      "article": "9",
+      "title": "기본계획",
+      "path": "library/grade-a/pipa/art9.md",
+      "source_grade": "A",
+      "effective_date": "20251002"
+    },
+    {
+      "id": "network-act-enforcement-decree-art1",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/network-act-enforcement-decree/art1.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art10",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "10",
+      "title": "연계정보 생성ㆍ처리가 불가피한 정보통신서비스",
+      "path": "library/grade-a/network-act-enforcement-decree/art10.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art11",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "11",
+      "title": "연계정보 생성ㆍ처리 승인 절차",
+      "path": "library/grade-a/network-act-enforcement-decree/art11.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art12",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "12",
+      "title": "승인 심사사항별 세부심사기준",
+      "path": "library/grade-a/network-act-enforcement-decree/art12.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art13",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "13",
+      "title": "본인확인기관의 물리적ㆍ기술적ㆍ관리적 조치 등",
+      "path": "library/grade-a/network-act-enforcement-decree/art13.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art14",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "14",
+      "title": "운영ㆍ관리 실태점검의 대상",
+      "path": "library/grade-a/network-act-enforcement-decree/art14.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art15",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "15",
+      "title": "실태점검의 절차",
+      "path": "library/grade-a/network-act-enforcement-decree/art15.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art16",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "16",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art16.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art17",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "17",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art17.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art18",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "18",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art18.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art19",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "19",
+      "title": "국내대리인 지정 대상자의 범위",
+      "path": "library/grade-a/network-act-enforcement-decree/art19.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art2",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "2",
+      "title": "윤리강령",
+      "path": "library/grade-a/network-act-enforcement-decree/art2.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art20",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "20",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art20.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art21",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "21",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art21.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art22",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "22",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art22.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art23",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "23",
+      "title": "청소년보호시책",
+      "path": "library/grade-a/network-act-enforcement-decree/art23.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art24",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "24",
+      "title": "청소년유해매체물의 표시방법",
+      "path": "library/grade-a/network-act-enforcement-decree/art24.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art25",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "25",
+      "title": "청소년보호책임자 지정의무자의 범위",
+      "path": "library/grade-a/network-act-enforcement-decree/art25.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art26",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "26",
+      "title": "청소년보호책임자의 업무",
+      "path": "library/grade-a/network-act-enforcement-decree/art26.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art27",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "27",
+      "title": "청소년보호책임자의 지정기한",
+      "path": "library/grade-a/network-act-enforcement-decree/art27.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art28",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "28",
+      "title": "영상 또는 음향정보의 보관 등",
+      "path": "library/grade-a/network-act-enforcement-decree/art28.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art29",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "29",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art29.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art3",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "3",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art3.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art30",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "30",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art30.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art31",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "31",
+      "title": "청구할 수 있는 이용자 정보의 범위",
+      "path": "library/grade-a/network-act-enforcement-decree/art31.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art32",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "32",
+      "title": "정보제공청구의 절차",
+      "path": "library/grade-a/network-act-enforcement-decree/art32.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art33",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "33",
+      "title": "정보제공의 절차",
+      "path": "library/grade-a/network-act-enforcement-decree/art33.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art34",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "34",
+      "title": "불법정보의 처리제한명령 등의 요청",
+      "path": "library/grade-a/network-act-enforcement-decree/art34.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art35",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "35",
+      "title": "불법촬영물등 유통방지 책임자",
+      "path": "library/grade-a/network-act-enforcement-decree/art35.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art36",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "36",
+      "title": "정보보호 최고책임자 협의회의 사업 범위",
+      "path": "library/grade-a/network-act-enforcement-decree/art36.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art37",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "37",
+      "title": "집적정보통신시설 사업자등의 보호조치",
+      "path": "library/grade-a/network-act-enforcement-decree/art37.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art38",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "38",
+      "title": "보험가입",
+      "path": "library/grade-a/network-act-enforcement-decree/art38.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art39",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "39",
+      "title": "보호조치의 이행점검 주기 및 방법",
+      "path": "library/grade-a/network-act-enforcement-decree/art39.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art4",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "4",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art4.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art40",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "40",
+      "title": "집적정보통신시설 사업자등의 서비스 중단 보고 방법",
+      "path": "library/grade-a/network-act-enforcement-decree/art40.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art41",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "41",
+      "title": "집적된 정보통신시설 임차사업자의 조치의무",
+      "path": "library/grade-a/network-act-enforcement-decree/art41.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art42",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "42",
+      "title": "보호조치 및 기술지원 전문기관",
+      "path": "library/grade-a/network-act-enforcement-decree/art42.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art43",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "43",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art43.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art44",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "44",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art44.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art45",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "45",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art45.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art46",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "46",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art46.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art47",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "47",
+      "title": "정보보호 관리체계 인증의 방법ㆍ절차ㆍ범위 등",
+      "path": "library/grade-a/network-act-enforcement-decree/art47.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art48",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "48",
+      "title": "정보보호 관리체계 인증의 수수료",
+      "path": "library/grade-a/network-act-enforcement-decree/art48.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art49",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "49",
+      "title": "정보보호 관리체계 인증의 특례 대상자의 범위",
+      "path": "library/grade-a/network-act-enforcement-decree/art49.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art5",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "5",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art5.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art50",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "50",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art50.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art51",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "51",
+      "title": "인증의 사후관리",
+      "path": "library/grade-a/network-act-enforcement-decree/art51.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art52",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "52",
+      "title": "인증표시 및 홍보",
+      "path": "library/grade-a/network-act-enforcement-decree/art52.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art53",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "53",
+      "title": "정보보호 관리체계 인증기관 및 정보보호 관리체계 심사기관의 사후관리",
+      "path": "library/grade-a/network-act-enforcement-decree/art53.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art54",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "54",
+      "title": "침해사고의 예방 및 확산 방지를 위한 조치 업무의 위탁",
+      "path": "library/grade-a/network-act-enforcement-decree/art54.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art55",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "55",
+      "title": "정보보호 취약점 신고자에 대한 포상",
+      "path": "library/grade-a/network-act-enforcement-decree/art55.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art56",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "56",
+      "title": "침해사고 대응조치",
+      "path": "library/grade-a/network-act-enforcement-decree/art56.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art57",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "57",
+      "title": "침해사고 관련정보 제공자",
+      "path": "library/grade-a/network-act-enforcement-decree/art57.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art58",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "58",
+      "title": "침해사고 조치의 이행점검 절차",
+      "path": "library/grade-a/network-act-enforcement-decree/art58.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art59",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "59",
+      "title": "민ㆍ관합동조사단의 구성ㆍ운영",
+      "path": "library/grade-a/network-act-enforcement-decree/art59.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art6",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "6",
+      "title": "정보의 공동 활용체제 구축 시책 등",
+      "path": "library/grade-a/network-act-enforcement-decree/art6.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art60",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "60",
+      "title": "속이는 행위에 사용된 전화번호의 전기통신역무 제공의 중지 등",
+      "path": "library/grade-a/network-act-enforcement-decree/art60.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art61",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "61",
+      "title": "영리목적의 광고성 정보 전송기준",
+      "path": "library/grade-a/network-act-enforcement-decree/art61.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art62",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "62",
+      "title": "수신동의 여부의 확인",
+      "path": "library/grade-a/network-act-enforcement-decree/art62.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art63",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "63",
+      "title": "영리목적의 광고성 프로그램 등의 설치 제한 장치",
+      "path": "library/grade-a/network-act-enforcement-decree/art63.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art64",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "64",
+      "title": "영리목적의 광고성 정보전송차단 소프트웨어 등 개발 지원",
+      "path": "library/grade-a/network-act-enforcement-decree/art64.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art65",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "65",
+      "title": "인터넷진흥원의 운영 등",
+      "path": "library/grade-a/network-act-enforcement-decree/art65.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art66",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "66",
+      "title": "이의신청 및 권리구제를 위한 절차",
+      "path": "library/grade-a/network-act-enforcement-decree/art66.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art67",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "67",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art67.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art68",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "68",
+      "title": "시정조치의 명령의 공표방법 등",
+      "path": "library/grade-a/network-act-enforcement-decree/art68.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art69",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "69",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art69.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art7",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "7",
+      "title": "정보통신망의 이용촉진 등에 관한 사업의 실시",
+      "path": "library/grade-a/network-act-enforcement-decree/art7.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art70",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "70",
+      "title": "고유식별정보의 처리",
+      "path": "library/grade-a/network-act-enforcement-decree/art70.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art71",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "71",
+      "title": "규제의 재검토",
+      "path": "library/grade-a/network-act-enforcement-decree/art71.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art72",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "72",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art72.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art73",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "73",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art73.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art74",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "74",
+      "title": "과태료의 부과기준",
+      "path": "library/grade-a/network-act-enforcement-decree/art74.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art8",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "8",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-decree/art8.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "network-act-enforcement-decree-art9",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
+      "article": "9",
+      "title": "본인확인업무의 정지 및 지정취소",
+      "path": "library/grade-a/network-act-enforcement-decree/art9.md",
+      "source_grade": "A",
+      "effective_date": "20260324"
+    },
+    {
+      "id": "location-info-act-art1",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/location-info-act/art1.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art10",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "10",
+      "title": "위치기반서비스사업의 양수 및 법인의 합병 등",
+      "path": "library/grade-a/location-info-act/art10.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art11",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "11",
+      "title": "위치기반서비스사업의 휴업ㆍ폐업 등",
+      "path": "library/grade-a/location-info-act/art11.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art12",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "12",
+      "title": "이용약관의 공개 등",
+      "path": "library/grade-a/location-info-act/art12.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art13",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "13",
+      "title": "등록의 취소 및 사업의 폐지ㆍ정지 등",
+      "path": "library/grade-a/location-info-act/art13.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art14",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "14",
+      "title": "과징금의 부과 등",
+      "path": "library/grade-a/location-info-act/art14.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art15",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "15",
+      "title": "위치정보의 수집 등의 금지",
+      "path": "library/grade-a/location-info-act/art15.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art16",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "16",
+      "title": "위치정보의 보호조치 등",
+      "path": "library/grade-a/location-info-act/art16.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art17",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "17",
+      "title": "개인위치정보주체에 대한 위치정보 처리 고지 등",
+      "path": "library/grade-a/location-info-act/art17.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art18",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "18",
+      "title": "개인위치정보의 수집",
+      "path": "library/grade-a/location-info-act/art18.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art19",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "19",
+      "title": "개인위치정보의 이용 또는 제공",
+      "path": "library/grade-a/location-info-act/art19.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art2",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "2",
+      "title": "정의",
+      "path": "library/grade-a/location-info-act/art2.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art20",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "20",
+      "title": "위치정보사업자의 개인위치정보 제공 등",
+      "path": "library/grade-a/location-info-act/art20.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art21",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "21",
+      "title": "개인위치정보 처리방침의 공개",
+      "path": "library/grade-a/location-info-act/art21.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art22",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "22",
+      "title": "사업의 양도 등의 통지",
+      "path": "library/grade-a/location-info-act/art22.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art23",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "23",
+      "title": "개인위치정보의 파기 등",
+      "path": "library/grade-a/location-info-act/art23.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art24",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "24",
+      "title": "개인위치정보주체의 권리 등",
+      "path": "library/grade-a/location-info-act/art24.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art25",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "25",
+      "title": "법정대리인의 권리",
+      "path": "library/grade-a/location-info-act/art25.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art26",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "26",
+      "title": "8세 이하의 아동등의 보호를 위한 위치정보 이용",
+      "path": "library/grade-a/location-info-act/art26.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art27",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "27",
+      "title": "손해배상",
+      "path": "library/grade-a/location-info-act/art27.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art28",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "28",
+      "title": "분쟁의 조정 등",
+      "path": "library/grade-a/location-info-act/art28.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art29",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "29",
+      "title": "긴급구조를 위한 개인위치정보의 이용",
+      "path": "library/grade-a/location-info-act/art29.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art3",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "3",
+      "title": "위치정보의 보호 및 이용 등을 위한 시책의 강구",
+      "path": "library/grade-a/location-info-act/art3.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art30",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "30",
+      "title": "가족관계 등록전산정보의 이용",
+      "path": "library/grade-a/location-info-act/art30.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art31",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "31",
+      "title": "비용의 감면",
+      "path": "library/grade-a/location-info-act/art31.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art32",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "32",
+      "title": "통계자료의 제출 등",
+      "path": "library/grade-a/location-info-act/art32.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art33",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "33",
+      "title": "기술개발의 추진 등",
+      "path": "library/grade-a/location-info-act/art33.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art34",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "34",
+      "title": "표준화의 추진",
+      "path": "library/grade-a/location-info-act/art34.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art35",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "35",
+      "title": "한국위치정보산업협회",
+      "path": "library/grade-a/location-info-act/art35.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art36",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "36",
+      "title": "시정조치 등",
+      "path": "library/grade-a/location-info-act/art36.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art37",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "37",
+      "title": "청문",
+      "path": "library/grade-a/location-info-act/art37.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art38",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "38",
+      "title": "준용 규정",
+      "path": "library/grade-a/location-info-act/art38.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art39",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "39",
+      "title": "벌칙",
+      "path": "library/grade-a/location-info-act/art39.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art4",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "4",
+      "title": "다른 법률과의 관계",
+      "path": "library/grade-a/location-info-act/art4.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art40",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "40",
+      "title": "벌칙",
+      "path": "library/grade-a/location-info-act/art40.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art41",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "41",
+      "title": "벌칙",
+      "path": "library/grade-a/location-info-act/art41.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art42",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "42",
+      "title": "양벌규정",
+      "path": "library/grade-a/location-info-act/art42.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art43",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "43",
+      "title": "과태료",
+      "path": "library/grade-a/location-info-act/art43.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art5",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "5",
+      "title": "개인위치정보를 대상으로 하지 아니하는 위치정보사업의 신고",
+      "path": "library/grade-a/location-info-act/art5.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art6",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "6",
+      "title": "임원 또는 종업원의 결격사유",
+      "path": "library/grade-a/location-info-act/art6.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art7",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "7",
+      "title": "위치정보사업의 양수 및 법인의 합병 등",
+      "path": "library/grade-a/location-info-act/art7.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art8",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "8",
+      "title": "위치정보사업의 휴업ㆍ폐업 등",
+      "path": "library/grade-a/location-info-act/art8.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "location-info-act-art9",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률",
+      "article": "9",
+      "title": "소상공인 등의 위치기반서비스사업의 신고",
+      "path": "library/grade-a/location-info-act/art9.md",
+      "source_grade": "A",
+      "effective_date": "20251001"
+    },
+    {
+      "id": "network-act-enforcement-rule-art1",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/network-act-enforcement-rule/art1.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "network-act-enforcement-rule-art10",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "10",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-rule/art10.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "network-act-enforcement-rule-art2",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "2",
+      "title": "정보보호 최고책임자 지정 신고 등",
+      "path": "library/grade-a/network-act-enforcement-rule/art2.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "network-act-enforcement-rule-art3",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "3",
+      "title": "정보보호 관리체계 인증심사 일부의 생략",
+      "path": "library/grade-a/network-act-enforcement-rule/art3.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "network-act-enforcement-rule-art4",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "4",
+      "title": "정보통신망연결기기등 정보보호인증의 절차 등",
+      "path": "library/grade-a/network-act-enforcement-rule/art4.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "network-act-enforcement-rule-art5",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "5",
+      "title": "정보보호인증의 유효기간 등",
+      "path": "library/grade-a/network-act-enforcement-rule/art5.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "network-act-enforcement-rule-art6",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "6",
+      "title": "정보통신망연결기기등 인증시험대행기관의 지정",
+      "path": "library/grade-a/network-act-enforcement-rule/art6.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "network-act-enforcement-rule-art7",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "7",
+      "title": "인증시험대행기관의 사후관리",
+      "path": "library/grade-a/network-act-enforcement-rule/art7.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "network-act-enforcement-rule-art8",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "8",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-rule/art8.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "network-act-enforcement-rule-art9",
+      "law": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
+      "article": "9",
+      "title": "",
+      "path": "library/grade-a/network-act-enforcement-rule/art9.md",
+      "source_grade": "A",
+      "effective_date": "20210331"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art1",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "1",
+      "title": "목적",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art1.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art10",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "10",
+      "title": "소상공인 등의 위치기반서비스사업의 신고",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art10.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art11",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "11",
+      "title": "위치기반서비스사업의 양수 및 법인의 합병 등의 신고",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art11.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art12",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "12",
+      "title": "위치기반서비스사업의 휴업ㆍ폐업의 신고",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art12.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art13",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "13",
+      "title": "이용약관의 공개",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art13.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art14",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "14",
+      "title": "행정처분의 세부기준 등",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art14.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art15",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "15",
+      "title": "과징금의 부과기준",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art15.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art16",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "16",
+      "title": "과징금의 부과 및 납부 절차",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art16.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art17",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "17",
+      "title": "과징금의 납부기한의 연장 및 분할납부",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art17.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art18",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "18",
+      "title": "",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art18.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art19",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "19",
+      "title": "",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art19.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art2",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "2",
+      "title": "개인위치정보사업의 등록신청",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art2.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art20",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "20",
+      "title": "위치정보의 관리적ㆍ기술적 보호조치",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art20.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art21",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "21",
+      "title": "위치정보 보호조치 등의 점검",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art21.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art22",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "22",
+      "title": "위치정보 수집 시 이용약관 명시사항",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art22.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art23",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "23",
+      "title": "개인위치정보 이용ㆍ제공 시의 이용약관 명시사항",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art23.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art24",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "24",
+      "title": "개인위치정보 제공사실의 통보",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art24.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art25",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "25",
+      "title": "개인위치정보 처리방침의 공개",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art25.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art26",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "26",
+      "title": "법정대리인 동의의 확인방법",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art26.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art27",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "27",
+      "title": "8세 이하의 아동등의 보호를 위한 위치정보 이용동의의 요건",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art27.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art28",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "28",
+      "title": "구조받을 사람의 의사확인 방법 등",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art28.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art29",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "29",
+      "title": "특수번호 전화서비스",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art29.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art3",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "3",
+      "title": "개인위치정보사업의 등록요건별 세부심사기준",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art3.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art30",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "30",
+      "title": "통계자료의 제출",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art30.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art31",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "31",
+      "title": "연구기관의 범위 등",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art31.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art32",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "32",
+      "title": "표준화의 절차",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art32.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art33",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "33",
+      "title": "한국위치정보산업협회의 설립인가 등",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art33.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art34",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "34",
+      "title": "자료제출 요구",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art34.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art35",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "35",
+      "title": "실태 정기점검",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art35.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art36",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "36",
+      "title": "시정조치의 명령을 받은 사실의 공표",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art36.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art37",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "37",
+      "title": "고유식별정보의 처리",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art37.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art38",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "38",
+      "title": "과태료의 부과기준",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art38.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art39",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "39",
+      "title": "행정정보의 공동이용",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art39.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art4",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "4",
+      "title": "개인위치정보사업의 변경등록 등",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art4.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art40",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "40",
+      "title": "서식",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art40.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art5",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "5",
+      "title": "사물위치정보사업의 신고 등",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art5.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art6",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "6",
+      "title": "사물위치정보사업의 양수 및 법인의 합병 등의 신고",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art6.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art7",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "7",
+      "title": "개인위치정보사업의 휴업ㆍ폐업 승인 등",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art7.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art8",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "8",
+      "title": "위치정보사업의 휴업ㆍ폐업 시 자료 파기",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art8.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    },
+    {
+      "id": "location-info-act-enforcement-decree-art9",
+      "law": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
+      "article": "9",
+      "title": "위치기반서비스사업의 신고",
+      "path": "library/grade-a/location-info-act-enforcement-decree/art9.md",
+      "source_grade": "A",
+      "effective_date": "20260210"
+    }
+  ]
+}
