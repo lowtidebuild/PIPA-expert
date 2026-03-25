@@ -11,5 +11,11 @@ __pycache__/
 # 벡터 DB (로컬 생성)
 embeddings/chroma/
 
+# 생성 결과물 (의견서 DOCX 등 — 폴더 구조는 유지, 내용물만 제외)
+output/**
+!output/
+!output/opinions/
+!output/opinions/.gitkeep
+
 # 임시 파일
 *.tmp
