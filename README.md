@@ -264,6 +264,24 @@ Every citation is tagged with its verification status:
 
 ---
 
+## Fact-Check Layer (Hallucination Prevention)
+
+Before any output is finalized, a **dedicated fact-checker sub-agent** verifies every legal citation against the knowledge base:
+
+| Check | Method | On Fail |
+|-------|--------|---------|
+| Article exists | Glob for `art{N}.md` in KB | Downgrade to `[UNVERIFIED]` |
+| Quoted text matches source | Read file, substring match | Replace with correct text |
+| Article number is precise | Frontmatter `article` + `article_title` match | Correct the number |
+| Effective date is valid | Compare `effective_date` to today | Add `[미시행]` warning |
+| Guideline citation exists | Check `guideline-index.json` | Downgrade or remove |
+| Cross-reference is valid | Verify target file exists | Flag broken reference |
+| Web source is trusted | Match against trusted domain list | Downgrade Grade |
+
+**Confidence score:** If below 70%, FAIL items are corrected and re-verified before output. Citations affecting core conclusions are withdrawn rather than left unverified.
+
+---
+
 ## DOCX Legal Opinion Generator
 
 The agent produces **law firm-grade Word documents** with:
@@ -272,6 +290,7 @@ The agent produces **law firm-grade Word documents** with:
 - Structured sections: Issues → Analysis → Conclusions → Recommendations
 - Risk matrix tables with color coding
 - Full citation trail with verification status
+- Fact-check report appended
 - Signature block and disclaimer
 - AI disclosure notice
 
