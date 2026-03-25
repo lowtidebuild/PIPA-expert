@@ -217,7 +217,7 @@ flowchart TD
     subgraph web["Step 4: Multi-Layer Web Search <i>(if KB insufficient)</i>"]
         direction TB
         L1["🏛️ <b>Layer 1 · Statutes</b><br/>law.go.kr · pipc.go.kr"]
-        L2["⚖️ <b>Layer 2 · Major Law Firms</b><br/>Kim &amp; Chang · BKL · Lee &amp; Ko<br/>Shin &amp; Kim · Yulchon · Yoon &amp; Yang"]
+        L2["⚖️ <b>Layer 2 · Major Law Firms</b><br/>Top-tier Korean law firm<br/>newsletters &amp; articles"]
         L3["🎓 <b>Layer 3 · Academic</b><br/>KCI · RISS · SSRN"]
         L4["🌍 <b>Layer 4 · Foreign DPAs</b><br/>EDPB · ICO · IAPP"]
         L1 --> L2 --> L3 --> L4
