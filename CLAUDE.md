@@ -25,10 +25,10 @@ docs/specs/                # 설계 문서
 - **C**: 학술 논문 — 단독 근거 불가, [EDITORIAL] 표시 필수
 - **D**: 뉴스, AI 요약, 위키 — RAG 미포함
 
-## Agent
+## Agents
 
-PIPA 전문 Agent는 `.claude/agents/pipa-agent.md`에 정의되어 있음.
-`/agents/pipa-agent`로 호출.
+- **pipa-agent** — PIPA 전문 메인 에이전트 (`.claude/agents/pipa-agent.md`). `/agents/pipa-agent`로 호출.
+- **fact-checker** — 환각 검증 서브에이전트 (`.claude/agents/fact-checker/AGENT.md`). pipa-agent가 답변 생성 후 자동 호출. 모든 법령 인용을 KB 원본과 대조하여 PASS/WARN/FAIL 리포트 반환.
 
 ## Skills
 
