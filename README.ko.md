@@ -39,27 +39,56 @@
 
 PIPA Expert는 다른 접근을 취합니다: **더 똑똑한 검색 대신, 더 똑똑한 데이터를 구축합니다.**
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    PIPA Expert Agent                     │
-│              정보호 변호사 (鄭保護)                         │
-│         5년차 Associate · 법무법인 진주                     │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  ┌─────────────┐  ┌──────────────┐  ┌───────────────┐  │
-│  │  구조화된     │  │  Multi-Layer │  │  로펌 수준     │  │
-│  │  Knowledge   │  │  웹서치       │  │  DOCX         │  │
-│  │  Base (RAG)  │  │  + 교차검증   │  │  의견서        │  │
-│  └──────┬──────┘  └──────┬───────┘  └───────┬───────┘  │
-│         │                │                   │          │
-│  ┌──────┴────────────────┴───────────────────┴───────┐  │
-│  │              Source Grade 체계                      │  │
-│  │  A: 법령 원문, 가이드라인    (단독 근거 가능)          │  │
-│  │  B: 판례, 로펌 해설         (A 교차검증 권장)         │  │
-│  │  C: 학술 논문              (단독 근거 불가)           │  │
-│  │  D: 뉴스, AI 요약          (RAG 미포함)              │  │
-│  └───────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph agent["<b>PIPA Expert Agent</b><br/>정보호 변호사 (鄭保護) · 5년차 Associate · 법무법인 진주"]
+        direction TB
+
+        subgraph core["핵심 기능"]
+            direction LR
+            KB["<b>구조화된 Knowledge Base</b><br/>929개 조문 · 46건 가이드라인<br/>1,498개 교차참조"]
+            WS["<b>Multi-Layer 웹서치</b><br/>6대 로펌 · 학술 · 해외 DPA<br/>교차검증"]
+            DX["<b>DOCX 의견서 생성</b><br/>로펌 수준 문서<br/>검증된 인용 체계"]
+        end
+
+        subgraph pipeline["리서치 파이프라인"]
+            direction LR
+            S1["1️⃣ KB 검색<br/><i>조문·가이드라인 인덱스</i>"]
+            S2["2️⃣ 교차참조 추적<br/><i>위임 조문 체인 탐색</i>"]
+            S3["3️⃣ 웹서치<br/><i>4단계 신뢰도 기반</i>"]
+            S4["4️⃣ Adversarial 검증<br/><i>Pass A vs Pass B</i>"]
+            S1 --> S2 --> S3 --> S4
+        end
+
+        subgraph grades["Source Grade 체계"]
+            direction LR
+            GA["<b>Grade A</b> ✅<br/>법령 원문 · 가이드라인<br/><i>단독 근거 가능</i>"]
+            GB["<b>Grade B</b> 🔍<br/>판례 · 로펌 해설<br/><i>A 교차검증 권장</i>"]
+            GC["<b>Grade C</b> 📝<br/>학술 논문<br/><i>단독 근거 불가</i>"]
+            GD["<b>Grade D</b> 🚫<br/>뉴스 · AI 요약<br/><i>RAG 미포함</i>"]
+        end
+    end
+
+    Q["❓ 사용자 질문"] --> S1
+    S4 --> O["📄 검증된 법률 의견서"]
+
+    style agent fill:#f8fafc,stroke:#1B2A4A,stroke-width:2px,color:#1B2A4A
+    style core fill:#eef2ff,stroke:#4f46e5,stroke-width:1px
+    style pipeline fill:#f0fdf4,stroke:#16a34a,stroke-width:1px
+    style grades fill:#fffbeb,stroke:#d97706,stroke-width:1px
+    style KB fill:#dbeafe,stroke:#2563eb,color:#1e40af
+    style WS fill:#dbeafe,stroke:#2563eb,color:#1e40af
+    style DX fill:#dbeafe,stroke:#2563eb,color:#1e40af
+    style GA fill:#d1fae5,stroke:#059669,color:#065f46
+    style GB fill:#fef3c7,stroke:#d97706,color:#92400e
+    style GC fill:#fee2e2,stroke:#dc2626,color:#991b1b
+    style GD fill:#f3f4f6,stroke:#6b7280,color:#374151
+    style Q fill:#ede9fe,stroke:#7c3aed,color:#5b21b6
+    style O fill:#d1fae5,stroke:#059669,color:#065f46
+    style S1 fill:#f0fdf4,stroke:#16a34a,color:#166534
+    style S2 fill:#f0fdf4,stroke:#16a34a,color:#166534
+    style S3 fill:#f0fdf4,stroke:#16a34a,color:#166534
+    style S4 fill:#f0fdf4,stroke:#16a34a,color:#166534
 ```
 
 ---
