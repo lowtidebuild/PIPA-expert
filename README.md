@@ -40,27 +40,56 @@ The result? Hallucinated article numbers, fabricated provisions, and opinions th
 
 PIPA Expert takes a different approach: **instead of smarter search, build smarter data.**
 
-```
-┌─────────────────────────────────────────────────────────┐
-│                    PIPA Expert Agent                     │
-│              정보호 변호사 (Attorney Jeong Bo-ho)          │
-│         5th Year Associate · Law Firm Pearl              │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  ┌─────────────┐  ┌──────────────┐  ┌───────────────┐  │
-│  │  Structured  │  │  Multi-Layer │  │  Law Firm     │  │
-│  │  Knowledge   │  │  Web Search  │  │  Grade DOCX   │  │
-│  │  Base (RAG)  │  │  + Cross-Ref │  │  Opinions     │  │
-│  └──────┬──────┘  └──────┬───────┘  └───────┬───────┘  │
-│         │                │                   │          │
-│  ┌──────┴────────────────┴───────────────────┴───────┐  │
-│  │              Source Grade System                   │  │
-│  │  A: Statutes, Guidelines  (sole authority)        │  │
-│  │  B: Case law, Law firms   (cross-verify with A)   │  │
-│  │  C: Academic papers       (editorial only)        │  │
-│  │  D: News, AI summaries    (excluded)              │  │
-│  └───────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph agent["<b>PIPA Expert Agent</b><br/>정보호 변호사 · 5th Year Associate · Law Firm Pearl"]
+        direction TB
+
+        subgraph core["Core Capabilities"]
+            direction LR
+            KB["<b>Structured Knowledge Base</b><br/>929 Articles · 46 Guidelines<br/>1,498 Cross-References"]
+            WS["<b>Multi-Layer Web Search</b><br/>Law Firms · Academic · DPAs<br/>Cross-Reference Verification"]
+            DX["<b>DOCX Opinion Generator</b><br/>Law Firm-Grade Documents<br/>Verified Citations"]
+        end
+
+        subgraph pipeline["Research Pipeline"]
+            direction LR
+            S1["1️⃣ KB Search<br/><i>Article & Guideline Index</i>"]
+            S2["2️⃣ Cross-Reference<br/><i>Follow delegation chains</i>"]
+            S3["3️⃣ Web Search<br/><i>4-layer trusted sources</i>"]
+            S4["4️⃣ Adversarial Check<br/><i>Pass A vs Pass B</i>"]
+            S1 --> S2 --> S3 --> S4
+        end
+
+        subgraph grades["Source Grade System"]
+            direction LR
+            GA["<b>Grade A</b> ✅<br/>Statutes · Guidelines<br/><i>Sole authority</i>"]
+            GB["<b>Grade B</b> 🔍<br/>Case Law · Law Firms<br/><i>Cross-verify with A</i>"]
+            GC["<b>Grade C</b> 📝<br/>Academic Papers<br/><i>Editorial only</i>"]
+            GD["<b>Grade D</b> 🚫<br/>News · AI Summaries<br/><i>Excluded from RAG</i>"]
+        end
+    end
+
+    Q["❓ User Question"] --> S1
+    S4 --> O["📄 Verified Legal Opinion"]
+
+    style agent fill:#f8fafc,stroke:#1B2A4A,stroke-width:2px,color:#1B2A4A
+    style core fill:#eef2ff,stroke:#4f46e5,stroke-width:1px
+    style pipeline fill:#f0fdf4,stroke:#16a34a,stroke-width:1px
+    style grades fill:#fffbeb,stroke:#d97706,stroke-width:1px
+    style KB fill:#dbeafe,stroke:#2563eb,color:#1e40af
+    style WS fill:#dbeafe,stroke:#2563eb,color:#1e40af
+    style DX fill:#dbeafe,stroke:#2563eb,color:#1e40af
+    style GA fill:#d1fae5,stroke:#059669,color:#065f46
+    style GB fill:#fef3c7,stroke:#d97706,color:#92400e
+    style GC fill:#fee2e2,stroke:#dc2626,color:#991b1b
+    style GD fill:#f3f4f6,stroke:#6b7280,color:#374151
+    style Q fill:#ede9fe,stroke:#7c3aed,color:#5b21b6
+    style O fill:#d1fae5,stroke:#059669,color:#065f46
+    style S1 fill:#f0fdf4,stroke:#16a34a,color:#166534
+    style S2 fill:#f0fdf4,stroke:#16a34a,color:#166534
+    style S3 fill:#f0fdf4,stroke:#16a34a,color:#166534
+    style S4 fill:#f0fdf4,stroke:#16a34a,color:#166534
 ```
 
 ---
