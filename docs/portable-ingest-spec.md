@@ -4,9 +4,8 @@
 
 ## Origin
 
-- **Source project:** `/Users/kpsfamily/코딩 프로젝트/PIPA-expert`
+- **Source project:** [PIPA-expert](https://github.com/lowtidebuild/PIPA-expert)
 - **Created:** 2026-03-25
-- **Commit:** `37de66f`
 
 ## What to Copy
 
@@ -127,9 +126,19 @@ agent .md 파일에 아래 섹션 추가:
 - [ ] 기존 `sources/` → `library/` rename 필요 여부
 - [ ] `.claude/settings.json` hook 등록 (기존 settings.json 있으면 머지)
 
-## Files to Read
+## How to Use
 
-PIPA-expert에서 실제 구현을 확인하려면:
+다른 프로젝트 폴더에서 Claude Code에 아래 프롬프트를 입력:
+
+> 이 repo의 `docs/portable-ingest-spec.md` 읽고, 이 프로젝트에 library ingest 구조 적용해줘. hook 포함 (Section 7).
+
+또는 PIPA-expert를 clone하지 않은 경우:
+
+> https://github.com/lowtidebuild/PIPA-expert/blob/main/docs/portable-ingest-spec.md 읽고, 이 프로젝트에 library ingest 구조 적용해줘. hook 포함 (Section 7).
+
+## Reference Files
+
+PIPA-expert에서 실제 구현을 확인하려면 (경로는 이 repo 기준 상대경로):
 
 | 파일 | 용도 |
 |------|------|
