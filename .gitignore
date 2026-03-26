@@ -17,5 +17,8 @@ output/**
 !output/opinions/
 !output/opinions/.gitkeep
 
+# 내부 설계 문서
+DESIGN.md
+
 # 임시 파일
 *.tmp
