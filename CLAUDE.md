@@ -36,6 +36,7 @@ docs/specs/                # 설계 문서
   - `SKILL.md` — 의견서 구조 및 워크플로우
   - `legal-opinion-formatter-SKILL.md` — python-docx 상세 구현 가이드
   - `references/format-checklist.md` — 생성 전 체크리스트
+  - **한국어 의견서 작성 시 반드시 `docs/ko-legal-opinion-style-guide.md`를 읽고 따를 것**
 - **ingest** — 외부 소스 자동 파싱/분류/인덱싱 (`.claude/skills/ingest/`)
   - `library/inbox/`에 파일 드롭 → `/ingest`로 자동 처리
   - Grade 자동 판별 → frontmatter 생성 → 폴더 배치 → 인덱스 업데이트
