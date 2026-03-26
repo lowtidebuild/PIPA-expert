@@ -222,7 +222,7 @@ You need a free Open Law API account. The `--oc` parameter is your registered em
 - **Something looks wrong?** Ask the agent: "제15조 인용을 검증해줘"
 - **Need a different format?** Just ask: "마크다운 요약으로 줘" or "DOCX로 만들어줘"
 - **Agent seems stuck?** Try rephrasing your question or breaking it into smaller parts
-- **Technical issues?** Check the [GitHub repository](https://github.com/lowtidebuild/PIPA-expert)
+
 
 ---
 
