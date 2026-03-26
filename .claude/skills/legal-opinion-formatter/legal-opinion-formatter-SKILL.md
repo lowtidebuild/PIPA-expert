@@ -105,7 +105,7 @@ def create_letterhead(doc, firm_info=None):
     if firm_info is None:
         firm_info = {
             'name_ko': '법무법인 진주',
-            'name_en': 'Law Firm Pearl',
+            'name_en': 'Jinju Law Firm',
         }
 
     # Firm name (Korean)
