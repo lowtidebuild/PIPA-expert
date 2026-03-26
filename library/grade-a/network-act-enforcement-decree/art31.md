@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제44조의6제1항"
   - "제44조의10"
-  - "제31조"
 
 # === 검색 메타 ===
 keywords:

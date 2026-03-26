@@ -51,6 +51,7 @@ KNOWN_LAWS = {
     # 전자정부법 (개인정보 관련 조항 포함)
     "전자정부법": {"search_query": "전자정부법", "target_dir": "e-government-act"},
 }
+TARGET_DIR_TO_LAW_NAME = {config["target_dir"]: law_name for law_name, config in KNOWN_LAWS.items()}
 
 
 def api_request(url: str, max_retries: int = 3) -> str:
@@ -133,6 +134,7 @@ def parse_full_law_xml(xml_text: str) -> dict:
     for jo in root.findall(".//조문단위"):
         article = {
             "조문번호": _find_text(jo, "조문번호"),
+            "조문가지번호": _find_text(jo, "조문가지번호"),
             "조문여부": _find_text(jo, "조문여부"),
             "조문제목": _find_text(jo, "조문제목"),
             "조문시행일자": _find_text(jo, "조문시행일자"),
@@ -195,6 +197,7 @@ def _find_text(element, path: str) -> str:
 def extract_cross_references(text: str) -> list[str]:
     """Extract cross-references from article text (e.g., '제15조', '시행령 제17조')."""
     refs = []
+    seen = set()
     # Pattern: 제N조, 제N조의N, 제N조제N항
     pattern = r"제(\d+)조(?:의(\d+))?(?:제(\d+)항)?"
     for match in re.finditer(pattern, text):
@@ -203,8 +206,10 @@ def extract_cross_references(text: str) -> list[str]:
             ref += f"의{match.group(2)}"
         if match.group(3):
             ref += f"제{match.group(3)}항"
-        refs.append(ref)
-    return list(set(refs))
+        if ref not in seen:
+            seen.add(ref)
+            refs.append(ref)
+    return refs
 
 
 def extract_keywords(title: str, content: str) -> list[str]:
@@ -231,10 +236,10 @@ def extract_keywords(title: str, content: str) -> list[str]:
     return list(set(keywords))[:10]
 
 
-def format_article_number(num_str: str) -> str:
-    """Format article number: '000200' -> '2', '001002' -> '10의2', '①' -> '1'."""
+def _normalize_numeric_token(num_str: str) -> str:
+    """Normalize a numeric token from the API into a plain integer string."""
     if not num_str:
-        return num_str
+        return ""
 
     # Handle circled numbers (①②③...)
     circled = "①②③④⑤⑥⑦⑧⑨⑩⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳"
@@ -246,15 +251,54 @@ def format_article_number(num_str: str) -> str:
     if not digits_only:
         return num_str
 
-    if len(digits_only) >= 6:
-        num = int(digits_only[:4])
-        sub = int(digits_only[4:6])
-        result = str(num)
-        if sub > 0:
-            result += f"의{sub}"
-        return result
-
     return str(int(digits_only))
+
+
+def format_article_number(num_str: str, branch_str: str = "") -> str:
+    """Format article number: ('10', '2') -> '10의2', legacy '001002' -> '10의2'."""
+    if branch_str:
+        main = _normalize_numeric_token(num_str)
+        branch = _normalize_numeric_token(branch_str)
+        if main and branch and branch != "0":
+            return f"{main}의{branch}"
+        if main:
+            return main
+
+    digits_only = re.sub(r"[^\d]", "", num_str or "")
+    if len(digits_only) >= 6:
+        num = str(int(digits_only[:4]))
+        sub = str(int(digits_only[4:6]))
+        if sub != "0":
+            return f"{num}의{sub}"
+        return num
+
+    return _normalize_numeric_token(num_str)
+
+
+def format_article_citation(num_str: str, branch_str: str = "") -> str:
+    """Format a legal article citation label: ('10', '2') -> '제10조의2'."""
+    article_number = format_article_number(num_str, branch_str)
+    if "의" in article_number:
+        main, sub = article_number.split("의", 1)
+        return f"제{main}조의{sub}"
+    return f"제{article_number}조"
+
+
+def format_article_slug(num_str: str, branch_str: str = "") -> str:
+    """Format the filename slug for an article."""
+    return f"art{format_article_number(num_str, branch_str).replace('의', '-')}"
+
+
+def collect_article_text(article: dict) -> str:
+    """Collect article text for keyword and cross-reference extraction."""
+    parts = [article.get("조문제목", ""), article.get("조문내용", "")]
+    for paragraph in article.get("항", []):
+        parts.append(paragraph.get("항내용", ""))
+        for ho in paragraph.get("호", []):
+            parts.append(ho.get("호내용", ""))
+            for mok in ho.get("목", []):
+                parts.append(mok.get("목내용", ""))
+    return " ".join(part for part in parts if part)
 
 
 def build_chapter_map(chapters: list) -> dict:
@@ -266,19 +310,15 @@ def build_chapter_map(chapters: list) -> dict:
 
 def create_article_md(law_info: dict, article: dict, law_slug: str) -> str:
     """Create markdown content for a single article."""
-    art_num = format_article_number(article["조문번호"])
+    art_num = format_article_number(article["조문번호"], article.get("조문가지번호", ""))
+    art_label = format_article_citation(article["조문번호"], article.get("조문가지번호", ""))
     title = article.get("조문제목", "")
     content = article.get("조문내용", "")
     effective_date = article.get("조문시행일자", law_info.get("시행일자", ""))
 
     # Extract cross-references and keywords
-    full_text = f"{title} {content}"
-    for p in article.get("항", []):
-        full_text += f" {p.get('항내용', '')}"
-        for h in p.get("호", []):
-            full_text += f" {h.get('호내용', '')}"
-
-    cross_refs = extract_cross_references(full_text)
+    full_text = collect_article_text(article)
+    cross_refs = [ref for ref in extract_cross_references(full_text) if ref != art_label]
     keywords = extract_keywords(title, full_text)
 
     # Build frontmatter
@@ -294,7 +334,7 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/{urllib.parse.quote(law_info['법령명한글'])}/제{art_num}조"
+source_url: "https://law.go.kr/법령/{urllib.parse.quote(law_info['법령명한글'])}/{urllib.parse.quote(art_label)}"
 effective_date: "{effective_date}"
 last_amended: "{law_info.get('공포일자', '')}"
 retrieved_at: "{datetime.now().strftime('%Y-%m-%d')}"
@@ -311,7 +351,7 @@ keywords:
 """
 
     # Build article body
-    body = f"## 제{art_num}조"
+    body = f"## {art_label}"
     if title:
         body += f"({title})"
     body += "\n\n"
@@ -397,32 +437,14 @@ def process_law(oc: str, law_name: str, config: dict):
         print(f"  Saved raw XML to {debug_path}")
         return False
 
-    # Step 4: Write _meta.json
-    meta = {
-        "law_name": law_info["법령명한글"],
-        "law_id": law_info.get("법령ID", ""),
-        "law_mst": law_info.get("법령키", ""),
-        "law_type": law_info.get("법종구분", ""),
-        "effective_date": law_info.get("시행일자", ""),
-        "promulgation_date": law_info.get("공포일자", ""),
-        "promulgation_number": law_info.get("공포번호", ""),
-        "governing_body": law_info.get("소관부처", ""),
-        "amendment_type": law_info.get("제개정구분", ""),
-        "article_count": len(articles),
-        "source_grade": "A",
-        "retrieved_at": datetime.now().isoformat(),
-    }
-    meta_path = target_dir / "_meta.json"
-    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"  Wrote {meta_path.name}")
-
-    # Step 5: Write _hierarchy.json
+    # Step 4: Write _hierarchy.json
+    hierarchy_article_count = sum(1 for a in articles if a.get("조문여부", "") == "조문")
     hierarchy = {
         "law": law_info["법령명한글"],
         "chapters": law_info.get("chapters", []),
         "articles": [
             {
-                "number": format_article_number(a["조문번호"]),
+                "number": format_article_number(a["조문번호"], a.get("조문가지번호", "")),
                 "title": a.get("조문제목", ""),
                 "is_article": a.get("조문여부", "") == "조문",
             }
@@ -433,7 +455,7 @@ def process_law(oc: str, law_name: str, config: dict):
     hier_path.write_text(json.dumps(hierarchy, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"  Wrote {hier_path.name}")
 
-    # Step 6: Write individual article files
+    # Step 5: Write individual article files
     cross_refs_all = []
     article_count = 0
 
@@ -442,9 +464,9 @@ def process_law(oc: str, law_name: str, config: dict):
         if article.get("조문여부") != "조문":
             continue
 
-        art_num = format_article_number(article["조문번호"])
-        slug = f"art{art_num.replace('의', '-')}"
-        title = article.get("조문제목", "")
+        art_num = format_article_number(article["조문번호"], article.get("조문가지번호", ""))
+        art_label = format_article_citation(article["조문번호"], article.get("조문가지번호", ""))
+        slug = format_article_slug(article["조문번호"], article.get("조문가지번호", ""))
 
         md_content = create_article_md(law_info, article, config["target_dir"])
 
@@ -454,19 +476,37 @@ def process_law(oc: str, law_name: str, config: dict):
         article_count += 1
 
         # Collect cross-references
-        full_text = article.get("조문내용", "")
-        for p in article.get("항", []):
-            full_text += f" {p.get('항내용', '')}"
+        full_text = collect_article_text(article)
         refs = extract_cross_references(full_text)
         for ref in refs:
-            if ref != f"제{art_num}조":  # Skip self-references
+            if ref != art_label:  # Skip self-references
                 cross_refs_all.append({
-                    "from": f"제{art_num}조",
+                    "from": art_label,
                     "to": ref,
                     "type": "references",
                 })
 
     print(f"  Wrote {article_count} article files")
+
+    # Step 6: Write _meta.json
+    meta = {
+        "law_name": law_info["법령명한글"],
+        "law_id": law_info.get("법령ID", ""),
+        "law_mst": law_info.get("법령키", ""),
+        "law_type": law_info.get("법종구분", ""),
+        "effective_date": law_info.get("시행일자", ""),
+        "promulgation_date": law_info.get("공포일자", ""),
+        "promulgation_number": law_info.get("공포번호", ""),
+        "governing_body": law_info.get("소관부처", ""),
+        "amendment_type": law_info.get("제개정구분", ""),
+        "article_count": article_count,
+        "hierarchy_article_count": hierarchy_article_count,
+        "source_grade": "A",
+        "retrieved_at": datetime.now().isoformat(),
+    }
+    meta_path = target_dir / "_meta.json"
+    meta_path.write_text(json.dumps(meta, ensure_ascii=False, indent=2), encoding="utf-8")
+    print(f"  Wrote {meta_path.name}")
 
     # Step 7: Write _cross-refs.json
     cross_refs = {
@@ -513,10 +553,19 @@ def update_indexes(oc: str):
                 continue
 
             rel_path = md_file.relative_to(PROJECT_ROOT)
+            article_main = meta.get("article", "")
+            article_sub = meta.get("article_sub", "0")
+            article_label = article_main
+            article_id = article_main
+            if article_sub not in ("", "0", 0):
+                article_label = f"{article_main}의{article_sub}"
+                article_id = f"{article_main}-{article_sub}"
             all_articles.append({
-                "id": f"{law_dir.name}-art{meta.get('article', 'x')}",
+                "id": f"{law_dir.name}-art{article_id or 'x'}",
                 "law": meta.get("law", ""),
-                "article": meta.get("article", ""),
+                "article": article_label,
+                "article_main": article_main,
+                "article_sub": article_sub,
                 "title": meta.get("article_title", ""),
                 "path": str(rel_path),
                 "source_grade": "A",
@@ -544,15 +593,38 @@ def update_indexes(oc: str):
     for law_dir in SOURCES_DIR.iterdir():
         if not law_dir.is_dir():
             continue
+        if law_dir.name == "pipc-guidelines":
+            continue
         meta_path = law_dir / "_meta.json"
-        if meta_path.exists():
-            meta = json.loads(meta_path.read_text(encoding="utf-8"))
-            registry["sources"]["grade-a"][law_dir.name] = {
-                "status": "complete",
-                "count": meta.get("article_count", 0),
-                "law_name": meta.get("law_name", ""),
-                "retrieved_at": meta.get("retrieved_at", ""),
-            }
+        meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
+        count = len(list(law_dir.glob("art*.md")))
+
+        hier_path = law_dir / "_hierarchy.json"
+        target = count
+        if hier_path.exists():
+            hierarchy = json.loads(hier_path.read_text(encoding="utf-8"))
+            target = sum(1 for article in hierarchy.get("articles", []) if article.get("is_article"))
+
+        if count == 0:
+            status = "pending"
+        elif target == count:
+            status = "complete"
+        else:
+            status = "partial"
+
+        entry = {
+            "status": status,
+            "count": count,
+            "target": target,
+            "law_name": meta.get("law_name", TARGET_DIR_TO_LAW_NAME.get(law_dir.name, "")),
+            "retrieved_at": meta.get("retrieved_at", ""),
+        }
+        if status == "partial":
+            entry["note"] = "Branch articles are currently flattened into base article files; re-ingest required."
+        elif status == "pending":
+            entry["note"] = "Directory exists but no ingested statute files are available yet."
+
+        registry["sources"]["grade-a"][law_dir.name] = entry
 
     registry["generated_at"] = datetime.now().isoformat()
     registry_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2), encoding="utf-8")

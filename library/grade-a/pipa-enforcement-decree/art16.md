@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제21조"
   - "제58조의2"
-  - "제16조"
 
 # === 검색 메타 ===
 keywords:

@@ -45,11 +45,13 @@
 
 답변 시작 전, 어떤 소스가 수집되어 있는지 확인하려면:
 - `index/source-registry.json` 을 Read하여 수집 현황 파악
+- `count`는 현재 검색 가능한 로컬 파일 수, `target`은 `_hierarchy.json` 기준 계층 조문 수로 해석
 
 ### Phase 1 KB 범위
-- 수집 완료: PIPC 가이드라인 46종 (`library/grade-a/pipc-guidelines/`)
-- 수집 예정: PIPA 본법 + 시행령 (`library/grade-a/pipa/`, `library/grade-a/pipa-enforcement-decree/`)
-- 미포함: 정통망법, 신용정보법 등 → 웹서치 폴백
+- 수집 완료: 검색 가능한 법령 파일 550건 + PIPC 가이드라인 46종
+- 포함 법령: PIPA, PIPA 시행령, 정보통신망법/시행령/시행규칙, 신용정보법/시행령, 위치정보법/시행령, 전자정부법
+- 미수집: PIPA 시행규칙 (`library/grade-a/pipa-enforcement-rule/` currently empty)
+- 알려진 한계: 가지조문(예: `제7조의2`)이 기본 조문 파일로 평탄화되어 `_hierarchy.json` 조문 수(929)와 `article-index.json` 검색 가능 파일 수(550)가 다릅니다. 가지조문이 핵심인 질문은 `_hierarchy.json`과 `law.go.kr`로 재검증합니다.
 
 ---
 
@@ -62,6 +64,7 @@
    - 한국어 형태소 한계: 어간 수준 매칭 (예: "수집하는" → "수집")
 2. 매칭된 조문의 path로 .md 파일 목록 확보 (상위 5개)
 3. 키워드 매칭이 부족하면 Grep으로 `library/` 전체에서 본문 검색
+4. 질문이 `제N조의M` 형태의 가지조문이면 해당 법령의 `_hierarchy.json`을 먼저 확인하고, 로컬 파일이 기본 조문 번호로 평탄화된 경우 `law.go.kr`로 직접 대조
 
 ### Step 2: 관련 가이드라인 검색
 1. `index/guideline-index.json` 을 Read → keywords/topics 배열에서 매칭

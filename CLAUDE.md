@@ -8,15 +8,23 @@
 library/inbox/             # 외부 소스 드롭 → /ingest로 자동 처리
 library/grade-a/           # Grade A 공식 1차 소스
   pipc-guidelines/          # PIPC 가이드라인 46종 (전처리 완료)
-  pipa/                     # 개인정보보호법 조문 (API 수집 예정)
-  pipa-enforcement-decree/  # 시행령 (API 수집 예정)
+  pipa/                     # 개인정보보호법 searchable 파일 76건 (계층 126건)
+  pipa-enforcement-decree/  # 시행령 searchable 파일 63건 (계층 140건)
+  pipa-enforcement-rule/    # 시행규칙 폴더만 존재, 재수집 필요
 library/grade-b/           # Grade B 2차 소스 (처분례, 판례)
 library/grade-c/           # Grade C 3차 소스 (로펌 해설, 학술)
-index/                     # 검색 인덱스 (guideline-index.json, source-registry.json)
+index/                     # 검색 인덱스 (article-index.json, guideline-index.json, source-registry.json)
 config/                    # RAG 설정, 소스 등급 정의
 scripts/                   # 전처리/수집 스크립트
 docs/specs/                # 설계 문서
 ```
+
+## Current Status
+
+- 검색 가능한 Grade A 법령 파일: 550건 (`index/article-index.json`)
+- PIPC 가이드라인: 46건 (`index/guideline-index.json`)
+- 알려진 감사 이슈: 가지조문(예: `제7조의2`)이 기본 조문 파일로 평탄화되어 `count`와 `target`이 다를 수 있음. 법령별 실제 커버리지는 `index/source-registry.json`의 `count/target/status`를 확인할 것.
+- 상세 감사/수정 로그: `docs/2026-03-27-quality-audit-log.md`
 
 ## Source Grade 체계
 

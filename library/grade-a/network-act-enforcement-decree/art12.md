@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제13조제1항"
   - "제23조의5제2항"
-  - "제12조"
 
 # === 검색 메타 ===
 keywords:

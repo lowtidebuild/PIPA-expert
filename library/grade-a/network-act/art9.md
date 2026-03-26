@@ -18,7 +18,6 @@ retrieved_at: "2026-03-25"
 # === 관계 정보 ===
 cross_references:
   - "제8조제1항"
-  - "제9조"
 
 # === 검색 메타 ===
 keywords:

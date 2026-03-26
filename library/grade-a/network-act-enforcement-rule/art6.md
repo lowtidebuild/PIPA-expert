@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제60조의7제4항"
   - "제48조의6제5항"
-  - "제6조"
 
 # === 검색 메타 ===
 keywords:

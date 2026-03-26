@@ -100,10 +100,12 @@ When you need a formal document — not just a chat answer — ask for a legal o
 > "제3자 제공 관련 법률의견서를 DOCX로 만들어줘"
 
 The agent will:
-1. Research across the full knowledge base (929 articles + 46 guidelines)
+1. Research across the full knowledge base (550 searchable statute files + 46 guidelines)
 2. Draft a structured opinion with verified citations
 3. Run the fact-checker to verify every legal reference
 4. Generate a professional DOCX file saved to `output/opinions/`
+
+If the issue turns on a branch article such as `제7조의2`, ask the agent to verify directly against `law.go.kr` as well. The current local statute index is still flattened at the base article-number level for some laws.
 
 ---
 
