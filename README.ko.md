@@ -8,7 +8,7 @@
 
 **929개 법조문** · **46건 공식 가이드라인** · **1,498개 교차참조** · **로펌 수준 DOCX 의견서**
 
-[Claude Code](https://claude.ai/claude-code) 전용 · 구조화된 RAG 기반
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) 전용 · 구조화된 RAG 기반 · **[사용 가이드](docs/ko/HOW-TO-USE.md)**
 
 [![Laws](https://img.shields.io/badge/법령-10개_법률-blue)](#-knowledge-base-법령-라이브러리)
 [![Articles](https://img.shields.io/badge/조문-929개-blue)](#-knowledge-base-법령-라이브러리)
