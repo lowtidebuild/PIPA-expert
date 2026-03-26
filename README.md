@@ -47,7 +47,7 @@ PIPA Expert takes a different approach: **instead of smarter search, build smart
 
 ```mermaid
 graph TB
-    subgraph agent["<b>PIPA Expert Agent</b><br/>정보호 변호사 · 5th Year Associate · Law Firm Pearl"]
+    subgraph agent["<b>PIPA Expert Agent</b><br/>정보호 변호사 · 5th Year Associate · Jinju Law Firm"]
         direction TB
 
         subgraph core["Core Capabilities"]
@@ -289,7 +289,7 @@ Before any output is finalized, a **dedicated fact-checker sub-agent** verifies 
 
 The agent produces **law firm-grade Word documents** with:
 
-- Professional letterhead (법무법인 진주 / Law Firm Pearl)
+- Professional letterhead (법무법인 진주 / Jinju Law Firm)
 - Structured sections: Issues → Analysis → Conclusions → Recommendations
 - Risk matrix tables with color coding
 - Full citation trail with verification status
@@ -403,9 +403,9 @@ Then use `/agents/pipa-agent` to activate the PIPA expert persona.
 
 ---
 
-## Part of Law Firm Pearl
+## Part of Jinju Law Firm
 
-PIPA Expert is one of several specialized legal AI agents operating under the fictional **법무법인 진주 (Law Firm Pearl)**:
+PIPA Expert is one of several specialized legal AI agents operating under the fictional **법무법인 진주 (Jinju Law Firm)**:
 
 | Agent | Attorney | Specialty |
 |-------|----------|-----------|

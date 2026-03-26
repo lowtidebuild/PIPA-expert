@@ -58,12 +58,12 @@ description: >
 
 ```
 법무법인 진주
-Law Firm Pearl
+Jinju Law Firm
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 [주소]  |  전화: [번호]  |  [이메일]  |  [웹사이트]
 ```
 
-- 기본값: 법무법인 진주 / Law Firm Pearl
+- 기본값: 법무법인 진주 / Jinju Law Firm
 - 사용자가 다른 법무법인/회사 정보를 제공하면 override
 - 첫 페이지 헤더와 이후 페이지 헤더 구분
 
@@ -82,7 +82,7 @@ PRIVILEGED & CONFIDENTIAL
 의견서의 작성자는 별도 지정이 없으면 다음 페르소나를 사용한다:
 
 - **이름:** 정보호 (鄭保護)
-- **소속:** 법무법인 진주 (Law Firm Pearl)
+- **소속:** 법무법인 진주 (Jinju Law Firm)
 - **직위:** 5년차 Associate / 개인정보보호 전문
 - **등록번호:** 변호사 등록번호 제2018-XXXX호
 
