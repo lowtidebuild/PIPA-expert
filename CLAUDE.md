@@ -10,8 +10,8 @@ library/grade-a/           # Grade A 공식 1차 소스
   pipc-guidelines/          # PIPC 가이드라인 46종 (전처리 완료)
   pipa/                     # 개인정보보호법 조문 (API 수집 예정)
   pipa-enforcement-decree/  # 시행령 (API 수집 예정)
-library/grade-b/           # Grade B 2차 소스 (처분례, 판례, 로펌)
-library/grade-c/           # Grade C 3차 소스 (학술)
+library/grade-b/           # Grade B 2차 소스 (처분례, 판례)
+library/grade-c/           # Grade C 3차 소스 (로펌 해설, 학술)
 index/                     # 검색 인덱스 (guideline-index.json, source-registry.json)
 config/                    # RAG 설정, 소스 등급 정의
 scripts/                   # 전처리/수집 스크립트
@@ -21,8 +21,8 @@ docs/specs/                # 설계 문서
 ## Source Grade 체계
 
 - **A**: 법령 원문, PIPC 가이드라인 — 단독 근거 가능
-- **B**: 처분례, 판례, 로펌 해설 — A 교차검증 권장
-- **C**: 학술 논문 — 단독 근거 불가, [EDITORIAL] 표시 필수
+- **B**: 처분례, 판례 — A 교차검증 권장
+- **C**: 로펌 해설, 학술 논문 — 단독 근거 불가, [EDITORIAL] 표시 필수
 - **D**: 뉴스, AI 요약, 위키 — RAG 미포함
 
 ## Agents

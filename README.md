@@ -69,8 +69,8 @@ graph TB
         subgraph grades["Source Grade System"]
             direction LR
             GA["<b>Grade A</b> ✅<br/>Statutes · Guidelines<br/><i>Sole authority</i>"]
-            GB["<b>Grade B</b> 🔍<br/>Case Law · Law Firms<br/><i>Cross-verify with A</i>"]
-            GC["<b>Grade C</b> 📝<br/>Academic Papers<br/><i>Editorial only</i>"]
+            GB["<b>Grade B</b> 🔍<br/>Case Law · Enforcement<br/><i>Cross-verify with A</i>"]
+            GC["<b>Grade C</b> 📝<br/>Law Firms · Academic<br/><i>Editorial only</i>"]
             GD["<b>Grade D</b> 🚫<br/>News · AI Summaries<br/><i>Excluded from RAG</i>"]
         end
     end
@@ -335,8 +335,8 @@ PIPA-expert/
 │   │   ├── network-act/          #   Network Act (142)
 │   │   ├── pipc-guidelines/      #   Official guidelines (46)
 │   │   └── ...                   #   + 6 more statute sets
-│   ├── grade-b/                  # Case law, law firm analysis
-│   └── grade-c/                  # Academic papers
+│   ├── grade-b/                  # Case law, enforcement decisions
+│   └── grade-c/                  # Law firm analysis, academic papers
 ├── index/
 │   ├── article-index.json        # Searchable article index (929 entries)
 │   ├── guideline-index.json      # Guideline index (46 entries)

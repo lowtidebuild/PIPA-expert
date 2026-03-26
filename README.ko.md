@@ -68,8 +68,8 @@ graph TB
         subgraph grades["Source Grade 체계"]
             direction LR
             GA["<b>Grade A</b> ✅<br/>법령 원문 · 가이드라인<br/><i>단독 근거 가능</i>"]
-            GB["<b>Grade B</b> 🔍<br/>판례 · 로펌 해설<br/><i>A 교차검증 권장</i>"]
-            GC["<b>Grade C</b> 📝<br/>학술 논문<br/><i>단독 근거 불가</i>"]
+            GB["<b>Grade B</b> 🔍<br/>판례 · 처분례<br/><i>A 교차검증 권장</i>"]
+            GC["<b>Grade C</b> 📝<br/>로펌 해설 · 학술 논문<br/><i>단독 근거 불가</i>"]
             GD["<b>Grade D</b> 🚫<br/>뉴스 · AI 요약<br/><i>RAG 미포함</i>"]
         end
     end

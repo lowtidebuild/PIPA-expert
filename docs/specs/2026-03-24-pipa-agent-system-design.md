@@ -63,6 +63,7 @@ library/
 │   ├── pipc-decisions/               # PIPC 처분례
 │   └── court-precedents/            # 대법원 판례
 └── grade-c/
+    ├── law-firm/                     # 로펌 해설/뉴스레터
     └── academic/                     # 학술 논문
 ```
 

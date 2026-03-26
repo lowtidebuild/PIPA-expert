@@ -29,7 +29,7 @@ pipa-rag/
 │   │   ├── pipa-enforcement-decree/ # (대기: API 검증 후)
 │   │   └── pipc-guidelines/         # ✅ 46개 가이드라인 전처리 완료
 │   ├── grade-b/      # 2차 소스 (처분례, 판례 — 추후)
-│   └── grade-c/      # 3차 소스 (학술 — 추후)
+│   └── grade-c/      # 3차 소스 (로펌 해설, 학술 — 추후)
 ├── index/            # 검색 인덱스
 ├── embeddings/       # Phase 2: 벡터 임베딩
 ├── archive/          # 법령 개정 이력

@@ -112,6 +112,7 @@ def build_index():
                 "court-precedents": {"status": "pending", "note": "대법원 판례 — 추후 수집"},
             },
             "grade-c": {
+                "law-firm": {"status": "pending", "note": "로펌 해설/뉴스레터 — 추후 수집"},
                 "academic": {"status": "pending", "note": "학술 논문 — 추후 수집"},
             },
         },
