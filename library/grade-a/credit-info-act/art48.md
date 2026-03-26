@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제14조제1항"
   - "제27조제6항"
-  - "제48조"
 
 # === 검색 메타 ===
 keywords:

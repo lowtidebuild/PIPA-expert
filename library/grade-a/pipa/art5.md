@@ -18,7 +18,6 @@ retrieved_at: "2026-03-25"
 # === 관계 정보 ===
 cross_references:
   - "제4조"
-  - "제5조"
 
 # === 검색 메타 ===
 keywords:

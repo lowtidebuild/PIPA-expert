@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제46조제1항"
   - "제3조"
-  - "제37조"
 
 # === 검색 메타 ===
 keywords:

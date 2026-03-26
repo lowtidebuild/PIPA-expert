@@ -3,10 +3,11 @@
 
 import json
 import re
+from datetime import datetime
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).parent.parent
-GUIDELINES_DIR = PROJECT_ROOT / "sources" / "grade-a" / "pipc-guidelines"
+GUIDELINES_DIR = PROJECT_ROOT / "library" / "grade-a" / "pipc-guidelines"
 INDEX_DIR = PROJECT_ROOT / "index"
 
 
@@ -85,7 +86,7 @@ def build_index():
         "collection": "PIPC Official Guidelines",
         "source_grade": "A",
         "count": len(guidelines),
-        "generated_at": __import__("datetime").datetime.now().isoformat(),
+        "generated_at": datetime.now().isoformat(),
         "guidelines": guidelines,
     }
 
@@ -93,32 +94,30 @@ def build_index():
     out_path.write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Index written: {out_path} ({len(guidelines)} entries)")
 
-    # Also build source registry
-    registry = {
-        "type": "source_registry",
-        "generated_at": __import__("datetime").datetime.now().isoformat(),
-        "sources": {
-            "grade-a": {
-                "pipa": {"status": "pending", "note": "법령 원문 — law.go.kr API로 수집 예정"},
-                "pipa-enforcement-decree": {"status": "pending", "note": "시행령 — law.go.kr API로 수집 예정"},
-                "pipc-guidelines": {
-                    "status": "complete",
-                    "count": len(guidelines),
-                    "total_chars": sum(g["char_count"] for g in guidelines),
-                },
-            },
-            "grade-b": {
-                "pipc-decisions": {"status": "pending", "note": "PIPC 처분례 — 추후 수집"},
-                "court-precedents": {"status": "pending", "note": "대법원 판례 — 추후 수집"},
-            },
-            "grade-c": {
-                "law-firm": {"status": "pending", "note": "로펌 해설/뉴스레터 — 추후 수집"},
-                "academic": {"status": "pending", "note": "학술 논문 — 추후 수집"},
-            },
-        },
-    }
-
     reg_path = INDEX_DIR / "source-registry.json"
+    if reg_path.exists():
+        registry = json.loads(reg_path.read_text(encoding="utf-8"))
+    else:
+        registry = {"type": "source_registry", "sources": {"grade-a": {}, "grade-b": {}, "grade-c": {}}}
+
+    registry["generated_at"] = datetime.now().isoformat()
+    registry["sources"].setdefault("grade-a", {})
+    registry["sources"].setdefault("grade-b", {})
+    registry["sources"].setdefault("grade-c", {})
+    registry["sources"]["grade-a"]["pipc-guidelines"] = {
+        "status": "complete",
+        "count": len(guidelines),
+        "target": len(guidelines),
+        "collection": "PIPC Official Guidelines",
+        "publisher": "개인정보보호위원회 (PIPC)",
+        "retrieved_at": datetime.now().isoformat(),
+        "total_chars": sum(g["char_count"] for g in guidelines),
+    }
+    registry["sources"]["grade-b"].setdefault("pipc-decisions", {"status": "pending", "note": "PIPC 처분례 — 추후 수집"})
+    registry["sources"]["grade-b"].setdefault("court-precedents", {"status": "pending", "note": "대법원 판례 — 추후 수집"})
+    registry["sources"]["grade-c"].setdefault("law-firm", {"status": "pending", "note": "로펌 해설/뉴스레터 — 추후 수집"})
+    registry["sources"]["grade-c"].setdefault("academic", {"status": "pending", "note": "학술 논문 — 추후 수집"})
+
     reg_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"Registry written: {reg_path}")
 

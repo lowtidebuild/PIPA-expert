@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제15조"
   - "제26조"
-  - "제27조"
 
 # === 검색 메타 ===
 keywords:

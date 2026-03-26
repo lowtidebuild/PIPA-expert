@@ -1,73 +1,104 @@
 {
   "type": "source_registry",
-  "generated_at": "2026-03-25T10:04:27.867099",
+  "generated_at": "2026-03-27T05:33:05.684123",
   "sources": {
     "grade-a": {
       "pipa": {
-        "status": "complete",
-        "count": 140,
+        "status": "partial",
+        "count": 76,
+        "target": 126,
         "law_name": "개인정보 보호법",
-        "retrieved_at": "2026-03-25T10:03:46.833897"
+        "retrieved_at": "2026-03-25T10:03:46.833897",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
       },
       "pipa-enforcement-decree": {
-        "status": "complete",
-        "count": 151,
+        "status": "partial",
+        "count": 63,
+        "target": 140,
         "law_name": "개인정보 보호법 시행령",
-        "retrieved_at": "2026-03-25T10:03:50.897479"
+        "retrieved_at": "2026-03-25T10:03:50.897479",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
       },
       "pipc-guidelines": {
         "status": "complete",
-        "count": 0,
-        "law_name": "",
-        "retrieved_at": ""
+        "count": 46,
+        "target": 46,
+        "collection": "PIPC Official Guidelines",
+        "publisher": "개인정보보호위원회 (PIPC)",
+        "retrieved_at": "2026-03-27T05:33:05.684206",
+        "total_chars": 5835290
       },
       "network-act": {
-        "status": "complete",
-        "count": 156,
+        "status": "partial",
+        "count": 76,
+        "target": 142,
         "law_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률",
-        "retrieved_at": "2026-03-25T10:03:57.169013"
+        "retrieved_at": "2026-03-25T10:03:57.169013",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
       },
       "e-government-act": {
-        "status": "complete",
-        "count": 111,
+        "status": "partial",
+        "count": 78,
+        "target": 99,
         "law_name": "전자정부법",
-        "retrieved_at": "2026-03-25T10:04:25.766257"
+        "retrieved_at": "2026-03-25T10:04:25.766257",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
       },
       "location-info-act": {
-        "status": "complete",
-        "count": 63,
+        "status": "partial",
+        "count": 43,
+        "target": 53,
         "law_name": "위치정보의 보호 및 이용 등에 관한 법률",
-        "retrieved_at": "2026-03-25T10:04:17.756500"
+        "retrieved_at": "2026-03-25T10:04:17.756500",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
       },
       "network-act-enforcement-rule": {
-        "status": "complete",
-        "count": 11,
+        "status": "partial",
+        "count": 10,
+        "target": 11,
         "law_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행규칙",
-        "retrieved_at": "2026-03-25T10:04:05.453063"
+        "retrieved_at": "2026-03-25T10:04:05.453063",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
       },
       "location-info-act-enforcement-decree": {
-        "status": "complete",
-        "count": 55,
+        "status": "partial",
+        "count": 40,
+        "target": 55,
         "law_name": "위치정보의 보호 및 이용 등에 관한 법률 시행령",
-        "retrieved_at": "2026-03-25T10:04:21.775236"
+        "retrieved_at": "2026-03-25T10:04:21.775236",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
       },
       "credit-info-act": {
-        "status": "complete",
-        "count": 103,
+        "status": "partial",
+        "count": 52,
+        "target": 91,
         "law_name": "신용정보의 이용 및 보호에 관한 법률",
-        "retrieved_at": "2026-03-25T10:04:09.531368"
+        "retrieved_at": "2026-03-25T10:04:09.531368",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
       },
       "credit-info-act-enforcement-decree": {
-        "status": "complete",
-        "count": 91,
+        "status": "partial",
+        "count": 38,
+        "target": 81,
         "law_name": "신용정보의 이용 및 보호에 관한 법률 시행령",
-        "retrieved_at": "2026-03-25T10:04:13.815597"
+        "retrieved_at": "2026-03-25T10:04:13.815597",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
       },
       "network-act-enforcement-decree": {
-        "status": "complete",
-        "count": 140,
+        "status": "partial",
+        "count": 74,
+        "target": 131,
         "law_name": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령",
-        "retrieved_at": "2026-03-25T10:04:01.393748"
+        "retrieved_at": "2026-03-25T10:04:01.393748",
+        "note": "Branch articles are currently flattened into base article files; re-ingest required."
+      },
+      "pipa-enforcement-rule": {
+        "status": "pending",
+        "count": 0,
+        "target": 0,
+        "law_name": "개인정보보호법 시행규칙",
+        "retrieved_at": "",
+        "note": "Directory exists but no ingested statute files are available yet."
       }
     },
     "grade-b": {

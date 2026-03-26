@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제2조제6항"
   - "제24조제1항"
-  - "제20조"
 
 # === 검색 메타 ===
 keywords:

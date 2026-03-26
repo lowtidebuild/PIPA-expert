@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제58조제1항"
   - "제64조의2"
-  - "제57조"
 
 # === 검색 메타 ===
 keywords:

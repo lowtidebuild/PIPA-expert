@@ -18,7 +18,6 @@ retrieved_at: "2026-03-25"
 # === 관계 정보 ===
 cross_references:
   - "제6조제2항"
-  - "제7조"
 
 # === 검색 메타 ===
 keywords:

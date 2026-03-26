@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제36조제1항"
   - "제36조의7"
-  - "제2조"
 
 # === 검색 메타 ===
 keywords:

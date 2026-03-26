@@ -19,7 +19,6 @@ retrieved_at: "2026-03-25"
 cross_references:
   - "제129조"
   - "제132조"
-  - "제69조"
 
 # === 검색 메타 ===
 keywords:

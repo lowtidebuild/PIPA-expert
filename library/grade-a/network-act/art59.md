@@ -18,7 +18,6 @@ retrieved_at: "2026-03-25"
 # === 관계 정보 ===
 cross_references:
   - "제58조의2"
-  - "제59조"
 
 # === 검색 메타 ===
 keywords:
