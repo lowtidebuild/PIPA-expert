@@ -8,7 +8,7 @@
 
 **929 statute articles** · **46 official guidelines** · **1,498 cross-references** · **Law firm-grade DOCX opinions**
 
-Built for [Claude Code](https://claude.ai/claude-code) · Powered by structured RAG
+Built for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · Powered by structured RAG · **[How to Use](docs/en/HOW-TO-USE.md)**
 
 [![Laws](https://img.shields.io/badge/Statutes-10_Laws-blue)](#-knowledge-base)
 [![Articles](https://img.shields.io/badge/Articles-929-blue)](#-knowledge-base)
