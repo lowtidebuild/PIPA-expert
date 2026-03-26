@@ -74,14 +74,14 @@ inbox/ 내 모든 파일을 Glob으로 탐색
 |--------|------|
 | 판례 번호 | `대법원 20XXdaXXXXX`, `헌법재판소 20XX헌마XXX` |
 | 처분례 번호 | `의결 제20XX-XXX-XXX호`, `시정명령` |
-| 로펌 레터헤드/도메인 | kimchang.com, bkl.co.kr, leeko.com 등 |
-| 뉴스레터 형식 | "법률 뉴스레터", "Client Alert", "Legal Update" |
-| 법조 칼럼 | 법률신문, 대한변호사협회 |
 
-**Grade C — 학술/참고:**
+**Grade C — 전문가 코멘터리/학술:**
 
 | 시그널 | 예시 |
 |--------|------|
+| 로펌 레터헤드/도메인 | kimchang.com, bkl.co.kr, leeko.com 등 |
+| 뉴스레터 형식 | "법률 뉴스레터", "Client Alert", "Legal Update" |
+| 법조 칼럼 | 법률신문, 대한변호사협회 |
 | 학술지 형식 | 초록/Abstract, 참고문헌/References 섹션 |
 | 학술 DB 출처 | KCI, RISS, SSRN, Google Scholar |
 | 저널명 패턴 | "법학연구", "정보법학", "Law Review" |
@@ -91,7 +91,7 @@ inbox/ 내 모든 파일을 Glob으로 탐색
 - 위 시그널이 어디에도 매칭되지 않으면 유저에게 질문:
   > "이 파일의 성격을 판별하지 못했습니다: `{filename}`
   > 내용 일부: {첫 200자}
-  > Grade를 지정해주세요: A (법령/공식), B (판례/로펌), C (학술)"
+  > Grade를 지정해주세요: A (법령/공식), B (판례/처분례), C (로펌 해설/학술)"
 - 유저 응답 후 처리 계속
 
 ### Step 4: Frontmatter 생성
@@ -148,11 +148,11 @@ Grade A:
 Grade B:
   decision                    → library/grade-b/pipc-decisions/
   precedent                   → library/grade-b/court-precedents/
-  newsletter, article         → library/grade-b/law-firm/  (폴더 생성)
   기타                        → library/grade-b/{category}/
 
 Grade C:
-  paper, article              → library/grade-c/academic/
+  newsletter, article         → library/grade-c/law-firm/  (폴더 생성)
+  paper                       → library/grade-c/academic/
   기타                        → library/grade-c/{category}/
 ```
 
@@ -181,10 +181,11 @@ Grade C:
 
 처리: 5개 파일
   ✅ Grade A: 1건 (개인정보보호법 시행령 일부개정령안.pdf → grade-a/pipa-enforcement-decree/)
-  ✅ Grade B: 2건
-     - 김장-개인정보-제3자제공-뉴스레터.pdf → grade-b/law-firm/
+  ✅ Grade B: 1건
      - PIPC-처분례-2025-123.docx → grade-b/pipc-decisions/
-  ✅ Grade C: 1건 (정보법학-가명처리-논문.pdf → grade-c/academic/)
+  ✅ Grade C: 2건
+     - 김장-개인정보-제3자제공-뉴스레터.pdf → grade-c/law-firm/
+     - 정보법학-가명처리-논문.pdf → grade-c/academic/
   ❓ 판별 불가: 1건 (미확인문서.docx → Grade 지정 필요)
 
 원본: library/inbox/_processed/ 로 이동
