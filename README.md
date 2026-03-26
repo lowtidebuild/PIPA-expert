@@ -24,7 +24,7 @@ Built for [Claude Code](https://claude.ai/claude-code) · Powered by structured 
 </div>
 
 > [!CAUTION]
-> **This tool is for legal research assistance only — it does not provide legal advice.** Outputs are AI-generated and may contain errors despite built-in verification. All legal citations should be independently verified before reliance. Consult a qualified attorney for advice on specific legal matters.
+> **This tool is for legal research assistance only — it does not provide legal advice.** Outputs are AI-generated and may contain errors despite built-in verification. All legal citations should be independently verified before reliance. Consult a qualified attorney for advice on specific legal matters. **[Full Disclaimer](docs/en/DISCLAIMER.md)** · **[면책사항](docs/ko/DISCLAIMER.md)**
 
 ---
 
