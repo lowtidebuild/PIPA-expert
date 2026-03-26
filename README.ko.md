@@ -324,6 +324,8 @@ library/inbox/    ← 파일 드롭
 
 ## 시작하기
 
+> **처음이신가요?** **[사용 가이드](docs/ko/HOW-TO-USE.md)** — 비개발자를 위한 단계별 안내서를 읽어보세요.
+
 ### 사전 요구사항
 
 - [Claude Code](https://claude.ai/claude-code) CLI
