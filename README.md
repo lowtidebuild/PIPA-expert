@@ -361,6 +361,8 @@ PIPA-expert/
 
 ## Getting Started
 
+> **New here?** Read the **[How to Use Guide](docs/en/HOW-TO-USE.md)** — a step-by-step walkthrough for non-developers.
+
 ### Prerequisites
 
 - [Claude Code](https://claude.ai/claude-code) CLI
