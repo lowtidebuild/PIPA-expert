@@ -10,10 +10,10 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95/제5조"
+source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95/%EC%A0%9C5%EC%A1%B0"
 effective_date: "20251002"
 last_amended: "20250401"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
@@ -21,12 +21,12 @@ cross_references:
 
 # === 검색 메타 ===
 keywords:
-  - "수집"
-  - "정보주체"
   - "책무"
-  - "국가"
-  - "동의"
+  - "정보주체"
+  - "수집"
   - "등의"
+  - "동의"
+  - "국가"
 ---
 
 ## 제5조(국가 등의 책무)

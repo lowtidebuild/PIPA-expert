@@ -10,23 +10,23 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%8B%A0%EC%9A%A9%EC%A0%95%EB%B3%B4%EC%9D%98%20%EC%9D%B4%EC%9A%A9%20%EB%B0%8F%20%EB%B3%B4%ED%98%B8%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0/제31조"
+source_url: "https://law.go.kr/법령/%EC%8B%A0%EC%9A%A9%EC%A0%95%EB%B3%B4%EC%9D%98%20%EC%9D%B4%EC%9A%A9%20%EB%B0%8F%20%EB%B3%B4%ED%98%B8%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0/%EC%A0%9C31%EC%A1%B0"
 effective_date: "20240814"
 last_amended: "20240213"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제30조제2항"
-  - "제30조제1항"
+  - "개인정보 보호법 제30조제1항"
+  - "개인정보 보호법 제30조제2항"
 
 # === 검색 메타 ===
 keywords:
-  - "이용"
+  - "공시"
   - "정보주체"
   - "신용정보활용체제의"
+  - "이용"
   - "제공"
-  - "공시"
 ---
 
 ## 제31조(신용정보활용체제의 공시)

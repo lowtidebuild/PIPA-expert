@@ -10,10 +10,10 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%9C%84%EC%B9%98%EC%A0%95%EB%B3%B4%EC%9D%98%20%EB%B3%B4%ED%98%B8%20%EB%B0%8F%20%EC%9D%B4%EC%9A%A9%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0/제11조"
+source_url: "https://law.go.kr/법령/%EC%9C%84%EC%B9%98%EC%A0%95%EB%B3%B4%EC%9D%98%20%EB%B3%B4%ED%98%B8%20%EB%B0%8F%20%EC%9D%B4%EC%9A%A9%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0/%EC%A0%9C11%EC%A1%B0"
 effective_date: "20251001"
 last_amended: "20251001"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
@@ -21,13 +21,13 @@ cross_references:
 
 # === 검색 메타 ===
 keywords:
-  - "이용"
   - "정보주체"
-  - "위치기반서비스사업의"
-  - "폐업"
-  - "파기"
+  - "이용"
   - "제공"
   - "휴업"
+  - "파기"
+  - "위치기반서비스사업의"
+  - "폐업"
 ---
 
 ## 제11조(위치기반서비스사업의 휴업ㆍ폐업 등)

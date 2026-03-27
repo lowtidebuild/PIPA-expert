@@ -10,10 +10,10 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/제63조"
+source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/%EC%A0%9C63%EC%A1%B0"
 effective_date: "20250708"
 last_amended: "20250107"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
@@ -21,12 +21,12 @@ cross_references:
 
 # === 검색 메타 ===
 keywords:
-  - "업무계속"
-  - "등을"
-  - "등록취소처분"
   - "감리법인의"
-  - "통지"
   - "받은"
+  - "통지"
+  - "업무계속"
+  - "등록취소처분"
+  - "등을"
 ---
 
 ## 제63조(등록취소처분 등을 받은 감리법인의 업무계속 등)

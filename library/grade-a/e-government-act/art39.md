@@ -10,26 +10,26 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/제39조"
+source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/%EC%A0%9C39%EC%A1%B0"
 effective_date: "20250708"
 last_amended: "20250107"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제36조제1항"
-  - "제32조"
   - "제37조제2항"
-  - "제7조"
+  - "개인정보 보호법 제32조"
+  - "개인정보 보호법 제7조"
+  - "민원 처리에 관한 법률 제36조제1항"
 
 # === 검색 메타 ===
 keywords:
-  - "이용"
-  - "행정정보"
   - "신청"
   - "공동이용의"
-  - "동의"
+  - "이용"
   - "승인"
+  - "행정정보"
+  - "동의"
 ---
 
 ## 제39조(행정정보 공동이용의 신청ㆍ승인)

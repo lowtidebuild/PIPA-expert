@@ -33,7 +33,7 @@
       "is_article": true
     },
     {
-      "number": "4",
+      "number": "4의2",
       "title": "영리업무의 금지",
       "is_article": true
     },
@@ -43,12 +43,12 @@
       "is_article": true
     },
     {
-      "number": "5",
+      "number": "5의2",
       "title": "개인정보 보호 정책협의회",
       "is_article": true
     },
     {
-      "number": "5",
+      "number": "5의3",
       "title": "시ㆍ도 개인정보 보호 관계 기관 협의회",
       "is_article": true
     },
@@ -73,12 +73,12 @@
       "is_article": true
     },
     {
-      "number": "9",
+      "number": "9의2",
       "title": "정책ㆍ제도ㆍ법령 개선 권고의 절차 등",
       "is_article": true
     },
     {
-      "number": "9",
+      "number": "9의3",
       "title": "개인정보 침해요인 평가 절차 등",
       "is_article": true
     },
@@ -108,7 +108,7 @@
       "is_article": true
     },
     {
-      "number": "13",
+      "number": "13의2",
       "title": "개인정보 보호수준 평가의 대상ㆍ기준ㆍ방법ㆍ절차 등",
       "is_article": true
     },
@@ -118,12 +118,12 @@
       "is_article": true
     },
     {
-      "number": "14",
+      "number": "14의2",
       "title": "",
       "is_article": false
     },
     {
-      "number": "14",
+      "number": "14의2",
       "title": "개인정보의 추가적인 이용ㆍ제공의 기준 등",
       "is_article": true
     },
@@ -133,12 +133,12 @@
       "is_article": true
     },
     {
-      "number": "15",
+      "number": "15의2",
       "title": "개인정보 수집 출처 등 통지 대상ㆍ방법ㆍ절차",
       "is_article": true
     },
     {
-      "number": "15",
+      "number": "15의3",
       "title": "개인정보 이용ㆍ제공 내역의 통지",
       "is_article": true
     },
@@ -153,7 +153,7 @@
       "is_article": true
     },
     {
-      "number": "17",
+      "number": "17의2",
       "title": "아동의 개인정보 보호",
       "is_article": true
     },
@@ -178,7 +178,7 @@
       "is_article": true
     },
     {
-      "number": "21",
+      "number": "21의2",
       "title": "주민등록번호 암호화 적용 대상 등",
       "is_article": true
     },
@@ -213,12 +213,12 @@
       "is_article": true
     },
     {
-      "number": "27",
+      "number": "27의2",
       "title": "이동형 영상정보처리기기 촬영 사실 표시 등",
       "is_article": true
     },
     {
-      "number": "27",
+      "number": "27의3",
       "title": "영상정보처리기기 설치ㆍ운영 지침",
       "is_article": true
     },
@@ -233,67 +233,67 @@
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의2",
       "title": "",
       "is_article": false
     },
     {
-      "number": "29",
+      "number": "29의2",
       "title": "결합전문기관의 지정 및 지정 취소",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의3",
       "title": "개인정보처리자 간 가명정보의 결합 및 반출 등",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의4",
       "title": "결합전문기관의 관리ㆍ감독 등",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의5",
       "title": "가명정보에 대한 안전성 확보 조치",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의6",
       "title": "",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의7",
       "title": "",
       "is_article": false
     },
     {
-      "number": "29",
+      "number": "29의7",
       "title": "개인정보의 국외 처리위탁ㆍ보관 시 정보주체에게 알리는 방법",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의8",
       "title": "개인정보의 국외 이전 인증",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의9",
       "title": "국가 등에 대한 개인정보 보호 수준 인정",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의10",
       "title": "개인정보의 국외 이전 시 보호조치 등",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의11",
       "title": "국외 이전 중지 명령의 기준 등",
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "29의12",
       "title": "국외 이전 중지 명령에 대한 이의 제기",
       "is_article": true
     },
@@ -308,7 +308,7 @@
       "is_article": true
     },
     {
-      "number": "30",
+      "number": "30의2",
       "title": "공공시스템 운영기관 등의 개인정보 안전성 확보 조치 등",
       "is_article": true
     },
@@ -318,7 +318,7 @@
       "is_article": true
     },
     {
-      "number": "31",
+      "number": "31의2",
       "title": "개인정보 처리방침의 평가 대상 및 절차",
       "is_article": true
     },
@@ -328,12 +328,12 @@
       "is_article": true
     },
     {
-      "number": "32",
+      "number": "32의2",
       "title": "개인정보 보호책임자 협의회의 사업 범위 등",
       "is_article": true
     },
     {
-      "number": "32",
+      "number": "32의3",
       "title": "국내대리인 지정 대상자의 범위 등",
       "is_article": true
     },
@@ -348,37 +348,37 @@
       "is_article": true
     },
     {
-      "number": "34",
+      "number": "34의2",
       "title": "개인정보 보호 인증의 기준ㆍ방법ㆍ절차 등",
       "is_article": true
     },
     {
-      "number": "34",
+      "number": "34의3",
       "title": "개인정보 보호 인증의 수수료",
       "is_article": true
     },
     {
-      "number": "34",
+      "number": "34의4",
       "title": "인증취소",
       "is_article": true
     },
     {
-      "number": "34",
+      "number": "34의5",
       "title": "인증의 사후관리",
       "is_article": true
     },
     {
-      "number": "34",
+      "number": "34의6",
       "title": "개인정보 보호 인증 전문기관",
       "is_article": true
     },
     {
-      "number": "34",
+      "number": "34의7",
       "title": "인증의 표시 및 홍보",
       "is_article": true
     },
     {
-      "number": "34",
+      "number": "34의8",
       "title": "개인정보 보호 인증심사원의 자격 및 자격 취소 요건",
       "is_article": true
     },
@@ -413,7 +413,7 @@
       "is_article": true
     },
     {
-      "number": "40",
+      "number": "40의2",
       "title": "노출된 개인정보의 삭제ㆍ차단 요청 기관",
       "is_article": true
     },
@@ -433,77 +433,77 @@
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의2",
       "title": "정보전송자 기준",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의3",
       "title": "일반수신자 기준",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의4",
       "title": "전송 요구 대상 정보의 범위",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의5",
       "title": "전송 요구의 방법 등",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의6",
       "title": "개인정보 전송의 기한 및 방법 등",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의7",
       "title": "전송 요구 시 적용이 배제되는 법률의 규정",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의8",
       "title": "전송 요구의 거절 및 전송 중단 등",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의9",
       "title": "개인정보관리 전문기관의 업무 등",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의10",
       "title": "개인정보관리 전문기관의 지정 신청 등",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의11",
       "title": "개인정보관리 전문기관의 지정요건 세부기준",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의12",
       "title": "개인정보관리 전문기관의 지정 등",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의13",
       "title": "개인정보관리 전문기관의 금지행위",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의14",
       "title": "개인정보관리 전문기관의 지정취소 등",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의15",
       "title": "개인정보 전송 요구에 대한 보호위원회의 관리ㆍ감독",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의16",
       "title": "개인정보전송지원플랫폼의 구축 및 운영 등",
       "is_article": true
     },
@@ -518,17 +518,17 @@
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의2",
       "title": "자동화된 결정에 대한 거부 및 설명 등 요구의 방법 및 절차",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의3",
       "title": "거부ㆍ설명등요구에 따른 조치",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의4",
       "title": "자동화된 결정의 기준과 절차 등의 공개",
       "is_article": true
     },
@@ -553,77 +553,77 @@
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의2",
       "title": "",
       "is_article": false
     },
     {
-      "number": "48",
+      "number": "48의2",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의3",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의4",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의5",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의6",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의7",
       "title": "손해배상책임의 이행을 위한 보험 등 가입 대상자의 범위 및 기준 등",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의8",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의9",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의10",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의11",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의12",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의13",
       "title": "",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의14",
       "title": "",
       "is_article": false
     },
     {
-      "number": "48",
+      "number": "48의14",
       "title": "당연직위원",
       "is_article": true
     },
@@ -633,7 +633,7 @@
       "is_article": true
     },
     {
-      "number": "49",
+      "number": "49의2",
       "title": "분쟁조정 전문위원회",
       "is_article": true
     },
@@ -648,17 +648,17 @@
       "is_article": true
     },
     {
-      "number": "51",
+      "number": "51의2",
       "title": "조정 불응 의사의 통지",
       "is_article": true
     },
     {
-      "number": "51",
+      "number": "51의3",
       "title": "분쟁조정위원회의 사무기구 및 조사ㆍ열람 등",
       "is_article": true
     },
     {
-      "number": "51",
+      "number": "51의4",
       "title": "조정안에 대한 거부 의사 통지 등",
       "is_article": true
     },
@@ -713,22 +713,22 @@
       "is_article": true
     },
     {
-      "number": "60",
+      "number": "60의2",
       "title": "과징금의 산정기준 등",
       "is_article": true
     },
     {
-      "number": "60",
+      "number": "60의3",
       "title": "과징금의 부과 및 납부",
       "is_article": true
     },
     {
-      "number": "60",
+      "number": "60의4",
       "title": "과징금의 납부기한 연기 및 분할 납부",
       "is_article": true
     },
     {
-      "number": "60",
+      "number": "60의5",
       "title": "환급가산금의 이자율",
       "is_article": true
     },
@@ -743,12 +743,12 @@
       "is_article": true
     },
     {
-      "number": "62",
+      "number": "62의2",
       "title": "민감정보 및 고유식별정보의 처리",
       "is_article": true
     },
     {
-      "number": "62",
+      "number": "62의3",
       "title": "규제의 재검토",
       "is_article": true
     },

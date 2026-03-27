@@ -10,10 +10,10 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/제3조"
+source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/%EC%A0%9C3%EC%A1%B0"
 effective_date: "20250708"
 last_amended: "20250107"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
@@ -21,11 +21,11 @@ cross_references:
 
 # === 검색 메타 ===
 keywords:
-  - "이용"
-  - "행정기관등"
   - "책무"
-  - "공무원"
+  - "이용"
   - "등의"
+  - "공무원"
+  - "행정기관등"
 ---
 
 ## 제3조(행정기관등 및 공무원 등의 책무)
