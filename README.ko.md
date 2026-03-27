@@ -6,14 +6,14 @@
 
 ### AI 개인정보보호법 전문 자문 시스템
 
-**550개 검색 가능한 법조문 파일** · **929개 계층 조문 엔트리** · **46건 공식 가이드라인** · **로펌 수준 DOCX 의견서**
+**929개 검색 가능한 법조문 파일** · **929개 계층 조문 엔트리** · **46건 공식 가이드라인** · **로펌 수준 DOCX 의견서**
 
 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) 전용 · 구조화된 RAG 기반 · **[사용 가이드](docs/ko/HOW-TO-USE.md)**
 
-[![Statute Files](https://img.shields.io/badge/조문파일-550개-blue)](#-knowledge-base-법령-라이브러리)
+[![Statute Files](https://img.shields.io/badge/조문파일-929개-blue)](#-knowledge-base-법령-라이브러리)
 [![Hierarchy Entries](https://img.shields.io/badge/계층조문-929개-lightgrey)](#-knowledge-base-법령-라이브러리)
 [![Guidelines](https://img.shields.io/badge/PIPC_가이드라인-46건-green)](#-knowledge-base-법령-라이브러리)
-[![Cross-ref Edges](https://img.shields.io/badge/교차참조_엣지-1%2C498개-orange)](#-knowledge-base-법령-라이브러리)
+[![Cross-ref Edges](https://img.shields.io/badge/교차참조_엣지-2%2C369개-orange)](#-knowledge-base-법령-라이브러리)
 
 <br/>
 
@@ -51,7 +51,7 @@ graph TB
 
         subgraph core["핵심 기능"]
             direction LR
-            KB["<b>구조화된 Knowledge Base</b><br/>550개 검색 파일 · 46건 가이드라인<br/>929개 계층 조문 엔트리"]
+            KB["<b>구조화된 Knowledge Base</b><br/>929개 검색 파일 · 46건 가이드라인<br/>929개 계층 조문 엔트리"]
             WS["<b>Multi-Layer 웹서치</b><br/>6대 로펌 · 학술 · 해외 DPA<br/>교차검증"]
             DX["<b>DOCX 의견서 생성</b><br/>로펌 수준 문서<br/>검증된 인용 체계"]
         end
@@ -106,23 +106,23 @@ graph TB
 
 | 법령 | 검색 가능 파일 수 | 계층 조문 엔트리 | 추출 교차참조 엣지 | 디렉토리 |
 |------|------------------|------------------|-------------------|---------|
-| **개인정보 보호법** | 76 | 126 | 190 | `library/grade-a/pipa/` |
-| 개인정보 보호법 시행령 | 63 | 140 | 306 | `library/grade-a/pipa-enforcement-decree/` |
-| 정보통신망법 | 76 | 142 | 119 | `library/grade-a/network-act/` |
-| 정보통신망법 시행령 | 74 | 131 | 203 | `library/grade-a/network-act-enforcement-decree/` |
-| 정보통신망법 시행규칙 | 10 | 11 | 16 | `library/grade-a/network-act-enforcement-rule/` |
-| 신용정보법 | 52 | 91 | 138 | `library/grade-a/credit-info-act/` |
-| 신용정보법 시행령 | 38 | 81 | 263 | `library/grade-a/credit-info-act-enforcement-decree/` |
-| 위치정보법 | 43 | 53 | 73 | `library/grade-a/location-info-act/` |
-| 위치정보법 시행령 | 40 | 55 | 121 | `library/grade-a/location-info-act-enforcement-decree/` |
-| 전자정부법 | 78 | 99 | 69 | `library/grade-a/e-government-act/` |
-| **합계** | **550** | **929** | **1,498** | |
+| **개인정보 보호법** | 126 | 126 | 301 | `library/grade-a/pipa/` |
+| 개인정보 보호법 시행령 | 140 | 140 | 406 | `library/grade-a/pipa-enforcement-decree/` |
+| 정보통신망법 | 142 | 142 | 188 | `library/grade-a/network-act/` |
+| 정보통신망법 시행령 | 131 | 131 | 266 | `library/grade-a/network-act-enforcement-decree/` |
+| 정보통신망법 시행규칙 | 11 | 11 | 20 | `library/grade-a/network-act-enforcement-rule/` |
+| 신용정보법 | 91 | 91 | 326 | `library/grade-a/credit-info-act/` |
+| 신용정보법 시행령 | 81 | 81 | 435 | `library/grade-a/credit-info-act-enforcement-decree/` |
+| 위치정보법 | 53 | 53 | 159 | `library/grade-a/location-info-act/` |
+| 위치정보법 시행령 | 55 | 55 | 164 | `library/grade-a/location-info-act-enforcement-decree/` |
+| 전자정부법 | 99 | 99 | 104 | `library/grade-a/e-government-act/` |
+| **합계** | **929** | **929** | **2,369** | |
 
 > [!IMPORTANT]
-> 2026년 3월 27일 감사 기준으로 `article-index.json`에는 현재 검색 가능한 법조문 파일이 550건 들어 있고, 대응하는 `_hierarchy.json`에는 계층상 조문 엔트리가 929건 들어 있습니다. 즉 `제7조의2` 같은 가지조문이 API 수집 과정에서 기본 조문 파일로 평탄화되고 있습니다. frontmatter 정리로 self-reference 400건은 제거했지만, 동일 법령 내 미해결 타깃 23건은 아직 남아 있습니다. 가지조문 질의나 교차참조 추적은 재수집 전까지 `law.go.kr`로 재검증하는 것을 전제로 사용해야 합니다.
+> 2026년 3월 27일 재수집 기준으로 기본 활성 corpus는 개인정보에 직접 관련된 법령 세트만 남기도록 다시 슬림화되었고, `article-index.json`의 검색 가능 법조문 파일 수는 929건입니다. `source-registry.json`의 활성 법령은 모두 `count == target` 상태이며, 같은 법 내부 교차참조의 미해결 타깃도 계속 0건입니다. `cross-reference-graph.json`에는 법령 간 교차참조 1,309건(로컬 corpus로 해소 가능한 869건)이 집계되고, `external-law-candidates.json`은 corpus 밖 외부 법령 154건을 선택적 확장 후보로 정리합니다(고우선 8건). 민법·상법 같은 대형 일반법은 명시적으로 요청할 때만 온디맨드로 수집하는 방향입니다. 폐지된 `pipa-enforcement-rule`은 의도적으로 수집 대상에서 제외하고 `retired`로 관리합니다.
 > 상세 로그: [docs/2026-03-27-quality-audit-log.md](docs/2026-03-27-quality-audit-log.md)
 
-> **미수집 소스:** `library/grade-a/pipa-enforcement-rule/` 디렉토리는 존재하지만 현재 법조문 파일은 없습니다.
+> **제외 소스:** `library/grade-a/pipa-enforcement-rule/`은 폐지 법령 세트라서 의도적으로 수집하지 않습니다.
 
 ### PIPC 공식 가이드라인 — 46건
 
@@ -218,7 +218,7 @@ flowchart TD
         direction TB
         S1["📚 <b>조문 검색</b><br/><code>article-index.json</code> → 관련 법조문"]
         S2["📖 <b>가이드라인 검색</b><br/><code>guideline-index.json</code> → PIPC 해설"]
-        S3["🔗 <b>교차참조 추적</b><br/><code>cross-reference-graph</code> → 위임 조문"]
+        S3["🔗 <b>교차참조 추적</b><br/><code>cross-reference-graph.json</code> → 위임 조문"]
         S1 --> S2 --> S3
     end
 

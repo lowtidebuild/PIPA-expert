@@ -10,10 +10,10 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/제14조"
+source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/%EC%A0%9C14%EC%A1%B0"
 effective_date: "20250708"
 last_amended: "20250107"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
@@ -21,12 +21,12 @@ cross_references:
 
 # === 검색 메타 ===
 keywords:
-  - "이용"
-  - "세금"
-  - "전자적"
-  - "과징금"
   - "납부"
+  - "과징금"
+  - "세금"
+  - "이용"
   - "등의"
+  - "전자적"
 ---
 
 ## 제14조(세금 등의 전자적 납부)

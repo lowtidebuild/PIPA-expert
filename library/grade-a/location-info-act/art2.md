@@ -10,20 +10,21 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%9C%84%EC%B9%98%EC%A0%95%EB%B3%B4%EC%9D%98%20%EB%B3%B4%ED%98%B8%20%EB%B0%8F%20%EC%9D%B4%EC%9A%A9%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0/제2조"
+source_url: "https://law.go.kr/법령/%EC%9C%84%EC%B9%98%EC%A0%95%EB%B3%B4%EC%9D%98%20%EB%B3%B4%ED%98%B8%20%EB%B0%8F%20%EC%9D%B4%EC%9A%A9%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0/%EC%A0%9C2%EC%A1%B0"
 effective_date: "20251001"
 last_amended: "20251001"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제2조제1항"
+  - "전기통신사업법 제2조"
+  - "정보통신망 이용촉진 및 정보보호 등에 관한 법률 제2조제1항"
 
 # === 검색 메타 ===
 keywords:
-  - "이용"
   - "정보주체"
   - "수집"
+  - "이용"
   - "제공"
   - "정의"
 ---

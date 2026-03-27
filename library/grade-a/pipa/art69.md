@@ -10,23 +10,23 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95/제69조"
+source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95/%EC%A0%9C69%EC%A1%B0"
 effective_date: "20251002"
 last_amended: "20250401"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제129조"
-  - "제132조"
+  - "형법 제129조"
+  - "형법 제132조"
 
 # === 검색 메타 ===
 keywords:
-  - "의제"
-  - "공무원"
-  - "벌칙"
   - "적용"
+  - "의제"
+  - "벌칙"
   - "시의"
+  - "공무원"
 ---
 
 ## 제69조(벌칙 적용 시의 공무원 의제)

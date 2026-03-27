@@ -10,25 +10,25 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/제10조"
+source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/%EC%A0%9C10%EC%A1%B0"
 effective_date: "20250708"
 last_amended: "20250107"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제2조"
+  - "전자서명법 제2조"
 
 # === 검색 메타 ===
 keywords:
-  - "이용"
-  - "제공받는"
-  - "전자정부서비스를"
-  - "본인"
   - "자에"
+  - "이용"
   - "제공"
+  - "본인"
   - "확인"
+  - "전자정부서비스를"
   - "대한"
+  - "제공받는"
 ---
 
 ## 제10조(전자정부서비스를 제공받는 자에 대한 본인 확인)

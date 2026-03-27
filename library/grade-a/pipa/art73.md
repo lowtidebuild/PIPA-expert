@@ -10,19 +10,19 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95/제73조"
+source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95/%EC%A0%9C73%EC%A1%B0"
 effective_date: "20251002"
 last_amended: "20250401"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제26조제8항"
-  - "제63조제2항"
   - "제36조제2항"
+  - "제26조제8항"
+  - "제37조제2항"
   - "제39조의4"
   - "제63조제1항"
-  - "제37조제2항"
+  - "제63조제2항"
 
 # === 검색 메타 ===
 keywords:

@@ -10,21 +10,21 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/제46조"
+source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/%EC%A0%9C46%EC%A1%B0"
 effective_date: "20250708"
 last_amended: "20250107"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  []
+  - "전자정부법 시행령 제46조"
 
 # === 검색 메타 ===
 keywords:
-  - "기관별"
-  - "도입"
   - "운영"
+  - "도입"
   - "정보기술아키텍처"
+  - "기관별"
 ---
 
 ## 제46조(기관별 정보기술아키텍처 도입ㆍ운영)

@@ -10,10 +10,10 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/제74조"
+source_url: "https://law.go.kr/법령/%EC%A0%84%EC%9E%90%EC%A0%95%EB%B6%80%EB%B2%95/%EC%A0%9C74%EC%A1%B0"
 effective_date: "20250708"
 last_amended: "20250107"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
@@ -23,8 +23,8 @@ cross_references:
 keywords:
   - "등의"
   - "금지"
-  - "비밀누설"
   - "이용"
+  - "비밀누설"
 ---
 
 ## 제74조(비밀누설 등의 금지)

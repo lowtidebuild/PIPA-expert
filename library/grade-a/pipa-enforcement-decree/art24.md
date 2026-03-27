@@ -10,24 +10,24 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9/제24조"
+source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9/%EC%A0%9C24%EC%A1%B0"
 effective_date: "20251002"
 last_amended: "20250923"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제25조제4항"
-  - "제2조"
-  - "제32조"
-  - "제25조제1항"
+  - "개인정보 보호법 제25조제1항"
+  - "개인정보 보호법 제25조제4항"
+  - "신문 등의 진흥에 관한 법률 제2조"
+  - "보안업무규정 제32조"
 
 # === 검색 메타 ===
 keywords:
   - "설치"
   - "영상정보"
-  - "정보주체"
   - "안내판의"
+  - "정보주체"
 ---
 
 ## 제24조(안내판의 설치 등)

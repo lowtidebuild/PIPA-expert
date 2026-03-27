@@ -10,19 +10,19 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9/제63조"
+source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9/%EC%A0%9C63%EC%A1%B0"
 effective_date: "20251002"
 last_amended: "20250923"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제75조"
+  - "개인정보 보호법 제75조"
 
 # === 검색 메타 ===
 keywords:
-  - "과태료의"
   - "부과기준"
+  - "과태료의"
 ---
 
 ## 제63조(과태료의 부과기준)

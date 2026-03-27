@@ -8,12 +8,12 @@
 library/inbox/             # 외부 소스 드롭 → /ingest로 자동 처리
 library/grade-a/           # Grade A 공식 1차 소스
   pipc-guidelines/          # PIPC 가이드라인 46종 (전처리 완료)
-  pipa/                     # 개인정보보호법 searchable 파일 76건 (계층 126건)
-  pipa-enforcement-decree/  # 시행령 searchable 파일 63건 (계층 140건)
-  pipa-enforcement-rule/    # 시행규칙 폴더만 존재, 재수집 필요
+  pipa/                     # 개인정보보호법 searchable 파일 126건
+  pipa-enforcement-decree/  # 시행령 searchable 파일 140건
+  pipa-enforcement-rule/    # 폐지 법령, 수집 제외
 library/grade-b/           # Grade B 2차 소스 (처분례, 판례)
 library/grade-c/           # Grade C 3차 소스 (로펌 해설, 학술)
-index/                     # 검색 인덱스 (article-index.json, guideline-index.json, source-registry.json)
+index/                     # 검색 인덱스 (article-index.json, cross-reference-graph.json, external-law-candidates.json, guideline-index.json, source-registry.json)
 config/                    # RAG 설정, 소스 등급 정의
 scripts/                   # 전처리/수집 스크립트
 docs/specs/                # 설계 문서
@@ -21,9 +21,9 @@ docs/specs/                # 설계 문서
 
 ## Current Status
 
-- 검색 가능한 Grade A 법령 파일: 550건 (`index/article-index.json`)
+- 검색 가능한 Grade A 법령 파일: 929건 (`index/article-index.json`)
 - PIPC 가이드라인: 46건 (`index/guideline-index.json`)
-- 알려진 감사 이슈: 가지조문(예: `제7조의2`)이 기본 조문 파일로 평탄화되어 `count`와 `target`이 다를 수 있음. 법령별 실제 커버리지는 `index/source-registry.json`의 `count/target/status`를 확인할 것.
+- 기본 활성 법령 세트는 개인정보 직접 관련 법령만 유지하도록 슬림화했고 모두 `count == target`, same-law internal unresolved reference `0` 상태임. `index/cross-reference-graph.json`에는 cross-law edge 1,309건(869 resolved)이 들어 있고, `index/external-law-candidates.json`은 corpus 밖 외부 법령 154건을 온디맨드 확장 후보로 정리한다(고우선 8건). 폐지된 `개인정보보호법 시행규칙`은 `index/source-registry.json`에서 `retired`로 관리.
 - 상세 감사/수정 로그: `docs/2026-03-27-quality-audit-log.md`
 
 ## Source Grade 체계

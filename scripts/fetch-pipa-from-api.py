@@ -37,7 +37,13 @@ KNOWN_LAWS = {
     # 개인정보 보호법 체계
     "개인정보보호법": {"search_query": "개인정보보호법", "target_dir": "pipa"},
     "개인정보보호법 시행령": {"search_query": "개인정보 보호법 시행령", "target_dir": "pipa-enforcement-decree"},
-    "개인정보보호법 시행규칙": {"search_query": "개인정보 보호법 시행규칙", "target_dir": "pipa-enforcement-rule"},
+    "개인정보보호법 시행규칙": {
+        "search_query": "개인정보 보호법 시행규칙",
+        "target_dir": "pipa-enforcement-rule",
+        "skip_fetch": True,
+        "registry_status": "retired",
+        "note": "Repealed statute; excluded from ingest.",
+    },
     # 정보통신망법 체계
     "정보통신망법": {"search_query": "정보통신망 이용촉진 및 정보보호 등에 관한 법률", "target_dir": "network-act"},
     "정보통신망법 시행령": {"search_query": "정보통신망 이용촉진 및 정보보호 등에 관한 법률 시행령", "target_dir": "network-act-enforcement-decree"},
@@ -50,8 +56,49 @@ KNOWN_LAWS = {
     "위치정보법 시행령": {"search_query": "위치정보의 보호 및 이용 등에 관한 법률 시행령", "target_dir": "location-info-act-enforcement-decree"},
     # 전자정부법 (개인정보 관련 조항 포함)
     "전자정부법": {"search_query": "전자정부법", "target_dir": "e-government-act"},
+    # 온디맨드 확장 후보 (기본 corpus 제외)
+    "전기통신사업법": {
+        "search_query": "전기통신사업법",
+        "target_dir": "telecommunications-business-act",
+        "default_enabled": False,
+    },
+    "자본시장과 금융투자업에 관한 법률": {
+        "search_query": "자본시장과 금융투자업에 관한 법률",
+        "target_dir": "capital-markets-act",
+        "default_enabled": False,
+    },
+    "채권의 공정한 추심에 관한 법률": {
+        "search_query": "채권의 공정한 추심에 관한 법률",
+        "target_dir": "fair-debt-collection-act",
+        "default_enabled": False,
+    },
+    "형법": {"search_query": "형법", "target_dir": "criminal-act", "default_enabled": False},
+    "여신전문금융업법": {
+        "search_query": "여신전문금융업법",
+        "target_dir": "specialized-credit-finance-business-act",
+        "default_enabled": False,
+    },
+    "상법": {
+        "search_query": "상법",
+        "target_dir": "commercial-act",
+        "mst": "284143",
+        "default_enabled": False,
+    },
+    "의료법": {"search_query": "의료법", "target_dir": "medical-act", "default_enabled": False},
+    "민법": {"search_query": "민법", "target_dir": "civil-act", "default_enabled": False},
 }
 TARGET_DIR_TO_LAW_NAME = {config["target_dir"]: law_name for law_name, config in KNOWN_LAWS.items()}
+TARGET_DIR_TO_CONFIG = {config["target_dir"]: config for config in KNOWN_LAWS.values()}
+DEFAULT_ENABLED_TARGET_DIRS = {
+    config["target_dir"]
+    for config in KNOWN_LAWS.values()
+    if config.get("default_enabled", True)
+}
+DEFAULT_ENABLED_LAWS = {
+    law_name: config
+    for law_name, config in KNOWN_LAWS.items()
+    if config.get("default_enabled", True)
+}
 
 
 def api_request(url: str, max_retries: int = 3) -> str:
@@ -73,7 +120,7 @@ def api_request(url: str, max_retries: int = 3) -> str:
 def search_law(oc: str, query: str) -> dict | None:
     """Search for a law by name, return law info dict."""
     encoded_query = urllib.parse.quote(query)
-    url = f"{BASE_URL}/lawSearch.do?OC={oc}&target=law&type=JSON&query={encoded_query}&display=5"
+    url = f"{BASE_URL}/lawSearch.do?OC={oc}&target=law&type=JSON&query={encoded_query}&display=20"
 
     print(f"  Searching: {query}")
     raw = api_request(url)
@@ -90,14 +137,35 @@ def search_law(oc: str, query: str) -> dict | None:
     if isinstance(laws, dict):
         laws = [laws]
 
+    normalized_query = query.replace(" ", "")
+
     for law in laws:
         name = law.get("법령명한글", "")
-        if query.replace(" ", "") in name.replace(" ", ""):
+        if normalized_query == name.replace(" ", ""):
+            print(f"  Found: {name} (ID: {law.get('법령ID')}, MST: {law.get('법령일련번호')})")
+            return law
+
+    for law in laws:
+        name = law.get("법령명한글", "")
+        if len(normalized_query) >= 5 and normalized_query in name.replace(" ", ""):
             print(f"  Found: {name} (ID: {law.get('법령ID')}, MST: {law.get('법령일련번호')})")
             return law
 
     print(f"  WARNING: '{query}' not found in search results")
+    if laws:
+        print("  Search results:", ", ".join(law.get("법령명한글", "") for law in laws[:10]))
     return None
+
+
+def clear_generated_outputs(target_dir: Path):
+    """Remove previously generated statute outputs before rewriting a law set."""
+    for md_file in target_dir.glob("art*.md"):
+        md_file.unlink()
+
+    for filename in ("_hierarchy.json", "_meta.json", "_cross-refs.json", "_raw_response.xml"):
+        path = target_dir / filename
+        if path.exists():
+            path.unlink()
 
 
 def fetch_law_full_text(oc: str, mst: str) -> str:
@@ -194,21 +262,171 @@ def _find_text(element, path: str) -> str:
     return el.text.strip() if el is not None and el.text else ""
 
 
-def extract_cross_references(text: str) -> list[str]:
-    """Extract cross-references from article text (e.g., '제15조', '시행령 제17조')."""
+CROSS_REFERENCE_PATTERN = re.compile(
+    r"(?:(?P<named_law>「[^」]+」)(?:\s*\(이하\s+\"[^\"]+\"\s*이라\s+한다\))?\s*|"
+    r"(?P<prefix>(?:같은|이)\s*(?:법|영|규칙)|[법영규칙])\s*)?"
+    r"제(?P<article>\d+)조(?:의(?P<article_sub>\d+))?(?:제(?P<paragraph>\d+)항)?"
+)
+ARTICLE_CITATION_PATTERN = re.compile(r"^제(?P<article>\d+)조(?:의(?P<article_sub>\d+))?(?:제(?P<paragraph>\d+)항)?$")
+
+
+def infer_law_reference_kind(law_name: str) -> str | None:
+    """Infer the shorthand kind used by Korean legal citations."""
+    if not law_name:
+        return None
+    if law_name.endswith(" 시행규칙"):
+        return "규칙"
+    if law_name.endswith(" 시행령"):
+        return "영"
+    return "법"
+
+
+def related_law_names(current_law_name: str) -> dict[str, str]:
+    """Resolve shorthand 법/영/규칙 references relative to the current law."""
+    if current_law_name.endswith(" 시행령"):
+        base_law = current_law_name[: -len(" 시행령")]
+        decree = current_law_name
+        rule = f"{base_law} 시행규칙"
+    elif current_law_name.endswith(" 시행규칙"):
+        base_law = current_law_name[: -len(" 시행규칙")]
+        decree = f"{base_law} 시행령"
+        rule = current_law_name
+    else:
+        base_law = current_law_name
+        decree = f"{current_law_name} 시행령"
+        rule = f"{current_law_name} 시행규칙"
+
+    return {
+        "법": base_law,
+        "영": decree,
+        "규칙": rule,
+    }
+
+
+def normalize_reference_kind(token: str) -> str | None:
+    """Normalize a 법/영/규칙 shorthand token."""
+    if not token:
+        return None
+    compact = token.replace(" ", "")
+    if compact.endswith("규칙"):
+        return "규칙"
+    if compact.endswith("영"):
+        return "영"
+    if compact.endswith("법"):
+        return "법"
+    return None
+
+
+def should_inherit_previous_law(separator: str) -> bool:
+    """Return True when a bare citation is part of the same citation chain."""
+    cleaned = separator
+    cleaned = re.sub(
+        r"제\d+(?:항|호|목)(?:부터\s*제\d+(?:항|호|목)까지)?",
+        "",
+        cleaned,
+    )
+    cleaned = cleaned.replace("각 호", "").replace("각호", "").replace("각 목", "").replace("각목", "")
+    for token in ("부터", "까지", "내지", "및", "또는", "와", "과"):
+        cleaned = cleaned.replace(token, "")
+    cleaned = re.sub(r"[\s,·ㆍ\-~()]+", "", cleaned)
+    return cleaned == ""
+
+
+def format_cross_reference_citation(article_num: str, branch_str: str = "", paragraph_str: str = "") -> str:
+    """Format a citation string with optional paragraph suffix."""
+    citation = format_article_citation(article_num, branch_str)
+    paragraph = _normalize_numeric_token(paragraph_str)
+    if paragraph:
+        citation += f"제{paragraph}항"
+    return citation
+
+
+def parse_article_citation(citation: str) -> dict:
+    """Parse a legal citation into article/sub/paragraph components."""
+    match = ARTICLE_CITATION_PATTERN.match(citation or "")
+    if not match:
+        return {"article_main": "", "article_sub": "0", "paragraph": ""}
+    return {
+        "article_main": _normalize_numeric_token(match.group("article")),
+        "article_sub": _normalize_numeric_token(match.group("article_sub")) if match.group("article_sub") else "0",
+        "paragraph": _normalize_numeric_token(match.group("paragraph")) if match.group("paragraph") else "",
+    }
+
+
+def is_self_article_reference(ref: dict, current_law_name: str, article_num: str, branch_str: str = "") -> bool:
+    """Check whether a reference points back to the current article."""
+    return (
+        ref.get("law") == current_law_name
+        and ref.get("article_citation") == format_article_citation(article_num, branch_str)
+    )
+
+
+def extract_cross_references(text: str, current_law_name: str) -> list[dict]:
+    """Extract cross-references with law context when it is explicit or inferable."""
     refs = []
     seen = set()
-    # Pattern: 제N조, 제N조의N, 제N조제N항
-    pattern = r"제(\d+)조(?:의(\d+))?(?:제(\d+)항)?"
-    for match in re.finditer(pattern, text):
-        ref = f"제{match.group(1)}조"
-        if match.group(2):
-            ref += f"의{match.group(2)}"
-        if match.group(3):
-            ref += f"제{match.group(3)}항"
-        if ref not in seen:
-            seen.add(ref)
-            refs.append(ref)
+    law_aliases = related_law_names(current_law_name)
+    last_context_by_kind = {}
+    previous_match_end = 0
+    previous_target_law = None
+
+    for match in CROSS_REFERENCE_PATTERN.finditer(text):
+        named_law = match.group("named_law")
+        prefix = match.group("prefix")
+        article_num = match.group("article")
+        article_sub = match.group("article_sub") or ""
+        paragraph = match.group("paragraph") or ""
+
+        target_law = None
+
+        if named_law:
+            target_law = named_law.strip("「」")
+            ref_kind = infer_law_reference_kind(target_law)
+            if ref_kind:
+                last_context_by_kind[ref_kind] = target_law
+        elif prefix:
+            ref_kind = normalize_reference_kind(prefix)
+            compact_prefix = prefix.replace(" ", "")
+            if compact_prefix.startswith("같은"):
+                target_law = last_context_by_kind.get(ref_kind)
+                if not target_law:
+                    previous_match_end = match.end()
+                    previous_target_law = None
+                    continue
+            else:
+                target_law = law_aliases.get(ref_kind)
+                if not target_law:
+                    previous_match_end = match.end()
+                    previous_target_law = None
+                    continue
+                last_context_by_kind[ref_kind] = target_law
+        else:
+            separator = text[previous_match_end:match.start()]
+            if previous_target_law and should_inherit_previous_law(separator):
+                target_law = previous_target_law
+            else:
+                target_law = current_law_name
+
+        article_citation = format_article_citation(article_num, article_sub)
+        citation = format_cross_reference_citation(article_num, article_sub, paragraph)
+        scope = "internal" if target_law == current_law_name else "external"
+        display = citation if scope == "internal" else f"{target_law} {citation}"
+
+        if display not in seen:
+            seen.add(display)
+            refs.append({
+                "citation": display,
+                "law": target_law,
+                "article_citation": article_citation,
+                "article_main": _normalize_numeric_token(article_num),
+                "article_sub": _normalize_numeric_token(article_sub) if article_sub else "0",
+                "paragraph": _normalize_numeric_token(paragraph) if paragraph else "",
+                "scope": scope,
+            })
+
+        previous_match_end = match.end()
+        previous_target_law = target_law
+
     return refs
 
 
@@ -318,7 +536,17 @@ def create_article_md(law_info: dict, article: dict, law_slug: str) -> str:
 
     # Extract cross-references and keywords
     full_text = collect_article_text(article)
-    cross_refs = [ref for ref in extract_cross_references(full_text) if ref != art_label]
+    cross_ref_entries = extract_cross_references(full_text, law_info["법령명한글"])
+    cross_refs = [
+        ref["citation"]
+        for ref in cross_ref_entries
+        if not is_self_article_reference(
+            ref,
+            law_info["법령명한글"],
+            article["조문번호"],
+            article.get("조문가지번호", ""),
+        )
+    ]
     keywords = extract_keywords(title, full_text)
 
     # Build frontmatter
@@ -384,6 +612,180 @@ keywords:
     return fm + body
 
 
+def safe_int(value: str | int | None) -> int:
+    """Convert numeric-like values to ints for stable sorting."""
+    try:
+        return int(value or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def build_cross_reference_graph(all_articles: list[dict], active_target_dirs: set[str]) -> dict:
+    """Build a cross-law reference graph from per-law cross-reference files."""
+    article_lookup = {}
+    indexed_laws = set()
+    for article in all_articles:
+        article_main = _normalize_numeric_token(str(article.get("article_main", "")))
+        article_sub = str(article.get("article_sub", "0") or "0")
+        article_sub = _normalize_numeric_token(article_sub) if article_sub not in ("", "0") else "0"
+        key = (article.get("law", ""), article_main, article_sub)
+        article_lookup[key] = article
+        indexed_laws.add(article.get("law", ""))
+
+    edges = []
+    pair_counts = {}
+
+    for law_dir in SOURCES_DIR.iterdir():
+        if not law_dir.is_dir():
+            continue
+        if law_dir.name not in active_target_dirs:
+            continue
+        xref_path = law_dir / "_cross-refs.json"
+        if not xref_path.exists():
+            continue
+
+        xref_data = json.loads(xref_path.read_text(encoding="utf-8"))
+        for ref in xref_data.get("cross_references", []):
+            if ref.get("scope") != "external":
+                continue
+
+            from_parts = parse_article_citation(ref.get("from", ""))
+            to_main = str(ref.get("to_article_main", "") or "")
+            to_sub = str(ref.get("to_article_sub", "0") or "0")
+            if not to_main:
+                parsed_to = parse_article_citation(ref.get("to_article", ""))
+                to_main = parsed_to["article_main"]
+                to_sub = parsed_to["article_sub"]
+            to_key = (
+                ref.get("to_law", ""),
+                _normalize_numeric_token(to_main),
+                _normalize_numeric_token(to_sub) if to_sub not in ("", "0") else "0",
+            )
+            target_article = article_lookup.get(to_key)
+            target_status = "resolved" if target_article else (
+                "missing_article" if ref.get("to_law", "") in indexed_laws else "external_unindexed"
+            )
+
+            edge = {
+                "from_law": ref.get("from_law", xref_data.get("law", "")),
+                "from_article": ref.get("from", ""),
+                "from_article_main": ref.get("from_article_main", from_parts["article_main"]),
+                "from_article_sub": ref.get("from_article_sub", from_parts["article_sub"]),
+                "from_path": ref.get("from_path", ""),
+                "to_law": ref.get("to_law", ""),
+                "to_article": ref.get("to_article", ""),
+                "to_display": ref.get("to", ""),
+                "to_article_main": to_key[1],
+                "to_article_sub": to_key[2],
+                "to_paragraph": ref.get("to_paragraph", ""),
+                "to_path": target_article["path"] if target_article else "",
+                "to_id": target_article["id"] if target_article else "",
+                "target_status": target_status,
+                "type": ref.get("type", "references"),
+            }
+            edges.append(edge)
+            pair_key = (edge["from_law"], edge["to_law"])
+            pair_counts[pair_key] = pair_counts.get(pair_key, 0) + 1
+
+    edges.sort(
+        key=lambda edge: (
+            edge["from_law"],
+            safe_int(edge["from_article_main"]),
+            safe_int(edge["from_article_sub"]),
+            edge["to_law"],
+            safe_int(edge["to_article_main"]),
+            safe_int(edge["to_article_sub"]),
+            safe_int(edge["to_paragraph"]),
+        )
+    )
+    pairs = [
+        {"from_law": from_law, "to_law": to_law, "count": count}
+        for (from_law, to_law), count in sorted(pair_counts.items())
+    ]
+
+    return {
+        "type": "cross_reference_graph",
+        "generated_at": datetime.now().isoformat(),
+        "count": len(edges),
+        "resolved_count": sum(1 for edge in edges if edge["target_status"] == "resolved"),
+        "unresolved_count": sum(1 for edge in edges if edge["target_status"] != "resolved"),
+        "pairs": pairs,
+        "edges": edges,
+    }
+
+
+def build_external_law_candidates(cross_reference_graph: dict) -> dict:
+    """Summarize unresolved external-law references into fetch candidates."""
+    candidate_map = {}
+
+    for edge in cross_reference_graph.get("edges", []):
+        if edge.get("target_status") != "external_unindexed":
+            continue
+
+        law_name = edge.get("to_law", "")
+        if not law_name:
+            continue
+
+        entry = candidate_map.setdefault(
+            law_name,
+            {
+                "law": law_name,
+                "reference_count": 0,
+                "source_laws": set(),
+                "sample_backlinks": [],
+            },
+        )
+        entry["reference_count"] += 1
+        entry["source_laws"].add(edge.get("from_law", ""))
+        if len(entry["sample_backlinks"]) < 5:
+            entry["sample_backlinks"].append({
+                "from_law": edge.get("from_law", ""),
+                "from_article": edge.get("from_article", ""),
+                "from_path": edge.get("from_path", ""),
+                "to_display": edge.get("to_display", ""),
+            })
+
+    candidates = []
+    for entry in candidate_map.values():
+        source_laws = sorted(law for law in entry["source_laws"] if law)
+        reference_count = entry["reference_count"]
+        if reference_count >= 10:
+            priority_tier = "high"
+        elif reference_count >= 5:
+            priority_tier = "medium"
+        else:
+            priority_tier = "low"
+
+        candidates.append({
+            "law": entry["law"],
+            "reference_count": reference_count,
+            "source_law_count": len(source_laws),
+            "source_laws": source_laws,
+            "priority_tier": priority_tier,
+            "sample_backlinks": entry["sample_backlinks"],
+        })
+
+    candidates.sort(
+        key=lambda candidate: (
+            -candidate["reference_count"],
+            -candidate["source_law_count"],
+            candidate["law"],
+        )
+    )
+    for idx, candidate in enumerate(candidates, start=1):
+        candidate["priority_rank"] = idx
+
+    return {
+        "type": "external_law_candidates",
+        "generated_at": datetime.now().isoformat(),
+        "count": len(candidates),
+        "high_priority_count": sum(1 for candidate in candidates if candidate["priority_tier"] == "high"),
+        "medium_priority_count": sum(1 for candidate in candidates if candidate["priority_tier"] == "medium"),
+        "low_priority_count": sum(1 for candidate in candidates if candidate["priority_tier"] == "low"),
+        "candidates": candidates,
+    }
+
+
 def process_law(oc: str, law_name: str, config: dict):
     """Process a single law: search, fetch, parse, write files."""
     target_dir = SOURCES_DIR / config["target_dir"]
@@ -396,11 +798,15 @@ def process_law(oc: str, law_name: str, config: dict):
 
     law_search = search_law(oc, config["search_query"])
     if not law_search:
-        print(f"  FAILED: Could not find '{law_name}' via API")
-        return False
-
-    mst = law_search.get("법령일련번호", "")
-    law_id = law_search.get("법령ID", "")
+        mst = config.get("mst", "")
+        law_id = ""
+        if not mst:
+            print(f"  FAILED: Could not find '{law_name}' via API")
+            return False
+        print(f"  Using configured MST fallback: {mst}")
+    else:
+        mst = law_search.get("법령일련번호", "")
+        law_id = law_search.get("법령ID", "")
 
     if not mst:
         print(f"  FAILED: No MST number for '{law_name}'")
@@ -436,6 +842,8 @@ def process_law(oc: str, law_name: str, config: dict):
         debug_path.write_text(xml_text, encoding="utf-8")
         print(f"  Saved raw XML to {debug_path}")
         return False
+
+    clear_generated_outputs(target_dir)
 
     # Step 4: Write _hierarchy.json
     hierarchy_article_count = sum(1 for a in articles if a.get("조문여부", "") == "조문")
@@ -477,14 +885,30 @@ def process_law(oc: str, law_name: str, config: dict):
 
         # Collect cross-references
         full_text = collect_article_text(article)
-        refs = extract_cross_references(full_text)
+        refs = extract_cross_references(full_text, law_info["법령명한글"])
         for ref in refs:
-            if ref != art_label:  # Skip self-references
-                cross_refs_all.append({
-                    "from": art_label,
-                    "to": ref,
-                    "type": "references",
-                })
+            if is_self_article_reference(
+                ref,
+                law_info["법령명한글"],
+                article["조문번호"],
+                article.get("조문가지번호", ""),
+            ):
+                continue
+            cross_refs_all.append({
+                "from": art_label,
+                "from_law": law_info["법령명한글"],
+                "from_article_main": art_num.split("의")[0] if "의" in art_num else art_num,
+                "from_article_sub": art_num.split("의")[1] if "의" in art_num else "0",
+                "from_path": str(filepath.relative_to(PROJECT_ROOT)),
+                "to": ref["citation"],
+                "to_law": ref["law"],
+                "to_article": ref["article_citation"],
+                "to_article_main": ref["article_main"],
+                "to_article_sub": ref["article_sub"],
+                "to_paragraph": ref["paragraph"],
+                "scope": ref["scope"],
+                "type": "references",
+            })
 
     print(f"  Wrote {article_count} article files")
 
@@ -526,11 +950,14 @@ def update_indexes(oc: str):
     """Update master indexes after processing all laws."""
     index_dir = PROJECT_ROOT / "index"
     index_dir.mkdir(parents=True, exist_ok=True)
+    active_target_dirs = DEFAULT_ENABLED_TARGET_DIRS | {"pipc-guidelines"}
 
     # Build article-index.json from all processed laws
     all_articles = []
     for law_dir in SOURCES_DIR.iterdir():
         if not law_dir.is_dir():
+            continue
+        if law_dir.name not in active_target_dirs:
             continue
         for md_file in sorted(law_dir.glob("art*.md")):
             # Quick frontmatter parse
@@ -583,21 +1010,57 @@ def update_indexes(oc: str):
     existing_index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"\nUpdated article-index.json ({len(all_articles)} articles)")
 
+    cross_reference_graph = build_cross_reference_graph(all_articles, DEFAULT_ENABLED_TARGET_DIRS)
+    cross_reference_graph_path = index_dir / "cross-reference-graph.json"
+    cross_reference_graph_path.write_text(
+        json.dumps(cross_reference_graph, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(
+        "Updated cross-reference-graph.json "
+        f"({cross_reference_graph['count']} edges, "
+        f"{cross_reference_graph['resolved_count']} resolved)"
+    )
+
+    external_law_candidates = build_external_law_candidates(cross_reference_graph)
+    external_law_candidates_path = index_dir / "external-law-candidates.json"
+    external_law_candidates_path.write_text(
+        json.dumps(external_law_candidates, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(
+        "Updated external-law-candidates.json "
+        f"({external_law_candidates['count']} candidates, "
+        f"{external_law_candidates['high_priority_count']} high priority)"
+    )
+
     # Update source-registry.json
     registry_path = index_dir / "source-registry.json"
     if registry_path.exists():
         registry = json.loads(registry_path.read_text(encoding="utf-8"))
     else:
         registry = {"type": "source_registry", "sources": {"grade-a": {}, "grade-b": {}, "grade-c": {}}}
+    existing_guidelines_entry = registry.get("sources", {}).get("grade-a", {}).get("pipc-guidelines")
+    registry["sources"]["grade-a"] = {}
+    if existing_guidelines_entry:
+        registry["sources"]["grade-a"]["pipc-guidelines"] = existing_guidelines_entry
 
-    for law_dir in SOURCES_DIR.iterdir():
-        if not law_dir.is_dir():
-            continue
-        if law_dir.name == "pipc-guidelines":
-            continue
+    for law_name, law_config in DEFAULT_ENABLED_LAWS.items():
+        law_dir = SOURCES_DIR / law_config["target_dir"]
         meta_path = law_dir / "_meta.json"
         meta = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
-        count = len(list(law_dir.glob("art*.md")))
+        count = len(list(law_dir.glob("art*.md"))) if law_dir.exists() else 0
+
+        if law_config.get("skip_fetch"):
+            registry["sources"]["grade-a"][law_config["target_dir"]] = {
+                "status": law_config.get("registry_status", "retired"),
+                "count": 0,
+                "target": 0,
+                "law_name": meta.get("law_name", law_name),
+                "retrieved_at": meta.get("retrieved_at", ""),
+                "note": law_config.get("note", "Excluded from ingest."),
+            }
+            continue
 
         hier_path = law_dir / "_hierarchy.json"
         target = count
@@ -616,7 +1079,7 @@ def update_indexes(oc: str):
             "status": status,
             "count": count,
             "target": target,
-            "law_name": meta.get("law_name", TARGET_DIR_TO_LAW_NAME.get(law_dir.name, "")),
+            "law_name": meta.get("law_name", law_name),
             "retrieved_at": meta.get("retrieved_at", ""),
         }
         if status == "partial":
@@ -624,7 +1087,7 @@ def update_indexes(oc: str):
         elif status == "pending":
             entry["note"] = "Directory exists but no ingested statute files are available yet."
 
-        registry["sources"]["grade-a"][law_dir.name] = entry
+        registry["sources"]["grade-a"][law_config["target_dir"]] = entry
 
     registry["generated_at"] = datetime.now().isoformat()
     registry_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -646,12 +1109,19 @@ def main():
     print()
 
     if args.law == "all":
-        laws_to_process = KNOWN_LAWS
+        laws_to_process = DEFAULT_ENABLED_LAWS
     else:
         laws_to_process = {args.law: KNOWN_LAWS[args.law]}
 
     results = {}
     for law_name, config in laws_to_process.items():
+        if config.get("skip_fetch"):
+            print(f"\n{'='*60}")
+            print(f"Processing: {law_name}")
+            print(f"{'='*60}")
+            print(f"  SKIPPED: {config.get('note', 'Excluded from ingest.')}")
+            results[law_name] = "SKIPPED"
+            continue
         if args.dry_run:
             search_law(args.oc, config["search_query"])
             continue
@@ -668,7 +1138,10 @@ def main():
         print("SUMMARY")
         print(f"{'='*60}")
         for law, success in results.items():
-            status = "OK" if success else "FAILED"
+            if isinstance(success, str):
+                status = success
+            else:
+                status = "OK" if success else "FAILED"
             print(f"  {law}: {status}")
 
 

@@ -28,7 +28,7 @@
       "is_article": true
     },
     {
-      "number": "4",
+      "number": "4의2",
       "title": "합성영상등으로 인한 피해 예방을 위한 시책",
       "is_article": true
     },
@@ -38,7 +38,7 @@
       "is_article": true
     },
     {
-      "number": "5",
+      "number": "5의2",
       "title": "국외행위에 대한 적용",
       "is_article": true
     },
@@ -148,7 +148,7 @@
       "is_article": true
     },
     {
-      "number": "22",
+      "number": "22의2",
       "title": "접근권한에 대한 동의",
       "is_article": true
     },
@@ -158,27 +158,27 @@
       "is_article": true
     },
     {
-      "number": "23",
+      "number": "23의2",
       "title": "주민등록번호의 사용 제한",
       "is_article": true
     },
     {
-      "number": "23",
+      "number": "23의3",
       "title": "본인확인기관의 지정 등",
       "is_article": true
     },
     {
-      "number": "23",
+      "number": "23의4",
       "title": "본인확인업무의 정지 및 지정취소",
       "is_article": true
     },
     {
-      "number": "23",
+      "number": "23의5",
       "title": "연계정보의 생성ㆍ처리 등",
       "is_article": true
     },
     {
-      "number": "23",
+      "number": "23의6",
       "title": "연계정보의 안전조치 의무 등",
       "is_article": true
     },
@@ -188,7 +188,7 @@
       "is_article": true
     },
     {
-      "number": "24",
+      "number": "24의2",
       "title": "",
       "is_article": true
     },
@@ -203,7 +203,7 @@
       "is_article": true
     },
     {
-      "number": "26",
+      "number": "26의2",
       "title": "",
       "is_article": true
     },
@@ -218,17 +218,12 @@
       "is_article": true
     },
     {
-      "number": "27",
+      "number": "27의2",
       "title": "",
       "is_article": true
     },
     {
-      "number": "27",
-      "title": "",
-      "is_article": true
-    },
-    {
-      "number": "28",
+      "number": "27의3",
       "title": "",
       "is_article": true
     },
@@ -238,12 +233,17 @@
       "is_article": true
     },
     {
-      "number": "29",
+      "number": "28의2",
       "title": "",
       "is_article": true
     },
     {
       "number": "29",
+      "title": "",
+      "is_article": true
+    },
+    {
+      "number": "29의2",
       "title": "",
       "is_article": true
     },
@@ -258,7 +258,7 @@
       "is_article": true
     },
     {
-      "number": "30",
+      "number": "30의2",
       "title": "",
       "is_article": true
     },
@@ -273,22 +273,22 @@
       "is_article": true
     },
     {
-      "number": "32",
+      "number": "32의2",
       "title": "",
       "is_article": true
     },
     {
-      "number": "32",
+      "number": "32의3",
       "title": "",
       "is_article": true
     },
     {
-      "number": "32",
+      "number": "32의4",
       "title": "",
       "is_article": true
     },
     {
-      "number": "32",
+      "number": "32의5",
       "title": "국내대리인의 지정",
       "is_article": true
     },
@@ -303,7 +303,7 @@
       "is_article": true
     },
     {
-      "number": "33",
+      "number": "33의2",
       "title": "",
       "is_article": true
     },
@@ -358,12 +358,12 @@
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의2",
       "title": "청소년유해매체물의 광고금지",
       "is_article": true
     },
     {
-      "number": "42",
+      "number": "42의3",
       "title": "청소년 보호 책임자의 지정 등",
       "is_article": true
     },
@@ -378,47 +378,47 @@
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의2",
       "title": "정보의 삭제요청 등",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의3",
       "title": "임의의 임시조치",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의4",
       "title": "자율규제",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의5",
       "title": "게시판 이용자의 본인 확인",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의6",
       "title": "이용자 정보의 제공청구",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의7",
       "title": "불법정보의 유통금지 등",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의8",
       "title": "대화형정보통신서비스에서의 아동 보호",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의9",
       "title": "불법촬영물등 유통방지 책임자",
       "is_article": true
     },
     {
-      "number": "44",
+      "number": "44의10",
       "title": "명예훼손 분쟁조정부",
       "is_article": true
     },
@@ -433,12 +433,12 @@
       "is_article": true
     },
     {
-      "number": "45",
+      "number": "45의2",
       "title": "정보보호 사전점검",
       "is_article": true
     },
     {
-      "number": "45",
+      "number": "45의3",
       "title": "정보보호 최고책임자의 지정 등",
       "is_article": true
     },
@@ -448,12 +448,12 @@
       "is_article": true
     },
     {
-      "number": "46",
+      "number": "46의2",
       "title": "집적정보통신시설 사업자의 긴급대응",
       "is_article": true
     },
     {
-      "number": "46",
+      "number": "46의3",
       "title": "",
       "is_article": true
     },
@@ -463,32 +463,32 @@
       "is_article": true
     },
     {
-      "number": "47",
+      "number": "47의2",
       "title": "정보보호 관리체계 인증기관 및 정보보호 관리체계 심사기관의 지정취소 등",
       "is_article": true
     },
     {
-      "number": "47",
+      "number": "47의3",
       "title": "",
       "is_article": true
     },
     {
-      "number": "47",
+      "number": "47의4",
       "title": "이용자의 정보보호",
       "is_article": true
     },
     {
-      "number": "47",
+      "number": "47의5",
       "title": "정보보호 관리등급 부여",
       "is_article": true
     },
     {
-      "number": "47",
+      "number": "47의6",
       "title": "정보보호 취약점 신고자에 대한 포상",
       "is_article": true
     },
     {
-      "number": "47",
+      "number": "47의7",
       "title": "정보보호 관리체계 인증의 특례",
       "is_article": true
     },
@@ -498,27 +498,27 @@
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의2",
       "title": "침해사고의 대응 등",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의3",
       "title": "침해사고의 신고 등",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의4",
       "title": "침해사고의 원인 분석 등",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의5",
       "title": "정보통신망연결기기등 관련 침해사고의 대응 등",
       "is_article": true
     },
     {
-      "number": "48",
+      "number": "48의6",
       "title": "정보통신망연결기기등에 관한 인증",
       "is_article": true
     },
@@ -528,12 +528,12 @@
       "is_article": true
     },
     {
-      "number": "49",
+      "number": "49의2",
       "title": "속이는 행위에 의한 정보의 수집금지 등",
       "is_article": true
     },
     {
-      "number": "49",
+      "number": "49의3",
       "title": "속이는 행위에 사용된 전화번호의 전기통신역무 제공의 중지 등",
       "is_article": true
     },
@@ -543,37 +543,37 @@
       "is_article": true
     },
     {
-      "number": "50",
+      "number": "50의2",
       "title": "",
       "is_article": true
     },
     {
-      "number": "50",
+      "number": "50의3",
       "title": "영리목적의 광고성 정보 전송의 위탁 등",
       "is_article": true
     },
     {
-      "number": "50",
+      "number": "50의4",
       "title": "정보 전송 역무 제공 등의 제한",
       "is_article": true
     },
     {
-      "number": "50",
+      "number": "50의5",
       "title": "영리목적의 광고성 프로그램 등의 설치",
       "is_article": true
     },
     {
-      "number": "50",
+      "number": "50의6",
       "title": "영리목적의 광고성 정보 전송차단 소프트웨어의 보급 등",
       "is_article": true
     },
     {
-      "number": "50",
+      "number": "50의7",
       "title": "영리목적의 광고성 정보 게시의 제한",
       "is_article": true
     },
     {
-      "number": "50",
+      "number": "50의8",
       "title": "불법행위를 위한 광고성 정보 전송금지",
       "is_article": true
     },
@@ -623,7 +623,7 @@
       "is_article": true
     },
     {
-      "number": "58",
+      "number": "58의2",
       "title": "구매자정보 제공 요청 등",
       "is_article": true
     },
@@ -658,7 +658,7 @@
       "is_article": true
     },
     {
-      "number": "63",
+      "number": "63의2",
       "title": "",
       "is_article": true
     },
@@ -673,22 +673,22 @@
       "is_article": true
     },
     {
-      "number": "64",
+      "number": "64의2",
       "title": "자료 등의 보호 및 폐기",
       "is_article": true
     },
     {
-      "number": "64",
+      "number": "64의3",
       "title": "",
       "is_article": true
     },
     {
-      "number": "64",
+      "number": "64의4",
       "title": "청문",
       "is_article": true
     },
     {
-      "number": "64",
+      "number": "64의5",
       "title": "투명성 보고서 제출의무 등",
       "is_article": true
     },
@@ -698,7 +698,7 @@
       "is_article": true
     },
     {
-      "number": "65",
+      "number": "65의2",
       "title": "",
       "is_article": true
     },
@@ -718,7 +718,7 @@
       "is_article": true
     },
     {
-      "number": "68",
+      "number": "68의2",
       "title": "",
       "is_article": true
     },
@@ -728,7 +728,7 @@
       "is_article": true
     },
     {
-      "number": "69",
+      "number": "69의2",
       "title": "",
       "is_article": true
     },
@@ -743,7 +743,7 @@
       "is_article": true
     },
     {
-      "number": "70",
+      "number": "70의2",
       "title": "벌칙",
       "is_article": true
     },
@@ -773,7 +773,7 @@
       "is_article": true
     },
     {
-      "number": "75",
+      "number": "75의2",
       "title": "몰수ㆍ추징",
       "is_article": true
     },

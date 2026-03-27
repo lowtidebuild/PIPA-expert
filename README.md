@@ -6,14 +6,14 @@
 
 ### AI-Powered Korean Data Privacy Law Advisor
 
-**550 searchable statute files** · **929 hierarchy article entries** · **46 official guidelines** · **Law firm-grade DOCX opinions**
+**929 searchable statute files** · **929 hierarchy article entries** · **46 official guidelines** · **Law firm-grade DOCX opinions**
 
 Built for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · Powered by structured RAG · **[How to Use](docs/en/HOW-TO-USE.md)**
 
-[![Statute Files](https://img.shields.io/badge/Statute_Files-550-blue)](#-knowledge-base)
+[![Statute Files](https://img.shields.io/badge/Statute_Files-929-blue)](#-knowledge-base)
 [![Hierarchy Entries](https://img.shields.io/badge/Hierarchy_Entries-929-lightgrey)](#-knowledge-base)
 [![Guidelines](https://img.shields.io/badge/PIPC_Guidelines-46-green)](#-knowledge-base)
-[![Cross-ref Edges](https://img.shields.io/badge/Cross--Ref_Edges-1%2C498-orange)](#-knowledge-base)
+[![Cross-ref Edges](https://img.shields.io/badge/Cross--Ref_Edges-2%2C369-orange)](#-knowledge-base)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](#license)
 
 <br/>
@@ -52,7 +52,7 @@ graph TB
 
         subgraph core["Core Capabilities"]
             direction LR
-            KB["<b>Structured Knowledge Base</b><br/>550 Searchable Statute Files · 46 Guidelines<br/>929 Hierarchy Entries"]
+            KB["<b>Structured Knowledge Base</b><br/>929 Searchable Statute Files · 46 Guidelines<br/>929 Hierarchy Entries"]
             WS["<b>Multi-Layer Web Search</b><br/>Law Firms · Academic · DPAs<br/>Cross-Reference Verification"]
             DX["<b>DOCX Opinion Generator</b><br/>Law Firm-Grade Documents<br/>Verified Citations"]
         end
@@ -107,23 +107,23 @@ Every statute is fetched from Korea's [National Law Information Center](https://
 
 | Law | Searchable Files | Hierarchy Entries | Extracted Cross-Ref Edges | Directory |
 |-----|------------------|-------------------|---------------------------|-----------|
-| **Personal Information Protection Act (PIPA)** | 76 | 126 | 190 | `library/grade-a/pipa/` |
-| PIPA Enforcement Decree | 63 | 140 | 306 | `library/grade-a/pipa-enforcement-decree/` |
-| Network Act (정보통신망법) | 76 | 142 | 119 | `library/grade-a/network-act/` |
-| Network Act Enforcement Decree | 74 | 131 | 203 | `library/grade-a/network-act-enforcement-decree/` |
-| Network Act Enforcement Rule | 10 | 11 | 16 | `library/grade-a/network-act-enforcement-rule/` |
-| Credit Information Act (신용정보법) | 52 | 91 | 138 | `library/grade-a/credit-info-act/` |
-| Credit Information Act Enforcement Decree | 38 | 81 | 263 | `library/grade-a/credit-info-act-enforcement-decree/` |
-| Location Information Act (위치정보법) | 43 | 53 | 73 | `library/grade-a/location-info-act/` |
-| Location Information Act Enforcement Decree | 40 | 55 | 121 | `library/grade-a/location-info-act-enforcement-decree/` |
-| E-Government Act (전자정부법) | 78 | 99 | 69 | `library/grade-a/e-government-act/` |
-| **Total** | **550** | **929** | **1,498** | |
+| **Personal Information Protection Act (PIPA)** | 126 | 126 | 301 | `library/grade-a/pipa/` |
+| PIPA Enforcement Decree | 140 | 140 | 406 | `library/grade-a/pipa-enforcement-decree/` |
+| Network Act (정보통신망법) | 142 | 142 | 188 | `library/grade-a/network-act/` |
+| Network Act Enforcement Decree | 131 | 131 | 266 | `library/grade-a/network-act-enforcement-decree/` |
+| Network Act Enforcement Rule | 11 | 11 | 20 | `library/grade-a/network-act-enforcement-rule/` |
+| Credit Information Act (신용정보법) | 91 | 91 | 326 | `library/grade-a/credit-info-act/` |
+| Credit Information Act Enforcement Decree | 81 | 81 | 435 | `library/grade-a/credit-info-act-enforcement-decree/` |
+| Location Information Act (위치정보법) | 53 | 53 | 159 | `library/grade-a/location-info-act/` |
+| Location Information Act Enforcement Decree | 55 | 55 | 164 | `library/grade-a/location-info-act-enforcement-decree/` |
+| E-Government Act (전자정부법) | 99 | 99 | 104 | `library/grade-a/e-government-act/` |
+| **Total** | **929** | **929** | **2,369** | |
 
 > [!IMPORTANT]
-> Audit status as of March 27, 2026: `article-index.json` currently exposes 550 searchable statute files, while the corresponding `_hierarchy.json` files list 929 article entries. This means branch articles such as `제7조의2` are being flattened into base article files during API ingest. A frontmatter cleanup removed 400 self-references, but 23 unresolved same-law targets still remain. Verify branch-article lookups and cross-reference traversal against `law.go.kr` until the ingest is re-run with branch-article support.
+> Re-ingest status as of March 27, 2026: the default active corpus has been slimmed back down to the directly privacy-related statute sets only, `article-index.json` now exposes 929 searchable statute files, the active law sets in `source-registry.json` all report `count == target`, same-law internal cross-reference misses remain at 0, `cross-reference-graph.json` aggregates 1,309 cross-law edges (869 resolved to local corpus), and `external-law-candidates.json` prioritizes 154 out-of-corpus statutes for optional expansion (8 high priority). Larger general-law corpora are intentionally kept out of the default KB unless explicitly requested. The repealed `pipa-enforcement-rule` source is intentionally excluded and tracked as `retired`.
 > Detailed log: [docs/2026-03-27-quality-audit-log.md](docs/2026-03-27-quality-audit-log.md)
 
-> **Pending source:** `library/grade-a/pipa-enforcement-rule/` exists but no statute files are currently ingested.
+> **Retired source:** `library/grade-a/pipa-enforcement-rule/` is a repealed statute set and is intentionally excluded from ingest.
 
 ### PIPC Official Guidelines — 46 Documents
 
@@ -219,7 +219,7 @@ flowchart TD
         direction TB
         S1["📚 <b>Article Search</b><br/><code>article-index.json</code> → relevant statutes"]
         S2["📖 <b>Guideline Search</b><br/><code>guideline-index.json</code> → PIPC guidance"]
-        S3["🔗 <b>Cross-Reference Tracking</b><br/><code>cross-reference-graph</code> → delegated provisions"]
+        S3["🔗 <b>Cross-Reference Tracking</b><br/><code>cross-reference-graph.json</code> → delegated provisions"]
         S1 --> S2 --> S3
     end
 
@@ -336,15 +336,17 @@ PIPA-expert/
 ├── library/
 │   ├── inbox/                    # Drop zone for new sources
 │   ├── grade-a/                  # Authoritative sources
-│   │   ├── pipa/                 #   PIPA searchable files (76)
-│   │   ├── pipa-enforcement-decree/  #   Enforcement Decree files (63)
-│   │   ├── network-act/          #   Network Act files (76)
+│   │   ├── pipa/                 #   PIPA searchable files (126)
+│   │   ├── pipa-enforcement-decree/  #   Enforcement Decree files (140)
+│   │   ├── network-act/          #   Network Act files (142)
 │   │   ├── pipc-guidelines/      #   Official guidelines (46)
-│   │   └── ...                   #   + 7 more statute sets, 1 pending
+│   │   └── ...                   #   + 7 more statute sets, 1 retired
 │   ├── grade-b/                  # Case law, enforcement decisions
 │   └── grade-c/                  # Law firm analysis, academic papers
 ├── index/
-│   ├── article-index.json        # Searchable statute index (550 entries)
+│   ├── article-index.json        # Searchable statute index (929 entries)
+│   ├── cross-reference-graph.json # Cross-law reference graph (1,309 edges)
+│   ├── external-law-candidates.json # Out-of-corpus law expansion queue (154 candidates)
 │   ├── guideline-index.json      # Guideline index (46 entries)
 │   └── source-registry.json      # Collection status dashboard
 ├── config/

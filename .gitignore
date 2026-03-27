@@ -24,3 +24,6 @@ Progress.md
 
 # 임시 파일
 *.tmp
+
+# 로컬 작업 로그
+logs/local-worklog.md

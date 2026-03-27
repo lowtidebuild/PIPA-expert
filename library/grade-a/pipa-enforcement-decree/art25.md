@@ -10,26 +10,26 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9/제25조"
+source_url: "https://law.go.kr/법령/%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%B3%B4%ED%98%B8%EB%B2%95%20%EC%8B%9C%ED%96%89%EB%A0%B9/%EC%A0%9C25%EC%A1%B0"
 effective_date: "20251002"
 last_amended: "20250923"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제30조제2항"
-  - "제25조제7항"
+  - "개인정보 보호법 제25조제7항"
   - "제31조제2항"
+  - "개인정보 보호법 제30조제2항"
 
 # === 검색 메타 ===
 keywords:
-  - "방침"
   - "고정형"
-  - "정보주체"
-  - "영상정보처리기기"
-  - "관리"
   - "운영"
+  - "정보주체"
+  - "방침"
   - "영상정보"
+  - "관리"
+  - "영상정보처리기기"
 ---
 
 ## 제25조(고정형 영상정보처리기기 운영ㆍ관리 방침)

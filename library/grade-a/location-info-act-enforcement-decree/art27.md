@@ -10,27 +10,27 @@ paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/%EC%9C%84%EC%B9%98%EC%A0%95%EB%B3%B4%EC%9D%98%20%EB%B3%B4%ED%98%B8%20%EB%B0%8F%20%EC%9D%B4%EC%9A%A9%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0%20%EC%8B%9C%ED%96%89%EB%A0%B9/제27조"
+source_url: "https://law.go.kr/법령/%EC%9C%84%EC%B9%98%EC%A0%95%EB%B3%B4%EC%9D%98%20%EB%B3%B4%ED%98%B8%20%EB%B0%8F%20%EC%9D%B4%EC%9A%A9%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EB%B2%95%EB%A5%A0%20%EC%8B%9C%ED%96%89%EB%A0%B9/%EC%A0%9C27%EC%A1%B0"
 effective_date: "20260210"
 last_amended: "20260210"
-retrieved_at: "2026-03-25"
+retrieved_at: "2026-03-27"
 
 # === 관계 정보 ===
 cross_references:
-  - "제26조제1항"
+  - "위치정보의 보호 및 이용 등에 관한 법률 제26조제1항"
 
 # === 검색 메타 ===
 keywords:
-  - "이용"
+  - "아동등의"
+  - "이하의"
+  - "위치정보"
   - "위한"
   - "수집"
-  - "아동등의"
-  - "위치정보"
-  - "이하의"
-  - "동의"
-  - "요건"
+  - "이용"
   - "제공"
+  - "보호를"
   - "이용동의의"
+  - "요건"
 ---
 
 ## 제27조(8세 이하의 아동등의 보호를 위한 위치정보 이용동의의 요건)
