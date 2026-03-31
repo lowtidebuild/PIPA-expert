@@ -34,8 +34,7 @@ library/inbox/ 에 파일 드롭
 
 ```
 inbox/ 내 모든 파일을 Glob으로 탐색
-지원 포맷: .pdf, .docx, .pptx, .xlsx, .html, .md, .txt
-비지원: .hwp, .hwpx → 유저에게 "PDF/DOCX 변환 후 다시 넣어주세요" 안내
+지원 포맷: .pdf, .docx, .pptx, .xlsx, .html, .md, .txt, .hwp, .hwpx
 ```
 
 - 파일이 0개면 "inbox가 비어 있습니다" 안내 후 종료
@@ -48,7 +47,15 @@ inbox/ 내 모든 파일을 Glob으로 탐색
 | `.pdf` | `mcp__markitdown__convert_to_markdown` (uri: `file:///절대경로`) |
 | `.docx` | `mcp__markitdown__convert_to_markdown` |
 | `.pptx`, `.xlsx`, `.html` | `mcp__markitdown__convert_to_markdown` |
+| `.hwp`, `.hwpx` | `mcp__kordoc__parse_document` (파일 경로 전달) |
 | `.md`, `.txt` | 변환 불필요, 그대로 사용 |
+
+**kordoc 파싱 참고:**
+- kordoc은 HWP 5.x 및 HWPX(2020+)를 네이티브 파싱하여 Markdown 반환
+- 테이블이 포함된 문서는 `mcp__kordoc__parse_table`로 구조화 추출 가능
+- DRM 보호 문서는 파싱 실패 (ENCRYPTED 에러) → `_failed/`로 이동
+- kordoc이 문서 메타데이터(작성기관, 제목)를 반환하면 frontmatter에 직접 매핑
+- kordoc 파싱 후에도 Grade 판별 휴리스틱은 동일하게 적용
 
 **변환 실패 시:** 해당 파일을 `library/inbox/_failed/`로 이동 + 유저에게 실패 사유 안내
 
@@ -198,7 +205,8 @@ Grade C:
 | 상황 | 대응 |
 |------|------|
 | inbox 비어있음 | "inbox가 비어 있습니다" 안내 |
-| 미지원 포맷 (.hwp 등) | 해당 파일 스킵 + "PDF/DOCX로 변환 필요" 안내 |
+| 미지원 포맷 | 해당 파일 스킵 + "지원되지 않는 형식입니다" 안내 |
+| HWP DRM/암호화 | kordoc ENCRYPTED 에러 → `_failed/`로 이동 + "DRM 보호 문서" 안내 |
 | markitdown 변환 실패 | `_failed/`로 이동 + 실패 사유 안내 |
 | Grade 판별 불가 | 유저에게 Grade 선택 질문 |
 | 파일명 중복 | slug에 `-2`, `-3` 접미사 |

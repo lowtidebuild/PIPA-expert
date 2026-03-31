@@ -37,8 +37,8 @@
 | Grade | 설명 | 단독 근거 |
 |-------|------|----------|
 | **A** | 공식 1차 소스 (법령 원문, PIPC 가이드라인) | 가능 |
-| **B** | 교차검증된 2차 소스 (처분례, 판례, 로펌 해설) | 가능 (A 교차검증 권장) |
-| **C** | 단일 소스 (학술 논문) | 불가 ([EDITORIAL] 표시 필수) |
+| **B** | 교차검증된 2차 소스 (처분례, 판례) | 가능 (A 교차검증 권장) |
+| **C** | 단일 소스 (로펌 해설, 학술 논문) | 불가 ([EDITORIAL] 표시 필수) |
 | **D** | 제외 (뉴스, AI 요약, 위키) | 불가 |
 
 ### KB 현황 확인
@@ -48,40 +48,101 @@
 - `count`는 현재 검색 가능한 로컬 파일 수, `target`은 `_hierarchy.json` 기준 계층 조문 수로 해석
 
 ### Phase 1 KB 범위
-- 수집 완료: 검색 가능한 법령 파일 550건 + PIPC 가이드라인 46종
+- 수집 완료: 검색 가능한 법령 파일 929건 + PIPC 가이드라인 46종
 - 포함 법령: PIPA, PIPA 시행령, 정보통신망법/시행령/시행규칙, 신용정보법/시행령, 위치정보법/시행령, 전자정부법
-- 미수집: PIPA 시행규칙 (`library/grade-a/pipa-enforcement-rule/` currently empty)
-- 알려진 한계: 가지조문(예: `제7조의2`)이 기본 조문 파일로 평탄화되어 `_hierarchy.json` 조문 수(929)와 `article-index.json` 검색 가능 파일 수(550)가 다릅니다. 가지조문이 핵심인 질문은 `_hierarchy.json`과 `law.go.kr`로 재검증합니다.
+- 미수집: PIPA 시행규칙 (`library/grade-a/pipa-enforcement-rule/` retired — 폐지 법령)
+- 알려진 한계: 가지조문(예: `제7조의2`)이 기본 조문 파일로 평탄화된 경우 있음. 가지조문이 핵심인 질문은 `_hierarchy.json`과 MCP 또는 `law.go.kr`로 재검증합니다.
+
+### MCP 서버 (실시간 보충)
+- **korean-law**: 법제처 Open API — 법령 검색/조회, 판례, 헌재 결정, 처분례, 위임 체계, 개정 이력 (64 도구)
+- **kordoc**: HWP/HWPX/PDF 문서 파싱 → Markdown (7 도구)
+- MCP는 로컬 KB 보충용. 로컬 KB가 항상 1차 소스.
 
 ---
 
 ## 검색 프로토콜
 
-질문을 받으면 다음 순서로 검색합니다:
+질문을 받으면 다음 7단계(Step 0, 1, 2, 2.5, 3, 3.5, 4)로 검색합니다:
 
-### Step 1: 관련 조문 검색
+### Step 0: Freshness Check (MCP)
+
+질문에 관련된 법령이 로컬 KB 수집 이후 개정되었는지 확인한다.
+
+1. 질문에서 법명 추출. 법명이 없으면 PIPA + 시행령만 체크
+2. `index/source-registry.json`의 `retrieved_at` 확인
+3. korean-law MCP 도구로 해당 법령의 최신 개정일 조회
+4. 로컬보다 API가 새로우면 `[STALE LOCAL]` 플래그 + API 텍스트 우선 사용
+
+**제한:** 최대 2개 법령, 2 API 호출/질문. MCP 불가 시 조용히 스킵.
+
+### Step 1: 관련 조문 검색 (로컬 KB)
 1. `index/article-index.json` 을 Read → keywords 배열에서 질문 키워드와 부분 문자열 매칭
    - 한국어 형태소 한계: 어간 수준 매칭 (예: "수집하는" → "수집")
 2. 매칭된 조문의 path로 .md 파일 목록 확보 (상위 5개)
 3. 키워드 매칭이 부족하면 Grep으로 `library/` 전체에서 본문 검색
-4. 질문이 `제N조의M` 형태의 가지조문이면 해당 법령의 `_hierarchy.json`을 먼저 확인하고, 로컬 파일이 기본 조문 번호로 평탄화된 경우 `law.go.kr`로 직접 대조
+4. 질문이 `제N조의M` 형태의 가지조문이면 해당 법령의 `_hierarchy.json`을 먼저 확인하고, 로컬 파일이 기본 조문 번호로 평탄화된 경우 MCP 또는 `law.go.kr`로 재검증
 
-### Step 2: 관련 가이드라인 검색
+### Step 2: 관련 가이드라인 검색 (로컬 KB)
 1. `index/guideline-index.json` 을 Read → keywords/topics 배열에서 매칭
 2. 매칭된 가이드라인 .md 파일을 Read
 
-### Step 3: 교차참조 추적
+### Step 2.5: MCP 판례/처분례 검색
+
+해석 질문, 비교 질문, Dual-Pass 모드에서 관련 판례와 처분례를 검색한다.
+
+1. korean-law MCP의 판례 검색 도구로 관련 판례 조회
+2. 필요 시 헌재 결정, 조세심판례도 조회
+3. 결과를 `[MCP] [Grade B]` 태깅
+4. 최대 5 API 호출
+
+**트리거 조건:** 해석 질문, 비교 질문, Dual-Pass 모드, 사용자 명시 요청
+**단순 조문 조회에서는 스킵.** MCP 불가 시 조용히 스킵.
+
+### Step 3: 교차참조 추적 (로컬 KB)
 1. 찾은 조문의 frontmatter에서 `cross_references`, `delegates_to`, `referenced_by` 확인
 2. 동일법 내 참조: `library/grade-a/{law}/_cross-refs.json`
 3. 법령 간 참조: `index/cross-reference-graph.json`
 4. 관련 조문도 Read
 
+### Step 3.5: MCP 법령 보충 조회
+
+로컬 KB에 없는 법령 조문을 실시간으로 조회한다.
+
+1. korean-law MCP로 해당 조문 실시간 조회
+2. `[MCP] [Grade A] [VERIFIED]` 태깅 (법제처 API 직접 조회이므로)
+3. 가지조문(`제N조의M`) 정확 조회 가능
+4. 최대 5 API 호출
+
+**트리거 조건:**
+- 교차참조 대상이 `index/external-law-candidates.json`의 미수집 법령일 때
+- Step 1-3에서 `[INSUFFICIENT]` 항목이 있을 때
+- 사용자가 로컬 KB에 없는 법령을 질문했을 때
+
+MCP 불가 시 Step 4 Layer 1 WebSearch로 폴백.
+
+**MCP → Grade 매핑:**
+
+| MCP 소스 유형 | Grade | 태그 형식 |
+|-------------|-------|----------|
+| 법령 원문 | A | `[MCP] [Grade A] [VERIFIED]` |
+| 시행령/시행규칙 | A | `[MCP] [Grade A] [VERIFIED]` |
+| 대법원 판례 | B | `[MCP] [Grade B]` |
+| 헌재 결정 | B | `[MCP] [Grade B]` |
+| PIPC 처분례 | B | `[MCP] [Grade B]` |
+| 조세심판례 | B | `[MCP] [Grade B]` |
+
+**API Rate Limit:** 질문당 총 MCP 호출 예산 15회 (Step 0: 2, Step 2.5: 5, Step 3.5: 5, fact-checker: 3). 세션 내 60초간 45회 초과 시 이후 MCP 호출 스킵 + `[MCP RATE LIMITED]` + 웹서치 폴백.
+
+**Graceful Degradation:** MCP 서버 불가용 시(네트워크 장애, 서버 미시작 등), Step 0/2.5/3.5는 조용히 스킵하고 기존 4단계 프로토콜(Step 1→2→3→4)로 동작한다. `[MCP UNAVAILABLE]` 로그 + 사용자에게 1회 안내.
+
 ### Step 4: 외부 소스 웹서치 (Multi-Layer)
 
-KB 검색으로 충분한 근거가 확보되지 않으면, 아래 순서로 외부 소스를 검색한다.
+KB + MCP 검색으로 충분한 근거가 확보되지 않으면, 아래 순서로 외부 소스를 검색한다.
 각 결과에 `[WEB]` 태그 + Grade를 표시하여 KB 소스와 구분한다.
 
-#### Layer 1: 법령 원문 — Grade A
+#### Layer 1: 법령 원문 — Grade A (MCP 실패 시 폴백)
+
+Step 3.5에서 MCP로 법령 조회가 성공했으면 이 Layer는 스킵한다. MCP 실패 시에만 사용.
 
 | 소스 | 검색 도메인 | 비고 |
 |------|-----------|------|
