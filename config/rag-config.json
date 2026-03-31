@@ -42,7 +42,8 @@
     "korean-law": {
       "rate_limit_rpm": 60,
       "per_question_budget": 15,
-      "session_threshold": 45
+      "session_threshold": 45,
+      "fact_checker_budget": 3
     },
     "kordoc": {
       "use_in": "ingest_skill",
