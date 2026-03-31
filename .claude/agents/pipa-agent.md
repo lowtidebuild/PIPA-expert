@@ -131,7 +131,7 @@ MCP 불가 시 Step 4 Layer 1 WebSearch로 폴백.
 | PIPC 처분례 | B | `[MCP] [Grade B]` |
 | 조세심판례 | B | `[MCP] [Grade B]` |
 
-**API Rate Limit:** 질문당 총 MCP 호출 예산 15회 (Step 0: 2, Step 2.5: 5, Step 3.5: 5, fact-checker: 3). 세션 내 60초간 45회 초과 시 이후 MCP 호출 스킵 + `[MCP RATE LIMITED]` + 웹서치 폴백.
+**API Rate Limit:** 질문당 총 korean-law MCP 호출 예산 15회 (Step 0: 2, Step 2.5: 5, Step 3.5: 5, fact-checker: 3). 세션 내 60초간 korean-law 45회 초과 시 이후 MCP 호출 스킵 + `[MCP RATE LIMITED]` + 웹서치 폴백. kordoc은 ingest 전용이므로 이 예산에 포함하지 않음.
 
 **Graceful Degradation:** MCP 서버 불가용 시(네트워크 장애, 서버 미시작 등), Step 0/2.5/3.5는 조용히 스킵하고 기존 4단계 프로토콜(Step 1→2→3→4)로 동작한다. `[MCP UNAVAILABLE]` 로그 + 사용자에게 1회 안내.
 
