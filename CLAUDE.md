@@ -24,6 +24,7 @@ docs/specs/                # 설계 문서
 - 검색 가능한 Grade A 법령 파일: 929건 (`index/article-index.json`)
 - PIPC 가이드라인: 46건 (`index/guideline-index.json`)
 - 기본 활성 법령 세트는 개인정보 직접 관련 법령만 유지하도록 슬림화했고 모두 `count == target`, same-law internal unresolved reference `0` 상태임. `index/cross-reference-graph.json`에는 cross-law edge 1,309건(869 resolved)이 들어 있고, `index/external-law-candidates.json`은 corpus 밖 외부 법령 154건을 온디맨드 확장 후보로 정리한다(고우선 8건). 폐지된 `개인정보보호법 시행규칙`은 `index/source-registry.json`에서 `retired`로 관리.
+- MCP 연동: korean-law-mcp + kordoc 서버로 법제처 API 실시간 조회 및 HWP 네이티브 파싱 가능. 로컬 KB 미수집 법령(154건) 및 판례/처분례를 온디맨드 조회.
 - 상세 감사/수정 로그: `docs/2026-03-27-quality-audit-log.md`
 
 ## Source Grade 체계
@@ -47,11 +48,24 @@ docs/specs/                # 설계 문서
   - **한국어 의견서 작성 시 반드시 `docs/ko-legal-opinion-style-guide.md`를 읽고 따를 것**
 - **ingest** — 외부 소스 자동 파싱/분류/인덱싱 (`.claude/skills/ingest/`)
   - `library/inbox/`에 파일 드롭 → `/ingest`로 자동 처리
+  - **HWP/HWPX 지원** — kordoc MCP로 네이티브 파싱
   - Grade 자동 판별 → frontmatter 생성 → 폴더 배치 → 인덱스 업데이트
+
+## MCP Servers
+
+- **korean-law** — 법제처 Open API 기반 한국 법령 실시간 조회 (`.mcp.json`)
+  - 법령 검색/조회, 판례 검색, 헌재 결정, 처분례, 위임 체계 추적, 개정 이력
+  - pipa-agent Step 0(freshness check), Step 2.5(판례), Step 3.5(보충 조회)에서 사용
+  - fact-checker 항목 8(실시간 대조), 항목 9(교차참조 MCP 검증)에서 사용
+  - API 키: 법제처 Open API (LAW_OC 환경변수, https://open.law.go.kr 에서 무료 발급)
+- **kordoc** — HWP/HWPX/PDF 한국 문서 파싱 → Markdown
+  - ingest 스킬에서 HWP 파일 파싱용으로 사용
+  - 테이블 구조화 추출, 메타데이터 추출 지원
 
 ## Dependencies
 
 - `python-docx` — DOCX 생성용 (`pip install python-docx`)
+- `Node.js` — MCP 서버 실행용 (npx로 korean-law-mcp, kordoc 자동 설치)
 
 ## 주요 문서
 

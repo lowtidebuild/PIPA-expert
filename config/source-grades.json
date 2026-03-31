@@ -27,5 +27,16 @@
       "can_be_sole_basis": false,
       "note": "RAG에 포함하지 않음. 참고용으로만 사용 가능."
     }
-  }
+  },
+  "mcp_source_mapping": {
+    "statutes": "A",
+    "enforcement_decrees": "A",
+    "enforcement_rules": "A",
+    "precedents": "B",
+    "constitutional_court": "B",
+    "administrative_decisions": "B",
+    "tax_tribunal": "B"
+  },
+  "mcp_tag_format": "[MCP] [Grade {grade}]",
+  "mcp_verified_tag": "[MCP] [Grade A] [VERIFIED]"
 }
