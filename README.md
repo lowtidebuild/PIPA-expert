@@ -423,6 +423,7 @@ PIPA Expert is one of several specialized legal AI agents operating under the fi
 | [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | 변혁기 (Byeon Hyeok-gi) | Legal translation |
 | [general-legal-research](https://github.com/lowtidebuild/general-legal-research) | 김재식 (Kim Jaesik) | Legal research |
 | **PIPA-expert** | **정보호 (Jeong Bo-ho)** | **Data privacy law** |
+| [GDPR-expert](https://github.com/lowtidebuild/GDPR-expert) | 김덕배 (Kim De Bruyne) | EU data protection law |
 | [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | 고덕수 (Ko Duksoo) | Contract review |
 | [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | 한석봉 (Han Seokbong) | Legal writing |
 | [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | 반성문 (Ban Seong-mun) | Quality review (Partner) |
