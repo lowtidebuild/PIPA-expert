@@ -14,7 +14,7 @@ Built for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview)
 [![Hierarchy Entries](https://img.shields.io/badge/Hierarchy_Entries-929-lightgrey)](#-knowledge-base)
 [![Guidelines](https://img.shields.io/badge/PIPC_Guidelines-46-green)](#-knowledge-base)
 [![Cross-ref Edges](https://img.shields.io/badge/Cross--Ref_Edges-2%2C369-orange)](#-knowledge-base)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](#license)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue)](#license)
 
 <br/>
 
@@ -432,7 +432,7 @@ PIPA Expert is one of several specialized legal AI agents operating under the fi
 
 ## License
 
-MIT
+Licensed under the [Apache License, Version 2.0](LICENSE).
 
 ---
 
