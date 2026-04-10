@@ -6,13 +6,13 @@
 
 ### AI 개인정보보호법 전문 자문 시스템
 
-**929개 검색 가능한 법조문 파일** · **929개 계층 조문 엔트리** · **46건 공식 가이드라인** · **로펌 수준 DOCX 의견서**
+**929개 검색 가능한 법조문 파일** · **46건 공식 가이드라인** · **30건 landmark 판례·해석례** · **로펌 수준 DOCX 의견서**
 
 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) 전용 · 구조화된 RAG 기반 · **[사용 가이드](docs/ko/HOW-TO-USE.md)**
 
 [![Statute Files](https://img.shields.io/badge/조문파일-929개-blue)](#-knowledge-base-법령-라이브러리)
-[![Hierarchy Entries](https://img.shields.io/badge/계층조문-929개-lightgrey)](#-knowledge-base-법령-라이브러리)
 [![Guidelines](https://img.shields.io/badge/PIPC_가이드라인-46건-green)](#-knowledge-base-법령-라이브러리)
+[![Grade B Sources](https://img.shields.io/badge/Grade_B_소스-30건-yellow)](#-knowledge-base-법령-라이브러리)
 [![Cross-ref Edges](https://img.shields.io/badge/교차참조_엣지-2%2C369개-orange)](#-knowledge-base-법령-라이브러리)
 
 <br/>
@@ -51,7 +51,7 @@ graph TB
 
         subgraph core["핵심 기능"]
             direction LR
-            KB["<b>구조화된 Knowledge Base</b><br/>929개 검색 파일 · 46건 가이드라인<br/>929개 계층 조문 엔트리"]
+            KB["<b>구조화된 Knowledge Base</b><br/>929개 법조문 · 46건 가이드라인<br/>30건 판례·해석례"]
             WS["<b>Multi-Layer 웹서치</b><br/>6대 로펌 · 학술 · 해외 DPA<br/>교차검증"]
             DX["<b>DOCX 의견서 생성</b><br/>로펌 수준 문서<br/>검증된 인용 체계"]
         end
@@ -174,6 +174,44 @@ graph TB
 | 41a-c | 표준 개인정보 처리방침 템플릿 |
 
 </details>
+
+### Grade B — Landmark 판례·해석례 (30건)
+
+Grade B 2차 소스는 법제처 Open API(`korean-law` MCP)에서 실시간으로 fetch되며, 사건번호·선고일·원문이 `VERIFIED` 상태로 수록됩니다. 6개 핵심 주제(동의·제3자 제공·안전조치/유출·가명정보·민감정보·고유식별)를 커버합니다.
+
+| 카테고리 | 건수 | 발행기관 | 디렉토리 |
+|---------|------|---------|---------|
+| **대법원 판례** | 10 | 대법원 | `library/grade-b/court-precedents/` |
+| **법령 해석례** | 20 | 법제처 | `library/grade-b/legal-interpretations/` |
+| **합계** | **30** | | |
+
+<details>
+<summary><b>대법원 판례 10건 (landmark)</b></summary>
+
+| 사건번호 | 선고일 | 주제 |
+|---------|--------|------|
+| 2014다235080 (로앤비) | 2016-08-17 | 공개된 개인정보의 동의 범위 |
+| 2015다24904 (네이트/싸이월드) | 2018-01-25 | 유출 손해배상 — 기술적·관리적 보호조치 |
+| 2017다219232 (구글) | 2023-04-13 | 제3자 제공 현황 공개 청구 |
+| 2018다262103 (홈플러스) | 2024-05-17 | 경품 응모 개인정보를 보험사에 제공 |
+| 2020도14713 (수능 감독관) | 2025-02-13 | "개인정보 제공받은 자"의 범위 |
+| 2022두68923 | 2023-10-12 | 유출 과징금 처분 취소 |
+| 2023다311184 | 2025-12-04 | 제39조의2 법정손해배상 |
+| 2024다210554 | 2025-07-18 | 가명처리 정지 청구 |
+| 2024도8121 | 2025-12-11 | CCTV 영상 제3자 제공 |
+| 2013두2945 (주민등록번호 변경) | 2017-06-15 | 주민등록번호 변경 신청권 |
+
+</details>
+
+<details>
+<summary><b>법령 해석례 20건 (법제처)</b></summary>
+
+주요 주제: 제22조 동의 구조, 제18조제2항 "다른 법률 특별 규정" 범위(7건), 제35조 열람 요구 절차, 제31조 보호책임자 경과조치, 제2조 처리자 범위, 제28조의2 가명처리, 제23조 민감정보(2건), 제24조의2 주민등록번호(4건).
+
+</details>
+
+> [!NOTE]
+> `library/grade-b/pipc-decisions/`는 법제처 Open API의 `get_pipc_decision_text` endpoint가 빈 응답을 반환하는 문제로 수집이 보류된 상태입니다. endpoint 복구 시 원 계획대로 PIPC 처분례 약 20건이 추가 수집될 예정입니다.
 
 ### 데이터 구조화 방식
 

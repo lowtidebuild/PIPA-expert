@@ -6,13 +6,13 @@
 
 ### AI-Powered Korean Data Privacy Law Advisor
 
-**929 searchable statute files** · **929 hierarchy article entries** · **46 official guidelines** · **Law firm-grade DOCX opinions**
+**929 searchable statute files** · **46 official guidelines** · **30 landmark case law & interpretations** · **Law firm-grade DOCX opinions**
 
 Built for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · Powered by structured RAG · **[How to Use](docs/en/HOW-TO-USE.md)**
 
 [![Statute Files](https://img.shields.io/badge/Statute_Files-929-blue)](#-knowledge-base)
-[![Hierarchy Entries](https://img.shields.io/badge/Hierarchy_Entries-929-lightgrey)](#-knowledge-base)
 [![Guidelines](https://img.shields.io/badge/PIPC_Guidelines-46-green)](#-knowledge-base)
+[![Grade B Sources](https://img.shields.io/badge/Grade_B_Sources-30-yellow)](#-knowledge-base)
 [![Cross-ref Edges](https://img.shields.io/badge/Cross--Ref_Edges-2%2C369-orange)](#-knowledge-base)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue)](#license)
 
@@ -52,7 +52,7 @@ graph TB
 
         subgraph core["Core Capabilities"]
             direction LR
-            KB["<b>Structured Knowledge Base</b><br/>929 Searchable Statute Files · 46 Guidelines<br/>929 Hierarchy Entries"]
+            KB["<b>Structured Knowledge Base</b><br/>929 Statute Files · 46 Guidelines<br/>30 Case Law &amp; Interpretations"]
             WS["<b>Multi-Layer Web Search</b><br/>Law Firms · Academic · DPAs<br/>Cross-Reference Verification"]
             DX["<b>DOCX Opinion Generator</b><br/>Law Firm-Grade Documents<br/>Verified Citations"]
         end
@@ -175,6 +175,44 @@ All publicly available guidelines from the Personal Information Protection Commi
 | 41a-c | Standard Privacy Policy Templates |
 
 </details>
+
+### Grade B — Landmark Case Law & Interpretations (30 items)
+
+Grade B secondary sources are fetched from Korea's Open Law API (`korean-law` MCP) with real citations, case numbers, and `VERIFIED` verbatim text. Initial landmark collection covers 6 core topics: consent, third-party provision, safety measures & breach, pseudonymized data, sensitive info, and unique identifiers.
+
+| Category | Count | Publisher | Directory |
+|----------|-------|-----------|-----------|
+| **Supreme Court Precedents** | 10 | 대법원 | `library/grade-b/court-precedents/` |
+| **Statutory Interpretations** | 20 | 법제처 (MOLEG) | `library/grade-b/legal-interpretations/` |
+| **Total** | **30** | | |
+
+<details>
+<summary><b>Court precedents (10 landmark cases)</b></summary>
+
+| Case No. | Date | Topic |
+|----------|------|-------|
+| 2014다235080 (LAW&B) | 2016-08-17 | Scope of consent for publicly available personal info |
+| 2015다24904 (Nate/Cyworld) | 2018-01-25 | Data breach damages — technical/administrative safeguards |
+| 2017다219232 (Google) | 2023-04-13 | Third-party provision disclosure request |
+| 2018다262103 (Homeplus) | 2024-05-17 | Sweepstakes data sold to insurers |
+| 2020도14713 (CSAT supervisor) | 2025-02-13 | "Recipient of personal info" definition |
+| 2022두68923 | 2023-10-12 | Breach administrative fine revocation |
+| 2023다311184 | 2025-12-04 | PIPA §39-2 statutory damages |
+| 2024다210554 | 2025-07-18 | Pseudonym processing stop request |
+| 2024도8121 | 2025-12-11 | CCTV footage third-party provision |
+| 2013두2945 (RRN change) | 2017-06-15 | Right to change resident registration number |
+
+</details>
+
+<details>
+<summary><b>Statutory interpretations (20 MOLEG rulings)</b></summary>
+
+Core topics: §22 consent structure, §18(2) "other laws special provisions" scope (7 rulings), §35 access request, §31 DPO transition, §2 processor scope, §28-2 pseudonymization, §23 sensitive info (2), §24-2 resident registration number (4).
+
+</details>
+
+> [!NOTE]
+> Grade B `pipc-decisions/` directory remains empty pending MCP endpoint recovery. The `get_pipc_decision_text` endpoint returns empty responses — once fixed, an additional ~20 PIPC disposition cases will be collected per the original plan.
 
 ### How the Data is Structured
 
@@ -341,7 +379,10 @@ PIPA-expert/
 │   │   ├── network-act/          #   Network Act files (142)
 │   │   ├── pipc-guidelines/      #   Official guidelines (46)
 │   │   └── ...                   #   + 7 more statute sets, 1 retired
-│   ├── grade-b/                  # Case law, enforcement decisions
+│   ├── grade-b/                  # Case law & interpretations (30)
+│   │   ├── court-precedents/     #   Supreme Court decisions (10)
+│   │   ├── legal-interpretations/ #  MOLEG statutory interpretations (20)
+│   │   └── pipc-decisions/       #   PIPC dispositions (pending)
 │   └── grade-c/                  # Law firm analysis, academic papers
 ├── index/
 │   ├── article-index.json        # Searchable statute index (929 entries)
