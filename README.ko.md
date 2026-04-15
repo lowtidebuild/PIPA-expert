@@ -4,9 +4,9 @@
 
 # PIPA Expert Agent
 
-### AI 개인정보보호법 전문 자문 시스템
+### Jinju Legal Orchestrator의 AI 개인정보보호 워크플로우 시스템
 
-**929개 검색 가능한 법조문 파일** · **46건 공식 가이드라인** · **30건 landmark 판례·해석례** · **로펌 수준 DOCX 의견서**
+**929개 검색 가능한 법조문 파일** · **46건 공식 가이드라인** · **30건 landmark 판례·해석례** · **전문 형식 DOCX 분석 메모**
 
 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) 전용 · 구조화된 RAG 기반 · **[사용 가이드](docs/ko/HOW-TO-USE.md)**
 
@@ -36,7 +36,7 @@
 - **소스 권위 미구분** — PIPC 가이드라인과 뉴스 기사를 동일하게 취급
 - **검증 불가** — 인용된 조문 번호가 실제로 존재하는지 확인할 수 없음
 
-결과? 환각된 조문 번호, 조작된 규정, 어떤 변호사도 서명하지 않을 의견서.
+결과? 환각된 조문 번호, 조작된 규정, 그대로 의사결정에 쓰기 어려운 분석 메모.
 
 ---
 
@@ -46,14 +46,14 @@ PIPA Expert는 다른 접근을 취합니다: **더 똑똑한 검색 대신, 더
 
 ```mermaid
 graph TB
-    subgraph agent["<b>PIPA Expert Agent</b><br/>정보호 변호사 (鄭保護) · 5년차 Associate · 법무법인 진주"]
+    subgraph agent["<b>PIPA Expert Agent</b><br/>개인정보 스페셜리스트 정보호 (鄭保護) · Jinju Legal Orchestrator"]
         direction TB
 
         subgraph core["핵심 기능"]
             direction LR
             KB["<b>구조화된 Knowledge Base</b><br/>929개 법조문 · 46건 가이드라인<br/>30건 판례·해석례"]
-            WS["<b>Multi-Layer 웹서치</b><br/>6대 로펌 · 학술 · 해외 DPA<br/>교차검증"]
-            DX["<b>DOCX 의견서 생성</b><br/>로펌 수준 문서<br/>검증된 인용 체계"]
+            WS["<b>Multi-Layer 웹서치</b><br/>주요 로펌 해설 · 학술 · 해외 DPA<br/>교차검증"]
+            DX["<b>DOCX 분석 메모 생성</b><br/>전문 형식 문서<br/>검증된 인용 체계"]
         end
 
         subgraph pipeline["리서치 파이프라인"]
@@ -75,7 +75,7 @@ graph TB
     end
 
     Q["❓ 사용자 질문"] --> S1
-    S4 --> O["📄 검증된 법률 의견서"]
+    S4 --> O["📄 검증된 법률 분석 메모"]
 
     style agent fill:#f8fafc,stroke:#1B2A4A,stroke-width:2px,color:#1B2A4A
     style core fill:#eef2ff,stroke:#4f46e5,stroke-width:1px
@@ -276,7 +276,7 @@ flowchart TD
         PA <--> PB
     end
 
-    O["📄 <b>검증된 법률 의견서</b><br/>DOCX · 인용 체계 · 리스크 매트릭스"]
+    O["📄 <b>검증된 법률 분석 메모</b><br/>DOCX · 인용 체계 · 리스크 매트릭스"]
 
     Q --> kb
     kb --> web
@@ -328,11 +328,11 @@ flowchart TD
 
 ---
 
-## DOCX 법률의견서 생성
+## DOCX 법률 분석 메모 생성
 
-에이전트는 **로펌 수준의 Word 문서**를 생성합니다:
+에이전트는 **전문 형식의 Word 문서**를 생성합니다:
 
-- 법무법인 진주 레터헤드
+- Jinju Legal Orchestrator 레터헤드
 - 구조화된 섹션: 쟁점 → 분석 → 결론 → 권고
 - 색상 코딩된 리스크 매트릭스 테이블
 - 검증 상태 표시된 전체 인용 체계
@@ -399,33 +399,33 @@ cd PIPA-expert
 claude   # Claude Code 실행
 ```
 
-이후 `/agents/pipa-agent`로 PIPA 전문 에이전트 활성화.
+이후 `/agents/pipa-agent`로 개인정보 스페셜리스트 페르소나 활성화.
 
 ### 예시 질문
 
 ```
 "개인정보보호법 제15조 보여줘"
-"맞춤형 광고 동의 구조 재설계 방안 의견서 작성해줘"
+"맞춤형 광고 동의 구조 재설계 방안 분석 메모 작성해줘"
 "정보통신망법과 개인정보보호법의 동의 규정 차이점"
-"제3자 제공 관련 법률의견서 DOCX로 만들어줘"
+"제3자 제공 관련 법률 분석 메모 DOCX로 만들어줘"
 ```
 
 ---
 
-## 법무법인 진주 (Jinju Law Firm)
+## Jinju Legal Orchestrator
 
-PIPA Expert는 가상의 **법무법인 진주** 소속 전문 법률 AI 에이전트 시리즈 중 하나입니다:
+PIPA Expert는 **Jinju Legal Orchestrator** 소속 전문 법률 워크플로우 에이전트 시리즈 중 하나입니다:
 
-| 에이전트 | 변호사 | 전문 분야 |
-|---------|--------|----------|
-| [game-legal-research](https://github.com/lowtidebuild/game-legal-research) | 심진주 | 게임 산업법 |
-| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | 변혁기 | 법률 번역 |
-| [general-legal-research](https://github.com/lowtidebuild/general-legal-research) | 김재식 | 법률 리서치 |
-| **PIPA-expert** | **정보호** | **개인정보보호법** |
-| [GDPR-expert](https://github.com/lowtidebuild/GDPR-expert) | 김덕배 (Kim De Bruyne) | EU 데이터보호법 |
-| [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | 고덕수 | 계약서 검토 |
-| [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | 한석봉 | 법률 문서 작성 |
-| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | 반성문 | 품질 리뷰 (파트너) |
+| 에이전트 | 역할 | 전문 분야 |
+|---------|------|----------|
+| [game-legal-research](https://github.com/lowtidebuild/game-legal-research) | 게임 산업 스페셜리스트 심진주 | 게임 산업법 |
+| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | 법률 번역 스페셜리스트 변혁기 | 법률 번역 |
+| [general-legal-research](https://github.com/lowtidebuild/general-legal-research) | 리서치 스페셜리스트 김재식 | 법률 리서치 |
+| **PIPA-expert** | **개인정보 스페셜리스트 정보호** | **개인정보보호법** |
+| [GDPR-expert](https://github.com/lowtidebuild/GDPR-expert) | EU 데이터보호 스페셜리스트 김덕배 (Kim De Bruyne) | EU 데이터보호법 |
+| [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | 계약 스페셜리스트 고덕수 | 계약서 검토 |
+| [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | 법률 드래프팅 스페셜리스트 한석봉 | 법률 문서 작성 |
+| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | 시니어 리뷰 스페셜리스트 반성문 | 품질 리뷰 |
 
 ---
 

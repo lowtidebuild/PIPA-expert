@@ -1,12 +1,12 @@
 ---
 name: legal-opinion-formatter
 description: >
-  python-docx를 사용한 PIPA 법률의견서 DOCX 생성 상세 구현 가이드.
-  SKILL.md의 문서 구조를 실제 .docx 파일로 변환하는 코드 레시피.
+  python-docx를 사용한 PIPA 법률 분석 메모 DOCX 생성 상세 구현 가이드.
+  SKILL.md의 문서 구조를 실제 `.docx` 파일로 변환하는 코드 레시피.
   호환성을 위해 built-in 스타일만 사용하고, 레터헤드는 본문에 배치한다.
 ---
 
-# PIPA Legal Opinion DOCX Implementation Guide
+# PIPA Legal Analysis Memo DOCX Implementation Guide
 
 ## Required Setup
 
@@ -74,7 +74,7 @@ for level, size, color in [(1, 14, (0x1B,0x2A,0x4A)), (2, 12, (0x33,0x33,0x33)),
     hs.paragraph_format.space_before = Pt(18 if level == 1 else 12)
     hs.paragraph_format.space_after = Pt(8 if level == 1 else 6)
 
-# A4 page with Korean law firm margins
+# A4 page with Korean memorandum margins
 for section in doc.sections:
     section.page_width = Cm(21.0)
     section.page_height = Cm(29.7)
@@ -104,8 +104,8 @@ def create_letterhead(doc, firm_info=None):
     """레터헤드를 본문 최상단에 배치 (헤더 사용 안 함)."""
     if firm_info is None:
         firm_info = {
-            'name_ko': '법무법인 진주',
-            'name_en': 'Jinju Law Firm',
+            'name_ko': 'Jinju Legal Orchestrator',
+            'name_en': 'AI legal workflow system',
         }
 
     # Firm name (Korean)
@@ -145,7 +145,7 @@ def create_letterhead(doc, firm_info=None):
 ```python
 def add_confidential_marking(doc):
     """비밀유지 마킹."""
-    for text in ['비밀유지 / 변호사-의뢰인 비밀특권', 'PRIVILEGED & CONFIDENTIAL']:
+    for text in ['비밀유지 / 내부 검토 자료', 'CONFIDENTIAL & INTERNAL REVIEW']:
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r = p.add_run(text)
@@ -277,14 +277,14 @@ def add_table(doc, headers, rows):
 ## Signature Block
 
 ```python
-def add_signature_block(doc, firm_name='법무법인 진주',
+def add_signature_block(doc, firm_name='Jinju Legal Orchestrator',
                         author_name='정보호 (鄭保護)',
-                        title='5년차 Associate / 개인정보보호 전문',
-                        registration='변호사 등록번호 제2018-XXXX호'):
+                        title='개인정보 스페셜리스트 / Privacy Specialist',
+                        registration=None):
     """서명 블록."""
     doc.add_paragraph()
     doc.add_paragraph()
-    doc.add_paragraph('이상과 같이 의견을 드립니다.')
+    doc.add_paragraph('이상과 같이 분석 결과를 드립니다.')
     doc.add_paragraph()
 
     p_firm = doc.add_paragraph()
@@ -314,14 +314,14 @@ def add_disclaimer(doc):
     r.font.color.rgb = GRAY
 
     add_small_text(doc,
-        '본 의견서는 상기 특정된 사실관계와 법률 쟁점에 한정된 법률 정보 제공을 '
+        '본 분석 메모는 상기 특정된 사실관계와 법률 쟁점에 한정된 법률 정보 제공을 '
         '목적으로 작성되었으며, 일반적인 법률 자문을 구성하지 않습니다. 구체적 '
-        '사안에 대해서는 전문 법률가와 상담하시기 바랍니다. 본 의견서의 분석은 '
+        '사안에 대해서는 전문 법률가와 상담하시기 바랍니다. 본 분석 메모의 분석은 '
         '작성일 기준 시행 중인 법령에 근거하며, 이후 법령 개정, 판례 변경, '
         '감독기관 유권해석 등에 의해 결론이 달라질 수 있습니다.')
 
     add_small_text(doc,
-        '[AI 생성 고지] 본 의견서는 AI 시스템(PIPA Expert Agent)의 지원을 받아 '
+        '[AI 생성 고지] 본 분석 메모는 AI 시스템(PIPA Expert Agent)의 지원을 받아 '
         '작성되었습니다. AI가 제시한 법령 인용 및 분석은 Source Grade 체계에 따라 '
         '검증 상태가 표시되어 있으나, 최종 판단은 반드시 전문가 검토를 거쳐야 합니다.')
 ```
@@ -342,10 +342,10 @@ def generate_pipa_opinion(
     confidential=True,
     output_dir='output/opinions',
 ):
-    """PIPA 법률의견서 DOCX 생성.
+    """PIPA 법률 분석 메모 DOCX 생성.
 
     Agent는 이 함수를 참고하여 인라인 Python 스크립트를 작성하고 실행한다.
-    함수를 그대로 복사하지 말고, 의견서 내용에 맞게 필요한 부분만 조합하여 사용한다.
+    함수를 그대로 복사하지 말고, 분석 메모 내용에 맞게 필요한 부분만 조합하여 사용한다.
     """
     if date_str is None:
         today = datetime.date.today()
@@ -406,7 +406,7 @@ def generate_pipa_opinion(
 ## Usage Pattern (Agent가 따라야 할 흐름)
 
 1. RAG 검색으로 근거 수집 (pipa-agent 프로토콜)
-2. 수집 결과를 의견서 섹션별로 구조화
+2. 수집 결과를 분석 메모 섹션별로 구조화
 3. 위 헬퍼 함수들을 조합하여 인라인 Python 스크립트 작성
 4. 스크립트 실행하여 DOCX 생성
 5. 생성된 파일 경로를 사용자에게 안내

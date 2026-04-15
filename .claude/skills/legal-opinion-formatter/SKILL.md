@@ -1,21 +1,21 @@
 ---
 name: legal-opinion-formatter
 description: >
-  개인정보보호법(PIPA) 전문 법률의견서를 로펌 수준 DOCX로 생성.
-  "법률의견서 작성", "legal opinion 생성", "의견서 포맷", "DOCX로 변환",
-  "개인정보 의견서", "PIPA opinion" 등 요청 시 트리거.
-  pipa-agent의 RAG 검색 결과를 기반으로 구조화된 의견서 문서를 출력한다.
+  개인정보보호법(PIPA) 전문 법률 분석 메모를 전문 형식 DOCX로 생성.
+  "법률 분석 메모 작성", "법률의견서 작성", "analysis memo 생성", "DOCX로 변환",
+  "개인정보 분석 메모", "PIPA opinion" 등 요청 시 트리거.
+  pipa-agent의 RAG 검색 결과를 기반으로 구조화된 분석 메모 문서를 출력한다.
 ---
 
-# PIPA Legal Opinion Formatter
+# PIPA Legal Analysis Memo Formatter
 
-개인정보보호법 전문 법률의견서를 로펌 품질의 .docx 파일로 생성한다.
+개인정보보호법 전문 법률 분석 메모를 전문 형식의 `.docx` 파일로 생성한다.
 
 ## When to Activate
 
-- 사용자가 법률의견서, 법률검토보고서, 개인정보 관련 의견서를 .docx로 요청할 때
+- 사용자가 법률 분석 메모, 법률검토보고서, 개인정보 관련 문서를 `.docx`로 요청할 때
 - pipa-agent의 분석 결과를 공식 문서로 포맷팅할 때
-- "의견서 작성해줘", "DOCX로 만들어줘", "로펌 형식으로" 등 요청 시
+- "분석 메모 작성해줘", "의견서 작성해줘", "DOCX로 만들어줘", "전문 형식으로" 등 요청 시
 
 ---
 
@@ -23,7 +23,7 @@ description: >
 
 ### Step 1: RAG 검색 수행 (pipa-agent 프로토콜 따름)
 
-의견서 작성 전, 반드시 pipa-agent의 검색 프로토콜을 따라 근거를 수집한다:
+분석 메모 작성 전, 반드시 pipa-agent의 검색 프로토콜을 따라 근거를 수집한다:
 
 1. `index/article-index.json` → 관련 조문 검색
 2. `index/guideline-index.json` → 관련 가이드라인 검색
@@ -36,9 +36,9 @@ description: >
 - `[INSUFFICIENT]` — 근거 부족
 - `[CONTRADICTED]` — 소스 간 모순
 
-### Step 2: 의견서 구조 작성
+### Step 2: 분석 메모 구조 작성
 
-수집된 근거를 기반으로 아래 문서 구조에 따라 의견서 내용을 작성한다.
+수집된 근거를 기반으로 아래 문서 구조에 따라 분석 메모 내용을 작성한다.
 
 ### Step 3: DOCX 생성
 
@@ -52,26 +52,26 @@ description: >
 
 ## Document Structure
 
-모든 법률의견서는 아래 순서를 따른다.
+모든 법률 분석 메모는 아래 순서를 따른다.
 
 ### 1. Letterhead Block (Header)
 
 ```
-법무법인 진주
-Jinju Law Firm
+Jinju Legal Orchestrator
+AI legal workflow system
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 [주소]  |  전화: [번호]  |  [이메일]  |  [웹사이트]
 ```
 
-- 기본값: 법무법인 진주 / Jinju Law Firm
-- 사용자가 다른 법무법인/회사 정보를 제공하면 override
+- 기본값: Jinju Legal Orchestrator / AI legal workflow system
+- 사용자가 다른 브랜드/회사 정보를 제공하면 override
 - 첫 페이지 헤더와 이후 페이지 헤더 구분
 
 ### 2. Classification Marking
 
 ```
-비밀유지 / 변호사-의뢰인 비밀특권
-PRIVILEGED & CONFIDENTIAL
+비밀유지 / 내부 검토 자료
+CONFIDENTIAL & INTERNAL REVIEW
 ```
 
 - 중앙 정렬, 볼드, 9-10pt
@@ -79,12 +79,11 @@ PRIVILEGED & CONFIDENTIAL
 
 ### 작성자 기본값
 
-의견서의 작성자는 별도 지정이 없으면 다음 페르소나를 사용한다:
+분석 메모의 작성자는 별도 지정이 없으면 다음 페르소나를 사용한다:
 
 - **이름:** 정보호 (鄭保護)
-- **소속:** 법무법인 진주 (Jinju Law Firm)
-- **직위:** 5년차 Associate / 개인정보보호 전문
-- **등록번호:** 변호사 등록번호 제2018-XXXX호
+- **소속:** Jinju Legal Orchestrator
+- **직위:** 개인정보 스페셜리스트 / Privacy Specialist
 
 ### 3. Date & Addressee Block
 
@@ -99,7 +98,7 @@ PRIVILEGED & CONFIDENTIAL
 ### 4. Reference Line (건명)
 
 ```
-건명:   [의견서 제목 — 개인정보보호법 관련 쟁점]
+건명:   [분석 메모 제목 — 개인정보보호법 관련 쟁점]
 ```
 
 ### 5. Salutation
@@ -110,7 +109,7 @@ PRIVILEGED & CONFIDENTIAL
 
 ### 6. 서론 (Introduction)
 
-- 의견서 요청 배경
+- 분석 메모 요청 배경
 - 검토 범위 및 전제사항
 - 적용 법령 특정 (개인정보보호법, 시행령, 관련 가이드라인)
 
@@ -122,12 +121,12 @@ PRIVILEGED & CONFIDENTIAL
 ### 8. 검토 사실관계 (Background/Facts)
 
 - 사실관계 기술
-- "본 의견서는 상기 사실관계의 정확성을 전제로 합니다" 면책
+- "본 분석 메모는 상기 사실관계의 정확성을 전제로 합니다" 면책
 
 ### 9. 검토 쟁점 (Issues Presented)
 
 ```
-본 의견서에서 검토하는 법률 쟁점은 다음과 같습니다:
+본 분석 메모에서 검토하는 법률 쟁점은 다음과 같습니다:
 
 1. [쟁점 1] ...
 2. [쟁점 2] ...
@@ -171,7 +170,7 @@ PRIVILEGED & CONFIDENTIAL
 ### 12. 결론 (Conclusions/Opinion)
 
 ```
-이상의 검토를 종합하면, 다음과 같이 의견을 드립니다:
+이상의 검토를 종합하면, 다음과 같이 분석 결과를 드립니다:
 
 1. [쟁점 1에 대한 결론]
 2. [쟁점 2에 대한 결론]
@@ -197,34 +196,33 @@ PRIVILEGED & CONFIDENTIAL
 ### 15. Closing & Signature Block
 
 ```
-이상과 같이 의견을 드립니다.
+이상과 같이 분석 결과를 드립니다.
 
-법무법인 진주
+Jinju Legal Orchestrator
 
 
 ____________________________
 정보호 (鄭保護)
-5년차 Associate / 개인정보보호 전문
-변호사 등록번호 제2018-XXXX호
+개인정보 스페셜리스트 / Privacy Specialist
 ```
 
 ### 16. Disclaimer (면책)
 
 ```
-본 의견서는 상기 특정된 사실관계와 법률 쟁점에 한정된 법률 정보 제공을 목적으로
+본 분석 메모는 상기 특정된 사실관계와 법률 쟁점에 한정된 법률 정보 제공을 목적으로
 작성되었으며, 일반적인 법률 자문을 구성하지 않습니다. 구체적 사안에 대해서는
-전문 법률가와 상담하시기 바랍니다. 본 의견서의 분석은 작성일 기준 시행 중인
+전문 법률가와 상담하시기 바랍니다. 본 분석 메모의 분석은 작성일 기준 시행 중인
 법령에 근거하며, 이후 법령 개정, 판례 변경, 감독기관 유권해석 등에 의해
 결론이 달라질 수 있습니다.
 
-[AI 생성 고지] 본 의견서는 AI 시스템(PIPA Expert Agent)의 지원을 받아
+[AI 생성 고지] 본 분석 메모는 AI 시스템(PIPA Expert Agent)의 지원을 받아
 작성되었습니다. AI가 제시한 법령 인용 및 분석은 Source Grade 체계에 따라
 검증 상태가 표시되어 있으나, 최종 판단은 반드시 전문가 검토를 거쳐야 합니다.
 ```
 
 ### 17. 출처 목록 (Source List)
 
-의견서에 인용된 모든 소스를 Grade별로 정리:
+분석 메모에 인용된 모든 소스를 Grade별로 정리:
 
 ```
 ■ Grade A (공식 1차 소스)
