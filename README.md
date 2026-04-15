@@ -4,9 +4,9 @@
 
 # PIPA Expert Agent
 
-### AI-Powered Korean Data Privacy Law Advisor
+### Jinju Legal Orchestrator's Korean Data Privacy Specialist
 
-**929 searchable statute files** · **46 official guidelines** · **30 landmark case law & interpretations** · **Law firm-grade DOCX opinions**
+**929 searchable statute files** · **46 official guidelines** · **30 landmark case law & interpretations** · **Professional-format DOCX analysis memos**
 
 Built for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · Powered by structured RAG · **[How to Use](docs/en/HOW-TO-USE.md)**
 
@@ -37,7 +37,7 @@ Existing AI legal assistants (ChatGPT Custom GPTs, Gemini Gems, etc.) treat legi
 - **Source authority** — a PIPC guideline ≠ a news article ≠ an academic paper
 - **Verification** — every citation must be traceable to the exact provision
 
-The result? Hallucinated article numbers, fabricated provisions, and opinions that no lawyer would sign.
+The result? Hallucinated article numbers, fabricated provisions, and analysis memos teams cannot safely rely on.
 
 ---
 
@@ -47,14 +47,14 @@ PIPA Expert takes a different approach: **instead of smarter search, build smart
 
 ```mermaid
 graph TB
-    subgraph agent["<b>PIPA Expert Agent</b><br/>정보호 변호사 · 5th Year Associate · Jinju Law Firm"]
+    subgraph agent["<b>PIPA Expert Agent</b><br/>Privacy Specialist 정보호 · Jinju Legal Orchestrator"]
         direction TB
 
         subgraph core["Core Capabilities"]
             direction LR
             KB["<b>Structured Knowledge Base</b><br/>929 Statute Files · 46 Guidelines<br/>30 Case Law &amp; Interpretations"]
-            WS["<b>Multi-Layer Web Search</b><br/>Law Firms · Academic · DPAs<br/>Cross-Reference Verification"]
-            DX["<b>DOCX Opinion Generator</b><br/>Law Firm-Grade Documents<br/>Verified Citations"]
+            WS["<b>Multi-Layer Web Search</b><br/>Law firm analyses · Academic · DPAs<br/>Cross-Reference Verification"]
+            DX["<b>DOCX Analysis Memo Generator</b><br/>Professional-format Documents<br/>Verified Citations"]
         end
 
         subgraph pipeline["Research Pipeline"]
@@ -70,13 +70,13 @@ graph TB
             direction LR
             GA["<b>Grade A</b> ✅<br/>Statutes · Guidelines<br/><i>Sole authority</i>"]
             GB["<b>Grade B</b> 🔍<br/>Case Law · Enforcement<br/><i>Cross-verify with A</i>"]
-            GC["<b>Grade C</b> 📝<br/>Law Firms · Academic<br/><i>Editorial only</i>"]
+            GC["<b>Grade C</b> 📝<br/>Law firm analyses · Academic<br/><i>Editorial only</i>"]
             GD["<b>Grade D</b> 🚫<br/>News · AI Summaries<br/><i>Excluded from RAG</i>"]
         end
     end
 
     Q["❓ User Question"] --> S1
-    S4 --> O["📄 Verified Legal Opinion"]
+    S4 --> O["📄 Verified Legal Analysis Memo"]
 
     style agent fill:#f8fafc,stroke:#1B2A4A,stroke-width:2px,color:#1B2A4A
     style core fill:#eef2ff,stroke:#4f46e5,stroke-width:1px
@@ -263,7 +263,7 @@ flowchart TD
     subgraph web["Step 4: Multi-Layer Web Search <i>(if KB insufficient)</i>"]
         direction TB
         L1["🏛️ <b>Layer 1 · Statutes</b><br/>law.go.kr · pipc.go.kr"]
-        L2["⚖️ <b>Layer 2 · Major Law Firms</b><br/>Top-tier Korean law firm<br/>newsletters &amp; articles"]
+        L2["⚖️ <b>Layer 2 · Major Law Firm Analyses</b><br/>Top-tier Korean law firm<br/>newsletters &amp; articles"]
         L3["🎓 <b>Layer 3 · Academic</b><br/>KCI · RISS · SSRN"]
         L4["🌍 <b>Layer 4 · Foreign DPAs</b><br/>EDPB · ICO · IAPP"]
         L1 --> L2 --> L3 --> L4
@@ -276,7 +276,7 @@ flowchart TD
         PA <--> PB
     end
 
-    O["📄 <b>Verified Legal Opinion</b><br/>DOCX with citations &amp; risk matrix"]
+    O["📄 <b>Verified Legal Analysis Memo</b><br/>DOCX with citations &amp; risk matrix"]
 
     Q --> kb
     kb --> web
@@ -328,11 +328,11 @@ Before any output is finalized, a **dedicated fact-checker sub-agent** verifies 
 
 ---
 
-## DOCX Legal Opinion Generator
+## DOCX Legal Analysis Memo Generator
 
-The agent produces **law firm-grade Word documents** with:
+The agent produces **professional-format Word documents** with:
 
-- Professional letterhead (법무법인 진주 / Jinju Law Firm)
+- Jinju Legal Orchestrator letterhead
 - Structured sections: Issues → Analysis → Conclusions → Recommendations
 - Risk matrix tables with color coding
 - Full citation trail with verification status
@@ -440,33 +440,33 @@ cd PIPA-expert
 claude   # launches Claude Code in this directory
 ```
 
-Then use `/agents/pipa-agent` to activate the PIPA expert persona.
+Then use `/agents/pipa-agent` to activate the privacy specialist persona.
 
 ### Example Queries
 
 ```
 "개인정보보호법 제15조 보여줘"
-"맞춤형 광고 동의 구조 재설계 방안 의견서 작성해줘"
+"맞춤형 광고 동의 구조 재설계 방안 분석 메모 작성해줘"
 "정보통신망법과 개인정보보호법의 동의 규정 차이점"
-"제3자 제공 관련 법률의견서 DOCX로 만들어줘"
+"제3자 제공 관련 법률 분석 메모 DOCX로 만들어줘"
 ```
 
 ---
 
-## Part of Jinju Law Firm
+## Part of Jinju Legal Orchestrator
 
-PIPA Expert is one of several specialized legal AI agents operating under the fictional **법무법인 진주 (Jinju Law Firm)**:
+PIPA Expert is one of several specialized legal workflow agents operating under **Jinju Legal Orchestrator**:
 
-| Agent | Attorney | Specialty |
-|-------|----------|-----------|
-| [game-legal-research](https://github.com/lowtidebuild/game-legal-research) | 심진주 (Sim Jinju) | Game industry law |
-| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | 변혁기 (Byeon Hyeok-gi) | Legal translation |
-| [general-legal-research](https://github.com/lowtidebuild/general-legal-research) | 김재식 (Kim Jaesik) | Legal research |
-| **PIPA-expert** | **정보호 (Jeong Bo-ho)** | **Data privacy law** |
-| [GDPR-expert](https://github.com/lowtidebuild/GDPR-expert) | 김덕배 (Kim De Bruyne) | EU data protection law |
-| [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | 고덕수 (Ko Duksoo) | Contract review |
-| [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | 한석봉 (Han Seokbong) | Legal writing |
-| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | 반성문 (Ban Seong-mun) | Quality review (Partner) |
+| Agent | Role | Focus |
+|-------|------|-------|
+| [game-legal-research](https://github.com/lowtidebuild/game-legal-research) | Game Industry Specialist 심진주 (Sim Jinju) | Game industry law |
+| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | Legal Translation Specialist 변혁기 (Byeon Hyeok-gi) | Legal translation |
+| [general-legal-research](https://github.com/lowtidebuild/general-legal-research) | Research Specialist 김재식 (Kim Jaesik) | Legal research |
+| **PIPA-expert** | **Privacy Specialist 정보호 (Jeong Bo-ho)** | **Data privacy law** |
+| [GDPR-expert](https://github.com/lowtidebuild/GDPR-expert) | EU Data Protection Specialist 김덕배 (Kim De Bruyne) | EU data protection law |
+| [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | Contract Specialist 고덕수 (Ko Duksoo) | Contract review |
+| [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | Legal Drafting Specialist 한석봉 (Han Seokbong) | Legal writing |
+| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | Senior Review Specialist 반성문 (Ban Seong-mun) | Quality review |
 
 ---
 
