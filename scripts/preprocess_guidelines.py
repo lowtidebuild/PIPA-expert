@@ -3,12 +3,16 @@
 PIPA RAG Preprocessor: Convert PIPC guideline PDFs to structured markdown with frontmatter.
 """
 
-import subprocess
-import os
-import json
-import re
-from pathlib import Path
 from datetime import datetime
+import json
+from pathlib import Path
+import subprocess
+
+from scripts.lib.sanitize import (
+    sanitize_ingested_markdown,
+    sanitize_yaml_string,
+    write_audit_sidecar,
+)
 
 PROJECT_ROOT = Path(__file__).parent.parent
 PDF_DIR = PROJECT_ROOT / "PIPC Official Guidelines"
@@ -90,27 +94,37 @@ def convert_pdf_to_markdown(pdf_path: Path) -> str:
         return f"[CONVERSION EXCEPTION: {e}]"
 
 
+def _wrap_untrusted_content(text: str, *, source: str) -> str:
+    return (
+        f'<untrusted_content source="{source}" sanitized="true">\n'
+        f"{text}\n"
+        "</untrusted_content>\n"
+    )
+
+
 def create_frontmatter(guideline_id, slug, title_kr, topics, pdf_name, char_count) -> str:
     """Create YAML frontmatter for a guideline."""
+    title_en_raw = pdf_name.split(" ", 1)[1].rsplit(".pdf", 1)[0] if " " in pdf_name else pdf_name
+    escaped_topics = [sanitize_yaml_string(topic) for topic in topics]
     return f"""---
 # === 식별 정보 ===
 guideline_id: "{guideline_id}"
-slug: "{slug}"
-title_kr: "{title_kr}"
-title_en: "{pdf_name.split(' ', 1)[1].rsplit('.pdf', 1)[0] if ' ' in pdf_name else pdf_name}"
+slug: "{sanitize_yaml_string(slug)}"
+title_kr: "{sanitize_yaml_string(title_kr)}"
+title_en: "{sanitize_yaml_string(title_en_raw)}"
 document_type: "guideline"
 
 # === 소스 정보 ===
 source_grade: "A"
-publisher: "개인정보보호위원회 (PIPC)"
-source_url: "https://www.pipc.go.kr"
+publisher: "{sanitize_yaml_string('개인정보보호위원회 (PIPC)')}"
+source_url: "{sanitize_yaml_string('https://www.pipc.go.kr')}"
 retrieved_at: "{datetime.now().strftime('%Y-%m-%d')}"
 
 # === 검색 메타 ===
 keywords:
-{chr(10).join(f'  - "{t}"' for t in topics)}
+{chr(10).join(f'  - "{topic}"' for topic in escaped_topics)}
 topics:
-{chr(10).join(f'  - "{t}"' for t in topics)}
+{chr(10).join(f'  - "{topic}"' for topic in escaped_topics)}
 char_count: {char_count}
 ---
 
@@ -140,12 +154,20 @@ def process_all():
             print(f"  SKIPPED (error)")
             continue
 
+        sanitize_result = sanitize_ingested_markdown(md_content)
+        if sanitize_result.aborted:
+            errors += 1
+            print("  SKIPPED ([SANITIZER UNAVAILABLE])")
+            continue
+
         # Create frontmatter
         frontmatter = create_frontmatter(gid, slug, title_kr, topics, pdf_path.name, char_count)
+        wrapped_body = _wrap_untrusted_content(sanitize_result.text, source="pipc-pdf")
 
         # Write output file
         output_file = OUTPUT_DIR / f"{str(gid).zfill(2)}-{slug}.md"
-        output_file.write_text(frontmatter + md_content, encoding="utf-8")
+        output_file.write_text(frontmatter + wrapped_body, encoding="utf-8")
+        write_audit_sidecar(output_file, sanitize_result)
 
         size_kb = output_file.stat().st_size / 1024
         print(f"  OK → {output_file.name} ({size_kb:.0f} KB)")

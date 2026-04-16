@@ -50,6 +50,8 @@ inbox/ 내 모든 파일을 Glob으로 탐색
 | `.hwp`, `.hwpx` | `mcp__kordoc__parse_document` (파일 경로 전달) |
 | `.md`, `.txt` | 변환 불필요, 그대로 사용 |
 
+모든 변환 결과는 저장 전에 `scripts/lib/sanitize.py::sanitize_ingested_markdown()`을 통과시키고, 결과 본문은 `<untrusted_content ...>...</untrusted_content>` 래퍼로 감싼다.
+
 **kordoc 파싱 참고:**
 - kordoc은 HWP 5.x 및 HWPX(2020+)를 네이티브 파싱하여 Markdown 반환
 - 테이블이 포함된 문서는 `mcp__kordoc__parse_table`로 구조화 추출 가능
@@ -141,6 +143,7 @@ grade_confidence: "{high | medium | low}"  # Grade 판별 확신도
 3. **pipa_articles**: 정규식으로 "제XX조" 패턴 추출 → 조문 번호 목록
 4. **publisher**: 로펌명, 기관명, 저널명 등 추출
 5. **published_date**: 날짜 패턴 추출 (YYYY.MM.DD, YYYY년 M월 D일 등)
+6. **쓰기 직전 보안 처리**: YAML 문자열 필드는 `sanitize_yaml_string()`으로 escape하고, 본문은 sanitize 후 래핑한다.
 
 ### Step 5: 목적 폴더로 이동
 

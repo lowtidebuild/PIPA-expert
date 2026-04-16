@@ -27,6 +27,13 @@ import xml.etree.ElementTree as ET
 from datetime import datetime
 from pathlib import Path
 
+from scripts.lib.sanitize import (
+    SanitizeResult,
+    sanitize_ingested_markdown,
+    sanitize_yaml_string,
+    write_audit_sidecar,
+)
+
 PROJECT_ROOT = Path(__file__).parent.parent
 SOURCES_DIR = PROJECT_ROOT / "library" / "grade-a"
 
@@ -526,7 +533,7 @@ def build_chapter_map(chapters: list) -> dict:
     return {ch["편장절관키"]: ch["편장절관명"] for ch in chapters}
 
 
-def create_article_md(law_info: dict, article: dict, law_slug: str) -> str:
+def create_article_md(law_info: dict, article: dict, law_slug: str) -> tuple[str, SanitizeResult]:
     """Create markdown content for a single article."""
     art_num = format_article_number(article["조문번호"], article.get("조문가지번호", ""))
     art_label = format_article_citation(article["조문번호"], article.get("조문가지번호", ""))
@@ -548,32 +555,36 @@ def create_article_md(law_info: dict, article: dict, law_slug: str) -> str:
         )
     ]
     keywords = extract_keywords(title, full_text)
+    source_url = (
+        f"https://law.go.kr/법령/{urllib.parse.quote(law_info['법령명한글'])}/"
+        f"{urllib.parse.quote(art_label)}"
+    )
 
     # Build frontmatter
     fm = f"""---
 # === 식별 정보 ===
-law: "{law_info['법령명한글']}"
-law_id: "{law_info.get('법령ID', '')}"
-law_mst: "{law_info.get('법령키', '')}"
+law: "{sanitize_yaml_string(law_info['법령명한글'])}"
+law_id: "{sanitize_yaml_string(law_info.get('법령ID', ''))}"
+law_mst: "{sanitize_yaml_string(law_info.get('법령키', ''))}"
 article: {art_num.split('의')[0] if '의' in art_num else art_num}
 article_sub: {art_num.split('의')[1] if '의' in art_num else 0}
-article_title: "{title}"
+article_title: "{sanitize_yaml_string(title)}"
 paragraph: null
 
 # === 소스 정보 ===
 source_grade: "A"
-source_url: "https://law.go.kr/법령/{urllib.parse.quote(law_info['법령명한글'])}/{urllib.parse.quote(art_label)}"
-effective_date: "{effective_date}"
-last_amended: "{law_info.get('공포일자', '')}"
+source_url: "{sanitize_yaml_string(source_url)}"
+effective_date: "{sanitize_yaml_string(effective_date)}"
+last_amended: "{sanitize_yaml_string(law_info.get('공포일자', ''))}"
 retrieved_at: "{datetime.now().strftime('%Y-%m-%d')}"
 
 # === 관계 정보 ===
 cross_references:
-{chr(10).join(f'  - "{ref}"' for ref in cross_refs) if cross_refs else '  []'}
+{chr(10).join(f'  - "{sanitize_yaml_string(ref)}"' for ref in cross_refs) if cross_refs else '  []'}
 
 # === 검색 메타 ===
 keywords:
-{chr(10).join(f'  - "{kw}"' for kw in keywords) if keywords else '  []'}
+{chr(10).join(f'  - "{sanitize_yaml_string(kw)}"' for kw in keywords) if keywords else '  []'}
 ---
 
 """
@@ -609,7 +620,16 @@ keywords:
 
         body += "\n"
 
-    return fm + body
+    sanitize_result = sanitize_ingested_markdown(body)
+    if sanitize_result.aborted:
+        raise RuntimeError("[SANITIZER UNAVAILABLE] article body could not be sanitized")
+
+    wrapped_body = (
+        f'<untrusted_content source="law-api:{law_slug}" sanitized="true">\n'
+        f"{sanitize_result.text}\n"
+        "</untrusted_content>\n"
+    )
+    return fm + wrapped_body, sanitize_result
 
 
 def safe_int(value: str | int | None) -> int:
@@ -876,11 +896,12 @@ def process_law(oc: str, law_name: str, config: dict):
         art_label = format_article_citation(article["조문번호"], article.get("조문가지번호", ""))
         slug = format_article_slug(article["조문번호"], article.get("조문가지번호", ""))
 
-        md_content = create_article_md(law_info, article, config["target_dir"])
+        md_content, sanitize_result = create_article_md(law_info, article, config["target_dir"])
 
         filename = f"{slug}.md"
         filepath = target_dir / filename
         filepath.write_text(md_content, encoding="utf-8")
+        write_audit_sidecar(filepath, sanitize_result)
         article_count += 1
 
         # Collect cross-references
