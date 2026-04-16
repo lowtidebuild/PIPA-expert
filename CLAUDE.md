@@ -23,7 +23,7 @@ library/grade-c/           # Grade C 3차 소스 (로펌 해설, 학술)
 index/                     # 검색 인덱스 (article-index.json, cross-reference-graph.json, external-law-candidates.json, guideline-index.json, source-registry.json)
 config/                    # RAG 설정, 소스 등급 정의
 scripts/                   # 전처리/수집 스크립트
-_private/                  # 비공개 작업 문서/스타일 가이드 (gitignored)
+${PIPA_PRIVATE_DIR:-_private/}  # 비공개 작업 문서/스타일 가이드
 ```
 
 ## Current Status
@@ -52,7 +52,7 @@ _private/                  # 비공개 작업 문서/스타일 가이드 (gitign
   - `SKILL.md` — 분석 메모 구조 및 워크플로우
   - `legal-opinion-formatter-SKILL.md` — python-docx 상세 구현 가이드
   - `references/format-checklist.md` — 생성 전 체크리스트
-  - **한국어 분석 메모 작성 시 반드시 `_private/ko-legal-opinion-style-guide.md`를 읽고 따를 것**
+  - **한국어 분석 메모 작성 시 반드시 `${PIPA_PRIVATE_DIR:-_private/}/ko-legal-opinion-style-guide.md`를 읽고 따를 것**
 - **ingest** — 외부 소스 자동 파싱/분류/인덱싱 (`.claude/skills/ingest/`)
   - `${PIPA_INBOX_DIR:-library/inbox/}`에 파일 드롭 → `/ingest`로 자동 처리
   - **HWP/HWPX 지원** — kordoc MCP로 네이티브 파싱
@@ -82,10 +82,10 @@ _private/                  # 비공개 작업 문서/스타일 가이드 (gitign
 - 쉘 예시: `export PIPA_OUTPUT_DIR=~/Private/pipa-output`
 - 쉘 예시: `export PIPA_INBOX_DIR=~/Private/pipa-inbox`
 - 쉘 예시: `export PIPA_PRIVATE_DIR=~/Private/pipa-private`
-- Stage 1은 경로 계약과 문서화만 포함한다. 실제 파일 이동은 별도 확인 후 진행한다.
+- 권장 점검: `python3 scripts/security_audit.py`
 
 ## 주요 문서
 
-- `_private/DESIGN.md` — RAG 시스템 전체 설계
-- `_private/PROGRESS.md` — 작업 기록 및 진행 상황
-- `_private/specs/2026-03-24-pipa-agent-system-design.md` — Agent 시스템 스펙
+- `${PIPA_PRIVATE_DIR:-_private/}/DESIGN.md` — RAG 시스템 전체 설계
+- `${PIPA_PRIVATE_DIR:-_private/}/PROGRESS.md` — 작업 기록 및 진행 상황
+- `${PIPA_PRIVATE_DIR:-_private/}/specs/2026-03-24-pipa-agent-system-design.md` — Agent 시스템 스펙

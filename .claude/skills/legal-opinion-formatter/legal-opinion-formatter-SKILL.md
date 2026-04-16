@@ -340,7 +340,7 @@ def generate_pipa_opinion(
     sources=None,
     author_info=None,
     confidential=True,
-    output_dir='output/opinions',
+    output_dir=None,
 ):
     """PIPA 법률 분석 메모 DOCX 생성.
 
@@ -350,6 +350,8 @@ def generate_pipa_opinion(
     if date_str is None:
         today = datetime.date.today()
         date_str = f"{today.year}년 {today.month}월 {today.day}일"
+    if output_dir is None:
+        output_dir = os.environ.get('PIPA_OUTPUT_DIR', 'output/opinions')
 
     doc = Document()
     # ... (위 Page Setup, Heading styles 적용)
