@@ -26,7 +26,7 @@ library/
 **Copy from:** `.claude/skills/ingest/SKILL.md`
 
 **핵심 워크플로우:**
-1. `library/inbox/`의 모든 파일 스캔
+1. `${PIPA_INBOX_DIR:-library/inbox/}`의 모든 파일 스캔
 2. markitdown MCP로 .md 변환 (PDF, DOCX, PPTX 등)
 3. 내용 분석 → Grade 자동 판별 (A/B/C)
 4. YAML frontmatter 자동 생성
@@ -76,7 +76,7 @@ agent .md 파일에 아래 섹션 추가:
 ```markdown
 ## 소스 Ingest
 
-사용자가 외부 소스 파일을 `library/inbox/`에 넣고 `/ingest`를 요청하면:
+사용자가 외부 소스 파일을 `${PIPA_INBOX_DIR:-library/inbox/}`에 넣고 `/ingest`를 요청하면:
 
 1. `.claude/skills/ingest/SKILL.md`를 읽어 워크플로우 확인
 2. inbox 내 파일을 markitdown으로 .md 변환
@@ -122,7 +122,7 @@ agent .md 파일에 아래 섹션 추가:
 ```markdown
 ### Adding Your Own Sources
 
-1. Drop any file (PDF, DOCX, etc.) into `library/inbox/`
+1. Drop any file (PDF, DOCX, etc.) into `${PIPA_INBOX_DIR:-library/inbox/}`
 2. Tell the agent: `/ingest` or "파일 넣었어"
 3. The agent will automatically:
    - Convert to structured Markdown

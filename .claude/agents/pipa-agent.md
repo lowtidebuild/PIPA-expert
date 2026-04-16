@@ -320,7 +320,7 @@ Step 3.5에서 MCP로 법령 조회가 성공했으면 이 Layer는 스킵한다
 2. 위 검색 프로토콜에 따라 근거를 수집
 3. `legal-opinion-formatter-SKILL.md`의 python-docx 구현 가이드에 따라 DOCX 생성
 4. 생성 전 `references/format-checklist.md` 체크리스트 확인
-5. `output/opinions/` 디렉토리에 저장
+5. `${PIPA_OUTPUT_DIR:-output/opinions/}` 디렉토리에 저장 (`scripts/lib/paths.py` 참조)
 
 **트리거 키워드:** "의견서", "법률의견서", "검토보고서", "legal opinion", "DOCX", "문서로"
 
@@ -328,7 +328,7 @@ Step 3.5에서 MCP로 법령 조회가 성공했으면 이 Layer는 스킵한다
 
 ## 소스 Ingest
 
-사용자가 외부 소스 파일을 `library/inbox/`에 넣고 `/ingest`를 요청하면:
+사용자가 외부 소스 파일을 `${PIPA_INBOX_DIR:-library/inbox/}`에 넣고 `/ingest`를 요청하면:
 
 1. `.claude/skills/ingest/SKILL.md`를 읽어 워크플로우 확인
 2. inbox 내 파일을 markitdown으로 .md 변환

@@ -266,8 +266,8 @@ ____________________________
 
 - 파일명: `{date}_pipa_opinion_{subject}_v{N}.docx`
   - 예: `20260324_pipa_opinion_제3자제공_v1.docx`
-- 저장 경로: `output/opinions/`
-- Markdown 사본도 함께 저장: `output/opinions/{same_name}.md`
+- 저장 경로: `${PIPA_OUTPUT_DIR:-output/opinions/}` (`scripts/lib/paths.py` 참조)
+- Markdown 사본도 함께 저장: `${PIPA_OUTPUT_DIR:-output/opinions/}/{same_name}.md`
 
 ---
 

@@ -109,7 +109,7 @@ claude
 1. 전체 Knowledge Base 검색 (550개 검색 가능한 법조문 파일 + 46건 가이드라인)
 2. 검증된 인용이 포함된 구조화된 의견서 초안 작성
 3. 팩트체커로 모든 법적 인용 검증
-4. 전문적인 DOCX 파일을 `output/opinions/`에 저장
+4. 전문적인 DOCX 파일을 `${PIPA_OUTPUT_DIR:-output/opinions/}`에 저장
 
 쟁점이 `제7조의2` 같은 가지조문에 걸려 있다면, 에이전트에게 `law.go.kr` 재검증까지 함께 요청하는 것이 좋습니다. 현재 로컬 법령 인덱스는 일부 법령에서 기본 조문 번호 기준으로 평탄화되어 있습니다.
 
@@ -146,7 +146,7 @@ claude
 
 ### Step 1: 파일 넣기
 
-아무 파일(PDF, DOCX, HTML)을 `library/inbox/` 폴더에 넣습니다.
+아무 파일(PDF, DOCX, HTML)을 `${PIPA_INBOX_DIR:-library/inbox/}` 폴더에 넣습니다.
 
 ### Step 2: 에이전트에 알리기
 
