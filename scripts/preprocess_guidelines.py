@@ -7,6 +7,11 @@ from datetime import datetime
 import json
 from pathlib import Path
 import subprocess
+import sys
+
+PROJECT_ROOT = Path(__file__).parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 from scripts.lib.sanitize import (
     sanitize_ingested_markdown,
@@ -14,7 +19,6 @@ from scripts.lib.sanitize import (
     write_audit_sidecar,
 )
 
-PROJECT_ROOT = Path(__file__).parent.parent
 PDF_DIR = PROJECT_ROOT / "PIPC Official Guidelines"
 OUTPUT_DIR = PROJECT_ROOT / "sources" / "grade-a" / "pipc-guidelines"
 
