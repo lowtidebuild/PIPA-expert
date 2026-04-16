@@ -17,12 +17,9 @@ output/**
 !output/opinions/
 !output/opinions/.gitkeep
 
-# 내부 설계 문서
-DESIGN.md
-PROGRESS.md
-Progress.md
-docs/notes/naming-transition-guide.md
-docs/ko-legal-opinion-style-guide.md
+# 내부 설계 문서 (opaque private workspace)
+/_private/**
+!/_private/.gitkeep
 
 # MCP 서버 설정 (API 키 포함)
 .mcp.json
