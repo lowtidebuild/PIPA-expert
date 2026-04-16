@@ -395,7 +395,7 @@ PIPA-expert/
 │   └── rag-config.json           # Search configuration
 ├── scripts/
 │   ├── fetch-pipa-from-api.py    # Open Law API collector
-│   ├── preprocess-guidelines.py  # PDF → Markdown pipeline
+│   ├── preprocess_guidelines.py  # PDF → Markdown pipeline
 │   └── build-guideline-index.py  # Index generator
 ├── .claude/
 │   ├── agents/pipa-agent.md      # Agent definition
