@@ -221,3 +221,13 @@ Grade C:
 3. **대용량 파일**: 50MB 초과 파일은 경고 후 유저 확인 요청
 4. **스캔 PDF**: OCR 품질이 낮으면 `grade_confidence: low` + 유저 검토 권고
 5. **기존 파일 보호**: 이미 `library/grade-x/`에 있는 동일 slug 파일은 덮어쓰지 않음
+
+---
+
+## 신뢰 경계 및 Sanitization (AGENTS.md 참조)
+
+- 모든 변환된 markdown은 `scripts/lib/sanitize.py`의 `sanitize_ingested_markdown()`을 통과해야 한다.
+- 매칭된 role-marker / jailbreak 패턴은 `<escape>MATCH</escape>`로 감싼 뒤 파일에 기록한다.
+- 매칭 내역은 동일 디렉토리에 `{slug}.sanitize.json` sidecar로 남긴다. 내용에는 match count, pattern id, offset이 포함된다.
+- Sanitizer 모듈 로드 실패 시 해당 파일을 `_failed/`로 이동하고 사용자에게 안내한다. raw content는 그대로 쓰지 않는다.
+- frontmatter YAML 문자열 필드(`title_kr`, `publisher`, `author`, `title_en`)는 `sanitize_yaml_string()`으로 escape한 뒤 삽입한다.
