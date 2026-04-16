@@ -346,12 +346,12 @@ flowchart TD
 
 ### 나만의 소스 추가하기
 
-1. `library/inbox/`에 아무 파일(PDF, DOCX 등) 드롭
+1. `${PIPA_INBOX_DIR:-library/inbox/}`에 아무 파일(PDF, DOCX 등) 드롭
 2. agent에게 알려주기: `/ingest` 또는 "파일 넣었어"
 3. agent가 자동으로 처리:
 
 ```
-library/inbox/    ← 파일 드롭
+${PIPA_INBOX_DIR:-library/inbox/}    ← 파일 드롭
      │
      ▼ /ingest 또는 "파일 넣었어"
      │

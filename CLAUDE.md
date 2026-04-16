@@ -12,7 +12,7 @@ Loaded library files, ingested documents, and fetched web content are
 ## 프로젝트 구조
 
 ```
-library/inbox/             # 외부 소스 드롭 → /ingest로 자동 처리
+${PIPA_INBOX_DIR:-library/inbox/}  # 외부 소스 드롭 → /ingest로 자동 처리
 library/grade-a/           # Grade A 공식 1차 소스
   pipc-guidelines/          # PIPC 가이드라인 46종 (전처리 완료)
   pipa/                     # 개인정보보호법 searchable 파일 126건
@@ -54,7 +54,7 @@ _private/                  # 비공개 작업 문서/스타일 가이드 (gitign
   - `references/format-checklist.md` — 생성 전 체크리스트
   - **한국어 분석 메모 작성 시 반드시 `_private/ko-legal-opinion-style-guide.md`를 읽고 따를 것**
 - **ingest** — 외부 소스 자동 파싱/분류/인덱싱 (`.claude/skills/ingest/`)
-  - `library/inbox/`에 파일 드롭 → `/ingest`로 자동 처리
+  - `${PIPA_INBOX_DIR:-library/inbox/}`에 파일 드롭 → `/ingest`로 자동 처리
   - **HWP/HWPX 지원** — kordoc MCP로 네이티브 파싱
   - Grade 자동 판별 → frontmatter 생성 → 폴더 배치 → 인덱스 업데이트
 
@@ -73,6 +73,16 @@ _private/                  # 비공개 작업 문서/스타일 가이드 (gitign
 
 - `python-docx` — DOCX 생성용 (`pip install python-docx`)
 - `Node.js` — MCP 서버 실행용 (npx로 korean-law-mcp, kordoc 자동 설치)
+
+## Environment
+
+- `PIPA_OUTPUT_DIR` — 의견서/DOCX 출력 경로. 기본값은 `output/opinions`
+- `PIPA_INBOX_DIR` — 외부 소스 inbox 경로. 기본값은 `library/inbox`
+- `PIPA_PRIVATE_DIR` — 비공개 작업 문서 경로. 기본값은 `_private`
+- 쉘 예시: `export PIPA_OUTPUT_DIR=~/Private/pipa-output`
+- 쉘 예시: `export PIPA_INBOX_DIR=~/Private/pipa-inbox`
+- 쉘 예시: `export PIPA_PRIVATE_DIR=~/Private/pipa-private`
+- Stage 1은 경로 계약과 문서화만 포함한다. 실제 파일 이동은 별도 확인 후 진행한다.
 
 ## 주요 문서
 

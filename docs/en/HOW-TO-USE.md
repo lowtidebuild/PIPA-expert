@@ -103,7 +103,7 @@ The agent will:
 1. Research across the full knowledge base (550 searchable statute files + 46 guidelines)
 2. Draft a structured opinion with verified citations
 3. Run the fact-checker to verify every legal reference
-4. Generate a professional DOCX file saved to `output/opinions/`
+4. Generate a professional DOCX file saved to `${PIPA_OUTPUT_DIR:-output/opinions/}`
 
 If the issue turns on a branch article such as `제7조의2`, ask the agent to verify directly against `law.go.kr` as well. The current local statute index is still flattened at the base article-number level for some laws.
 
@@ -140,7 +140,7 @@ Got a PIPC enforcement decision, a law firm newsletter, or an academic paper you
 
 ### Step 1: Drop the file
 
-Place any file (PDF, DOCX, HTML) into the `library/inbox/` folder.
+Place any file (PDF, DOCX, HTML) into the `${PIPA_INBOX_DIR:-library/inbox/}` folder.
 
 ### Step 2: Tell the agent
 

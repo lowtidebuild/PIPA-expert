@@ -347,12 +347,12 @@ The agent produces **professional-format Word documents** with:
 
 ### Adding Your Own Sources
 
-1. Drop any file (PDF, DOCX, etc.) into `library/inbox/`
+1. Drop any file (PDF, DOCX, etc.) into `${PIPA_INBOX_DIR:-library/inbox/}`
 2. Tell the agent: `/ingest` or "파일 넣었어"
 3. The agent will automatically:
 
 ```
-library/inbox/    ← drop files here
+${PIPA_INBOX_DIR:-library/inbox/}    ← drop files here
      │
      ▼ /ingest or "파일 넣었어"
      │
@@ -402,7 +402,7 @@ PIPA-expert/
 │   └── skills/
 │       ├── legal-opinion-formatter/  # DOCX generation skill
 │       └── ingest/               # Source ingestion skill
-├── output/opinions/              # Generated DOCX opinions
+├── ${PIPA_OUTPUT_DIR:-output/opinions/}  # Generated DOCX opinions
 └── docs/                         # Design specs
 ```
 

@@ -68,7 +68,7 @@ DOCX 생성 전 반드시 아래 항목을 확인한다.
 - [ ] 서명 블록 완성
 - [ ] 파일명 규칙 준수: `{YYYYMMDD}_pipa_opinion_{subject}_v{N}.docx`
 - [ ] Markdown 사본 함께 저장
-- [ ] `output/opinions/` 디렉토리에 저장
+- [ ] `${PIPA_OUTPUT_DIR:-output/opinions/}` 디렉토리에 저장
 
 ## Red Flags to Avoid
 

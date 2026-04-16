@@ -1,14 +1,14 @@
 ---
 name: ingest
 description: >
-  library/inbox/에 넣은 외부 소스 파일(PDF, DOCX 등)을 자동으로
+  ${PIPA_INBOX_DIR:-library/inbox/}에 넣은 외부 소스 파일(PDF, DOCX 등)을 자동으로
   Markdown 변환, Grade 판별, frontmatter 생성, 폴더 배치, 인덱스 업데이트까지
   원스텝으로 처리한다. /ingest로 트리거.
 ---
 
 # Source Ingest
 
-`library/inbox/`에 파일을 넣고 `/ingest`를 실행하면 자동으로 처리한다.
+`${PIPA_INBOX_DIR:-library/inbox/}`에 파일을 넣고 `/ingest`를 실행하면 자동으로 처리한다.
 
 ## Trigger
 
@@ -20,7 +20,7 @@ description: >
 ## Workflow
 
 ```
-library/inbox/ 에 파일 드롭
+${PIPA_INBOX_DIR:-library/inbox/} 에 파일 드롭
   │
   ├─ Step 1: 파일 스캔
   ├─ Step 2: Markdown 변환
@@ -59,7 +59,7 @@ inbox/ 내 모든 파일을 Glob으로 탐색
 - kordoc이 문서 메타데이터(작성기관, 제목)를 반환하면 frontmatter에 직접 매핑
 - kordoc 파싱 후에도 Grade 판별 휴리스틱은 동일하게 적용
 
-**변환 실패 시:** 해당 파일을 `library/inbox/_failed/`로 이동 + 유저에게 실패 사유 안내
+**변환 실패 시:** 해당 파일을 `${PIPA_INBOX_DIR:-library/inbox/}/_failed/`로 이동 + 유저에게 실패 사유 안내
 
 ### Step 3: Grade 자동 판별
 
@@ -170,7 +170,7 @@ Grade C:
 - slug는 제목에서 생성: 한글 유지, 공백→하이픈, 특수문자 제거
 - 중복 시 `-2`, `-3` 접미사
 
-**원본 파일:** `library/inbox/_processed/`로 이동 (삭제하지 않음)
+**원본 파일:** `${PIPA_INBOX_DIR:-library/inbox/}/_processed/`로 이동 (삭제하지 않음)
 
 ### Step 6: 인덱스 업데이트
 
@@ -198,7 +198,7 @@ Grade C:
      - 정보법학-가명처리-논문.pdf → grade-c/academic/
   ❓ 판별 불가: 1건 (미확인문서.docx → Grade 지정 필요)
 
-원본: library/inbox/_processed/ 로 이동
+원본: `${PIPA_INBOX_DIR:-library/inbox/}/_processed/` 로 이동
 ```
 
 ---
