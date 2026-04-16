@@ -23,3 +23,9 @@
 - 파일명: `target.sanitize.json`
 - 포함 정보: `generated_at`, `aborted`, `match_count`, `matches[]`
 - 각 match는 `pattern_id`, `severity`, `start`, `end`, `snippet`을 가집니다.
+
+## Manual Verification
+
+- 파일 검사: `python3 scripts/sanitize-check.py path/to/file.md`
+- stdin 검사: `cat some-text.txt | python3 scripts/sanitize-check.py -`
+- 종료 코드: `0` clean, `1` matches found, `2` IO error, `3` sanitizer load failure
