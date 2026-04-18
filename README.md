@@ -4,7 +4,7 @@
 
 # PIPA Expert Agent
 
-### Jinju Legal Orchestrator's Korean Data Privacy Specialist
+### KP Legal Orchestrator's Korean Data Privacy Specialist
 
 **929 searchable statute files** · **46 official guidelines** · **30 landmark case law & interpretations** · **Professional-format DOCX analysis memos**
 
@@ -47,7 +47,7 @@ PIPA Expert takes a different approach: **instead of smarter search, build smart
 
 ```mermaid
 graph TB
-    subgraph agent["<b>PIPA Expert Agent</b><br/>Privacy Specialist 정보호 · Jinju Legal Orchestrator"]
+    subgraph agent["<b>PIPA Expert Agent</b><br/>Privacy Specialist · KP Legal Orchestrator"]
         direction TB
 
         subgraph core["Core Capabilities"]
@@ -333,7 +333,7 @@ Before any output is finalized, a **dedicated fact-checker sub-agent** verifies 
 
 The agent produces **professional-format Word documents** with:
 
-- Jinju Legal Orchestrator letterhead
+- KP Legal Orchestrator letterhead
 - Structured sections: Issues → Analysis → Conclusions → Recommendations
 - Risk matrix tables with color coding
 - Full citation trail with verification status
@@ -421,10 +421,12 @@ PIPA-expert/
 ### Setup
 
 ```bash
-git clone https://github.com/lowtidebuild/PIPA-expert.git
+git clone <repository-url>
 cd PIPA-expert
 pip install python-docx
 ```
+
+Use the current repository URL from your Git hosting page.
 
 ### Refresh Law Data (Monthly)
 
@@ -454,20 +456,20 @@ Then use `/agents/pipa-agent` to activate the privacy specialist persona.
 
 ---
 
-## Part of Jinju Legal Orchestrator
+## Part of KP Legal Orchestrator
 
-PIPA Expert is one of several specialized legal workflow agents operating under **Jinju Legal Orchestrator**:
+PIPA Expert is one of several specialized legal workflow agents operating under **KP Legal Orchestrator**:
 
 | Agent | Role | Focus |
 |-------|------|-------|
-| [game-legal-research](https://github.com/lowtidebuild/game-legal-research) | Game Industry Specialist 심진주 (Sim Jinju) | Game industry law |
-| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | Legal Translation Specialist 변혁기 (Byeon Hyeok-gi) | Legal translation |
-| [general-legal-research](https://github.com/lowtidebuild/general-legal-research) | Research Specialist 김재식 (Kim Jaesik) | Legal research |
-| **PIPA-expert** | **Privacy Specialist 정보호 (Jeong Bo-ho)** | **Data privacy law** |
-| [GDPR-expert](https://github.com/lowtidebuild/GDPR-expert) | EU Data Protection Specialist 김덕배 (Kim De Bruyne) | EU data protection law |
-| [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | Contract Specialist 고덕수 (Ko Duksoo) | Contract review |
-| [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | Legal Drafting Specialist 한석봉 (Han Seokbong) | Legal writing |
-| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | Senior Review Specialist 반성문 (Ban Seong-mun) | Quality review |
+| `game-legal-research` | Game Industry Research Specialist | Game industry law |
+| `legal-translation-agent` | Legal Translation Specialist | Legal translation |
+| `general-legal-research` | General Legal Research Specialist | Legal research |
+| **PIPA-expert** | **Privacy Specialist** | **Data privacy law** |
+| `GDPR-expert` | EU Data Protection Specialist | EU data protection law |
+| `contract-review-agent` | Contract Review Specialist | Contract review |
+| `legal-writing-agent` | Legal Drafting Specialist | Legal writing |
+| `second-review-agent` | Senior Review Specialist | Quality review |
 
 ---
 

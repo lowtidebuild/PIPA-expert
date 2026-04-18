@@ -26,14 +26,14 @@
 터미널을 열고 실행:
 
 ```bash
-git clone https://github.com/lowtidebuild/PIPA-expert.git
+git clone <repository-url>
 ```
 
-모든 법령 데이터와 에이전트 파일이 포함된 `PIPA-expert` 폴더가 생성됩니다.
+모든 법령 데이터와 에이전트 파일이 포함된 `PIPA-expert` 폴더가 생성됩니다. 현재 저장소의 호스팅 페이지에서 실제 URL을 복사해 사용하세요.
 
 ### Git이 없는 경우
 
-1. [github.com/lowtidebuild/PIPA-expert](https://github.com/lowtidebuild/PIPA-expert) 접속
+1. 현재 저장소의 메인 호스팅 페이지에 접속
 2. 초록색 **"Code"** 버튼 클릭
 3. **"Download ZIP"** 클릭
 4. 다운로드한 파일을 원하는 폴더에 압축 해제 (예: `Documents/PIPA-expert`)
@@ -221,7 +221,7 @@ Open Law API 무료 계정이 필요합니다. `--oc` 파라미터는 등록된 
 - **법률 자문을 제공하지 않습니다.** 법률 소스를 더 빠르고 체계적으로 찾도록 도와주는 리서치 보조 도구입니다. 결과물은 반드시 법률 전문가가 검토해야 합니다.
 - **귀하의 구체적인 계약이나 내부 정책을 알지 못합니다** — ingest 시스템으로 추가하지 않는 한.
 - **자동으로 업데이트되지 않습니다.** 법령 데이터는 특정 시점의 스냅샷입니다. 주기적으로 갱신 스크립트를 실행하거나 ingest로 새 소스를 추가하세요.
-- **현재 한국 개인정보보호 법령만 다룹니다.** EU/GDPR은 [GDPR-expert](https://github.com/lowtidebuild/GDPR-expert)를 참고하세요.
+- **현재 한국 개인정보보호 법령만 다룹니다.** EU/GDPR은 별도 저장소 `GDPR-expert`를 참고하세요.
 
 ---
 

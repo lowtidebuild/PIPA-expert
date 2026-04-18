@@ -4,7 +4,7 @@
 
 ## Origin
 
-- **Source project:** [PIPA-expert](https://github.com/lowtidebuild/PIPA-expert)
+- **Source project:** `PIPA-expert` (this repository)
 - **Created:** 2026-03-25
 
 ## What to Copy
@@ -155,7 +155,7 @@ agent .md 파일에 아래 섹션 추가:
 
 또는 PIPA-expert를 clone하지 않은 경우:
 
-> https://github.com/lowtidebuild/PIPA-expert/blob/main/docs/portable-ingest-spec.md 읽고, 이 프로젝트에 library ingest 구조 적용해줘. hook 포함 (Section 7).
+> <repository-url>/blob/main/docs/portable-ingest-spec.md 읽고, 이 프로젝트에 library ingest 구조 적용해줘. hook 포함 (Section 7).
 
 ## Reference Files
 
