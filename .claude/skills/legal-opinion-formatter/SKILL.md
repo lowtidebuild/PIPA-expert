@@ -57,13 +57,13 @@ description: >
 ### 1. Letterhead Block (Header)
 
 ```
-Jinju Legal Orchestrator
+KP Legal Orchestrator
 AI legal workflow system
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 [주소]  |  전화: [번호]  |  [이메일]  |  [웹사이트]
 ```
 
-- 기본값: Jinju Legal Orchestrator / AI legal workflow system
+- 기본값: KP Legal Orchestrator / AI legal workflow system
 - 사용자가 다른 브랜드/회사 정보를 제공하면 override
 - 첫 페이지 헤더와 이후 페이지 헤더 구분
 
@@ -79,11 +79,11 @@ CONFIDENTIAL & INTERNAL REVIEW
 
 ### 작성자 기본값
 
-분석 메모의 작성자는 별도 지정이 없으면 다음 페르소나를 사용한다:
+분석 메모의 작성자 표시는 별도 지정이 없으면 다음 역할 기반 표기를 사용한다:
 
-- **이름:** 정보호 (鄭保護)
-- **소속:** Jinju Legal Orchestrator
-- **직위:** 개인정보 스페셜리스트 / Privacy Specialist
+- **표기명:** 개인정보 스페셜리스트
+- **소속:** KP Legal Orchestrator
+- **직위:** Privacy Specialist
 
 ### 3. Date & Addressee Block
 
@@ -198,12 +198,12 @@ CONFIDENTIAL & INTERNAL REVIEW
 ```
 이상과 같이 분석 결과를 드립니다.
 
-Jinju Legal Orchestrator
+KP Legal Orchestrator
 
 
 ____________________________
-정보호 (鄭保護)
-개인정보 스페셜리스트 / Privacy Specialist
+개인정보 스페셜리스트
+Privacy Specialist
 ```
 
 ### 16. Disclaimer (면책)

@@ -4,7 +4,7 @@
 
 # PIPA Expert Agent
 
-### Jinju Legal Orchestrator의 AI 개인정보보호 워크플로우 시스템
+### KP Legal Orchestrator의 AI 개인정보보호 워크플로우 시스템
 
 **929개 검색 가능한 법조문 파일** · **46건 공식 가이드라인** · **30건 landmark 판례·해석례** · **전문 형식 DOCX 분석 메모**
 
@@ -46,7 +46,7 @@ PIPA Expert는 다른 접근을 취합니다: **더 똑똑한 검색 대신, 더
 
 ```mermaid
 graph TB
-    subgraph agent["<b>PIPA Expert Agent</b><br/>개인정보 스페셜리스트 정보호 (鄭保護) · Jinju Legal Orchestrator"]
+    subgraph agent["<b>PIPA Expert Agent</b><br/>개인정보 스페셜리스트 · KP Legal Orchestrator"]
         direction TB
 
         subgraph core["핵심 기능"]
@@ -331,7 +331,7 @@ flowchart TD
 
 에이전트는 **전문 형식의 Word 문서**를 생성합니다:
 
-- Jinju Legal Orchestrator 레터헤드
+- KP Legal Orchestrator 레터헤드
 - 구조화된 섹션: 쟁점 → 분석 → 결론 → 권고
 - 색상 코딩된 리스크 매트릭스 테이블
 - 검증 상태 표시된 전체 인용 체계
@@ -378,10 +378,12 @@ ${PIPA_INBOX_DIR:-library/inbox/}    ← 파일 드롭
 ### 설치
 
 ```bash
-git clone https://github.com/lowtidebuild/PIPA-expert.git
+git clone <repository-url>
 cd PIPA-expert
 pip install python-docx
 ```
+
+현재 저장소의 호스팅 페이지에서 실제 URL을 복사해 사용하면 됩니다.
 
 ### 법령 데이터 갱신 (월 1회)
 
@@ -411,20 +413,20 @@ claude   # Claude Code 실행
 
 ---
 
-## Jinju Legal Orchestrator
+## KP Legal Orchestrator
 
-PIPA Expert는 **Jinju Legal Orchestrator** 소속 전문 법률 워크플로우 에이전트 시리즈 중 하나입니다:
+PIPA Expert는 **KP Legal Orchestrator** 소속 전문 법률 워크플로우 에이전트 시리즈 중 하나입니다:
 
 | 에이전트 | 역할 | 전문 분야 |
 |---------|------|----------|
-| [game-legal-research](https://github.com/lowtidebuild/game-legal-research) | 게임 산업 스페셜리스트 심진주 | 게임 산업법 |
-| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | 법률 번역 스페셜리스트 변혁기 | 법률 번역 |
-| [general-legal-research](https://github.com/lowtidebuild/general-legal-research) | 리서치 스페셜리스트 김재식 | 법률 리서치 |
-| **PIPA-expert** | **개인정보 스페셜리스트 정보호** | **개인정보보호법** |
-| [GDPR-expert](https://github.com/lowtidebuild/GDPR-expert) | EU 데이터보호 스페셜리스트 김덕배 (Kim De Bruyne) | EU 데이터보호법 |
-| [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | 계약 스페셜리스트 고덕수 | 계약서 검토 |
-| [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | 법률 드래프팅 스페셜리스트 한석봉 | 법률 문서 작성 |
-| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | 시니어 리뷰 스페셜리스트 반성문 | 품질 리뷰 |
+| `game-legal-research` | 게임 산업 리서치 스페셜리스트 | 게임 산업법 |
+| `legal-translation-agent` | 법률 번역 스페셜리스트 | 법률 번역 |
+| `general-legal-research` | 일반 법률 리서치 스페셜리스트 | 법률 리서치 |
+| **PIPA-expert** | **개인정보 스페셜리스트** | **개인정보보호법** |
+| `GDPR-expert` | EU 데이터보호 스페셜리스트 | EU 데이터보호법 |
+| `contract-review-agent` | 계약 검토 스페셜리스트 | 계약서 검토 |
+| `legal-writing-agent` | 법률 드래프팅 스페셜리스트 | 법률 문서 작성 |
+| `second-review-agent` | 시니어 리뷰 스페셜리스트 | 품질 리뷰 |
 
 ---
 

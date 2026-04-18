@@ -104,7 +104,7 @@ def create_letterhead(doc, firm_info=None):
     """레터헤드를 본문 최상단에 배치 (헤더 사용 안 함)."""
     if firm_info is None:
         firm_info = {
-            'name_ko': 'Jinju Legal Orchestrator',
+            'name_ko': 'KP Legal Orchestrator',
             'name_en': 'AI legal workflow system',
         }
 
@@ -277,9 +277,9 @@ def add_table(doc, headers, rows):
 ## Signature Block
 
 ```python
-def add_signature_block(doc, firm_name='Jinju Legal Orchestrator',
-                        author_name='정보호 (鄭保護)',
-                        title='개인정보 스페셜리스트 / Privacy Specialist',
+def add_signature_block(doc, firm_name='KP Legal Orchestrator',
+                        author_name='개인정보 스페셜리스트',
+                        title='Privacy Specialist',
                         registration=None):
     """서명 블록."""
     doc.add_paragraph()

@@ -26,14 +26,14 @@ You need a local copy of this project on your computer.
 Open a terminal and run:
 
 ```bash
-git clone https://github.com/lowtidebuild/PIPA-expert.git
+git clone <repository-url>
 ```
 
-This creates a `PIPA-expert` folder with all the legal data and agent files.
+This creates a `PIPA-expert` folder with all the legal data and agent files. Copy the current repository URL from your hosting page.
 
 ### If you don't have Git
 
-1. Go to [github.com/lowtidebuild/PIPA-expert](https://github.com/lowtidebuild/PIPA-expert)
+1. Go to this repository's main hosting page
 2. Click the green **"Code"** button
 3. Click **"Download ZIP"**
 4. Unzip the downloaded file to a folder of your choice (e.g., `Documents/PIPA-expert`)
@@ -215,7 +215,7 @@ You need a free Open Law API account. The `--oc` parameter is your registered em
 - **It does not provide legal advice.** It's a research assistant that helps you find and organize legal sources faster. A qualified lawyer must review the output.
 - **It does not know about your specific contracts or internal policies** — unless you add them via the ingest system.
 - **It does not automatically update.** The legal data is a snapshot. Run the refresh script periodically or add new sources via ingest.
-- **It currently covers Korean privacy law only.** For EU/GDPR, see [GDPR-expert](https://github.com/lowtidebuild/GDPR-expert).
+- **It currently covers Korean privacy law only.** For EU/GDPR, use the separate `GDPR-expert` repository.
 
 ---
 
