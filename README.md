@@ -425,7 +425,8 @@ PIPA-expert/
 │       └── ingest/               # Source ingestion skill
 ├── ${PIPA_OUTPUT_DIR:-output/opinions/}  # Generated DOCX opinions
 ├── requirements.txt              # Runtime Python dependencies
-├── legal-writing-formatting-guide.md  # Legal opinion/memo drafting style guide
+├── legal-writing-formatting-guide.compact.md # Default opinion/memo drafting guide
+├── legal-writing-formatting-guide.md  # Full drafting style guide for detailed formatting
 └── docs/                         # Design specs
 ```
 
