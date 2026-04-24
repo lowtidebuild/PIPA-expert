@@ -67,6 +67,7 @@ description: >
 **Output format branching:**
 - Markdown 사본: `scripts/render_audit_append.py` 결과를 최종 Markdown으로 저장한다. 원문 Markdown은 재파싱하지 않는다.
 - DOCX: `aggregated.json`을 저장하고, DOCX 생성 코드에서 `scripts.docx_citation_appendix`를 사용한다.
+  - `scripts/audit_status.py` 또는 wrapper가 생성한 `audit_status.json`을 함께 보존
   - 본문 Markdown을 DOCX에 넣기 전 `inject_unverified_tags(body_md, aggregated, return_result=True)` 호출
   - 반환된 `result.body_md`를 DOCX 본문에 사용하고, `doc.save()` 직전 `append_citation_audit_log(doc, aggregated, audit_status=result)` 호출
   - 태그 삽입 후 DOCX embed 전까지 본문 Markdown을 다시 수정하지 않는다.
