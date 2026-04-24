@@ -64,6 +64,22 @@ python3 scripts/render_audit_append.py draft.md aggregated.json \
 `render_audit_append.py`는 failing/unknown claim에만 `[Unverified]` 또는
 `[Partially Unverified]` 태그를 삽입하고, 끝에 `부록: 검증 로그 (Citation Audit Log)`를 붙인다.
 
+## Existing Document Wrapper
+
+기존 `.md` 또는 `.docx` 파일을 감사 workflow에 넣을 때는 project-local wrapper를 사용한다.
+
+```bash
+python3 scripts/audit_document.py opinion.docx \
+  --out output/audit \
+  --aggregated aggregated.json \
+  --append-docx
+```
+
+- `.docx`: `python-docx`로 plain text Markdown sidecar를 만든다.
+- `aggregated.json`이 없으면 감사 가능한 source sidecar와 `status=skipped`인 `audit_status.json`만 생성한다.
+- `aggregated.json`이 있으면 audited Markdown sidecar를 만들고, `--append-docx` 사용 시 원본 DOCX 복사본에 Citation Audit Log 부록을 추가한다.
+- 본문 내부 tag 삽입은 Markdown sidecar 기준이다. 기존 DOCX 본문에 직접 span tag를 역삽입하지 않는다.
+
 ## DOCX Output
 
 DOCX 생성 코드에서는 다음 순서를 지킨다.
