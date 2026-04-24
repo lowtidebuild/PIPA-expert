@@ -1,0 +1,90 @@
+{
+  "title": "개인정보 처리 위탁 검토 메모",
+  "language": "ko",
+  "request_type": "memo",
+  "as_of_date": "2026-04-25",
+  "questions": [
+    "개인정보 처리 위탁 구조에서 개인정보 보호법 제15조상 동의 근거를 어떻게 표시해야 하는가?"
+  ],
+  "assumptions": [
+    "수탁자는 위탁 계약 범위 안에서만 개인정보를 처리한다."
+  ],
+  "ai_notice": "[AI 생성 고지] 본 분석 메모는 AI 시스템의 지원을 받아 작성되었습니다.",
+  "disclaimer": "이 문서는 법률 자문이 아니며, 구체적 사안은 전문가 검토가 필요합니다.",
+  "sections": [
+    {
+      "section_type": "ai_notice",
+      "heading": "AI 생성 고지",
+      "body": "본 문서는 AI 기반 리서치 워크플로우의 지원으로 작성되었습니다."
+    },
+    {
+      "section_type": "scope",
+      "heading": "검토 범위 및 기준일",
+      "body": "본 메모는 개인정보 처리 위탁 구조와 개인정보 보호법 제15조의 수집·이용 근거를 검토합니다."
+    },
+    {
+      "section_type": "executive_summary",
+      "heading": "요약 결론",
+      "body": "개인정보 보호법 제15조상 정보주체 동의가 있는 경우 개인정보 수집·이용 근거가 인정됩니다."
+    },
+    {
+      "section_type": "issues",
+      "heading": "검토 쟁점",
+      "body": "개인정보 처리 위탁 목적과 동의 문구의 관계를 검토합니다."
+    },
+    {
+      "section_type": "analysis",
+      "heading": "분석",
+      "body": "[VERIFIED] [Grade A] 개인정보 보호법 제15조 제1항 제1호는 정보주체 동의를 수집·이용 근거로 규정합니다."
+    },
+    {
+      "section_type": "counter_analysis",
+      "heading": "반대 논거 및 리스크",
+      "body": "동의 범위가 위탁 목적보다 좁으면 별도 동의 또는 고지 보완이 필요할 수 있습니다."
+    },
+    {
+      "section_type": "recommendations",
+      "heading": "권고",
+      "body": "필수: 계약서와 고지 문구에서 처리 목적과 항목을 일치시켜야 합니다."
+    },
+    {
+      "section_type": "sources",
+      "heading": "출처 목록",
+      "body": "[VERIFIED] [Grade A] 개인정보 보호법 제15조 제1항 제1호"
+    },
+    {
+      "section_type": "verification_guide",
+      "heading": "검증 가이드",
+      "body": "library/grade-a/pipa/art15.md에서 조문 원문을 재확인합니다."
+    },
+    {
+      "section_type": "disclaimer",
+      "heading": "면책",
+      "body": "이 문서는 법률 자문이 아니며 전문가 검토가 필요합니다."
+    }
+  ],
+  "citations": [
+    {
+      "id": "pipa-art15-1-1",
+      "title": "개인정보 보호법 제15조",
+      "citation": "개인정보 보호법 제15조 제1항 제1호",
+      "grade": "A",
+      "verification_status": "VERIFIED",
+      "source_path": "library/grade-a/pipa/art15.md",
+      "law_name": "개인정보 보호법",
+      "article": "제15조",
+      "paragraph": "제1항",
+      "item": "제1호",
+      "quote": "정보주체의 동의를 받은 경우",
+      "reliability_note": "공식 법령 원문"
+    }
+  ],
+  "fact_check": {
+    "status": "complete",
+    "sidecar_path": "tmp/factcheck_result-opinion-pipeline-smoke.json"
+  },
+  "citation_audit": {
+    "status": "complete",
+    "sidecar_path": "tmp/audit_status.json"
+  }
+}

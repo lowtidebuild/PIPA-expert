@@ -113,6 +113,7 @@ vendored auditor.
 - Vendor 경계 점검: `python3 scripts/check_vendor_boundary.py`
 - MCP 예산 추적: `python3 scripts/mcp_budget.py --session "$PIPA_SESSION_ID" status`
 - 릴리즈 노트 정책: GitHub Releases만 사용 (`docs/publishing-policy.md`)
+- 구조화 의견서 모델: `scripts/lib/opinion_model.py`
 
 ## 주요 문서
 

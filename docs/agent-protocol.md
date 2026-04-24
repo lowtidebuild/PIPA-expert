@@ -100,6 +100,7 @@ Vendor 경계는 유지한다. `citation_auditor/`, `.claude/skills/citation-aud
 
 의견서·메모·DOCX 산출물은 최소한 아래 조건을 만족해야 한다.
 
+- 구조화된 JSON 산출물이 필요한 workflow는 `scripts.lib.opinion_model.OpinionArtifact`를 사용한다.
 - placeholder가 남아 있지 않을 것.
 - 모든 법령 근거에 verification status와 source grade가 있을 것.
 - fact-check 미실행이면 그 이유가 명시될 것.
