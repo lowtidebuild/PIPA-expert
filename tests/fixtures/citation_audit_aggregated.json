@@ -1,0 +1,36 @@
+{
+  "aggregated": [
+    {
+      "claim": {
+        "id": "claim-pipa-art15",
+        "text": "개인정보 보호법 제15조는 정보주체 동의를 받은 경우 개인정보 수집·이용을 허용합니다.",
+        "sentence_span": {
+          "start": 94,
+          "end": 142
+        },
+        "claim_type": "citation"
+      },
+      "verdict": {
+        "claim": {
+          "id": "claim-pipa-art15",
+          "text": "개인정보 보호법 제15조는 정보주체 동의를 받은 경우 개인정보 수집·이용을 허용합니다.",
+          "sentence_span": {
+            "start": 94,
+            "end": 142
+          },
+          "claim_type": "citation"
+        },
+        "label": "verified",
+        "verifier_name": "fact-checker/korean-law",
+        "authority": 1.0,
+        "rationale": "factcheck_result_complete.json에서 supported로 확인됨",
+        "evidence": [
+          {
+            "title": "개인정보 보호법 제15조",
+            "url": "library/grade-a/pipa/art15.md"
+          }
+        ]
+      }
+    }
+  ]
+}

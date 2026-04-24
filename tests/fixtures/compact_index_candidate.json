@@ -1,0 +1,12 @@
+{
+  "laws": [
+    {
+      "law_id": "pipa",
+      "law_name": "개인정보 보호법",
+      "prefix": "library/grade-a/pipa/",
+      "articles": [
+        ["제15조", "개인정보의 수집ㆍ이용", "art15.md"]
+      ]
+    }
+  ]
+}

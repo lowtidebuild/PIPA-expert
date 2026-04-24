@@ -1,0 +1,24 @@
+{
+  "session_id": "opinion-pipeline-smoke",
+  "status": "complete",
+  "checked_claims": [
+    {
+      "claim_id": "claim-pipa-art15",
+      "text": "개인정보 보호법 제15조는 정보주체 동의를 받은 경우 개인정보 수집·이용을 허용합니다.",
+      "citation": {
+        "law_name": "개인정보 보호법",
+        "article": "제15조",
+        "paragraph": null,
+        "item": null,
+        "source_path": "library/grade-a/pipa/art15.md",
+        "confidence": "high"
+      },
+      "result": "supported"
+    }
+  ],
+  "summary": {
+    "supported": 1,
+    "unsupported": 0,
+    "needs_context": 0
+  }
+}

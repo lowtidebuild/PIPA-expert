@@ -30,6 +30,8 @@
 | "/audit", "citation audit", "인용 감사" | audit | same as input/sidecar | avoid duplicate | yes | no new freshness unless needed |
 
 같은 요청에 여러 signal이 있으면 더 무거운 산출물 기준을 적용한다.
+테스트와 smoke fixture에서 쓰는 programmatic mirror는
+`scripts.lib.workflow_routing.classify_request`다.
 
 ## Source Grade
 
