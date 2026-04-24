@@ -177,7 +177,7 @@ Agent(
 - `[AMENDED]` 태그 추가: "이 조문은 KB 수집 이후 개정되었습니다"
 - 로컬 KB 파일 업데이트는 별도 수동 처리 (자동 수정 금지)
 
-**최대 3 API 호출.** MCP 불가 시 이 항목은 스킵 + `[MCP UNAVAILABLE]` 표시.
+**최대 3 API 호출.** 호출 전 `scripts/mcp_budget.py record --tool korean-law --purpose fact-check`로 세션 예산을 갱신한다. 예산 초과 또는 MCP 불가 시 이 항목은 스킵 + `[MCP UNAVAILABLE]` 또는 `[MCP RATE LIMITED]` 표시.
 
 ### 9. 교차참조 MCP 검증 (확장)
 
