@@ -70,3 +70,18 @@ def test_compact_legal_writing_guide_is_default_reference() -> None:
     assert "legal-writing-formatting-guide.compact.md" in claude
     assert "legal-writing-formatting-guide.compact.md" in formatter
     assert "professional DOCX tuning" in formatter
+
+
+def test_preflight_docs_distinguish_dev_warning_from_release_gate() -> None:
+    preflight = (ROOT / "scripts/preflight.sh").read_text(encoding="utf-8")
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    readme_ko = (ROOT / "README.ko.md").read_text(encoding="utf-8")
+    policy = (ROOT / "docs/publishing-policy.md").read_text(encoding="utf-8")
+    policy_flat = " ".join(policy.split())
+
+    assert "python3 -m pip check" in preflight
+    assert "release blocking" in preflight
+    assert "strict security audit must pass" in preflight
+    assert "Run the full preflight before pushing" in readme
+    assert "push 전에는 전체 preflight를 실행" in readme_ko
+    assert "strict security audit is release blocking" in policy_flat

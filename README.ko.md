@@ -405,10 +405,15 @@ pip install -r requirements.txt
 
 ### Preflight 점검
 
+push 전에는 전체 preflight를 실행합니다. strict 보안 점검은 기본 private/output
+경로가 repo 내부를 가리키는 로컬 개발 환경에서 warning으로만 표시됩니다.
+릴리즈 또는 외부 공유 전에는 private 경로를 repo 밖으로 설정한 뒤
+`python3 scripts/security_audit.py --strict`가 반드시 통과해야 합니다.
+
 ```bash
+scripts/preflight.sh
 python3 scripts/security_audit.py           # 개발용 WARN 모드
 python3 scripts/security_audit.py --strict  # 릴리즈/외부 공유 전 게이트
-scripts/preflight.sh
 ```
 
 ### 법령 데이터 갱신 (월 1회)
