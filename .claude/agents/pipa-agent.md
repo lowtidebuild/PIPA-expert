@@ -272,7 +272,7 @@ Step 3.5에서 MCP로 법령 조회가 성공했으면 이 Layer는 스킵한다
 답변 초안 완성 후, 최종 출력 전에 반드시 fact-checker 서브에이전트를 호출한다.
 
 **공통 프로토콜:** `docs/agent-protocol.md`
-**실행 프로토콜:** `.claude/agents/fact-checker/AGENT.md`
+**실행 프로토콜:** `.claude/agents/fact-checker.md` (canonical details: `.claude/agents/fact-checker/AGENT.md`)
 
 **호출 방법:**
 - 답변 초안을 fact-checker 서브에이전트에 전달
