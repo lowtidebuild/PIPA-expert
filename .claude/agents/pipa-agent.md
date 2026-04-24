@@ -321,7 +321,7 @@ Step 3.5에서 MCP로 법령 조회가 성공했으면 이 Layer는 스킵한다
 3. `legal-opinion-formatter-SKILL.md`의 python-docx 구현 가이드에 따라 DOCX 생성
 4. 생성 전 `references/format-checklist.md` 체크리스트 확인
 5. 조건부 citation audit 실행
-   - 메모 본문 Markdown 사본을 `citation-auditor`로 감사
+   - 메모 본문 Markdown 사본을 `pipa-citation-audit` wrapper로 감사
    - `aggregated.json`을 보존하여 DOCX 어댑터에 전달
    - 본문 embed 전 `scripts.docx_citation_appendix.inject_unverified_tags()` 적용
    - `doc.save()` 직전 `scripts.docx_citation_appendix.append_citation_audit_log()` 적용
@@ -331,12 +331,13 @@ Step 3.5에서 MCP로 법령 조회가 성공했으면 이 Layer는 스킵한다
 
 ## Citation Audit
 
-사용자가 `/audit <file.md>`를 호출하거나 기존 Markdown 의견서의 인용 감사를
-요청하면 `.claude/commands/audit.md` 및 `.claude/skills/citation-auditor/SKILL.md`를
-사용한다. `/audit`는 Markdown 파일 전용이다.
+사용자가 `/audit <file.md>`를 호출하면 `.claude/commands/audit.md`의 standalone
+Markdown 감사를 사용한다. 기존 Markdown 의견서의 PIPA workflow 통합 감사나 DOCX
+handoff가 필요하면 `.claude/skills/pipa-citation-audit/SKILL.md` wrapper를 사용한다.
+`/audit`는 Markdown 파일 전용이다.
 
 의견서·분석 메모 워크플로우에서는 fact-checker 이후 post-hoc 단계로 실행한다.
-Markdown 산출물은 append 모드로 `부록: 검증 로그 (Citation Audit Log)`를 붙이고,
+Markdown 산출물은 raw-preserve append renderer로 `부록: 검증 로그 (Citation Audit Log)`를 붙이고,
 DOCX 산출물은 `scripts/docx_citation_appendix.py`가 `aggregated.json`을 받아 본문
 태그와 DOCX 부록 표를 추가한다. 단순 조문 조회와 짧은 채팅 답변에서는 실행하지 않는다.
 

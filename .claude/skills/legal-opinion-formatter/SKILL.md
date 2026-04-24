@@ -61,14 +61,15 @@ description: >
 ### Step 5: 조건부 Citation Audit
 
 법률 의견서, 분석 메모, 검토보고서 산출물에는 fact-checker 검증 후
-`citation-auditor`를 post-hoc으로 실행한다. 단순 채팅 답변이나 짧은 조문 조회에는
+`pipa-citation-audit` wrapper를 통해 post-hoc으로 실행한다. 단순 채팅 답변이나 짧은 조문 조회에는
 실행하지 않는다.
 
 **Output format branching:**
-- Markdown 사본: `citation_auditor render --mode=append` 결과를 최종 Markdown으로 저장한다.
+- Markdown 사본: `scripts/render_audit_append.py` 결과를 최종 Markdown으로 저장한다. 원문 Markdown은 재파싱하지 않는다.
 - DOCX: `aggregated.json`을 저장하고, DOCX 생성 코드에서 `scripts.docx_citation_appendix`를 사용한다.
-  - 본문 Markdown을 DOCX에 넣기 전 `inject_unverified_tags(body_md, aggregated)` 호출
-  - `doc.save()` 직전 `append_citation_audit_log(doc, aggregated)` 호출
+  - 본문 Markdown을 DOCX에 넣기 전 `inject_unverified_tags(body_md, aggregated, return_result=True)` 호출
+  - 반환된 `result.body_md`를 DOCX 본문에 사용하고, `doc.save()` 직전 `append_citation_audit_log(doc, aggregated, audit_status=result)` 호출
+  - 태그 삽입 후 DOCX embed 전까지 본문 Markdown을 다시 수정하지 않는다.
 - 기타 포맷: Citation audit 결과를 sidecar Markdown으로 저장한다.
 
 ---
@@ -83,7 +84,7 @@ description: >
 KP Legal Orchestrator
 AI legal workflow system
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-[주소]  |  전화: [번호]  |  [이메일]  |  [웹사이트]
+연락처 정보는 사용자가 제공한 경우에만 표시
 ```
 
 - 기본값: KP Legal Orchestrator / AI legal workflow system
@@ -113,21 +114,19 @@ CONFIDENTIAL & INTERNAL REVIEW
 ```
 2026년 3월 24일
 
-[수신인 이름]
-[수신인 직위]
-[회사/기관명]
+수신인 정보가 제공된 경우에만 표시
 ```
 
 ### 4. Reference Line (건명)
 
 ```
-건명:   [분석 메모 제목 — 개인정보보호법 관련 쟁점]
+건명:   개인정보보호법 관련 검토 요청에 대한 분석 메모
 ```
 
 ### 5. Salutation
 
 ```
-[수신인 이름] 귀하
+수신인 정보가 제공된 경우에만 인사말 표시
 ```
 
 ### 6. 서론 (Introduction)

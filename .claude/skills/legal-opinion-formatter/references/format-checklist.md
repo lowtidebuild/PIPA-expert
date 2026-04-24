@@ -47,8 +47,8 @@ DOCX 생성 전 반드시 아래 항목을 확인한다.
 
 ## Citation Audit
 
-- [ ] 법률 의견서·분석 메모 산출물인 경우 citation-auditor 실행 여부 확인
-- [ ] Markdown 사본은 append 모드 부록 또는 sidecar 감사 로그를 포함
+- [ ] 법률 의견서·분석 메모 산출물인 경우 pipa-citation-audit wrapper 실행 여부 확인
+- [ ] Markdown 사본은 raw-preserve append 부록 또는 sidecar 감사 로그를 포함
 - [ ] DOCX 산출물은 `scripts.docx_citation_appendix`로 본문 `[Unverified]` 태그와 Citation Audit Log 부록 반영
 - [ ] 감사 실패 또는 verifier 불가 시 산출물에 생략 사유를 간단히 표시
 

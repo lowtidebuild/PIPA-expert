@@ -361,37 +361,40 @@ def generate_pipa_opinion(
     if output_dir is None:
         output_dir = os.environ.get('PIPA_OUTPUT_DIR', 'output/opinions')
     citation_audit = load_aggregated(citation_audit_json) if citation_audit_json else None
+    citation_injection = None
     if citation_audit and body_markdown:
-        body_markdown = inject_unverified_tags(body_markdown, citation_audit)
+        citation_injection = inject_unverified_tags(body_markdown, citation_audit, return_result=True)
+        body_markdown = citation_injection.body_md
 
     doc = Document()
-    # ... (위 Page Setup, Heading styles 적용)
+    # Apply the page setup and heading styles from this guide before adding content.
 
     create_letterhead(doc, firm_info)
 
     if confidential:
         add_confidential_marking(doc)
 
-    if recipient is None:
-        recipient = ['[수신인 이름]', '[직위]', '[회사/기관명]']
-    add_date_and_addressee(doc, date_str, recipient)
+    recipient = [line for line in (recipient or []) if str(line).strip()]
+    if recipient:
+        add_date_and_addressee(doc, date_str, recipient)
     add_reference_line(doc, subject)
-    add_salutation(doc, recipient[0])
+    if recipient:
+        add_salutation(doc, recipient[0])
 
     # 의뢰인 질문 사항 (맨 앞에 배치)
     add_section_heading(doc, 'I. 의뢰인 질문 사항')
-    # ... (배경 + 질문 목록)
+    # Add the request background and numbered questions from the approved draft.
 
     # 핵심 요약
     add_section_heading(doc, 'II. 핵심 요약 (Executive Summary)')
-    # ...
+    # Add the final executive summary text from the approved draft.
 
-    # 이하 분석, 결론 등 sections dict 기반으로 동적 생성
+    # Add analysis, conclusion, limitations, and recommendations from sections.
     # Citation audit이 있는 경우, 위에서 태그가 삽입된 body_markdown 또는
     # body_markdown에서 파생한 sections를 DOCX 본문에 사용한다.
 
     # 출처 목록
-    # ... (Grade A, Grade B, Web 순)
+    # Add sources in Grade A, Grade B, then Web order.
 
     # 서명
     add_signature_block(doc)
@@ -401,7 +404,7 @@ def generate_pipa_opinion(
 
     # Citation audit 부록: aggregated.json이 있는 경우에만 실행, 없으면 no-op
     if citation_audit:
-        append_citation_audit_log(doc, citation_audit)
+        append_citation_audit_log(doc, citation_audit, audit_status=citation_injection)
 
     # Save
     os.makedirs(output_dir, exist_ok=True)
@@ -428,7 +431,8 @@ def generate_pipa_opinion(
 2. 수집 결과를 분석 메모 섹션별로 구조화
 3. 위 헬퍼 함수들을 조합하여 인라인 Python 스크립트 작성
 4. citation audit aggregated JSON이 있으면 `scripts.docx_citation_appendix`로
-   본문 태그와 DOCX 부록을 연결
+   본문 태그와 DOCX 부록을 연결. `inject_unverified_tags(..., return_result=True)` 이후에는
+   DOCX embed 전까지 본문 Markdown을 수정하지 않는다.
 5. 스크립트 실행하여 DOCX 생성
 6. 생성된 파일 경로를 사용자에게 안내
 

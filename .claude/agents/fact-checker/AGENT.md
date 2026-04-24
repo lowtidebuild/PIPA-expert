@@ -20,12 +20,13 @@ pipa-agent가 생성한 답변 또는 의견서 초안을 받아, 모든 법령 
 
 ### 1. 조문 존재 검증 (Article Existence)
 
-답변에 인용된 모든 "제XX조"를 추출하여, KB에 해당 파일이 존재하는지 확인한다.
+답변에 인용된 모든 법령명 + 조문 조합을 추출하여, KB에 해당 파일이 존재하는지 확인한다. 조문 번호만 추출하지 않는다. `제15조`는 법령에 따라 전혀 다른 조문일 수 있으므로 법령명 context를 반드시 유지한다.
 
 **방법:**
-1. 답변 텍스트에서 정규식으로 조문 번호 추출: `제(\d+)조(의(\d+))?`
-2. 해당 법령 디렉토리에서 `art{N}.md` 또는 `art{N}-{M}.md` 파일 Glob
-3. 파일 존재 → PASS, 미존재 → FAIL
+1. `python3 -m scripts.lib.citations "<답변 텍스트>"`로 citation object를 생성한다.
+2. `law_name`, `article`, `paragraph`, `item`, `source_path`, `confidence`를 확인한다.
+3. `source_path` 존재 → PASS 후보, 미존재 → FAIL
+4. `confidence=low` 또는 `law_name` 불명확 → `[NEEDS LAW CONTEXT]`로 표시하고 수동 확인 대상으로 둔다.
 
 **FAIL 시 조치:** 해당 인용을 `[UNVERIFIED]`로 다운그레이드 + 경고 첨부
 
@@ -35,7 +36,7 @@ pipa-agent가 생성한 답변 또는 의견서 초안을 받아, 모든 법령 
 
 **방법:**
 1. 인용된 텍스트 추출
-2. 해당 `art{N}.md` 파일을 Read
+2. citation object의 `source_path` 파일을 Read
 3. 인용 텍스트가 파일 본문에 포함되는지 substring 매칭
 4. 완전 일치 → PASS, 부분 일치 → WARN (오타/생략 가능성), 불일치 → FAIL
 
@@ -113,6 +114,11 @@ PIPC 가이드라인 인용이 실재하는지 확인한다.
 [WARN] 개인정보보호법 제22조 — 내용 부분 일치 (인용 텍스트에 생략 있음)
 [FAIL] 개인정보보호법 제15조의3 — 해당 조문 파일 미존재
 [WARN] PIPC 가이드라인 #02 — 인용 내용 정확, 단 페이지 번호 미확인
+
+세션 산출물:
+- 의견서·메모 검증 시 `tmp/factcheck_result-{session}.json` 형태의 구조화 결과를 남긴다.
+- `checked_claims[].citation`에는 `scripts.lib.citations`의 citation object를 그대로 포함한다.
+- `confidence=low` 인용은 PASS로 계산하지 않고 `needs_context`로 기록한다.
 
 ━━━ 권고 조치 ━━━
 

@@ -9,6 +9,7 @@ appendix to the python-docx document before save.
 from __future__ import annotations
 
 import json
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
@@ -38,42 +39,71 @@ _APPENDIX_NOTE = (
 _HEADERS = ["#", "클레임 (Claim)", "판정 (Verdict)", "Verifier", "근거 (Evidence)"]
 
 
+@dataclass
+class InjectionResult:
+    body_md: str
+    inserted_count: int = 0
+    invalid_span_count: int = 0
+    invalid_claim_ids: list[str] = field(default_factory=list)
+    invalid_span_reasons: list[dict[str, str]] = field(default_factory=list)
+
+
 def load_aggregated(path: str | Path) -> dict[str, Any]:
     """Load an aggregated citation-auditor JSON file."""
     return json.loads(Path(path).read_text(encoding="utf-8"))
 
 
-def inject_unverified_tags(body_md: str, aggregated: dict[str, Any]) -> str:
+def inject_unverified_tags(
+    body_md: str,
+    aggregated: dict[str, Any],
+    *,
+    return_result: bool = False,
+) -> str | InjectionResult:
     """Insert failing-verdict tags after claim sentence spans in markdown.
 
     Verified claims are left untouched. Spans are expected to be
     document-relative, as produced by `python -m citation_auditor aggregate`.
-    Invalid spans are skipped rather than guessed.
+    Invalid spans are counted rather than guessed.
     """
     insertions: list[tuple[int, str]] = []
-    for item in _verdict_items(aggregated):
+    result = InjectionResult(body_md=body_md)
+    for index, item in enumerate(_verdict_items(aggregated), start=1):
         verdict = item.get("verdict") or {}
         tag = _TAG_FOR_LABEL.get(str(verdict.get("label", "")))
         if tag is None:
             continue
         claim = verdict.get("claim") or item.get("claim") or {}
         span = claim.get("sentence_span") or {}
-        end = span.get("end")
-        if not isinstance(end, int) or end < 0 or end > len(body_md):
+        valid, reason = _valid_span(body_md, span, claim)
+        if not valid:
+            result.invalid_span_count += 1
+            claim_id = str(claim.get("id") or f"claim-{index}")
+            result.invalid_claim_ids.append(claim_id)
+            result.invalid_span_reasons.append({"claim_id": claim_id, "reason": reason or "invalid span"})
             continue
+        end = span.get("end")
         insertions.append((end, f" {tag}"))
 
     rendered = body_md
     for offset, tag in sorted(set(insertions), key=lambda value: value[0], reverse=True):
         rendered = rendered[:offset] + tag + rendered[offset:]
-    return rendered
+    result.body_md = rendered
+    result.inserted_count = len(set(insertions))
+    return result if return_result else rendered
 
 
-def append_citation_audit_log(doc: Any, aggregated: dict[str, Any]) -> None:
+def append_citation_audit_log(
+    doc: Any,
+    aggregated: dict[str, Any],
+    audit_status: dict[str, Any] | InjectionResult | None = None,
+) -> None:
     """Append a bilingual citation audit appendix to a python-docx Document."""
     doc.add_page_break()
     _add_heading(doc, _APPENDIX_HEADING)
     _add_small_paragraph(doc, _APPENDIX_NOTE)
+    status_summary = _format_status_summary(audit_status)
+    if status_summary:
+        _add_small_paragraph(doc, status_summary, color=RGBColor(0x80, 0x00, 0x00))
 
     items = _verdict_items(aggregated)
     if not items:
@@ -106,6 +136,40 @@ def append_citation_audit_log(doc: Any, aggregated: dict[str, Any]) -> None:
 def _verdict_items(aggregated: dict[str, Any]) -> list[dict[str, Any]]:
     items = aggregated.get("aggregated")
     return items if isinstance(items, list) else []
+
+
+def _valid_span(body_md: str, span: dict[str, Any], claim: dict[str, Any]) -> tuple[bool, str | None]:
+    start = span.get("start")
+    end = span.get("end")
+    if not isinstance(start, int) or not isinstance(end, int):
+        return False, "missing start/end"
+    if start < 0 or end < start or end > len(body_md):
+        return False, "span out of bounds"
+    claim_text = _normalize(str(claim.get("text", "")))
+    span_text = _normalize(body_md[start:end])
+    if claim_text and span_text and claim_text not in span_text and span_text not in claim_text:
+        return False, "span text mismatch"
+    return True, None
+
+
+def _format_status_summary(audit_status: dict[str, Any] | InjectionResult | None) -> str | None:
+    if audit_status is None:
+        return None
+    if isinstance(audit_status, InjectionResult):
+        if audit_status.invalid_span_count == 0:
+            return f"Citation audit status: complete; inserted tags: {audit_status.inserted_count}; invalid spans: 0."
+        return (
+            "Citation audit status: partial; "
+            f"inserted tags: {audit_status.inserted_count}; "
+            f"invalid spans: {audit_status.invalid_span_count}."
+        )
+    status = str(audit_status.get("status", "unknown"))
+    invalid = audit_status.get("invalid_span_count", 0)
+    inserted = audit_status.get("inserted_count")
+    parts = [f"Citation audit status: {status}", f"invalid spans: {invalid}"]
+    if inserted is not None:
+        parts.append(f"inserted tags: {inserted}")
+    return "; ".join(parts) + "."
 
 
 def _add_heading(doc: Any, text: str) -> None:
@@ -185,3 +249,7 @@ def _truncate(text: str, max_len: int) -> str:
     if len(collapsed) <= max_len:
         return collapsed
     return collapsed[: max_len - 1] + "…"
+
+
+def _normalize(text: str) -> str:
+    return " ".join(text.split())
