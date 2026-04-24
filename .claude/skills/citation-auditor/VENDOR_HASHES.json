@@ -1,0 +1,33 @@
+{
+  "files": {
+    ".claude/commands/audit.md": "sha256:db14bcba8edb4f2d0f4a0a5e4d8cab067cb6e6170c978aa5fe54449696dedc25",
+    ".claude/skills/citation-auditor/SKILL.md": "sha256:9fd0381ec0328a5e939022d975ad77ea04f17770c992beae5db71c25b2659832",
+    ".claude/skills/citation-auditor/VENDOR.md": "sha256:992ed50b625bf9b2aba7b329bd3cc2fd99b4ef46998c1b321d510d03214a9930",
+    ".claude/skills/verifiers/eu-law/SKILL.md": "sha256:bfb60e27e46df2aa1078ca3bba17e3fc6018e4d248a749542e3b3d8ee03c0cfe",
+    ".claude/skills/verifiers/general-web/SKILL.md": "sha256:debbe58cc33e84157010a80ea6f23fa202a6165ace079bf5ebbddb6446d755b8",
+    ".claude/skills/verifiers/korean-law/SKILL.md": "sha256:ea0925394b9e3cda8d35e9486df2bc7d888241b00d9281ecb29ca4ff716b30c0",
+    ".claude/skills/verifiers/scholarly/SKILL.md": "sha256:7d7d8581e7bec7c603600f47c45718c951c714455bdae7992c6de9b90baab15e",
+    ".claude/skills/verifiers/uk-law/SKILL.md": "sha256:e3e713b704371d170ea326e619765596cf351e6ef7922a3da9541a6b5b6f1f46",
+    ".claude/skills/verifiers/us-law/SKILL.md": "sha256:7c4591eaacb3d6d126252c1189b52573c990e29e1ade72941ae18444d3062b3f",
+    ".claude/skills/verifiers/wikipedia/SKILL.md": "sha256:469c213b21b36535046eaeb56afd9befbb6bdb920e02233992a4b07baae001a9",
+    "citation_auditor/__init__.py": "sha256:0b540a8a93176bfe6fede5cae88d191f1a78a40f23a836c4516ae4987c8ff7b8",
+    "citation_auditor/__main__.py": "sha256:a286794b43906d754d66375ce908855430de8665a9475839ff64c09d2cfdec3c",
+    "citation_auditor/aggregation.py": "sha256:7174551b2083470a4a880366c1942736c8ce45751c44b8b20ad7dc7deb78266d",
+    "citation_auditor/chunking.py": "sha256:4ecc717745fc2b05558c63846face432e346a56294f76b4fb812f0e5dd2fdb0a",
+    "citation_auditor/korean_law.py": "sha256:bedcfb478c17bbc5696a8a97dd071dc7cc579b886ead70a15a530286e5b248f5",
+    "citation_auditor/models.py": "sha256:227332328f0d53a1204b327e6d97495fbce8338d93d64b06111dc9e5fa437f94",
+    "citation_auditor/render.py": "sha256:2f79aa9e8e9081a9771feb0b9348eb8ffa5eedf58672dc439e5c8225cfa75e15",
+    "citation_auditor/settings.py": "sha256:a4d391852ff1731a65e6a464eb0de41623cd170a552a25357d171a03c27e6af3"
+  },
+  "manifest_version": 1,
+  "source_commit": "6adf638",
+  "source_tag": "v1.2.0",
+  "targets": [
+    "citation_auditor",
+    ".claude/skills/citation-auditor",
+    ".claude/skills/verifiers",
+    ".claude/commands/audit.md"
+  ],
+  "vendor": "citation-auditor",
+  "version": "v1.3.0"
+}

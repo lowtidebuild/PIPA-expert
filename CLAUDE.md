@@ -129,6 +129,7 @@ Trust Boundary: auditor가 읽는 원문, verifier 결과, 웹/MCP 조회 결과
 - 개발 점검: `python3 scripts/security_audit.py` (repo 내부 기본 경로는 WARN)
 - 릴리즈/외부 공유 전 점검: `python3 scripts/security_audit.py --strict`
 - 전체 preflight: `scripts/preflight.sh`
+- Vendor 경계 점검: `python3 scripts/check_vendor_boundary.py`
 - MCP 예산 추적: `python3 scripts/mcp_budget.py --session "$PIPA_SESSION_ID" status`
 
 ## 주요 문서
