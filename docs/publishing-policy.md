@@ -18,6 +18,12 @@ scripts/preflight.sh
 python3 scripts/security_audit.py --strict
 ```
 
+`scripts/preflight.sh` treats strict security audit failures as local
+development warnings. For an actual release or external share, strict security
+audit is release blocking. In other words, strict security audit is release
+blocking and must pass after private/output paths are moved outside the
+repository.
+
 ---
 
 # 게시 정책
@@ -39,3 +45,7 @@ https://github.com/lowtidebuild/PIPA-expert/releases
 scripts/preflight.sh
 python3 scripts/security_audit.py --strict
 ```
+
+`scripts/preflight.sh`는 strict 보안 점검 실패를 로컬 개발 warning으로 처리합니다.
+실제 릴리즈 또는 외부 공유 전에는 private/output 경로를 저장소 밖으로 옮긴 뒤
+strict 보안 점검이 반드시 통과해야 합니다.

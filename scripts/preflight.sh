@@ -18,13 +18,16 @@ run_warning() {
   "$@"
   code=$?
   if [ "$code" -ne 0 ]; then
-    printf 'warning check failed: %s\n' "$*" >&2
+    printf 'dev warning: %s failed in local preflight.\n' "$*" >&2
+    printf 'release blocking: fix this before publishing or external sharing.\n' >&2
   fi
 }
 
 run_required pytest -q
 run_required python3 -m pip check
 run_required python3 scripts/security_audit.py
+printf '\nNote: strict security audit is allowed to fail during local development when default private paths point inside the repo.\n'
+printf '      For release or external sharing, strict security audit must pass.\n'
 run_warning python3 scripts/security_audit.py --strict
 run_required python3 scripts/build_compact_index.py --check
 run_required python3 scripts/check_vendor_boundary.py

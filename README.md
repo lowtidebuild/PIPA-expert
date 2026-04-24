@@ -454,10 +454,16 @@ Use the current repository URL from your Git hosting page.
 
 ### Preflight
 
+Run the full preflight before pushing. The strict security audit is reported as
+a local development warning because default private/output paths may point
+inside the repo. Before publishing or external sharing, `python3
+scripts/security_audit.py --strict` must pass with private paths configured
+outside the repository.
+
 ```bash
+scripts/preflight.sh
 python3 scripts/security_audit.py        # dev-friendly WARN mode
 python3 scripts/security_audit.py --strict  # release/external sharing gate
-scripts/preflight.sh
 ```
 
 ### Refresh Law Data (Monthly)
