@@ -27,6 +27,7 @@ run_required python3 -m pip check
 run_required python3 scripts/security_audit.py
 run_warning python3 scripts/security_audit.py --strict
 run_required python3 scripts/build_compact_index.py --check
+run_required python3 scripts/check_vendor_boundary.py
 run_required python3 -c "import citation_auditor; import scripts.audit_document; import scripts.docx_citation_appendix; import scripts.lib.mcp_budget; print('imports ok')"
 
 printf '\n==> stale text scan\n'
