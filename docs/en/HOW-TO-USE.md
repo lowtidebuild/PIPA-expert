@@ -100,7 +100,7 @@ When you need a formal document — not just a chat answer — ask for a legal o
 > "제3자 제공 관련 법률의견서를 DOCX로 만들어줘"
 
 The agent will:
-1. Research across the full knowledge base (550 searchable statute files + 46 guidelines)
+1. Research across the full knowledge base (929 searchable statute files + 46 guidelines)
 2. Draft a structured opinion with verified citations
 3. Run the fact-checker to verify every legal reference
 4. Run citation audit for opinion/memo deliverables when applicable
