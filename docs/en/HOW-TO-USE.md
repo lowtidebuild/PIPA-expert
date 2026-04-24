@@ -103,7 +103,8 @@ The agent will:
 1. Research across the full knowledge base (550 searchable statute files + 46 guidelines)
 2. Draft a structured opinion with verified citations
 3. Run the fact-checker to verify every legal reference
-4. Generate a professional DOCX file saved to `${PIPA_OUTPUT_DIR:-output/opinions/}`
+4. Run citation audit for opinion/memo deliverables when applicable
+5. Generate a professional DOCX file saved to `${PIPA_OUTPUT_DIR:-output/opinions/}`
 
 If the issue turns on a branch article such as `제7조의2`, ask the agent to verify directly against `law.go.kr` as well. The current local statute index is still flattened at the base article-number level for some laws.
 
@@ -122,6 +123,10 @@ Every legal reference in the agent's output is tagged so you know how reliable i
 | `[UNVERIFIED]` | Found via web search, not in the local knowledge base | Verify independently before relying on it |
 | `[INSUFFICIENT]` | The agent couldn't find enough evidence | The agent is being honest — don't guess, consult a lawyer |
 | `[CONTRADICTED]` | Different sources say different things | Both sides are shown — you decide which applies |
+
+### Citation Audit Log
+
+For legal opinions and analysis memos, the final artifact may include a `Citation Audit Log` appendix. In Markdown, it appears as an appended table. In DOCX, the same audit result is inserted as a final appendix. `Contradicted` and `Unknown` items need human review before reliance.
 
 ### Source Grades
 

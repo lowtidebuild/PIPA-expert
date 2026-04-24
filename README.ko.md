@@ -2,6 +2,8 @@
 
 **[English](README.md)** · **[한국어](#pipa-expert-agent)**
 
+> 릴리즈 노트는 **[GitHub Releases](https://github.com/lowtidebuild/PIPA-expert/releases)**에 게시합니다.
+
 # PIPA Expert Agent
 
 ### KP Legal Orchestrator의 AI 개인정보보호 워크플로우 시스템
@@ -327,6 +329,17 @@ flowchart TD
 
 ---
 
+## Post-Hoc Citation Audit
+
+법률 의견서와 분석 메모에는 fact-checker 이후 한 번 더 citation audit을 실행할 수 있습니다:
+
+- `/audit <file.md>`는 기존 Markdown 파일을 감사하고 주석 처리된 Markdown을 반환합니다.
+- 의견서·메모 워크플로우에서는 초안 작성 후 조건부로 citation audit을 실행합니다.
+- Markdown 산출물에는 `Citation Audit Log` 부록을 추가합니다.
+- DOCX 산출물에는 `scripts/docx_citation_appendix.py`를 통해 같은 감사 로그를 부록 표로 추가합니다.
+
+---
+
 ## DOCX 법률 분석 메모 생성
 
 에이전트는 **전문 형식의 Word 문서**를 생성합니다:
@@ -336,8 +349,10 @@ flowchart TD
 - 색상 코딩된 리스크 매트릭스 테이블
 - 검증 상태 표시된 전체 인용 체계
 - Fact-check 리포트 첨부
+- 의견서·메모 산출물의 Citation Audit 부록
 - 서명란 및 면책 조항
 - AI 생성 고지
+- 법률 의견서·메모 작성 시 [`legal-writing-formatting-guide.md`](legal-writing-formatting-guide.md)의 문서 구조, 어조, 인용, 면책 문구 기준 적용
 
 ---
 
@@ -373,14 +388,14 @@ ${PIPA_INBOX_DIR:-library/inbox/}    ← 파일 드롭
 
 - [Claude Code](https://claude.ai/claude-code) CLI
 - Python 3.10+
-- `python-docx` (`pip install python-docx`)
+- Python 의존성 (`pip install -r requirements.txt`)
 
 ### 설치
 
 ```bash
 git clone <repository-url>
 cd PIPA-expert
-pip install python-docx
+pip install -r requirements.txt
 ```
 
 현재 저장소의 호스팅 페이지에서 실제 URL을 복사해 사용하면 됩니다.
