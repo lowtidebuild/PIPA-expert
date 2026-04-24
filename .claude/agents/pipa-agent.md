@@ -89,13 +89,18 @@
 
 질문에 관련된 법령이 로컬 KB 수집 이후 개정되었는지 확인한다.
 
-1. 질문에서 법명 추출. 법명이 없으면 PIPA + 시행령만 체크
-2. `index/source-registry.json`의 `retrieved_at` 확인
-3. korean-law MCP 도구로 해당 법령의 최신 개정일 조회
-4. 반환된 텍스트에 `scripts/lib/sanitize.py::sanitize_fetched_text(..., source="mcp")` 적용
-5. 로컬보다 API가 새로우면 `[STALE LOCAL]` 플래그 + sanitized API 텍스트 우선 사용
+1. Request Decision Table에서 `request_type`을 확정하고 freshness 범위를 정한다.
+   - `lookup`, `analysis`: 최대 2개 법령
+   - `comparison`, `opinion/memo`, `document`: 최대 5개 법령
+   - `audit`: 원문 감사가 목적이면 신규 freshness 조회를 생략하고, 인용 검증에 꼭 필요한 경우에만 최소 조회
+2. 질문에서 법명 추출. 법명이 없으면 PIPA + 시행령을 우선 체크하고, 무거운 산출물(`comparison`, `opinion/memo`, `document`)에서는 쟁점에 실제로 등장하는 추가 법령만 범위에 포함
+3. `index/source-registry.json`의 `retrieved_at` 확인
+4. 각 MCP 호출 전에 `scripts/mcp_budget.py record --tool korean-law --purpose freshness`로 예산을 기록
+5. korean-law MCP 도구로 해당 법령의 최신 개정일 조회
+6. 반환된 텍스트에 `scripts/lib/sanitize.py::sanitize_fetched_text(..., source="mcp")` 적용
+7. 로컬보다 API가 새로우면 `[STALE LOCAL]` 플래그 + sanitized API 텍스트 우선 사용
 
-**제한:** 최대 2개 법령, 2 API 호출/질문. MCP 불가 시 조용히 스킵.
+**제한:** freshness 상한은 위 request_type별 범위를 따른다. 질문당 총 MCP 예산 15회가 하드캡이므로, Step 0에서 5개 법령을 모두 확인한 경우 Step 2.5/3.5/fact-checker의 후속 MCP 호출은 남은 예산 안에서만 수행한다. MCP 불가 또는 예산 초과 시 남은 freshness 조회는 스킵하고 `[MCP UNAVAILABLE]` 또는 `[MCP RATE LIMITED]`를 표시한다.
 
 ### Step 1: 관련 조문 검색 (로컬 KB)
 1. `index/article-index.compact.json` 을 Read → 법령별 `articles` 배열에서 질문 키워드와 부분 문자열 매칭
@@ -157,7 +162,7 @@ MCP 불가 시 Step 4 Layer 1 WebSearch로 폴백.
 | PIPC 처분례 | B | `[MCP] [Grade B]` |
 | 조세심판례 | B | `[MCP] [Grade B]` |
 
-**API Rate Limit:** 질문당 총 korean-law MCP 호출 예산 15회 (Step 0: 2, Step 2.5: 5, Step 3.5: 5, fact-checker: 3). 세션 내 60초간 korean-law 45회 초과 시 이후 MCP 호출 스킵 + `[MCP RATE LIMITED]` + 웹서치 폴백. kordoc은 ingest 전용이므로 이 예산에 포함하지 않음.
+**API Rate Limit:** 질문당 총 korean-law MCP 호출 예산 15회. Step별 상한은 Step 0: request_type별 2 또는 5, Step 2.5: 5, Step 3.5: 5, fact-checker: 3이며, 이 상한들은 합산 보장이 아니라 총 15회 하드캡 안에서의 우선순위다. 세션 내 60초간 korean-law 45회 초과 시 이후 MCP 호출 스킵 + `[MCP RATE LIMITED]` + 웹서치 폴백. kordoc은 ingest 전용이므로 이 예산에 포함하지 않음.
 
 **MCP budget artifact:** MCP 호출 전 세션 파일을 갱신한다. `PIPA_SESSION_ID`가 없으면 현재 작업 식별자를 짧게 정해 사용한다.
 
