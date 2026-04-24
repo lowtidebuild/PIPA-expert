@@ -141,7 +141,7 @@ pipa-agent에서 답변/의견서 초안 완성 후:
 Agent(
   subagent_type="general-purpose",
   prompt="이 답변의 법령 인용을 fact-check 해줘. "
-         ".claude/agents/fact-checker/AGENT.md 를 읽고 "
+         ".claude/agents/fact-checker.md 를 읽고 "
          "검증 프로토콜에 따라 모든 인용을 KB 원본과 대조해줘.\n\n"
          "[답변 텍스트]"
 )

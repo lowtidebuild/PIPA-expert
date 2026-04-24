@@ -29,6 +29,7 @@ def test_shared_agent_protocol_is_referenced_by_execution_docs() -> None:
     paths = [
         "CLAUDE.md",
         ".claude/agents/pipa-agent.md",
+        ".claude/agents/fact-checker.md",
         ".claude/agents/fact-checker/AGENT.md",
         ".claude/skills/legal-opinion-formatter/SKILL.md",
         ".claude/skills/pipa-citation-audit/SKILL.md",
@@ -41,6 +42,20 @@ def test_shared_agent_protocol_is_referenced_by_execution_docs() -> None:
     assert "## Source Grade 체계" not in (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
     assert "### Source Grade 체계" not in (ROOT / ".claude/agents/pipa-agent.md").read_text(encoding="utf-8")
     assert "| Signal | request_type | Output |" not in (ROOT / ".claude/agents/pipa-agent.md").read_text(encoding="utf-8")
+
+
+def test_fact_checker_has_convention_entrypoint_and_canonical_protocol() -> None:
+    entrypoint = (ROOT / ".claude/agents/fact-checker.md").read_text(encoding="utf-8")
+    canonical = (ROOT / ".claude/agents/fact-checker/AGENT.md").read_text(encoding="utf-8")
+    pipa_agent = (ROOT / ".claude/agents/pipa-agent.md").read_text(encoding="utf-8")
+    claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+
+    assert ".claude/agents/<name>.md" in entrypoint
+    assert ".claude/agents/fact-checker/AGENT.md" in entrypoint
+    assert "Do not summarize from this wrapper alone" in entrypoint
+    assert ".claude/agents/fact-checker.md" in pipa_agent
+    assert ".claude/agents/fact-checker.md" in claude
+    assert "## 검증 항목" in canonical
 
 
 def test_release_notes_policy_uses_github_releases_only() -> None:

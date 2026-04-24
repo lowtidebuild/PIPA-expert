@@ -53,7 +53,7 @@ It is the canonical source for:
 ## Agents
 
 - **pipa-agent** — PIPA 전문 메인 에이전트 (`.claude/agents/pipa-agent.md`). `/agents/pipa-agent`로 호출.
-- **fact-checker** — 환각 검증 서브에이전트 (`.claude/agents/fact-checker/AGENT.md`). pipa-agent가 답변 생성 후 자동 호출. 모든 법령 인용을 KB 원본과 대조하여 PASS/WARN/FAIL 리포트 반환.
+- **fact-checker** — 환각 검증 서브에이전트 (`.claude/agents/fact-checker.md`, canonical protocol: `.claude/agents/fact-checker/AGENT.md`). pipa-agent가 답변 생성 후 자동 호출. 모든 법령 인용을 KB 원본과 대조하여 PASS/WARN/FAIL 리포트 반환.
 
 ## Skills
 
