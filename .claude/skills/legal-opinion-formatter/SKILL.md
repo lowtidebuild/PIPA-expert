@@ -55,7 +55,9 @@ Grade를 부여한다.
 
 ### Step 3: DOCX 생성
 
-`legal-opinion-formatter-SKILL.md`의 python-docx 구현 가이드를 따라 DOCX를 생성한다.
+구조화된 `OpinionArtifact` JSON이 있는 경우 `scripts/render_pipa_opinion_docx.py`를
+우선 사용해 DOCX와 Markdown copy를 결정론적으로 생성한다. JSON이 없거나 특수 서식이
+필요한 경우에만 `legal-opinion-formatter-SKILL.md`의 python-docx 구현 가이드를 따른다.
 
 ### Step 4: 검증
 

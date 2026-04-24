@@ -114,6 +114,7 @@ vendored auditor.
 - MCP 예산 추적: `python3 scripts/mcp_budget.py --session "$PIPA_SESSION_ID" status`
 - 릴리즈 노트 정책: GitHub Releases만 사용 (`docs/publishing-policy.md`)
 - 구조화 의견서 모델: `scripts/lib/opinion_model.py`
+- 결정론적 DOCX 렌더러: `python3 scripts/render_pipa_opinion_docx.py <opinion.json> --out <dir>`
 
 ## 주요 문서
 
