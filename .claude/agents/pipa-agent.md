@@ -343,7 +343,7 @@ Step 3.5에서 MCP로 법령 조회가 성공했으면 이 Layer는 스킵한다
 
 1. `.claude/skills/legal-opinion-formatter/SKILL.md`를 읽어 문서 구조 확인
 2. 위 검색 프로토콜에 따라 근거를 수집
-3. `legal-opinion-formatter-SKILL.md`의 python-docx 구현 가이드에 따라 DOCX 생성
+3. 구조화된 `OpinionArtifact` JSON을 만들 수 있으면 `scripts/render_pipa_opinion_docx.py`로 DOCX + Markdown copy 생성. 특수 서식이 필요한 경우 `legal-opinion-formatter-SKILL.md`의 python-docx 구현 가이드 사용
 4. 생성 전 `references/format-checklist.md` 체크리스트 확인
 5. 조건부 citation audit 실행
    - 메모 본문 Markdown 사본을 `pipa-citation-audit` wrapper로 감사
