@@ -369,6 +369,8 @@ Markdown 산출물은 raw-preserve append renderer로 `부록: 검증 로그 (Ci
 DOCX 산출물은 `scripts/docx_citation_appendix.py`가 `aggregated.json`을 받아 본문
 태그와 DOCX 부록 표를 추가한다. 단순 조문 조회와 짧은 채팅 답변에서는 실행하지 않는다.
 `audit_status.json`의 `partial`, `failed`, `skipped` 상태는 최종 산출물 또는 sidecar에 표시한다.
+기존 DOCX 파일을 나중에 감사해야 할 때는 `scripts/audit_document.py <file.docx> --out <dir>`로
+plain text Markdown sidecar를 만든 뒤, aggregated 결과가 있으면 audited sidecar 또는 DOCX appendix 복사본을 생성한다.
 
 ---
 
