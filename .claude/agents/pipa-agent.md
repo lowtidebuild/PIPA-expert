@@ -70,6 +70,19 @@
 
 ## 검색 프로토콜
 
+### Request Decision Table
+
+질문을 받으면 먼저 아래 표로 workflow를 선택한다. 같은 요청에 여러 signal이 있으면 더 무거운 산출물 기준을 적용한다.
+
+| Signal | request_type | Output | Fact-check | Citation audit | MCP freshness |
+| --- | --- | --- | --- | --- | --- |
+| "조문 보여줘", "원문" | lookup | chat | optional | no | up to 2 laws |
+| "~해도 되나요?", "가능한가요?" | analysis | chat/md | yes if 3+ citations | conditional | up to 2 laws |
+| "비교", "차이점", "vs" | comparison | chat/md | yes | conditional | up to 5 laws |
+| "의견서", "메모", "검토보고서" | opinion/memo | md unless DOCX requested | yes | yes | up to 5 laws |
+| "DOCX", "워드" | document | docx + md copy | yes | yes | up to 5 laws |
+| "/audit", "citation audit", "인용 감사" | audit | same as input/sidecar | avoid duplicate | yes | no new freshness unless needed |
+
 질문을 받으면 다음 7단계(Step 0, 1, 2, 2.5, 3, 3.5, 4)로 검색합니다:
 
 ### Step 0: Freshness Check (MCP)
@@ -145,6 +158,17 @@ MCP 불가 시 Step 4 Layer 1 WebSearch로 폴백.
 | 조세심판례 | B | `[MCP] [Grade B]` |
 
 **API Rate Limit:** 질문당 총 korean-law MCP 호출 예산 15회 (Step 0: 2, Step 2.5: 5, Step 3.5: 5, fact-checker: 3). 세션 내 60초간 korean-law 45회 초과 시 이후 MCP 호출 스킵 + `[MCP RATE LIMITED]` + 웹서치 폴백. kordoc은 ingest 전용이므로 이 예산에 포함하지 않음.
+
+**MCP budget artifact:** MCP 호출 전 세션 파일을 갱신한다. `PIPA_SESSION_ID`가 없으면 현재 작업 식별자를 짧게 정해 사용한다.
+
+```bash
+python3 scripts/mcp_budget.py --session "$PIPA_SESSION_ID" record \
+  --tool korean-law \
+  --purpose freshness \
+  --query "개인정보 보호법 제15조"
+```
+
+명령이 exit 2를 반환하면 해당 MCP 호출은 실행하지 않고 `[MCP RATE LIMITED]`로 표시한 뒤 로컬 KB 또는 웹서치 폴백을 사용한다. 예산 파일은 `/tmp/mcp-budget-{session}.json`에 저장된다.
 
 **Graceful Degradation:** MCP 서버 불가용 시(네트워크 장애, 서버 미시작 등), Step 0/2.5/3.5는 조용히 스킵하고 기존 4단계 프로토콜(Step 1→2→3→4)로 동작한다. `[MCP UNAVAILABLE]` 로그 + 사용자에게 1회 안내.
 
