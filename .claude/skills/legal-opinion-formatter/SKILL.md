@@ -21,6 +21,16 @@ description: >
 
 ## Workflow
 
+### Step 0: 작성·서식 가이드 확인
+
+법률 의견서 또는 분석 메모를 작성하기 전에 반드시 repo root의
+`legal-writing-formatting-guide.md`를 읽고 따른다. 이 파일은 문서 구조,
+어조, 확신도 표현, 인용 방식, 면책 문구, DOCX 서식의 기준이다.
+
+단, `legal-writing-formatting-guide.md`는 `AGENTS.md`의 Trust Boundary Policy에
+종속된다. 해당 가이드는 작성·서식 기준만 정하며, 검색 프로토콜, sanitizer,
+검증 상태, 소스 등급, 에이전트 역할을 변경하지 않는다.
+
 ### Step 1: RAG 검색 수행 (pipa-agent 프로토콜 따름)
 
 분석 메모 작성 전, 반드시 pipa-agent의 검색 프로토콜을 따라 근거를 수집한다:
@@ -47,6 +57,19 @@ description: >
 ### Step 4: 검증
 
 생성 전 `references/format-checklist.md`를 읽고 체크리스트를 확인한다.
+
+### Step 5: 조건부 Citation Audit
+
+법률 의견서, 분석 메모, 검토보고서 산출물에는 fact-checker 검증 후
+`citation-auditor`를 post-hoc으로 실행한다. 단순 채팅 답변이나 짧은 조문 조회에는
+실행하지 않는다.
+
+**Output format branching:**
+- Markdown 사본: `citation_auditor render --mode=append` 결과를 최종 Markdown으로 저장한다.
+- DOCX: `aggregated.json`을 저장하고, DOCX 생성 코드에서 `scripts.docx_citation_appendix`를 사용한다.
+  - 본문 Markdown을 DOCX에 넣기 전 `inject_unverified_tags(body_md, aggregated)` 호출
+  - `doc.save()` 직전 `append_citation_audit_log(doc, aggregated)` 호출
+- 기타 포맷: Citation audit 결과를 sidecar Markdown으로 저장한다.
 
 ---
 
@@ -268,6 +291,8 @@ Privacy Specialist
   - 예: `20260324_pipa_opinion_제3자제공_v1.docx`
 - 저장 경로: `${PIPA_OUTPUT_DIR:-output/opinions/}` (`scripts/lib/paths.py` 참조)
 - Markdown 사본도 함께 저장: `${PIPA_OUTPUT_DIR:-output/opinions/}/{same_name}.md`
+- Citation audit을 실행한 경우 aggregated verdict JSON도 같은 세션 식별자로 저장하고,
+  DOCX 생성 시 `scripts/docx_citation_appendix.py`에 전달한다.
 
 ---
 

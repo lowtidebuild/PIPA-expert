@@ -109,7 +109,8 @@ claude
 1. 전체 Knowledge Base 검색 (550개 검색 가능한 법조문 파일 + 46건 가이드라인)
 2. 검증된 인용이 포함된 구조화된 의견서 초안 작성
 3. 팩트체커로 모든 법적 인용 검증
-4. 전문적인 DOCX 파일을 `${PIPA_OUTPUT_DIR:-output/opinions/}`에 저장
+4. 의견서·메모 산출물에 대해 필요한 경우 citation audit 실행
+5. 전문적인 DOCX 파일을 `${PIPA_OUTPUT_DIR:-output/opinions/}`에 저장
 
 쟁점이 `제7조의2` 같은 가지조문에 걸려 있다면, 에이전트에게 `law.go.kr` 재검증까지 함께 요청하는 것이 좋습니다. 현재 로컬 법령 인덱스는 일부 법령에서 기본 조문 번호 기준으로 평탄화되어 있습니다.
 
@@ -128,6 +129,10 @@ claude
 | `[UNVERIFIED]` | 웹 검색으로 발견, 로컬 KB에 없음 | 의존 전 독립적으로 검증 필요 |
 | `[INSUFFICIENT]` | 에이전트가 충분한 근거를 찾지 못함 | 에이전트가 솔직한 것 — 추측 말고 변호사 상담 |
 | `[CONTRADICTED]` | 소스마다 다른 내용 | 양쪽 모두 제시됨 — 판단은 사용자 몫 |
+
+### Citation Audit Log
+
+법률 의견서와 분석 메모에는 최종 산출물 말미에 `Citation Audit Log` 부록이 포함될 수 있습니다. Markdown은 표 부록으로, DOCX는 마지막 부록 표로 들어갑니다. `Contradicted` 또는 `Unknown` 항목은 실제 활용 전 사람이 다시 확인해야 합니다.
 
 ### 소스 등급
 

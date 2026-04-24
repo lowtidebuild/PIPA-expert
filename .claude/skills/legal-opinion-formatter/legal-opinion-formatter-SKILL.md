@@ -25,6 +25,12 @@ from docx.oxml.ns import qn, nsdecls
 from docx.oxml import parse_xml
 import datetime
 import os
+
+from scripts.docx_citation_appendix import (
+    append_citation_audit_log,
+    inject_unverified_tags,
+    load_aggregated,
+)
 ```
 
 ---
@@ -341,6 +347,8 @@ def generate_pipa_opinion(
     author_info=None,
     confidential=True,
     output_dir=None,
+    body_markdown=None,
+    citation_audit_json=None,
 ):
     """PIPA 법률 분석 메모 DOCX 생성.
 
@@ -352,6 +360,9 @@ def generate_pipa_opinion(
         date_str = f"{today.year}년 {today.month}월 {today.day}일"
     if output_dir is None:
         output_dir = os.environ.get('PIPA_OUTPUT_DIR', 'output/opinions')
+    citation_audit = load_aggregated(citation_audit_json) if citation_audit_json else None
+    if citation_audit and body_markdown:
+        body_markdown = inject_unverified_tags(body_markdown, citation_audit)
 
     doc = Document()
     # ... (위 Page Setup, Heading styles 적용)
@@ -376,6 +387,8 @@ def generate_pipa_opinion(
     # ...
 
     # 이하 분석, 결론 등 sections dict 기반으로 동적 생성
+    # Citation audit이 있는 경우, 위에서 태그가 삽입된 body_markdown 또는
+    # body_markdown에서 파생한 sections를 DOCX 본문에 사용한다.
 
     # 출처 목록
     # ... (Grade A, Grade B, Web 순)
@@ -385,6 +398,10 @@ def generate_pipa_opinion(
 
     # 면책
     add_disclaimer(doc)
+
+    # Citation audit 부록: aggregated.json이 있는 경우에만 실행, 없으면 no-op
+    if citation_audit:
+        append_citation_audit_log(doc, citation_audit)
 
     # Save
     os.makedirs(output_dir, exist_ok=True)
@@ -410,7 +427,9 @@ def generate_pipa_opinion(
 1. RAG 검색으로 근거 수집 (pipa-agent 프로토콜)
 2. 수집 결과를 분석 메모 섹션별로 구조화
 3. 위 헬퍼 함수들을 조합하여 인라인 Python 스크립트 작성
-4. 스크립트 실행하여 DOCX 생성
-5. 생성된 파일 경로를 사용자에게 안내
+4. citation audit aggregated JSON이 있으면 `scripts.docx_citation_appendix`로
+   본문 태그와 DOCX 부록을 연결
+5. 스크립트 실행하여 DOCX 생성
+6. 생성된 파일 경로를 사용자에게 안내
 
 **주의:** 반드시 위 Compatibility Rules를 준수한다. 커스텀 스타일, 헤더/푸터 조작은 사용하지 않는다.
