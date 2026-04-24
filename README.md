@@ -9,7 +9,7 @@
 
 ### KP Legal Orchestrator's Korean Data Privacy Specialist
 
-**929 searchable statute files** · **46 official guidelines** · **30 landmark case law & interpretations** · **Professional-format DOCX analysis memos**
+**929 searchable statute files** · **46 official guidelines** · **30 landmark case law & interpretations** · **Structured DOCX/Markdown opinions with citation audit**
 
 Built for [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) · Powered by structured RAG · **[How to Use](docs/en/HOW-TO-USE.md)**
 
@@ -57,7 +57,7 @@ graph TB
             direction LR
             KB["<b>Structured Knowledge Base</b><br/>929 Statute Files · 46 Guidelines<br/>30 Case Law &amp; Interpretations"]
             WS["<b>Multi-Layer Web Search</b><br/>Law firm analyses · Academic · DPAs<br/>Cross-Reference Verification"]
-            DX["<b>DOCX Analysis Memo Generator</b><br/>Professional-format Documents<br/>Verified Citations"]
+            DX["<b>Structured Opinion &amp; DOCX Generator</b><br/>OpinionArtifact · Markdown copy<br/>Citation audit appendix"]
         end
 
         subgraph pipeline["Research Pipeline"]
@@ -79,7 +79,7 @@ graph TB
     end
 
     Q["❓ User Question"] --> S1
-    S4 --> O["📄 Verified Legal Analysis Memo"]
+    S4 --> O["📄 Structured Legal Opinion/Memo<br/>DOCX + Markdown copy + audit log"]
 
     style agent fill:#f8fafc,stroke:#1B2A4A,stroke-width:2px,color:#1B2A4A
     style core fill:#eef2ff,stroke:#4f46e5,stroke-width:1px
@@ -280,7 +280,7 @@ flowchart TD
         PA <--> PB
     end
 
-    O["📄 <b>Verified Legal Analysis Memo</b><br/>DOCX with citations &amp; risk matrix"]
+    O["📄 <b>Structured Legal Opinion/Memo</b><br/>DOCX + Markdown copy + audit log"]
 
     Q --> kb
     kb --> web
@@ -320,10 +320,10 @@ Before any output is finalized, a **dedicated fact-checker sub-agent** verifies 
 
 | Check | Method | On Fail |
 |-------|--------|---------|
-| Article exists | Glob for `art{N}.md` in KB | Downgrade to `[UNVERIFIED]` |
+| Article exists | Resolve law name + article with `scripts.lib.citations`; confirm `source_path` | Downgrade to `[UNVERIFIED]` or `[NEEDS LAW CONTEXT]` |
 | Quoted text matches source | Read file, substring match | Replace with correct text |
-| Article number is precise | Frontmatter `article` + `article_title` match | Correct the number |
-| Effective date is valid | Compare `effective_date` to today | Add `[미시행]` warning |
+| Article number is precise | Match citation object against frontmatter `article` + `article_title` | Correct the number |
+| Effective date is valid | Compare source frontmatter `effective_date` to today | Add `[미시행]` warning |
 | Guideline citation exists | Check `guideline-index.json` | Downgrade or remove |
 | Cross-reference is valid | Verify target file exists | Flag broken reference |
 | Web source is trusted | Match against trusted domain list | Downgrade Grade |
@@ -337,24 +337,25 @@ Before any output is finalized, a **dedicated fact-checker sub-agent** verifies 
 For legal opinions and analysis memos, the agent can run a second citation-audit pass after the fact-checker:
 
 - `/audit <file.md>` audits an existing Markdown file and returns annotated Markdown.
-- Opinion and memo workflows run citation audit conditionally after drafting.
-- Markdown outputs receive a `Citation Audit Log` appendix.
+- Opinion and memo workflows use the project-local `pipa-citation-audit` wrapper after drafting.
+- Claims already supported by the fact-checker can be skipped to avoid duplicate review.
+- Markdown outputs receive a raw-preserved `Citation Audit Log` appendix.
 - DOCX outputs receive the same audit log through `scripts/docx_citation_appendix.py`.
+- Partial, failed, or skipped audit states are disclosed in the final artifact or `audit_status.json`.
 
 ---
 
 ## DOCX Legal Analysis Memo Generator
 
-The agent produces **professional-format Word documents** with:
+The agent can produce **professional-format Word documents** and matching Markdown copies. When a structured `OpinionArtifact` JSON exists, `scripts/render_pipa_opinion_docx.py` is the default deterministic renderer.
 
-- KP Legal Orchestrator letterhead
-- Structured sections: Issues → Analysis → Conclusions → Recommendations
-- Risk matrix tables with color coding
-- Full citation trail with verification status
-- Fact-check report appended
+- Required sections for scope, executive summary, analysis, counter-analysis, recommendations, sources, verification guidance, and disclaimer
+- Full citation trail with source grade and verification status
+- AI disclosure and legal-advice disclaimer checked before delivery
+- Markdown copy for review, validation, and audit sidecars
 - Citation audit appendix for memo/opinion deliverables
-- Signature block and disclaimer
-- AI disclosure notice
+- Consistent DOCX styling, including CJK and Latin font handling
+- Optional specialized tuning through the legal-opinion-formatter skill
 
 ---
 
@@ -371,7 +372,8 @@ ${PIPA_INBOX_DIR:-library/inbox/}    ← drop files here
      │
      ▼ /ingest or "파일 넣었어"
      │
-     ├─ Auto-convert to Markdown (via MarkItDown)
+     ├─ Auto-convert to Markdown (MarkItDown for common formats; kordoc for HWP/HWPX)
+     ├─ Sanitize converted content and wrap it as untrusted data
      ├─ Auto-classify Grade (A/B/C based on content signals)
      ├─ Auto-generate frontmatter (keywords, citations, metadata)
      ├─ Place in library/grade-{a,b,c}/
@@ -410,25 +412,41 @@ PIPA-expert/
 │   ├── source-grades.json        # A/B/C/D grade definitions
 │   └── rag-config.json           # Search configuration
 ├── scripts/
+│   ├── audit_document.py        # Project-local citation audit wrapper
+│   ├── audit_status.py          # Audit status CLI helper
 │   ├── build_compact_index.py    # Compact index projection generator
+│   ├── check_vendor_boundary.py # Vendored citation-auditor drift guard
+│   ├── docx_citation_appendix.py # DOCX citation-audit adapter
 │   ├── fetch-pipa-from-api.py    # Open Law API collector
-│   ├── preprocess_guidelines.py  # PDF → Markdown pipeline
+│   ├── mcp_budget.py             # MCP usage budget CLI
+│   ├── preprocess_guidelines.py  # External source ingest pipeline
 │   ├── build-guideline-index.py  # Index generator
-│   └── docx_citation_appendix.py # DOCX citation-audit adapter
+│   ├── preflight.sh              # Local pre-push/release check
+│   ├── render_audit_append.py    # Raw-preserve Markdown audit appendix
+│   ├── render_pipa_opinion_docx.py # Deterministic DOCX + Markdown renderer
+│   ├── sanitize-check.py         # Standalone untrusted-content sanitizer check
+│   ├── security_audit.py         # Private-path safety check
+│   ├── validate_opinion_artifact.py # Markdown/DOCX delivery validator
+│   └── lib/                      # Shared citation, routing, budget, model, sanitizer helpers
 ├── citation_auditor/             # Markdown-native citation audit package
 ├── .claude/
 │   ├── commands/audit.md         # /audit markdown command
 │   ├── agents/pipa-agent.md      # Agent definition
+│   ├── agents/fact-checker.md    # Fact-checker entrypoint shim
 │   └── skills/
 │       ├── citation-auditor/     # Post-hoc citation audit skill
+│       ├── pipa-citation-audit/  # PIPA wrapper around the vendored auditor
 │       ├── verifiers/            # Jurisdiction/source verifier skills
 │       ├── legal-opinion-formatter/  # DOCX generation skill
 │       └── ingest/               # Source ingestion skill
+├── docs/
+│   ├── agent-protocol.md         # Shared workflow, verification, audit handoff rules
+│   └── publishing-policy.md      # GitHub Releases policy
 ├── ${PIPA_OUTPUT_DIR:-output/opinions/}  # Generated DOCX opinions
+├── AGENTS.md                     # Trust-boundary policy for all agents/skills
 ├── requirements.txt              # Runtime Python dependencies
 ├── legal-writing-formatting-guide.compact.md # Default opinion/memo drafting guide
-├── legal-writing-formatting-guide.md  # Full drafting style guide for detailed formatting
-└── docs/                         # Design specs
+└── legal-writing-formatting-guide.md  # Full drafting style guide for detailed formatting
 ```
 
 ---

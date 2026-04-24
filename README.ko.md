@@ -9,7 +9,7 @@
 
 ### KP Legal Orchestrator의 AI 개인정보보호 워크플로우 시스템
 
-**929개 검색 가능한 법조문 파일** · **46건 공식 가이드라인** · **30건 landmark 판례·해석례** · **전문 형식 DOCX 분석 메모**
+**929개 검색 가능한 법조문 파일** · **46건 공식 가이드라인** · **30건 landmark 판례·해석례** · **Citation audit가 붙는 구조화 DOCX/Markdown 의견서**
 
 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview) 전용 · 구조화된 RAG 기반 · **[사용 가이드](docs/ko/HOW-TO-USE.md)**
 
@@ -56,7 +56,7 @@ graph TB
             direction LR
             KB["<b>구조화된 Knowledge Base</b><br/>929개 법조문 · 46건 가이드라인<br/>30건 판례·해석례"]
             WS["<b>Multi-Layer 웹서치</b><br/>주요 로펌 해설 · 학술 · 해외 DPA<br/>교차검증"]
-            DX["<b>DOCX 분석 메모 생성</b><br/>전문 형식 문서<br/>검증된 인용 체계"]
+            DX["<b>구조화 의견서 &amp; DOCX 생성</b><br/>OpinionArtifact · Markdown 사본<br/>Citation audit 부록"]
         end
 
         subgraph pipeline["리서치 파이프라인"]
@@ -78,7 +78,7 @@ graph TB
     end
 
     Q["❓ 사용자 질문"] --> S1
-    S4 --> O["📄 검증된 법률 분석 메모"]
+    S4 --> O["📄 구조화 법률 의견서/메모<br/>DOCX + Markdown 사본 + 감사 로그"]
 
     style agent fill:#f8fafc,stroke:#1B2A4A,stroke-width:2px,color:#1B2A4A
     style core fill:#eef2ff,stroke:#4f46e5,stroke-width:1px
@@ -279,7 +279,7 @@ flowchart TD
         PA <--> PB
     end
 
-    O["📄 <b>검증된 법률 분석 메모</b><br/>DOCX · 인용 체계 · 리스크 매트릭스"]
+    O["📄 <b>구조화 법률 의견서/메모</b><br/>DOCX + Markdown 사본 + 감사 로그"]
 
     Q --> kb
     kb --> web
@@ -319,10 +319,10 @@ flowchart TD
 
 | 검증 항목 | 방법 | 실패 시 |
 |----------|------|--------|
-| 조문 존재 여부 | KB에서 `art{N}.md` Glob | `[UNVERIFIED]`로 다운그레이드 |
+| 조문 존재 여부 | `scripts.lib.citations`로 법령명 + 조문을 함께 해석하고 `source_path` 확인 | `[UNVERIFIED]` 또는 `[NEEDS LAW CONTEXT]`로 다운그레이드 |
 | 인용 원문 일치 | 파일 Read 후 대조 | 올바른 원문으로 교체 |
-| 조문 번호 정확성 | frontmatter 대조 | 번호 정정 |
-| 시행일 유효성 | `effective_date` 확인 | `[미시행]` 경고 추가 |
+| 조문 번호 정확성 | citation object와 frontmatter의 `article`, `article_title` 대조 | 번호 정정 |
+| 시행일 유효성 | source frontmatter의 `effective_date` 확인 | `[미시행]` 경고 추가 |
 | 가이드라인 인용 | `guideline-index.json` 대조 | 다운그레이드 또는 삭제 |
 | 교차참조 유효성 | 대상 파일 존재 확인 | 깨진 참조 표시 |
 | 웹소스 신뢰도 | 신뢰 도메인 목록 대조 | Grade 다운그레이드 |
@@ -336,24 +336,25 @@ flowchart TD
 법률 의견서와 분석 메모에는 fact-checker 이후 한 번 더 citation audit을 실행할 수 있습니다:
 
 - `/audit <file.md>`는 기존 Markdown 파일을 감사하고 주석 처리된 Markdown을 반환합니다.
-- 의견서·메모 워크플로우에서는 초안 작성 후 조건부로 citation audit을 실행합니다.
-- Markdown 산출물에는 `Citation Audit Log` 부록을 추가합니다.
+- 의견서·메모 워크플로우에서는 초안 작성 후 project-local `pipa-citation-audit` wrapper를 실행합니다.
+- fact-checker가 이미 `supported`로 확인한 한국 법령 claim은 중복 감사를 생략할 수 있습니다.
+- Markdown 산출물에는 원문 형식을 보존한 `Citation Audit Log` 부록을 추가합니다.
 - DOCX 산출물에는 `scripts/docx_citation_appendix.py`를 통해 같은 감사 로그를 부록 표로 추가합니다.
+- 감사가 일부 실패하거나 스킵된 경우 최종 산출물 또는 `audit_status.json`에 상태가 드러납니다.
 
 ---
 
 ## DOCX 법률 분석 메모 생성
 
-에이전트는 **전문 형식의 Word 문서**를 생성합니다:
+에이전트는 **전문 형식의 Word 문서**와 검토용 Markdown 사본을 함께 생성할 수 있습니다. 구조화된 `OpinionArtifact` JSON이 있으면 `scripts/render_pipa_opinion_docx.py`가 기본 결정론적 렌더러입니다.
 
-- KP Legal Orchestrator 레터헤드
-- 구조화된 섹션: 쟁점 → 분석 → 결론 → 권고
-- 색상 코딩된 리스크 매트릭스 테이블
-- 검증 상태 표시된 전체 인용 체계
-- Fact-check 리포트 첨부
+- 범위, 요약, 분석, 반대 검토, 권고, 출처, 검증 안내, 면책 문구를 포함하는 필수 섹션
+- source grade와 verification status가 표시된 전체 인용 체계
+- 산출 전 확인되는 AI 생성 고지와 법률 자문 아님 면책 문구
+- 리뷰, 검증, 감사 sidecar 처리를 위한 Markdown 사본
 - 의견서·메모 산출물의 Citation Audit 부록
-- 서명란 및 면책 조항
-- AI 생성 고지
+- 한글/영문 폰트를 일관되게 처리하는 DOCX 스타일링
+- 필요 시 legal-opinion-formatter skill을 통한 세부 서식 조정
 - 법률 의견서·메모 작성 시 기본적으로 [`legal-writing-formatting-guide.compact.md`](legal-writing-formatting-guide.compact.md)의 문서 구조, 어조, 인용, 면책 문구 기준 적용
 - 세부 서식 조정이나 professional DOCX tuning에는 [`legal-writing-formatting-guide.md`](legal-writing-formatting-guide.md) full guide 참조
 
@@ -372,7 +373,8 @@ ${PIPA_INBOX_DIR:-library/inbox/}    ← 파일 드롭
      │
      ▼ /ingest 또는 "파일 넣었어"
      │
-     ├─ Markdown 자동 변환 (MarkItDown)
+     ├─ Markdown 자동 변환 (일반 포맷은 MarkItDown, HWP/HWPX는 kordoc)
+     ├─ 변환 결과 sanitize 및 untrusted data 래핑
      ├─ Grade 자동 판별 (A/B/C — 내용 분석 기반)
      ├─ Frontmatter 자동 생성 (키워드, 인용, 메타데이터)
      ├─ library/grade-{a,b,c}/ 에 배치
@@ -380,6 +382,69 @@ ${PIPA_INBOX_DIR:-library/inbox/}    ← 파일 드롭
 ```
 
 > **참고:** 파일을 넣는 것만으로는 자동 처리되지 않습니다. `/ingest`를 실행하거나 agent에게 알려줘야(예: "inbox에 파일 넣었어") 파싱 파이프라인이 시작됩니다.
+
+---
+
+## 프로젝트 구조
+
+```
+PIPA-expert/
+├── library/
+│   ├── inbox/                    # 새 소스 파일 드롭존
+│   ├── grade-a/                  # 공식 1차 소스
+│   │   ├── pipa/                 # 개인정보 보호법 조문 파일 (126)
+│   │   ├── pipa-enforcement-decree/  # 시행령 조문 파일 (140)
+│   │   ├── network-act/          # 정보통신망법 조문 파일 (142)
+│   │   ├── pipc-guidelines/      # 공식 가이드라인 (46)
+│   │   └── ...                   # 기타 법령 세트 및 retired 소스
+│   ├── grade-b/                  # 판례·해석례 (30)
+│   │   ├── court-precedents/     # 대법원 판례 (10)
+│   │   ├── legal-interpretations/ # 법제처 해석례 (20)
+│   │   └── pipc-decisions/       # PIPC 처분례 (수집 보류)
+│   └── grade-c/                  # 로펌 해설, 학술 자료
+├── index/
+│   ├── article-index.compact.json # agent context용 경량 조문 projection
+│   ├── article-index.json        # 검색 가능한 법령 인덱스 (929 entries)
+│   ├── cross-reference-graph.json # 법령 간 참조 그래프
+│   ├── external-law-candidates.json # corpus 밖 법령 확장 후보
+│   ├── guideline-index.json      # 가이드라인 인덱스 (46 entries)
+│   └── source-registry.json      # 수집 상태 대시보드
+├── scripts/
+│   ├── audit_document.py         # project-local citation audit wrapper
+│   ├── audit_status.py           # audit status CLI helper
+│   ├── build_compact_index.py    # compact index projection 생성기
+│   ├── check_vendor_boundary.py  # vendored citation-auditor drift guard
+│   ├── docx_citation_appendix.py # DOCX citation-audit adapter
+│   ├── fetch-pipa-from-api.py    # Open Law API 수집기
+│   ├── mcp_budget.py             # MCP 사용 예산 CLI
+│   ├── preprocess_guidelines.py  # PDF/HWP 등 외부 문서 ingest pipeline
+│   ├── preflight.sh              # 로컬 push/release 전 점검
+│   ├── render_audit_append.py    # 원문 보존 Markdown audit 부록 renderer
+│   ├── render_pipa_opinion_docx.py # 결정론적 DOCX + Markdown renderer
+│   ├── sanitize-check.py         # untrusted content sanitizer standalone 점검
+│   ├── security_audit.py         # private path 안전 점검
+│   ├── validate_opinion_artifact.py # Markdown/DOCX 산출물 validator
+│   └── lib/                      # citation, routing, budget, model, sanitizer 공통 helper
+├── citation_auditor/             # Markdown-native citation audit package
+├── .claude/
+│   ├── commands/audit.md         # /audit Markdown command
+│   ├── agents/pipa-agent.md      # PIPA agent 정의
+│   ├── agents/fact-checker.md    # fact-checker entrypoint shim
+│   └── skills/
+│       ├── citation-auditor/     # vendored post-hoc citation audit skill
+│       ├── pipa-citation-audit/  # PIPA wrapper around the vendored auditor
+│       ├── verifiers/            # 관할/출처별 verifier skill
+│       ├── legal-opinion-formatter/  # DOCX 생성 skill
+│       └── ingest/               # 소스 ingest skill
+├── docs/
+│   ├── agent-protocol.md         # 공통 workflow, 검증, audit handoff 규칙
+│   └── publishing-policy.md      # GitHub Releases 정책
+├── ${PIPA_OUTPUT_DIR:-output/opinions/}  # 생성된 DOCX 의견서
+├── AGENTS.md                     # 모든 agent/skill의 trust-boundary 정책
+├── requirements.txt              # Python 런타임 의존성
+├── legal-writing-formatting-guide.compact.md # 기본 의견서/메모 작성 가이드
+└── legal-writing-formatting-guide.md  # 상세 서식 조정용 full guide
+```
 
 ---
 
