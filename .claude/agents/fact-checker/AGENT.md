@@ -119,6 +119,8 @@ PIPC 가이드라인 인용이 실재하는지 확인한다.
 - 의견서·메모 검증 시 `tmp/factcheck_result-{session}.json` 형태의 구조화 결과를 남긴다.
 - `checked_claims[].citation`에는 `scripts.lib.citations`의 citation object를 그대로 포함한다.
 - `confidence=low` 인용은 PASS로 계산하지 않고 `needs_context`로 기록한다.
+- `checked_claims[].result` 값은 `supported`, `unsupported`, `needs_context` 중 하나를 사용한다.
+- pipa-citation-audit wrapper는 이 sidecar를 읽어 이미 `supported`인 법령 claim의 중복 감사를 생략한다.
 
 ━━━ 권고 조치 ━━━
 

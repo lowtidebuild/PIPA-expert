@@ -3,12 +3,17 @@
 from __future__ import annotations
 
 import argparse
-import json
 import re
 import sys
 from collections.abc import Iterable
 from pathlib import Path
 from typing import Any
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from scripts.lib.audit_status import derive_status, load_json, write_json
 
 
 TAG_FOR_LABEL = {
@@ -23,7 +28,7 @@ APPENDIX_HEADING = "## 부록: 검증 로그 (Citation Audit Log)"
 
 
 def load_aggregated(path: str | Path) -> dict[str, Any]:
-    return json.loads(Path(path).read_text(encoding="utf-8"))
+    return load_json(path)
 
 
 def render_audit_append(
@@ -72,7 +77,7 @@ def render_audit_append(
         rendered = rendered[:offset] + f" {tag}" + rendered[offset:]
 
     status["inserted_count"] = len(insertions)
-    status["status"] = _derive_status(status)
+    status["status"] = derive_status(status)
     rendered = rendered.rstrip() + "\n\n" + _audit_log_table(aggregated, status)
     return rendered, status
 
@@ -91,20 +96,6 @@ def _initial_status(aggregated: dict[str, Any], base_status: dict[str, Any] | No
     status["skipped_claim_ids"] = []
     status["inserted_count"] = 0
     return status
-
-
-def _derive_status(status: dict[str, Any]) -> str:
-    if status["claim_count_expected"] == 0:
-        return "skipped"
-    if status["claim_count_extracted"] == 0:
-        return "failed"
-    if (
-        status["invalid_span_count"] > 0
-        or status["skipped_claim_ids"]
-        or status["claim_count_extracted"] < status["claim_count_expected"]
-    ):
-        return "partial"
-    return "complete"
 
 
 def _increment_label_count(status: dict[str, Any], label: str) -> None:
@@ -277,7 +268,7 @@ def main(argv: list[str] | None = None) -> int:
     aggregated_path = Path(args.aggregated_json)
     md_text = input_path.read_text(encoding="utf-8")
     aggregated = load_aggregated(aggregated_path)
-    base_status = load_aggregated(args.status) if args.status and Path(args.status).exists() else None
+    base_status = load_json(args.status) if args.status and Path(args.status).exists() else None
     rendered, status = render_audit_append(md_text, aggregated, base_status=base_status)
 
     if args.output:
@@ -285,7 +276,7 @@ def main(argv: list[str] | None = None) -> int:
     else:
         sys.stdout.write(rendered)
     if args.status:
-        Path(args.status).write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        write_json(args.status, status)
     return 0
 
 

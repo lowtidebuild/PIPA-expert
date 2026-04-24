@@ -324,7 +324,9 @@ Step 3.5에서 MCP로 법령 조회가 성공했으면 이 Layer는 스킵한다
 4. 생성 전 `references/format-checklist.md` 체크리스트 확인
 5. 조건부 citation audit 실행
    - 메모 본문 Markdown 사본을 `pipa-citation-audit` wrapper로 감사
+   - fact-checker 결과는 `tmp/factcheck_result-{session}.json`으로 보존하여 중복 법령 검증을 줄임
    - `aggregated.json`을 보존하여 DOCX 어댑터에 전달
+   - `scripts/audit_status.py` 또는 wrapper가 `audit_status.json`을 생성
    - 본문 embed 전 `scripts.docx_citation_appendix.inject_unverified_tags()` 적용
    - `doc.save()` 직전 `scripts.docx_citation_appendix.append_citation_audit_log()` 적용
 6. `${PIPA_OUTPUT_DIR:-output/opinions/}` 디렉토리에 저장 (`scripts/lib/paths.py` 참조)
@@ -342,6 +344,7 @@ handoff가 필요하면 `.claude/skills/pipa-citation-audit/SKILL.md` wrapper를
 Markdown 산출물은 raw-preserve append renderer로 `부록: 검증 로그 (Citation Audit Log)`를 붙이고,
 DOCX 산출물은 `scripts/docx_citation_appendix.py`가 `aggregated.json`을 받아 본문
 태그와 DOCX 부록 표를 추가한다. 단순 조문 조회와 짧은 채팅 답변에서는 실행하지 않는다.
+`audit_status.json`의 `partial`, `failed`, `skipped` 상태는 최종 산출물 또는 sidecar에 표시한다.
 
 ---
 
