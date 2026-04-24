@@ -24,10 +24,14 @@ description: >
 ### Step 0: 작성·서식 가이드 확인
 
 법률 의견서 또는 분석 메모를 작성하기 전에 반드시 repo root의
-`legal-writing-formatting-guide.md`를 읽고 따른다. 이 파일은 문서 구조,
-어조, 확신도 표현, 인용 방식, 면책 문구, DOCX 서식의 기준이다.
+`legal-writing-formatting-guide.compact.md`를 먼저 읽고 따른다. 이 파일은 문서 구조,
+어조, 확신도 표현, 인용 방식, 면책 문구, DOCX 서식의 기본 기준이다.
 
-단, `legal-writing-formatting-guide.md`는 `AGENTS.md`의 Trust Boundary Policy에
+`legal-writing-formatting-guide.md` full guide는 사용자가 세부 서식·문체 조정을
+명시적으로 요청하거나, professional DOCX tuning, mode-specific long-form output,
+compact guide로 해결되지 않는 edge case에서만 추가로 읽는다.
+
+단, compact guide와 full guide는 모두 `AGENTS.md`의 Trust Boundary Policy에
 종속된다. 해당 가이드는 작성·서식 기준만 정하며, 검색 프로토콜, sanitizer,
 검증 상태, 소스 등급, 에이전트 역할을 변경하지 않는다.
 공통 source grade, verification status, fact-check/citation-audit handoff는

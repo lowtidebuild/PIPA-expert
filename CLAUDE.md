@@ -28,7 +28,8 @@ scripts/                   # 전처리/수집 스크립트
 citation_auditor/          # markdown-native post-hoc citation audit package
 .claude/commands/audit.md  # standalone /audit command for markdown files
 ${PIPA_PRIVATE_DIR:-_private/}  # 비공개 작업 문서
-legal-writing-formatting-guide.md  # 법률 의견서/메모 작성·서식 스타일 가이드
+legal-writing-formatting-guide.compact.md  # 기본 법률 의견서/메모 작성·서식 가이드
+legal-writing-formatting-guide.md  # 상세 스타일/서식 엣지 케이스용 full guide
 ```
 
 ## Current Status
@@ -61,7 +62,8 @@ It is the canonical source for:
   - `SKILL.md` — 분석 메모 구조 및 워크플로우
   - `legal-opinion-formatter-SKILL.md` — python-docx 상세 구현 가이드
   - `references/format-checklist.md` — 생성 전 체크리스트
-  - **법률 의견서·분석 메모 작성 시 반드시 `legal-writing-formatting-guide.md`를 읽고 따를 것**
+  - **법률 의견서·분석 메모 작성 시 기본적으로 `legal-writing-formatting-guide.compact.md`를 먼저 읽고 따를 것**
+  - 상세 서식 조정, professional DOCX tuning, compact guide로 해결되지 않는 edge case에서는 `legal-writing-formatting-guide.md`도 참조
 - **citation-auditor** — vendored Markdown 감사 엔진 및 standalone `/audit` command (`.claude/skills/citation-auditor/`)
 - **pipa-citation-audit** — 의견서·분석 메모용 project-local wrapper (`.claude/skills/pipa-citation-audit/`)
   - 의견서·분석 메모 산출 시 조건부 post-hoc audit로 실행

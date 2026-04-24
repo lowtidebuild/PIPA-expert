@@ -57,3 +57,16 @@ def test_release_notes_policy_uses_github_releases_only() -> None:
     assert "https://github.com/lowtidebuild/PIPA-expert/releases" in readme_ko
     assert "docs/releases/v1.0.0.md" not in readme
     assert "docs/releases/v1.0.0.md" not in readme_ko
+
+
+def test_compact_legal_writing_guide_is_default_reference() -> None:
+    compact = ROOT / "legal-writing-formatting-guide.compact.md"
+    full = ROOT / "legal-writing-formatting-guide.md"
+    assert compact.exists()
+    assert compact.stat().st_size < full.stat().st_size
+
+    claude = (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
+    formatter = (ROOT / ".claude/skills/legal-opinion-formatter/SKILL.md").read_text(encoding="utf-8")
+    assert "legal-writing-formatting-guide.compact.md" in claude
+    assert "legal-writing-formatting-guide.compact.md" in formatter
+    assert "professional DOCX tuning" in formatter

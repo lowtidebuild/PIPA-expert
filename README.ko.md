@@ -354,7 +354,8 @@ flowchart TD
 - 의견서·메모 산출물의 Citation Audit 부록
 - 서명란 및 면책 조항
 - AI 생성 고지
-- 법률 의견서·메모 작성 시 [`legal-writing-formatting-guide.md`](legal-writing-formatting-guide.md)의 문서 구조, 어조, 인용, 면책 문구 기준 적용
+- 법률 의견서·메모 작성 시 기본적으로 [`legal-writing-formatting-guide.compact.md`](legal-writing-formatting-guide.compact.md)의 문서 구조, 어조, 인용, 면책 문구 기준 적용
+- 세부 서식 조정이나 professional DOCX tuning에는 [`legal-writing-formatting-guide.md`](legal-writing-formatting-guide.md) full guide 참조
 
 ---
 
