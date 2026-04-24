@@ -41,3 +41,19 @@ def test_shared_agent_protocol_is_referenced_by_execution_docs() -> None:
     assert "## Source Grade 체계" not in (ROOT / "CLAUDE.md").read_text(encoding="utf-8")
     assert "### Source Grade 체계" not in (ROOT / ".claude/agents/pipa-agent.md").read_text(encoding="utf-8")
     assert "| Signal | request_type | Output |" not in (ROOT / ".claude/agents/pipa-agent.md").read_text(encoding="utf-8")
+
+
+def test_release_notes_policy_uses_github_releases_only() -> None:
+    gitignore = (ROOT / ".gitignore").read_text(encoding="utf-8")
+    policy = (ROOT / "docs/publishing-policy.md").read_text(encoding="utf-8")
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    readme_ko = (ROOT / "README.ko.md").read_text(encoding="utf-8")
+
+    assert "docs/releases/" in gitignore
+    assert "docs/RELEASE-*.md" in gitignore
+    assert "GitHub Releases" in policy
+    assert "docs/releases/**" in policy
+    assert "https://github.com/lowtidebuild/PIPA-expert/releases" in readme
+    assert "https://github.com/lowtidebuild/PIPA-expert/releases" in readme_ko
+    assert "docs/releases/v1.0.0.md" not in readme
+    assert "docs/releases/v1.0.0.md" not in readme_ko

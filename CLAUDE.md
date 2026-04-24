@@ -110,10 +110,12 @@ vendored auditor.
 - 전체 preflight: `scripts/preflight.sh`
 - Vendor 경계 점검: `python3 scripts/check_vendor_boundary.py`
 - MCP 예산 추적: `python3 scripts/mcp_budget.py --session "$PIPA_SESSION_ID" status`
+- 릴리즈 노트 정책: GitHub Releases만 사용 (`docs/publishing-policy.md`)
 
 ## 주요 문서
 
 - `docs/agent-protocol.md` — 공통 workflow, source grade, 검증, audit handoff 규칙
+- `docs/publishing-policy.md` — GitHub Releases 기반 릴리즈 노트 정책
 - `${PIPA_PRIVATE_DIR:-_private/}/DESIGN.md` — RAG 시스템 전체 설계
 - `${PIPA_PRIVATE_DIR:-_private/}/PROGRESS.md` — 작업 기록 및 진행 상황
 - `${PIPA_PRIVATE_DIR:-_private/}/specs/2026-03-24-pipa-agent-system-design.md` — Agent 시스템 스펙

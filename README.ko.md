@@ -3,6 +3,7 @@
 **[English](README.md)** · **[한국어](#pipa-expert-agent)**
 
 > 릴리즈 노트는 **[GitHub Releases](https://github.com/lowtidebuild/PIPA-expert/releases)**에 게시합니다.
+> [게시 정책](docs/publishing-policy.md)을 참고하세요.
 
 # PIPA Expert Agent
 
