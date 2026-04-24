@@ -256,7 +256,7 @@ flowchart TD
 
     subgraph kb["Step 1–3: Knowledge Base Search"]
         direction TB
-        S1["📚 <b>Article Search</b><br/><code>article-index.json</code> → relevant statutes"]
+            S1["📚 <b>Article Search</b><br/><code>article-index.compact.json</code> → relevant statutes"]
         S2["📖 <b>Guideline Search</b><br/><code>guideline-index.json</code> → PIPC guidance"]
         S3["🔗 <b>Cross-Reference Tracking</b><br/><code>cross-reference-graph.json</code> → delegated provisions"]
         S1 --> S2 --> S3
@@ -398,6 +398,7 @@ PIPA-expert/
 │   │   └── pipc-decisions/       #   PIPC dispositions (pending)
 │   └── grade-c/                  # Law firm analysis, academic papers
 ├── index/
+│   ├── article-index.compact.json # Compact article projection for agent context
 │   ├── article-index.json        # Searchable statute index (929 entries)
 │   ├── cross-reference-graph.json # Cross-law reference graph (1,309 edges)
 │   ├── external-law-candidates.json # Out-of-corpus law expansion queue (154 candidates)
@@ -407,6 +408,7 @@ PIPA-expert/
 │   ├── source-grades.json        # A/B/C/D grade definitions
 │   └── rag-config.json           # Search configuration
 ├── scripts/
+│   ├── build_compact_index.py    # Compact index projection generator
 │   ├── fetch-pipa-from-api.py    # Open Law API collector
 │   ├── preprocess_guidelines.py  # PDF → Markdown pipeline
 │   ├── build-guideline-index.py  # Index generator
@@ -447,6 +449,14 @@ pip install -r requirements.txt
 ```
 
 Use the current repository URL from your Git hosting page.
+
+### Preflight
+
+```bash
+python3 scripts/security_audit.py        # dev-friendly WARN mode
+python3 scripts/security_audit.py --strict  # release/external sharing gate
+scripts/preflight.sh
+```
 
 ### Refresh Law Data (Monthly)
 

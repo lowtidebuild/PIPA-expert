@@ -85,11 +85,13 @@
 **제한:** 최대 2개 법령, 2 API 호출/질문. MCP 불가 시 조용히 스킵.
 
 ### Step 1: 관련 조문 검색 (로컬 KB)
-1. `index/article-index.json` 을 Read → keywords 배열에서 질문 키워드와 부분 문자열 매칭
+1. `index/article-index.compact.json` 을 Read → 법령별 `articles` 배열에서 질문 키워드와 부분 문자열 매칭
+   - compact 구조: `laws[].prefix + laws[].articles[][2]`가 실제 조문 파일 path
    - 한국어 형태소 한계: 어간 수준 매칭 (예: "수집하는" → "수집")
 2. 매칭된 조문의 path로 .md 파일 목록 확보 (상위 5개)
-3. 키워드 매칭이 부족하면 Grep으로 `library/` 전체에서 본문 검색
-4. 질문이 `제N조의M` 형태의 가지조문이면 해당 법령의 `_hierarchy.json`을 먼저 확인하고, 로컬 파일이 기본 조문 번호로 평탄화된 경우 MCP 또는 `law.go.kr`로 재검증
+3. 키워드 매칭이 부족하거나 metadata 전체가 필요하면 `index/article-index.json`을 fallback으로 Read
+4. 그래도 부족하면 Grep으로 `library/` 전체에서 본문 검색
+5. 질문이 `제N조의M` 형태의 가지조문이면 해당 법령의 `_hierarchy.json`을 먼저 확인하고, 로컬 파일이 기본 조문 번호로 평탄화된 경우 MCP 또는 `law.go.kr`로 재검증
 
 ### Step 2: 관련 가이드라인 검색 (로컬 KB)
 1. `index/guideline-index.json` 을 Read → keywords/topics 배열에서 매칭

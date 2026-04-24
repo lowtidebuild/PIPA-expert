@@ -35,7 +35,7 @@ description: >
 
 분석 메모 작성 전, 반드시 pipa-agent의 검색 프로토콜을 따라 근거를 수집한다:
 
-1. `index/article-index.json` → 관련 조문 검색
+1. `index/article-index.compact.json` → 관련 조문 후보 검색 (`article-index.json`은 fallback)
 2. `index/guideline-index.json` → 관련 가이드라인 검색
 3. 교차참조 추적 (`cross-reference-graph.json`)
 4. KB에 없으면 웹서치 폴백

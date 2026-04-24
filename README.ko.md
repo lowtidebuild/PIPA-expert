@@ -255,7 +255,7 @@ flowchart TD
 
     subgraph kb["Step 1–3: Knowledge Base 검색"]
         direction TB
-        S1["📚 <b>조문 검색</b><br/><code>article-index.json</code> → 관련 법조문"]
+        S1["📚 <b>조문 검색</b><br/><code>article-index.compact.json</code> → 관련 법조문"]
         S2["📖 <b>가이드라인 검색</b><br/><code>guideline-index.json</code> → PIPC 해설"]
         S3["🔗 <b>교차참조 추적</b><br/><code>cross-reference-graph.json</code> → 위임 조문"]
         S1 --> S2 --> S3
@@ -399,6 +399,14 @@ pip install -r requirements.txt
 ```
 
 현재 저장소의 호스팅 페이지에서 실제 URL을 복사해 사용하면 됩니다.
+
+### Preflight 점검
+
+```bash
+python3 scripts/security_audit.py           # 개발용 WARN 모드
+python3 scripts/security_audit.py --strict  # 릴리즈/외부 공유 전 게이트
+scripts/preflight.sh
+```
 
 ### 법령 데이터 갱신 (월 1회)
 
