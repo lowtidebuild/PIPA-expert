@@ -521,18 +521,25 @@ claude   # Claude Code 실행
 
 ## KP Legal Orchestrator
 
-PIPA Expert는 **KP Legal Orchestrator** 소속 전문 법률 워크플로우 에이전트 시리즈 중 하나입니다:
+PIPA Expert는 **KP Legal Orchestrator** 소속 전문 법률 워크플로우 에이전트 시리즈 중 하나입니다.
+
+> [!NOTE]
+> 2026년 5월 8일자로 두 차례 통합:
+> - PIPA-expert + GDPR-expert + California → **`data-protection-agent`** (이 레포는 superseded)
+> - general-legal-research + game-legal-research → **`legal-research-agent`**
 
 | 에이전트 | 역할 | 전문 분야 |
 |---------|------|----------|
-| `game-legal-research` | 게임 산업 리서치 스페셜리스트 | 게임 산업법 |
-| `legal-translation-agent` | 법률 번역 스페셜리스트 | 법률 번역 |
-| `general-legal-research` | 일반 법률 리서치 스페셜리스트 | 법률 리서치 |
-| **PIPA-expert** | **개인정보 스페셜리스트** | **개인정보보호법** |
-| `GDPR-expert` | EU 데이터보호 스페셜리스트 | EU 데이터보호법 |
-| `contract-review-agent` | 계약 검토 스페셜리스트 | 계약서 검토 |
-| `legal-writing-agent` | 법률 드래프팅 스페셜리스트 | 법률 문서 작성 |
-| `second-review-agent` | 시니어 리뷰 스페셜리스트 | 품질 리뷰 |
+| **[data-protection-agent](https://github.com/lowtidebuild/data-protection-agent)** | **통합 개인정보 스페셜리스트** *(이 레포의 후신)* | **한국 PIPA · EU GDPR · 캘리포니아 CCPA** |
+| [legal-research-agent](https://github.com/lowtidebuild/legal-research-agent) | 일반 + 게임 법률 리서치 스페셜리스트 | 범용 법률 조사 및 게임 산업 규제 |
+| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | 법률 번역 스페셜리스트 | 법률 번역 |
+| [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | 계약 검토 스페셜리스트 | 계약서 검토 |
+| [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | 법률 드래프팅 스페셜리스트 | 법률 문서 작성 |
+| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | 시니어 리뷰 스페셜리스트 | 품질 리뷰 |
+| ~~PIPA-expert~~ | ~~개인정보 스페셜리스트~~ | *`data-protection-agent` 로 통합 (이 레포)* |
+| ~~GDPR-expert~~ | ~~EU 데이터보호 스페셜리스트~~ | *`data-protection-agent` 로 통합* |
+| ~~general-legal-research~~ | ~~일반 법률 리서치 스페셜리스트~~ | *`legal-research-agent` 로 통합* |
+| ~~game-legal-research~~ | ~~게임 산업 리서치 스페셜리스트~~ | *`legal-research-agent` 로 통합* |
 
 ---
 

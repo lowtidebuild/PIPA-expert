@@ -525,18 +525,25 @@ Then use `/agents/pipa-agent` to activate the privacy specialist persona.
 
 ## Part of KP Legal Orchestrator
 
-PIPA Expert is one of several specialized legal workflow agents operating under **KP Legal Orchestrator**:
+PIPA Expert is one of several specialized legal workflow agents operating under **KP Legal Orchestrator**.
+
+> [!NOTE]
+> Two consolidations as of 2026-05-08:
+> - PIPA-expert + GDPR-expert + California → **`data-protection-agent`** (this repo is now superseded)
+> - general-legal-research + game-legal-research → **`legal-research-agent`**
 
 | Agent | Role | Focus |
 |-------|------|-------|
-| `game-legal-research` | Game Industry Research Specialist | Game industry law |
-| `legal-translation-agent` | Legal Translation Specialist | Legal translation |
-| `general-legal-research` | General Legal Research Specialist | Legal research |
-| **PIPA-expert** | **Privacy Specialist** | **Data privacy law** |
-| `GDPR-expert` | EU Data Protection Specialist | EU data protection law |
-| `contract-review-agent` | Contract Review Specialist | Contract review |
-| `legal-writing-agent` | Legal Drafting Specialist | Legal writing |
-| `second-review-agent` | Senior Review Specialist | Quality review |
+| **[data-protection-agent](https://github.com/lowtidebuild/data-protection-agent)** | **Unified Privacy Specialist** *(supersedes this repo)* | **Korea PIPA · EU GDPR · California CCPA** |
+| [legal-research-agent](https://github.com/lowtidebuild/legal-research-agent) | General + Game Legal Research Specialist | Broad legal research and game-industry regulation |
+| [legal-translation-agent](https://github.com/lowtidebuild/legal-translation-agent) | Legal Translation Specialist | Legal translation |
+| [contract-review-agent](https://github.com/lowtidebuild/contract-review-agent) | Contract Review Specialist | Contract review |
+| [legal-writing-agent](https://github.com/lowtidebuild/legal-writing-agent) | Legal Drafting Specialist | Legal writing |
+| [second-review-agent](https://github.com/lowtidebuild/second-review-agent) | Senior Review Specialist | Quality review |
+| ~~PIPA-expert~~ | ~~Privacy Specialist~~ | *Superseded by `data-protection-agent` (this repo)* |
+| ~~GDPR-expert~~ | ~~EU Data Protection Specialist~~ | *Superseded by `data-protection-agent`* |
+| ~~general-legal-research~~ | ~~General Legal Research Specialist~~ | *Superseded by `legal-research-agent`* |
+| ~~game-legal-research~~ | ~~Game Industry Research Specialist~~ | *Superseded by `legal-research-agent`* |
 
 ---
 
