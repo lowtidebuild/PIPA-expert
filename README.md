@@ -5,6 +5,15 @@
 > Release notes are published on **[GitHub Releases](https://github.com/lowtidebuild/PIPA-expert/releases)**.
 > See [Publishing Policy](docs/publishing-policy.md).
 
+</div>
+
+> [!IMPORTANT]
+> **Heads up — as of 2026-05-08**, the Korea PIPA (`PIPA-expert`) and EU GDPR (`GDPR-expert`) specialist agents have been folded into a unified cross-jurisdictional privacy research agent at **[`data-protection-agent`](https://github.com/lowtidebuild/data-protection-agent)**, together with a newly added California (CCPA-as-amended-by-CPRA) sub-KB. Routing a multi-jurisdiction privacy question to two single-jurisdiction specialists meant two token-billed runs producing two memos to reconcile by hand — and California had no specialist at all. The unified agent collapses that into a single dispatch and adds a cross-jurisdictional citation auditor that catches authority-blending across borders.
+>
+> **This repo (`PIPA-expert`) remains the source-of-truth for the Korea PIPA knowledge base** — the unified agent re-imports it on every refresh — and continues to receive KB-level updates as Korean privacy law evolves. **Active development of the user-facing answering pipeline, output renderers (DOCX / HTML legal opinion), and cross-jurisdictional features now happens on `data-protection-agent`.** See the [v1.0.0 release notes](https://github.com/lowtidebuild/data-protection-agent/releases/tag/v1.0.0) for the full launch narrative.
+
+<div align="center">
+
 # PIPA Expert Agent
 
 ### KP Legal Orchestrator's Korean Data Privacy Specialist
