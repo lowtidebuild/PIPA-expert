@@ -5,6 +5,15 @@
 > 릴리즈 노트는 **[GitHub Releases](https://github.com/lowtidebuild/PIPA-expert/releases)**에 게시합니다.
 > [게시 정책](docs/publishing-policy.md)을 참고하세요.
 
+</div>
+
+> [!IMPORTANT]
+> **공지 — 2026년 5월 8일자로**, 한국 PIPA (`PIPA-expert`) 및 EU GDPR (`GDPR-expert`) specialist 에이전트가 통합 cross-jurisdictional 개인정보 리서치 에이전트인 **[`data-protection-agent`](https://github.com/lowtidebuild/data-protection-agent)** 로 합쳐졌습니다 (캘리포니아 CCPA-as-amended-by-CPRA sub-KB 신규 추가 포함). 다중 법역 개인정보 질문을 두 단일 법역 specialist 에 dispatch 하면 토큰이 두 번 청구되고 두 개 메모를 손으로 reconcile 해야 했고, 캘리포니아 specialist 는 아예 없었습니다. 통합 에이전트는 이를 한 번의 dispatch 로 처리하며, 국경 너머 권위 혼용을 잡는 cross-jurisdictional 인용 감사기를 추가합니다.
+>
+> **이 레포 (`PIPA-expert`) 는 한국 PIPA 지식베이스의 source-of-truth 로 유지됩니다** — 통합 에이전트가 매 refresh 마다 re-import — 그리고 한국 개인정보법 변화에 따른 KB-level 업데이트는 계속 받습니다. **사용자-facing 응답 파이프라인, 출력 렌더러 (DOCX / HTML 법률 의견서), cross-jurisdictional 기능의 active 개발은 이제 `data-protection-agent` 에서 이루어집니다.** 전체 launch narrative 는 [v1.0.0 release notes](https://github.com/lowtidebuild/data-protection-agent/releases/tag/v1.0.0) 참조.
+
+<div align="center">
+
 # PIPA Expert Agent
 
 ### KP Legal Orchestrator의 AI 개인정보보호 워크플로우 시스템
