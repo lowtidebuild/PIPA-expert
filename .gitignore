@@ -8,6 +8,9 @@ PIPC Official Guidelines/
 docs/releases/
 docs/RELEASE-*.md
 
+# Dated local notes should live in /_private, not public docs.
+docs/20??-??-??-*.md
+
 # Python
 __pycache__/
 *.pyc
